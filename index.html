@@ -9,1225 +9,1323 @@
 
   <meta
     name="description"
-    content="Productos digitales ZuzuBayo: invitaciones, plantillas, stickers, journals, guías, recursos NextFlight y más."
-  >
-
-  <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
-    rel="stylesheet"
+    content="Invitaciones, plantillas, stickers, journals, guías y recursos digitales de ZuzuBayo."
   >
 
   <style>
 
-    :root{
-      --red:#B11226;
-      --red-dark:#7F0E1D;
-      --pink:#D96A75;
-      --pink-light:#F7C9D0;
-      --soft:#FCEDEF;
-      --cream:#FFF9F3;
-      --white:#FFFFFF;
-      --black:#1B1B1B;
-      --gray:#6F6668;
+    /* =====================================================
+       ZUZUBAYO — VARIABLES
+    ===================================================== */
 
-      --shadow:0 8px 26px rgba(84,30,38,.08);
-      --radius:20px;
+    :root {
+      --wine: #7f1020;
+      --red: #a81429;
+      --pink: #d96a75;
+      --pink-soft: #f8dfe3;
+      --blush: #fdf0f2;
+      --cream: #fffaf5;
+      --white: #ffffff;
+
+      --text: #201b1c;
+      --muted: #75696b;
+
+      --border: #efd9dd;
+
+      --shadow:
+        0 8px 25px rgba(84, 30, 38, 0.08);
+
+      --shadow-hover:
+        0 14px 35px rgba(84, 30, 38, 0.14);
+
+      --radius: 18px;
     }
 
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
     }
 
 
-    html{
-      scroll-behavior:smooth;
-    }
-
-
-    body{
-      font-family:"Poppins",Arial,sans-serif;
-      background:var(--cream);
-      color:var(--black);
-      line-height:1.5;
-    }
-
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-
-    button,
-    a{
-      -webkit-tap-highlight-color:transparent;
-    }
-
-
-
-    /* =========================
+    /* =====================================================
        TOP BAR
-    ========================= */
+    ===================================================== */
 
-    .topbar{
-      background:var(--red-dark);
-      color:white;
-      min-height:30px;
+    .topbar {
+      min-height: 30px;
 
-      display:flex;
-      justify-content:center;
-      align-items:center;
+      background: var(--wine);
+      color: white;
 
-      gap:28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      padding:6px 20px;
+      gap: 26px;
 
-      font-size:11px;
-      font-weight:500;
-      letter-spacing:.02em;
+      padding: 6px 16px;
+
+      font-size: 11px;
+      font-weight: 600;
+
+      text-align: center;
+    }
+
+    .topbar span {
+      white-space: nowrap;
     }
 
 
-    .topbar span{
-      white-space:nowrap;
-    }
-
-
-
-    /* =========================
+    /* =====================================================
        HEADER
-    ========================= */
+    ===================================================== */
 
-    header{
-      background:rgba(255,249,243,.96);
-      border-bottom:1px solid #f2d9dd;
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-      position:sticky;
-      top:0;
-      z-index:100;
+      background: rgba(255, 250, 245, 0.96);
 
-      backdrop-filter:blur(8px);
+      border-bottom: 1px solid var(--border);
+
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      width: min(1180px, 92%);
+      min-height: 72px;
+
+      margin: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+    .logo img {
+      width: 190px;
+      height: auto;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .desktop-nav a {
+      transition: 0.2s ease;
+    }
+
+    .desktop-nav a:hover {
+      color: var(--red);
+    }
+
+    .shop-pill {
+      background: var(--wine);
+      color: white !important;
+
+      padding: 8px 15px;
+
+      border-radius: 100px;
+    }
+
+    .shop-pill:hover {
+      background: var(--red);
     }
 
 
-    .nav{
-      width:min(1180px,92%);
-      margin:auto;
-
-      min-height:72px;
-
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-
-      gap:30px;
-    }
-
-
-    .logo{
-      display:flex;
-      align-items:center;
-      flex-shrink:0;
-    }
-
-
-    .logo img{
-      width:185px;
-      height:auto;
-      object-fit:contain;
-    }
-
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      gap:28px;
-
-      font-family:"Jost",sans-serif;
-      font-size:14px;
-      font-weight:600;
-    }
-
-
-    .nav-links a{
-      position:relative;
-    }
-
-
-    .nav-links a::after{
-      content:"";
-      position:absolute;
-
-      left:0;
-      bottom:-5px;
-
-      width:0;
-      height:2px;
-
-      background:var(--red);
-
-      transition:.2s ease;
-    }
-
-
-    .nav-links a:hover{
-      color:var(--red);
-    }
-
-
-    .nav-links a:hover::after{
-      width:100%;
-    }
-
-
-    .mini-cherry{
-      width:27px;
-      height:27px;
-
-      object-fit:contain;
-
-      margin-left:4px;
-    }
-
-
-
-    /* =========================
+    /* =====================================================
        HERO
-    ========================= */
+    ===================================================== */
 
-    .hero{
-      width:min(1180px,92%);
-      margin:auto;
+    .hero {
+      width: min(1180px, 92%);
+      margin: auto;
 
-      padding:36px 0 26px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.75fr;
 
-      display:grid;
-      grid-template-columns:1fr .78fr;
+      align-items: center;
 
-      align-items:center;
+      gap: 38px;
 
-      gap:38px;
+      padding: 34px 0 24px;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+
+      color: var(--red);
+
+      font-size: 11px;
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 54px);
+
+      line-height: 1.02;
+
+      letter-spacing: -0.035em;
+
+      margin-bottom: 14px;
+    }
+
+    .hero h1 span {
+      display: block;
+
+      color: var(--pink);
+    }
+
+    .hero-copy > p {
+      max-width: 530px;
+
+      color: #484042;
+
+      font-size: 15px;
+
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 42px;
+
+      padding: 10px 18px;
+
+      border-radius: 10px;
+
+      font-size: 12px;
+      font-weight: 750;
+
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--wine);
+      color: white;
+
+      border: 1px solid var(--wine);
+    }
+
+    .btn-primary:hover {
+      background: var(--red);
+
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--pink);
+
+      color: var(--wine);
+
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: var(--blush);
+    }
+
+    .hero-mini-info {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 15px;
+
+      color: var(--muted);
+
+      font-size: 10px;
     }
 
 
-    .hero-copy{
-      max-width:580px;
-    }
+    /* Mascota */
 
+    .hero-art {
+      height: 330px;
 
-    .eyebrow{
-      display:flex;
-      align-items:center;
-      gap:8px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
 
-      color:var(--red);
+      position: relative;
 
-      font-family:"Jost",sans-serif;
+      overflow: hidden;
 
-      font-size:12px;
-      font-weight:700;
-
-      text-transform:uppercase;
-      letter-spacing:.11em;
-
-      margin-bottom:10px;
-    }
-
-
-    .eyebrow img{
-      width:21px;
-      height:21px;
-      object-fit:contain;
-    }
-
-
-    .hero h1{
-      font-family:"Jost",sans-serif;
-
-      font-size:48px;
-      line-height:1.02;
-
-      letter-spacing:-.02em;
-
-      margin-bottom:15px;
-
-      color:var(--black);
-    }
-
-
-    .hero h1 span{
-      display:block;
-      color:var(--pink);
-    }
-
-
-    .hero p{
-      max-width:520px;
-
-      font-size:15px;
-
-      color:#3f393a;
-
-      margin-bottom:22px;
-    }
-
-
-    .hero-buttons{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
-
-    .btn{
-      min-height:43px;
-
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-
-      padding:10px 20px;
-
-      border-radius:11px;
-
-      font-family:"Jost",sans-serif;
-      font-size:13px;
-      font-weight:700;
-
-      transition:.2s ease;
-    }
-
-
-    .btn-primary{
-      background:var(--red-dark);
-      color:white;
-
-      border:1px solid var(--red-dark);
-    }
-
-
-    .btn-primary:hover{
-      background:var(--red);
-      transform:translateY(-1px);
-    }
-
-
-    .btn-secondary{
-      background:transparent;
-
-      border:1px solid var(--pink);
-
-      color:var(--red-dark);
-    }
-
-
-    .btn-secondary:hover{
-      background:var(--soft);
-    }
-
-
-    .hero-trust{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-
-      margin-top:18px;
-
-      color:var(--gray);
-
-      font-size:11px;
-    }
-
-
-    .hero-trust span{
-      display:flex;
-      align-items:center;
-      gap:5px;
-    }
-
-
-    .hero-visual{
-      height:355px;
-
-      display:flex;
-      align-items:flex-end;
-      justify-content:center;
-
-      position:relative;
-
-      overflow:hidden;
-
-      border-radius:28px;
+      border-radius: 26px;
 
       background:
-        radial-gradient(circle at 50% 60%,#f9dce0 0%,#fff7f4 65%,transparent 100%);
+        radial-gradient(
+          circle at 50% 65%,
+          #f7d8dd 0%,
+          #fff6f2 65%,
+          transparent 100%
+        );
+    }
+
+    .hero-art .mascota {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+      object-position: center bottom;
     }
 
 
-    .hero-visual .mascota{
-      height:100%;
-      width:100%;
+    /* =====================================================
+       SHOP INTRO
+    ===================================================== */
 
-      object-fit:contain;
-      object-position:center bottom;
+    .shop-section {
+      width: min(1180px, 92%);
+      margin: auto;
+
+      padding: 20px 0 30px;
+    }
+
+    .section-head {
+      text-align: center;
+
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      color: var(--wine);
+
+      font-size: 27px;
+
+      margin-bottom: 5px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+
+      font-size: 12px;
     }
 
 
-    .hero-visual .cherry-accent{
-      position:absolute;
+    /* =====================================================
+       CATEGORY GRID
+    ===================================================== */
 
-      width:36px;
+    .categories {
+      display: grid;
 
-      right:18px;
-      top:18px;
+      grid-template-columns: repeat(4, 1fr);
 
-      opacity:.9;
+      gap: 14px;
+    }
+
+    .category-card {
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow);
+
+      transition: 0.22s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow: var(--shadow-hover);
+    }
+
+    .category-image {
+      height: 175px;
+
+      overflow: hidden;
+
+      background: var(--blush);
+    }
+
+    .category-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .category-body {
+      padding: 13px;
+    }
+
+    .category-body h3 {
+      font-size: 16px;
+
+      margin-bottom: 4px;
+    }
+
+    .category-body p {
+      min-height: 32px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      margin-bottom: 9px;
+    }
+
+    .category-btn {
+      border: none;
+
+      background: transparent;
+
+      color: var(--red);
+
+      cursor: pointer;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      padding: 0;
+    }
+
+    .category-btn:hover {
+      color: var(--wine);
+    }
+
+    .coming-badge {
+      position: absolute;
+
+      top: 9px;
+      right: 9px;
+
+      z-index: 2;
+
+      background: var(--wine);
+      color: white;
+
+      border-radius: 100px;
+
+      padding: 5px 8px;
+
+      font-size: 8px;
+      font-weight: 800;
     }
 
 
+    /* =====================================================
+       PRODUCT AREA — PREPARADO PARA EL FUTURO
+    ===================================================== */
 
-    /* =========================
-       CATEGORÍAS
-    ========================= */
+    .products-area {
+      background: var(--white);
 
-    .shop{
-      width:min(1180px,92%);
-      margin:auto;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
 
-      padding:22px 0 24px;
+      margin-top: 12px;
+    }
+
+    .products-inner {
+      width: min(1180px, 92%);
+      margin: auto;
+
+      padding: 30px 0;
+    }
+
+    .products-title {
+      text-align: center;
+
+      margin-bottom: 18px;
+    }
+
+    .products-title h2 {
+      color: var(--wine);
+
+      font-size: 25px;
+
+      margin-bottom: 4px;
+    }
+
+    .products-title p {
+      color: var(--muted);
+
+      font-size: 11px;
     }
 
 
-    .section-heading{
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    /* filtros */
 
-      gap:11px;
+    .filters {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      text-align:center;
+      flex-wrap: wrap;
 
-      margin-bottom:20px;
+      gap: 7px;
+
+      margin-bottom: 22px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--border);
+
+      background: var(--cream);
+
+      color: var(--text);
+
+      border-radius: 100px;
+
+      padding: 7px 12px;
+
+      cursor: pointer;
+
+      font-size: 9px;
+      font-weight: 750;
+
+      transition: 0.2s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--wine);
+      border-color: var(--wine);
+
+      color: white;
     }
 
 
-    .section-heading h2{
-      font-family:"Jost",sans-serif;
+    /* mensaje hasta que subamos productos */
 
-      color:var(--red-dark);
+    .empty-shop {
+      max-width: 650px;
 
-      font-size:27px;
-      font-weight:700;
+      margin: auto;
+
+      padding: 26px 20px;
+
+      border-radius: 18px;
+
+      background: var(--blush);
+
+      text-align: center;
+    }
+
+    .empty-shop h3 {
+      color: var(--wine);
+
+      font-size: 18px;
+
+      margin-bottom: 5px;
+    }
+
+    .empty-shop p {
+      color: var(--muted);
+
+      font-size: 11px;
+
+      max-width: 470px;
+
+      margin: auto;
     }
 
 
-    .section-heading img{
-      width:25px;
-      height:25px;
-      object-fit:contain;
+    /* =====================================================
+       BENEFITS
+    ===================================================== */
+
+    .benefits {
+      width: min(1050px, 92%);
+
+      margin: 26px auto;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      background: var(--pink-soft);
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 15px 13px;
+
+      border-right: 1px solid var(--border);
+    }
+
+    .benefit:last-child {
+      border-right: none;
+    }
+
+    .benefit-icon {
+      min-width: 34px;
+      width: 34px;
+      height: 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: white;
+
+      color: var(--red);
+
+      font-size: 17px;
+    }
+
+    .benefit h3 {
+      font-size: 11px;
+
+      margin-bottom: 2px;
+    }
+
+    .benefit p {
+      color: var(--muted);
+
+      font-size: 8px;
     }
 
 
-    .category-grid{
-      display:grid;
+    /* =====================================================
+       PAYPAL
+    ===================================================== */
 
-      grid-template-columns:repeat(4,1fr);
+    .payment {
+      width: min(930px, 92%);
 
-      gap:15px;
+      margin: 0 auto 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 18px 22px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .payment-copy h2 {
+      color: var(--wine);
+
+      font-size: 18px;
+
+      margin-bottom: 4px;
+    }
+
+    .payment-copy p {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      max-width: 560px;
+    }
+
+    .paypal-badge {
+      flex-shrink: 0;
+
+      padding: 9px 14px;
+
+      border-radius: 10px;
+
+      background: #f7f8fb;
+
+      border: 1px solid #e4e6ea;
+
+      font-weight: 800;
+
+      font-size: 13px;
     }
 
 
-    .category-card{
-      background:white;
+    /* =====================================================
+       ABOUT
+    ===================================================== */
 
-      border:1px solid #f1dadd;
+    .about {
+      background: var(--blush);
 
-      border-radius:var(--radius);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
 
-      overflow:hidden;
+    .about-inner {
+      width: min(950px, 92%);
 
-      box-shadow:var(--shadow);
+      margin: auto;
 
-      transition:.22s ease;
+      padding: 26px 0;
+
+      display: grid;
+      grid-template-columns: 95px 1fr;
+
+      gap: 22px;
+
+      align-items: center;
+    }
+
+    .about-image {
+      width: 90px;
+      height: 90px;
+
+      border-radius: 50%;
+
+      overflow: hidden;
+
+      background: white;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .about-copy h2 {
+      color: var(--wine);
+
+      font-size: 19px;
+
+      margin-bottom: 5px;
+    }
+
+    .about-copy p {
+      max-width: 700px;
+
+      color: #594f51;
+
+      font-size: 11px;
     }
 
 
-    .category-card:hover{
-      transform:translateY(-4px);
-
-      box-shadow:0 12px 32px rgba(84,30,38,.12);
-    }
-
-
-    .category-image{
-      height:180px;
-
-      background:#fff3f4;
-
-      overflow:hidden;
-    }
-
-
-    .category-image img{
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-    }
-
-
-    .category-content{
-      padding:14px 14px 15px;
-    }
-
-
-    .category-content h3{
-      font-family:"Jost",sans-serif;
-
-      font-size:17px;
-      line-height:1.15;
-
-      margin-bottom:5px;
-
-      color:var(--black);
-    }
-
-
-    .category-content p{
-      font-size:11px;
-
-      color:var(--gray);
-
-      margin-bottom:11px;
-
-      min-height:34px;
-    }
-
-
-    .category-link{
-      display:inline-flex;
-      align-items:center;
-      gap:5px;
-
-      color:var(--red);
-
-      font-family:"Jost",sans-serif;
-      font-weight:700;
-      font-size:11px;
-    }
-
-
-    .category-link:hover{
-      color:var(--red-dark);
-    }
-
-
-
-    /* NextFlight */
-
-    .category-card.nextflight{
-      background:#f5f4ff;
-    }
-
-
-    .category-card.nextflight .category-image{
-      background:#eff1ff;
-    }
-
-
-
-    /* Coming soon */
-
-    .coming{
-      position:relative;
-    }
-
-
-    .coming-badge{
-      position:absolute;
-
-      top:11px;
-      right:11px;
-
-      background:var(--pink);
-
-      color:white;
-
-      padding:5px 9px;
-
-      border-radius:100px;
-
-      font-size:9px;
-      font-weight:700;
-
-      letter-spacing:.03em;
-
-      z-index:2;
-    }
-
-
-
-    /* =========================
-       BENEFICIOS
-    ========================= */
-
-    .benefits{
-      width:min(1050px,92%);
-
-      margin:8px auto 28px;
-
-      background:var(--soft);
-
-      border:1px solid #f1d9dd;
-
-      border-radius:22px;
-
-      display:grid;
-
-      grid-template-columns:repeat(4,1fr);
-
-      overflow:hidden;
-    }
-
-
-    .benefit{
-      padding:17px 14px;
-
-      display:flex;
-      align-items:center;
-
-      gap:11px;
-
-      border-right:1px solid #efd8dc;
-    }
-
-
-    .benefit:last-child{
-      border-right:none;
-    }
-
-
-    .benefit-icon{
-      min-width:38px;
-      width:38px;
-      height:38px;
-
-      border-radius:50%;
-
-      background:white;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      color:var(--red);
-
-      font-size:20px;
-    }
-
-
-    .benefit h3{
-      font-family:"Jost",sans-serif;
-
-      font-size:13px;
-
-      margin-bottom:2px;
-    }
-
-
-    .benefit p{
-      font-size:9px;
-
-      color:var(--gray);
-    }
-
-
-
-    /* =========================
-       SOBRE ZUZUBAYO
-    ========================= */
-
-    .about{
-      background:white;
-
-      border-top:1px solid #f3e1e3;
-      border-bottom:1px solid #f3e1e3;
-    }
-
-
-    .about-inner{
-      width:min(1000px,92%);
-
-      margin:auto;
-
-      padding:28px 0;
-
-      display:grid;
-      grid-template-columns:120px 1fr;
-
-      align-items:center;
-
-      gap:26px;
-    }
-
-
-    .about-avatar{
-      width:115px;
-      height:115px;
-
-      border-radius:50%;
-
-      overflow:hidden;
-
-      background:var(--soft);
-    }
-
-
-    .about-avatar img{
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-      object-position:center top;
-    }
-
-
-    .about-copy h2{
-      font-family:"Jost",sans-serif;
-
-      color:var(--red-dark);
-
-      font-size:22px;
-
-      margin-bottom:7px;
-    }
-
-
-    .about-copy p{
-      color:#554d4e;
-
-      font-size:12px;
-
-      max-width:700px;
-    }
-
-
-
-    /* =========================
+    /* =====================================================
        FAQ
-    ========================= */
+    ===================================================== */
 
-    .faq{
-      width:min(900px,92%);
+    .faq {
+      width: min(850px, 92%);
 
-      margin:auto;
+      margin: auto;
 
-      padding:30px 0;
+      padding: 28px 0;
+    }
+
+    .faq h2 {
+      text-align: center;
+
+      color: var(--wine);
+
+      font-size: 23px;
+
+      margin-bottom: 15px;
+    }
+
+    details {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      padding: 12px 14px;
+
+      margin-bottom: 7px;
+    }
+
+    summary {
+      cursor: pointer;
+
+      font-size: 11px;
+      font-weight: 750;
+    }
+
+    details p {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      padding-top: 7px;
     }
 
 
-    .faq h2{
-      text-align:center;
+    /* =====================================================
+       CONTACT
+    ===================================================== */
 
-      font-family:"Jost",sans-serif;
+    .contact {
+      width: min(850px, 92%);
 
-      color:var(--red-dark);
+      margin: 0 auto 30px;
 
-      font-size:24px;
+      text-align: center;
 
-      margin-bottom:18px;
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 23px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .contact h2 {
+      color: var(--wine);
+
+      font-size: 21px;
+
+      margin-bottom: 5px;
+    }
+
+    .contact p {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      max-width: 540px;
+
+      margin: 0 auto 14px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid var(--pink);
+
+      border-radius: 9px;
+
+      padding: 8px 13px;
+
+      color: var(--wine);
+
+      font-size: 10px;
+      font-weight: 750;
+    }
+
+    .contact-link:hover {
+      background: var(--blush);
     }
 
 
-    details{
-      background:white;
-
-      border:1px solid #f0dadd;
-
-      border-radius:13px;
-
-      padding:13px 15px;
-
-      margin-bottom:8px;
-    }
-
-
-    summary{
-      cursor:pointer;
-
-      font-family:"Jost",sans-serif;
-
-      font-weight:600;
-
-      font-size:13px;
-    }
-
-
-    details p{
-      padding-top:8px;
-
-      color:var(--gray);
-
-      font-size:11px;
-    }
-
-
-
-    /* =========================
+    /* =====================================================
        FOOTER
-    ========================= */
+    ===================================================== */
 
-    footer{
-      background:#741020;
+    footer {
+      background: var(--wine);
 
-      color:white;
+      color: white;
+    }
+
+    .footer-inner {
+      width: min(1180px, 92%);
+
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr 0.8fr;
+
+      gap: 30px;
+
+      padding: 23px 0 17px;
+    }
+
+    .footer-logo img {
+      width: 150px;
+      height: auto;
+    }
+
+    .footer-brand p {
+      color: #f7dce1;
+
+      font-size: 9px;
+
+      margin-top: 6px;
+    }
+
+    .footer-col h4 {
+      font-size: 10px;
+
+      margin-bottom: 7px;
+    }
+
+    .footer-col a {
+      display: block;
+
+      color: #f5dce0;
+
+      font-size: 9px;
+
+      margin-bottom: 5px;
+    }
+
+    .copyright {
+      border-top:
+        1px solid rgba(255, 255, 255, 0.15);
+
+      text-align: center;
+
+      color: #f1d7dc;
+
+      font-size: 8px;
+
+      padding: 9px 15px;
     }
 
 
-    .footer-inner{
-      width:min(1180px,92%);
-
-      margin:auto;
-
-      padding:25px 0 18px;
-
-      display:grid;
-
-      grid-template-columns:1.4fr .8fr .8fr;
-
-      gap:35px;
-    }
-
-
-    .footer-logo img{
-      width:160px;
-    }
-
-
-    .footer-brand p{
-      font-size:10px;
-
-      color:#f8dfe3;
-
-      margin-top:6px;
-    }
-
-
-    .footer-col h4{
-      font-family:"Jost",sans-serif;
-
-      font-size:12px;
-
-      margin-bottom:8px;
-    }
-
-
-    .footer-col a{
-      display:block;
-
-      color:#f8dfe3;
-
-      font-size:10px;
-
-      margin-bottom:5px;
-    }
-
-
-    .copyright{
-      border-top:1px solid rgba(255,255,255,.16);
-
-      padding:10px 0;
-
-      text-align:center;
-
-      font-size:9px;
-
-      color:#f4dce0;
-    }
-
-
-
-    /* =========================
-       TABLET
-    ========================= */
-
-    @media(max-width:950px){
-
-      .nav-links{
-        gap:16px;
-        font-size:12px;
-      }
-
-
-      .hero{
-        grid-template-columns:1fr .7fr;
-      }
-
-
-      .hero h1{
-        font-size:41px;
-      }
-
-
-      .hero-visual{
-        height:310px;
-      }
-
-
-      .category-grid{
-        grid-template-columns:repeat(3,1fr);
-      }
-
-
-      .benefits{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-
-      .benefit:nth-child(2){
-        border-right:none;
-      }
-
-
-      .benefit:nth-child(-n+2){
-        border-bottom:1px solid #efd8dc;
-      }
-
-    }
-
-
-
-    /* =========================
+    /* =====================================================
        MOBILE
-    ========================= */
+    ===================================================== */
 
-    @media(max-width:700px){
+    @media (max-width: 760px) {
 
-      .topbar{
-        min-height:26px;
+      .topbar {
+        min-height: 25px;
 
-        padding:5px 10px;
+        gap: 12px;
 
-        gap:16px;
+        padding: 5px 8px;
 
-        font-size:9px;
+        font-size: 8px;
 
-        overflow:hidden;
+        overflow: hidden;
+      }
+
+      .topbar span:nth-child(3) {
+        display: none;
       }
 
 
-      .topbar span:nth-child(3){
-        display:none;
+      /* header */
+
+      .nav {
+        width: 94%;
+
+        min-height: 58px;
+      }
+
+      .logo img {
+        width: 145px;
+      }
+
+      .desktop-nav {
+        display: none;
       }
 
 
-      .nav{
-        min-height:58px;
+      /* hero */
 
-        width:94%;
+      .hero {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        padding: 20px 0 10px;
+      }
+
+      .hero h1 {
+        font-size: 31px;
+
+        margin-bottom: 9px;
+      }
+
+      .hero-copy > p {
+        font-size: 11px;
+
+        margin-bottom: 13px;
+      }
+
+      .eyebrow {
+        font-size: 8px;
+
+        margin-bottom: 5px;
+      }
+
+      .btn {
+        min-height: 35px;
+
+        padding: 8px 13px;
+
+        font-size: 9px;
+      }
+
+      .hero-mini-info {
+        display: none;
+      }
+
+      .hero-art {
+        height: 185px;
+
+        border-radius: 17px;
       }
 
 
-      .logo img{
-        width:138px;
+      /* categorías */
+
+      .shop-section {
+        width: 94%;
+
+        padding: 12px 0 18px;
+      }
+
+      .section-head {
+        margin-bottom: 11px;
+      }
+
+      .section-head h2 {
+        font-size: 19px;
+      }
+
+      .section-head p {
+        font-size: 9px;
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+      }
+
+      .category-card {
+        border-radius: 13px;
+      }
+
+      .category-image {
+        height: 110px;
+      }
+
+      .category-body {
+        padding: 8px;
+      }
+
+      .category-body h3 {
+        font-size: 12px;
+      }
+
+      .category-body p {
+        display: none;
+      }
+
+      .category-btn {
+        font-size: 8px;
+      }
+
+      .coming-badge {
+        top: 6px;
+        right: 6px;
+
+        padding: 4px 6px;
+
+        font-size: 6px;
       }
 
 
-      .mini-cherry{
-        width:21px;
-        height:21px;
+      /* productos */
+
+      .products-inner {
+        width: 94%;
+
+        padding: 21px 0;
+      }
+
+      .products-title {
+        margin-bottom: 12px;
+      }
+
+      .products-title h2 {
+        font-size: 18px;
+      }
+
+      .products-title p {
+        font-size: 9px;
+      }
+
+      .filters {
+        gap: 5px;
+
+        margin-bottom: 14px;
+      }
+
+      .filter-btn {
+        padding: 6px 9px;
+
+        font-size: 7px;
+      }
+
+      .empty-shop {
+        padding: 20px 13px;
+      }
+
+      .empty-shop h3 {
+        font-size: 14px;
+      }
+
+      .empty-shop p {
+        font-size: 9px;
       }
 
 
-      .nav-links{
-        display:none;
+      /* benefits */
+
+      .benefits {
+        width: 94%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        margin: 18px auto;
+
+        border-radius: 14px;
+      }
+
+      .benefit {
+        padding: 10px 8px;
+
+        gap: 7px;
+      }
+
+      .benefit:nth-child(2) {
+        border-right: none;
+      }
+
+      .benefit:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .benefit-icon {
+        min-width: 28px;
+        width: 28px;
+        height: 28px;
+
+        font-size: 13px;
+      }
+
+      .benefit h3 {
+        font-size: 9px;
+      }
+
+      .benefit p {
+        display: none;
       }
 
 
+      /* PayPal */
 
-      /* HERO MOBILE */
+      .payment {
+        width: 94%;
 
-      .hero{
-        width:92%;
+        padding: 13px;
 
-        grid-template-columns:1fr;
+        gap: 10px;
 
-        gap:10px;
+        margin-bottom: 18px;
+      }
 
-        padding:24px 0 13px;
+      .payment-copy h2 {
+        font-size: 14px;
+      }
+
+      .payment-copy p {
+        font-size: 8px;
+      }
+
+      .paypal-badge {
+        padding: 7px 9px;
+
+        font-size: 9px;
       }
 
 
-      .hero-copy{
-        max-width:none;
+      /* about */
+
+      .about-inner {
+        width: 92%;
+
+        grid-template-columns: 62px 1fr;
+
+        gap: 12px;
+
+        padding: 18px 0;
+      }
+
+      .about-image {
+        width: 60px;
+        height: 60px;
+      }
+
+      .about-copy h2 {
+        font-size: 15px;
+      }
+
+      .about-copy p {
+        font-size: 8px;
       }
 
 
-      .eyebrow{
-        font-size:9px;
-        margin-bottom:6px;
+      /* FAQ */
+
+      .faq {
+        padding: 20px 0;
+      }
+
+      .faq h2 {
+        font-size: 18px;
+      }
+
+      details {
+        padding: 10px 11px;
+      }
+
+      summary {
+        font-size: 9px;
+      }
+
+      details p {
+        font-size: 8px;
       }
 
 
-      .hero h1{
-        font-size:32px;
+      /* Contact */
 
-        margin-bottom:10px;
+      .contact {
+        width: 92%;
+
+        padding: 18px 12px;
+
+        margin-bottom: 20px;
+      }
+
+      .contact h2 {
+        font-size: 16px;
+      }
+
+      .contact p {
+        font-size: 8px;
+      }
+
+      .contact-link {
+        font-size: 8px;
+
+        padding: 7px 10px;
       }
 
 
-      .hero p{
-        font-size:12px;
+      /* footer */
 
-        line-height:1.5;
+      .footer-inner {
+        width: 92%;
 
-        margin-bottom:15px;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 17px;
+
+        padding: 18px 0 13px;
       }
 
-
-      .hero-buttons{
-        gap:8px;
+      .footer-brand {
+        grid-column: 1 / -1;
       }
 
-
-      .btn{
-        min-height:37px;
-
-        padding:8px 14px;
-
-        font-size:11px;
-      }
-
-
-      .hero-trust{
-        display:none;
-      }
-
-
-      .hero-visual{
-        height:190px;
-
-        margin-top:4px;
-
-        border-radius:18px;
-      }
-
-
-      .hero-visual .cherry-accent{
-        width:25px;
-
-        right:12px;
-        top:10px;
-      }
-
-
-
-      /* CATEGORIES MOBILE */
-
-      .shop{
-        width:94%;
-
-        padding:12px 0 17px;
-      }
-
-
-      .section-heading{
-        margin-bottom:12px;
-
-        gap:7px;
-      }
-
-
-      .section-heading h2{
-        font-size:20px;
-      }
-
-
-      .section-heading img{
-        width:19px;
-        height:19px;
-      }
-
-
-      .category-grid{
-        grid-template-columns:repeat(2,1fr);
-
-        gap:9px;
-      }
-
-
-      .category-card{
-        border-radius:14px;
-
-        box-shadow:0 5px 15px rgba(84,30,38,.06);
-      }
-
-
-      .category-image{
-        height:115px;
-      }
-
-
-      .category-content{
-        padding:9px 9px 10px;
-      }
-
-
-      .category-content h3{
-        font-size:13px;
-
-        margin-bottom:3px;
-      }
-
-
-      .category-content p{
-        display:none;
-      }
-
-
-      .category-link{
-        font-size:9px;
-      }
-
-
-      .coming-badge{
-        top:7px;
-        right:7px;
-
-        font-size:7px;
-
-        padding:4px 6px;
-      }
-
-
-
-      /* BENEFITS MOBILE */
-
-      .benefits{
-        width:94%;
-
-        margin:8px auto 18px;
-
-        border-radius:15px;
-      }
-
-
-      .benefit{
-        padding:11px 9px;
-
-        gap:7px;
-      }
-
-
-      .benefit-icon{
-        min-width:30px;
-        width:30px;
-        height:30px;
-
-        font-size:15px;
-      }
-
-
-      .benefit h3{
-        font-size:10px;
-      }
-
-
-      .benefit p{
-        display:none;
-      }
-
-
-
-      /* ABOUT MOBILE */
-
-      .about-inner{
-        width:92%;
-
-        padding:20px 0;
-
-        grid-template-columns:70px 1fr;
-
-        gap:15px;
-      }
-
-
-      .about-avatar{
-        width:68px;
-        height:68px;
-      }
-
-
-      .about-copy h2{
-        font-size:17px;
-      }
-
-
-      .about-copy p{
-        font-size:10px;
-      }
-
-
-
-      /* FAQ MOBILE */
-
-      .faq{
-        padding:22px 0;
-      }
-
-
-      .faq h2{
-        font-size:19px;
-      }
-
-
-      details{
-        padding:11px 12px;
-      }
-
-
-      summary{
-        font-size:11px;
-      }
-
-
-
-      /* FOOTER MOBILE */
-
-      .footer-inner{
-        width:92%;
-
-        grid-template-columns:1fr 1fr;
-
-        gap:18px;
-
-        padding:20px 0 14px;
-      }
-
-
-      .footer-brand{
-        grid-column:1 / -1;
-      }
-
-
-      .footer-logo img{
-        width:130px;
+      .footer-logo img {
+        width: 125px;
       }
 
     }
@@ -1236,52 +1334,76 @@
 </head>
 
 
-
 <body>
 
 
-  <!-- TOP BAR -->
+  <!-- =====================================================
+       TOP BAR
+  ====================================================== -->
 
   <div class="topbar">
 
-    <span>⇩ Descarga instantánea</span>
+    <span>⇩ Descarga digital</span>
 
-    <span>♡ Pago seguro</span>
+    <span>♡ Pago seguro con PayPal</span>
 
-    <span>Productos digitales hechos con amor</span>
+    <span>Productos digitales hechos para ti</span>
 
   </div>
 
 
 
-  <!-- HEADER -->
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
   <header>
 
     <div class="nav">
 
-<div style="display:flex;align-items:center;">
 
-  <a href="#inicio" class="logo">
-    <img src="logo.png" alt="ZuzuBayo">
-  </a>
+      <a
+        href="#inicio"
+        class="logo"
+      >
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+      </a>
 
-</div>
 
+      <nav class="desktop-nav">
 
-      <nav class="nav-links">
+        <a href="#inicio">
+          Inicio
+        </a>
 
-        <a href="#inicio">Inicio</a>
+        <a href="#categorias">
+          Categorías
+        </a>
 
-        <a href="#tienda">Tienda</a>
+        <a href="#productos">
+          Productos
+        </a>
 
-        <a href="#nextflight">NextFlight</a>
+        <a href="#sobre">
+          Sobre ZuzuBayo
+        </a>
 
-        <a href="#sobre">Sobre ZuzuBayo</a>
+        <a href="#faq">
+          FAQ
+        </a>
 
-        <a href="#faq">FAQ</a>
+        <a
+          href="#productos"
+          class="shop-pill"
+        >
+          Tienda ♡
+        </a>
 
       </nav>
+
 
     </div>
 
@@ -1292,20 +1414,21 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
 
-    <section class="hero" id="inicio">
+    <section
+      class="hero"
+      id="inicio"
+    >
 
 
       <div class="hero-copy">
 
 
         <div class="eyebrow">
-
-          <img src="cereza.png" alt="">
-
-          digital goodies
-
+          DIGITAL GOODIES
         </div>
 
 
@@ -1313,45 +1436,51 @@
 
           Productos digitales
 
-          <span>hechos para ti ♡</span>
+          <span>
+            hechos para ti ♡
+          </span>
 
         </h1>
 
 
         <p>
-          Invitaciones, plantillas, stickers, journals, guías y recursos
-          digitales para organizar tu vida, crear, aprender y disfrutar
-          cada día.
+
+          Invitaciones, plantillas, stickers, journals,
+          guías y recursos digitales creados para hacer
+          tu vida más fácil, bonita y organizada.
+
         </p>
 
 
         <div class="hero-buttons">
 
+
           <a
-            href="#tienda"
+            href="#categorias"
             class="btn btn-primary"
           >
-            Explorar productos ♡
+            Explorar productos
           </a>
 
 
           <a
-            href="#tienda"
+            href="#productos"
             class="btn btn-secondary"
           >
-            Ver novedades ✧
+            Ver novedades ♡
           </a>
+
 
         </div>
 
 
-        <div class="hero-trust">
+        <div class="hero-mini-info">
 
-          <span>♡ Hecho con amor</span>
+          <span>♡ 100% digital</span>
 
-          <span>⇩ Digital</span>
+          <span>✧ Creado con amor</span>
 
-          <span>✧ Para ti</span>
+          <span>⇩ Fácil de descargar</span>
 
         </div>
 
@@ -1360,18 +1489,12 @@
 
 
 
-      <div class="hero-visual">
+      <div class="hero-art">
 
         <img
           src="mascota.png"
-          alt="Mascota oficial de ZuzuBayo"
+          alt="Mascota de ZuzuBayo"
           class="mascota"
-        >
-
-        <img
-          src="cereza.png"
-          alt=""
-          class="cherry-accent"
         >
 
       </div>
@@ -1381,24 +1504,32 @@
 
 
 
-    <!-- TIENDA / CATEGORÍAS -->
+    <!-- ===================================================
+         CATEGORÍAS
+    ==================================================== -->
 
-    <section class="shop" id="tienda">
+    <section
+      class="shop-section"
+      id="categorias"
+    >
 
 
-      <div class="section-heading">
+      <div class="section-head">
 
-        <img src="cereza.png" alt="">
+        <h2>
+          Shop the goodies ♡
+        </h2>
 
-        <h2>Explora nuestras categorías</h2>
-
-        <img src="cereza.png" alt="">
+        <p>
+          Encuentra lo que necesitas y descubre nuevas formas
+          de crear, organizar y disfrutar.
+        </p>
 
       </div>
 
 
 
-      <div class="category-grid">
+      <div class="categories">
 
 
         <!-- INVITACIONES -->
@@ -1409,23 +1540,30 @@
 
             <img
               src="invitaciones.png"
-              alt="Invitaciones digitales ZuzuBayo"
+              alt="Invitaciones digitales"
             >
 
           </div>
 
 
-          <div class="category-content">
+          <div class="category-body">
 
-            <h3>Invitaciones Digitales</h3>
+            <h3>
+              Invitaciones
+            </h3>
 
             <p>
-              Cumpleaños, baby shower, bodas, eventos y momentos especiales.
+              Diseños digitales para cumpleaños, eventos
+              y momentos especiales.
             </p>
 
-            <a href="#" class="category-link">
+
+            <button
+              class="category-btn"
+              data-filter="invitaciones"
+            >
               Ver invitaciones →
-            </a>
+            </button>
 
           </div>
 
@@ -1441,23 +1579,30 @@
 
             <img
               src="plantillas.png"
-              alt="Plantillas digitales ZuzuBayo"
+              alt="Plantillas digitales"
             >
 
           </div>
 
 
-          <div class="category-content">
+          <div class="category-body">
 
-            <h3>Plantillas Digitales</h3>
+            <h3>
+              Plantillas
+            </h3>
 
             <p>
-              Recursos editables para redes, contenido, eventos y más.
+              Recursos digitales editables para crear
+              más rápido y bonito.
             </p>
 
-            <a href="#" class="category-link">
-              Explorar plantillas →
-            </a>
+
+            <button
+              class="category-btn"
+              data-filter="plantillas"
+            >
+              Ver plantillas →
+            </button>
 
           </div>
 
@@ -1473,23 +1618,30 @@
 
             <img
               src="stikers.png"
-              alt="Stickers digitales ZuzuBayo"
+              alt="Stickers digitales"
             >
 
           </div>
 
 
-          <div class="category-content">
+          <div class="category-body">
 
-            <h3>Stickers Digitales</h3>
+            <h3>
+              Stickers
+            </h3>
 
             <p>
-              Detalles digitales cute para personalizar tus proyectos.
+              Detalles digitales para personalizar tus
+              proyectos y contenido.
             </p>
 
-            <a href="#" class="category-link">
+
+            <button
+              class="category-btn"
+              data-filter="stickers"
+            >
               Ver stickers →
-            </a>
+            </button>
 
           </div>
 
@@ -1511,17 +1663,24 @@
           </div>
 
 
-          <div class="category-content">
+          <div class="category-body">
 
-            <h3>Journals & Listas</h3>
+            <h3>
+              Journals & Listas
+            </h3>
 
             <p>
-              Gratitud, checklists, organización personal y bienestar.
+              Bienestar, organización, checklists
+              y reflexión personal.
             </p>
 
-            <a href="#" class="category-link">
+
+            <button
+              class="category-btn"
+              data-filter="journals"
+            >
               Ver journals →
-            </a>
+            </button>
 
           </div>
 
@@ -1537,23 +1696,30 @@
 
             <img
               src="guias.png"
-              alt="Guías digitales ZuzuBayo"
+              alt="Guías digitales"
             >
 
           </div>
 
 
-          <div class="category-content">
+          <div class="category-body">
 
-            <h3>Guías Digitales</h3>
+            <h3>
+              Guías
+            </h3>
 
             <p>
-              Guías prácticas, recursos útiles y contenido paso a paso.
+              Recursos prácticos y contenido
+              explicado paso a paso.
             </p>
 
-            <a href="#" class="category-link">
+
+            <button
+              class="category-btn"
+              data-filter="guias"
+            >
               Ver guías →
-            </a>
+            </button>
 
           </div>
 
@@ -1563,10 +1729,7 @@
 
         <!-- NEXTFLIGHT -->
 
-        <article
-          class="category-card nextflight"
-          id="nextflight"
-        >
+        <article class="category-card">
 
           <div class="category-image">
 
@@ -1578,17 +1741,24 @@
           </div>
 
 
-          <div class="category-content">
+          <div class="category-body">
 
-            <h3>NextFlight Recursos</h3>
+            <h3>
+              NextFlight
+            </h3>
 
             <p>
-              Plantillas, guías y recursos para tu camino aeronáutico.
+              Guías y recursos digitales para
+              avanzar en tu camino aeronáutico.
             </p>
 
-            <a href="#" class="category-link">
+
+            <button
+              class="category-btn"
+              data-filter="nextflight"
+            >
               Explorar NextFlight →
-            </a>
+            </button>
 
           </div>
 
@@ -1598,7 +1768,7 @@
 
         <!-- PLANNERS -->
 
-        <article class="category-card coming">
+        <article class="category-card">
 
           <span class="coming-badge">
             COMING SOON
@@ -1615,15 +1785,19 @@
           </div>
 
 
-          <div class="category-content">
+          <div class="category-body">
 
-            <h3>Planners Digitales</h3>
+            <h3>
+              Planners
+            </h3>
 
             <p>
-              Una nueva colección se está preparando para ti.
+              Una nueva colección de organización
+              digital viene en camino.
             </p>
 
-            <span class="category-link">
+
+            <span class="category-btn">
               Próximamente ♡
             </span>
 
@@ -1639,7 +1813,155 @@
 
 
 
-    <!-- BENEFICIOS -->
+    <!-- ===================================================
+         PRODUCTOS
+         Aquí agregaremos los productos reales después.
+    ==================================================== -->
+
+    <section
+      class="products-area"
+      id="productos"
+    >
+
+
+      <div class="products-inner">
+
+
+        <div class="products-title">
+
+          <h2>
+            Productos ZuzuBayo
+          </h2>
+
+          <p>
+            Esta sección crecerá contigo ♡
+          </p>
+
+        </div>
+
+
+
+        <div class="filters">
+
+
+          <button
+            class="filter-btn active"
+            data-filter="todos"
+          >
+            Todos
+          </button>
+
+
+          <button
+            class="filter-btn"
+            data-filter="invitaciones"
+          >
+            Invitaciones
+          </button>
+
+
+          <button
+            class="filter-btn"
+            data-filter="plantillas"
+          >
+            Plantillas
+          </button>
+
+
+          <button
+            class="filter-btn"
+            data-filter="stickers"
+          >
+            Stickers
+          </button>
+
+
+          <button
+            class="filter-btn"
+            data-filter="journals"
+          >
+            Journals
+          </button>
+
+
+          <button
+            class="filter-btn"
+            data-filter="guias"
+          >
+            Guías
+          </button>
+
+
+          <button
+            class="filter-btn"
+            data-filter="nextflight"
+          >
+            NextFlight
+          </button>
+
+
+        </div>
+
+
+
+        <!--
+        ================================================
+        AQUÍ AGREGAREMOS PRODUCTOS REALES.
+
+        Después una tarjeta podrá verse así:
+
+        <article
+          class="product-card"
+          data-category="invitaciones"
+        >
+
+          IMAGEN
+
+          NOMBRE
+
+          PRECIO
+
+          BOTÓN PAYPAL
+
+        </article>
+
+        ================================================
+        -->
+
+
+        <div
+          class="empty-shop"
+          id="empty-shop"
+        >
+
+
+          <h3>
+            Nuevos goodies están en camino ♡
+          </h3>
+
+
+          <p>
+
+            Estamos preparando los primeros productos
+            digitales de ZuzuBayo. Muy pronto podrás
+            encontrarlos aquí.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         BENEFICIOS
+    ==================================================== -->
 
     <section class="benefits">
 
@@ -1652,10 +1974,12 @@
 
         <div>
 
-          <h3>Descarga instantánea</h3>
+          <h3>
+            Descarga digital
+          </h3>
 
           <p>
-            Accede a tus productos digitales.
+            Acceso a tus archivos.
           </p>
 
         </div>
@@ -1672,7 +1996,9 @@
 
         <div>
 
-          <h3>Pago seguro</h3>
+          <h3>
+            Pago seguro
+          </h3>
 
           <p>
             Compra con confianza.
@@ -1692,10 +2018,12 @@
 
         <div>
 
-          <h3>Hecho con amor</h3>
+          <h3>
+            Hecho con amor
+          </h3>
 
           <p>
-            Creado pensando en ti.
+            Diseñado pensando en ti.
           </p>
 
         </div>
@@ -1712,10 +2040,12 @@
 
         <div>
 
-          <h3>Úsalo donde quieras</h3>
+          <h3>
+            100% digital
+          </h3>
 
           <p>
-            Celular, tablet o computadora.
+            Úsalo desde tus dispositivos.
           </p>
 
         </div>
@@ -1727,7 +2057,44 @@
 
 
 
-    <!-- SOBRE ZUZUBAYO -->
+    <!-- ===================================================
+         PAYPAL
+    ==================================================== -->
+
+    <section class="payment">
+
+
+      <div class="payment-copy">
+
+        <h2>
+          Pago seguro con PayPal ♡
+        </h2>
+
+
+        <p>
+
+          Cuando nuestros productos estén disponibles,
+          podrás completar tu compra mediante PayPal.
+          Cada botón de compra se conectará directamente
+          al producto correspondiente.
+
+        </p>
+
+      </div>
+
+
+      <div class="paypal-badge">
+        PayPal
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SOBRE ZUZUBAYO
+    ==================================================== -->
 
     <section
       class="about"
@@ -1738,7 +2105,7 @@
       <div class="about-inner">
 
 
-        <div class="about-avatar">
+        <div class="about-image">
 
           <img
             src="mascota.png"
@@ -1757,10 +2124,14 @@
 
 
           <p>
-            ZuzuBayo es un espacio creativo de productos digitales
-            diseñados para ayudarte a organizar tu vida, expresar tu
-            creatividad, celebrar momentos especiales y avanzar hacia
-            tus metas de una forma bonita y práctica.
+
+            ZuzuBayo es un espacio creativo de productos
+            digitales pensado para hacer las cosas un poco
+            más bonitas, prácticas y especiales. Aquí
+            encontrarás recursos para organizarte,
+            crear, aprender, celebrar y acompañar
+            tus metas.
+
           </p>
 
         </div>
@@ -1773,7 +2144,9 @@
 
 
 
-    <!-- FAQ -->
+    <!-- ===================================================
+         FAQ
+    ==================================================== -->
 
     <section
       class="faq"
@@ -1793,9 +2166,12 @@
           ¿Los productos son físicos?
         </summary>
 
+
         <p>
-          No. Los productos disponibles en ZuzuBayo son productos
-          digitales.
+
+          No. ZuzuBayo está enfocado en productos digitales.
+          No recibirás un producto físico por correo.
+
         </p>
 
       </details>
@@ -1808,9 +2184,13 @@
           ¿Cómo recibiré mi compra?
         </summary>
 
+
         <p>
-          Los productos digitales podrán descargarse después de completar
-          la compra cuando el sistema de pagos y entrega esté conectado.
+
+          Cuando activemos las ventas, cada producto
+          indicará claramente cómo recibirás o descargarás
+          tus archivos después de completar el pago.
+
         </p>
 
       </details>
@@ -1820,12 +2200,35 @@
       <details>
 
         <summary>
-          ¿Puedo usar los productos desde mi teléfono?
+          ¿Cómo podré pagar?
         </summary>
 
+
         <p>
-          Sí. Dependiendo del producto podrás utilizarlo desde celular,
-          tablet o computadora.
+
+          La tienda utilizará PayPal como método de pago.
+          Los botones de compra se agregarán cuando
+          publiquemos cada producto.
+
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          ¿Puedo utilizar los productos en mi celular?
+        </summary>
+
+
+        <p>
+
+          Dependerá del producto, pero muchos recursos
+          estarán diseñados para utilizarse desde
+          celular, tablet o computadora.
+
         </p>
 
       </details>
@@ -1838,12 +2241,75 @@
           ¿Cuándo estarán disponibles los planners?
         </summary>
 
+
         <p>
-          Los planners están en desarrollo y aparecerán próximamente
-          como una nueva colección de ZuzuBayo.
+
+          Los planners forman parte de una colección futura
+          de ZuzuBayo y actualmente están marcados como
+          Coming Soon.
+
         </p>
 
       </details>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CONTACTO
+    ==================================================== -->
+
+    <section
+      class="contact"
+      id="contacto"
+    >
+
+
+      <h2>
+        ¿Necesitas ayuda? ♡
+      </h2>
+
+
+      <p>
+
+        Si tienes una pregunta sobre un producto,
+        una descarga o una compra, aquí podrás
+        encontrar las formas de contactar a ZuzuBayo.
+
+      </p>
+
+
+
+      <div class="contact-buttons">
+
+
+        <!--
+        MÁS ADELANTE CAMBIAREMOS # POR TU INSTAGRAM REAL
+        -->
+
+        <a
+          href="#"
+          class="contact-link"
+        >
+          Instagram
+        </a>
+
+
+        <!--
+        MÁS ADELANTE CAMBIAREMOS # POR TU EMAIL REAL
+        -->
+
+        <a
+          href="#"
+          class="contact-link"
+        >
+          Email
+        </a>
+
+
+      </div>
 
 
     </section>
@@ -1853,7 +2319,9 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
   <footer>
 
@@ -1862,6 +2330,7 @@
 
 
       <div class="footer-brand">
+
 
         <div class="footer-logo">
 
@@ -1874,8 +2343,9 @@
 
 
         <p>
-          Productos digitales hechos para ti ♡
+          Digital goodies made with love ♡
         </p>
+
 
       </div>
 
@@ -1883,39 +2353,51 @@
 
       <div class="footer-col">
 
-        <h4>Navegación</h4>
+        <h4>
+          Explora
+        </h4>
 
-        <a href="#tienda">
-          Tienda
+
+        <a href="#categorias">
+          Categorías
         </a>
 
-        <a href="#nextflight">
-          NextFlight
+
+        <a href="#productos">
+          Productos
         </a>
+
 
         <a href="#sobre">
           Sobre ZuzuBayo
         </a>
 
+
       </div>
 
 
 
       <div class="footer-col">
 
-        <h4>Ayuda</h4>
+        <h4>
+          Ayuda
+        </h4>
+
 
         <a href="#faq">
           Preguntas frecuentes
         </a>
 
-        <a href="#faq">
-          Descargas
+
+        <a href="#contacto">
+          Contacto
         </a>
 
-        <a href="#faq">
+
+        <a href="#productos">
           Productos digitales
         </a>
+
 
       </div>
 
@@ -1934,6 +2416,91 @@
   </footer>
 
 
+
+  <!-- =====================================================
+       JAVASCRIPT
+       Hace funcionar las categorías/filtros.
+  ====================================================== -->
+
+  <script>
+
+    const categoryButtons =
+      document.querySelectorAll(".category-btn[data-filter]");
+
+    const filterButtons =
+      document.querySelectorAll(".filter-btn");
+
+    const productsSection =
+      document.getElementById("productos");
+
+
+    function activateFilter(category) {
+
+      filterButtons.forEach(button => {
+
+        button.classList.remove("active");
+
+        if (
+          button.dataset.filter === category
+        ) {
+
+          button.classList.add("active");
+
+        }
+
+      });
+
+    }
+
+
+    categoryButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        function() {
+
+          const category =
+            this.dataset.filter;
+
+          activateFilter(category);
+
+
+          productsSection.scrollIntoView({
+            behavior: "smooth"
+          });
+
+        }
+      );
+
+    });
+
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        function() {
+
+          const category =
+            this.dataset.filter;
+
+          activateFilter(category);
+
+
+          /*
+          Cuando tengamos productos reales,
+          aquí también filtraremos las tarjetas
+          según su categoría.
+          */
+
+        }
+      );
+
+    });
+
+  </script>
+
+
 </body>
 
-</html>
+</html>]
