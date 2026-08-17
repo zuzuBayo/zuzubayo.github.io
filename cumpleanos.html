@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Invitaciones de Cumpleaños | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Invitaciones digitales de cumpleaños de ZuzuBayo."
+  >
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+
+
+    /* TOP BAR */
+
+    .topbar{
+      min-height:34px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:42px;
+
+      padding:7px 16px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:13px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,246,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:76px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:26px;
+
+      font-size:15px;
+      font-weight:600;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:9px 16px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* HERO */
+
+    .hero{
+      width:min(1020px,92%);
+
+      margin:auto;
+
+      padding:40px 0 24px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:15px;
+
+      color:var(--pink);
+
+      font-size:13px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--pink);
+    }
+
+
+    .hero h1{
+      margin-bottom:10px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:50px;
+      font-weight:500;
+      line-height:1.08;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:700px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:15px;
+    }
+
+
+
+    /* PRODUCT GRID */
+
+    .products{
+      width:min(1120px,92%);
+
+      margin:0 auto 34px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      gap:16px;
+    }
+
+
+    .product-card{
+      overflow:hidden;
+
+      display:block;
+
+      background:white;
+
+      border:1px solid var(--border);
+      border-radius:20px;
+
+      box-shadow:var(--shadow);
+
+      transition:.22s ease;
+    }
+
+
+    .product-card:hover{
+      transform:translateY(-4px);
+
+      box-shadow:var(--shadow-hover);
+
+      border-color:#e5bac2;
+    }
+
+
+    .product-image{
+      height:260px;
+
+      overflow:hidden;
+
+      background:var(--blush);
+    }
+
+
+    .product-image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      transition:transform .3s ease;
+    }
+
+
+    .product-card:hover
+    .product-image img{
+      transform:scale(1.025);
+    }
+
+
+    .product-body{
+      padding:17px;
+    }
+
+
+    .product-tag{
+      display:inline-block;
+
+      margin-bottom:8px;
+
+      color:var(--pink);
+
+      font-size:11px;
+      font-weight:700;
+
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+
+    .product-body h2{
+      margin-bottom:6px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:23px;
+      font-weight:500;
+    }
+
+
+    .product-body p{
+      color:var(--muted);
+
+      font-size:13px;
+
+      margin-bottom:12px;
+    }
+
+
+    .product-bottom{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:12px;
+
+      padding-top:11px;
+
+      border-top:1px solid var(--border);
+    }
+
+
+    .price{
+      color:var(--wine);
+
+      font-size:17px;
+      font-weight:800;
+    }
+
+
+    .product-link{
+      color:var(--red);
+
+      font-size:12px;
+      font-weight:750;
+    }
+
+
+
+    /* EMPTY / COMING PRODUCTS */
+
+    .product-placeholder{
+      opacity:.8;
+    }
+
+
+    .product-placeholder .product-image{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff,
+          #f9e8eb
+        );
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:20px;
+      font-style:italic;
+    }
+
+
+
+    /* NOTE */
+
+    .note{
+      width:min(900px,92%);
+
+      margin:0 auto 30px;
+
+      padding:20px 22px;
+
+      text-align:center;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .note strong{
+      display:block;
+
+      margin-bottom:4px;
+
+      color:var(--wine);
+
+      font-size:15px;
+    }
+
+
+    .note p{
+      color:var(--muted);
+
+      font-size:12px;
+    }
+
+
+
+    /* BENEFITS */
+
+    .benefits{
+      width:min(900px,92%);
+
+      margin:0 auto 30px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--blush);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .benefit{
+      padding:17px;
+
+      text-align:center;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      margin-bottom:2px;
+
+      color:var(--wine);
+
+      font-size:14px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+
+    /* FOOTER */
+
+    footer{
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
+
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1100px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+
+      gap:34px;
+
+      padding:28px 0 24px;
+    }
+
+
+    .footer-logo img{
+      width:155px;
+    }
+
+
+    .footer-brand p{
+      margin-top:8px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .footer-col h4{
+      margin-bottom:9px;
+
+      font-size:13px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .copyright{
+      padding:10px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:11px;
+    }
+
+
+
+    /* MOBILE */
+
+    @media(max-width:760px){
+
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+        min-height:62px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:26px 0 20px;
+      }
+
+
+      .breadcrumb{
+        margin-bottom:10px;
+
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:36px;
+      }
+
+
+      .hero p{
+        font-size:13px;
+      }
+
+
+      .products{
+        width:94%;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:9px;
+
+        margin-bottom:22px;
+      }
+
+
+      .product-card{
+        border-radius:15px;
+      }
+
+
+      .product-image{
+        height:160px;
+      }
+
+
+      .product-body{
+        padding:11px;
+      }
+
+
+      .product-tag{
+        font-size:9px;
+
+        margin-bottom:5px;
+      }
+
+
+      .product-body h2{
+        font-size:17px;
+      }
+
+
+      .product-body p{
+        display:none;
+      }
+
+
+      .product-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:4px;
+
+        padding-top:8px;
+      }
+
+
+      .price{
+        font-size:14px;
+      }
+
+
+      .product-link{
+        font-size:10px;
+      }
+
+
+      .note{
+        width:94%;
+
+        margin-bottom:20px;
+
+        padding:16px;
+      }
+
+
+      .note strong{
+        font-size:13px;
+      }
+
+
+      .note p{
+        font-size:11px;
+      }
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .benefit{
+        padding:11px 5px;
+      }
+
+
+      .benefit strong{
+        font-size:11px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+
+        padding:22px 0 18px;
+      }
+
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+
+      .footer-logo img{
+        width:130px;
+      }
+
+
+      .footer-brand p{
+        font-size:11px;
+      }
+
+
+      .footer-col h4{
+        font-size:12px;
+      }
+
+
+      .footer-col a{
+        font-size:11px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>
+      ⇩ Productos digitales
+    </span>
+
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
+
+    <span>
+      ZuzuBayo Digital Goodies
+    </span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+
+      </a>
+
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+        <a
+          href="ocasiones.html"
+          class="back-button"
+        >
+          ← Volver a ocasiones
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div class="breadcrumb">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        &nbsp;/&nbsp;
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        &nbsp;/&nbsp;
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+        &nbsp;/&nbsp;
+
+        Cumpleaños
+
+      </div>
+
+
+      <h1>
+
+        Invitaciones de
+
+        <span>
+          cumpleaños ♡
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        Explora nuestra colección de invitaciones digitales
+        para cumpleaños y encuentra el diseño perfecto
+        para tu celebración.
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- PRODUCTOS -->
+
+    <section class="products">
+
+
+      <!--
+      PRODUCTO 01
+
+      Cuando tengamos la imagen real,
+      cambia "cumpleanos-01.png"
+      por el nombre exacto que subamos.
+      -->
+
+      <a
+        href="cumpleanos-01.html"
+        class="product-card"
+      >
+
+
+        <div class="product-image">
+
+          <img
+            src="cumpleanos-01.png"
+            alt="Invitación digital de cumpleaños"
+          >
+
+        </div>
+
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            Cumpleaños
+          </span>
+
+
+          <h2>
+            Pink Birthday
+          </h2>
+
+
+          <p>
+            Invitación digital personalizable
+            para una celebración especial.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span class="price">
+              $4.99
+            </span>
+
+
+            <span class="product-link">
+              Ver producto →
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- PRODUCTO 02 -->
+
+      <article
+        class="product-card product-placeholder"
+      >
+
+
+        <div class="product-image">
+          Próximo diseño ♡
+        </div>
+
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            Cumpleaños
+          </span>
+
+
+          <h2>
+            Nuevo diseño
+          </h2>
+
+
+          <p>
+            Más invitaciones de cumpleaños
+            estarán disponibles próximamente.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span class="price">
+              Próximamente
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- PRODUCTO 03 -->
+
+      <article
+        class="product-card product-placeholder"
+      >
+
+
+        <div class="product-image">
+          Próximo diseño ♡
+        </div>
+
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            Cumpleaños
+          </span>
+
+
+          <h2>
+            Nuevo diseño
+          </h2>
+
+
+          <p>
+            Nuevos estilos llegarán
+            poco a poco a ZuzuBayo.
+          </p>
+
+
+          <div class="product-bottom">
+
+            <span class="price">
+              Próximamente
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+
+    </section>
+
+
+
+    <!-- NOTA -->
+
+    <section class="note">
+
+      <strong>
+        Nuevos diseños se agregarán poco a poco ♡
+      </strong>
+
+      <p>
+        Empezaremos con una colección pequeña
+        y añadiremos más estilos y temáticas.
+      </p>
+
+    </section>
+
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+
+      <div class="benefit">
+
+        <strong>
+          100% digital
+        </strong>
+
+        <span>
+          Sin envíos físicos
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Personalizable
+        </strong>
+
+        <span>
+          Adaptado a tu celebración
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Pago seguro
+        </strong>
+
+        <span>
+          PayPal en el producto
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+
+          <img
+            src="logo.png"
+            alt="ZuzuBayo"
+          >
+
+        </div>
+
+        <p>
+          Digital goodies made with love ♡
+        </p>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Explora
+        </h4>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Ayuda
+        </h4>
+
+        <a href="index.html#faq">
+          FAQ
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
