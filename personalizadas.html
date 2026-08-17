@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -14,14 +13,13 @@
 
   <meta
     name="description"
-    content="Solicita una invitación digital personalizada para tu evento con ZuzuBayo."
+    content="Crea una invitación digital personalizada para tu celebración con ZuzuBayo."
   >
 
   <style>
 
     :root{
       --wine:#7f1020;
-      --wine-dark:#68101c;
       --red:#a81429;
       --pink:#e36f7c;
       --pink-soft:#f8dfe3;
@@ -179,11 +177,11 @@
     ========================= */
 
     .hero{
-      width:min(980px,92%);
+      width:min(1000px,92%);
 
       margin:auto;
 
-      padding:42px 0 28px;
+      padding:46px 0 30px;
 
       text-align:center;
     }
@@ -204,7 +202,7 @@
 
 
     .hero h1{
-      margin-bottom:11px;
+      margin-bottom:12px;
 
       color:var(--wine);
 
@@ -214,20 +212,19 @@
         serif;
 
       font-size:50px;
-      line-height:1.08;
       font-weight:500;
+      line-height:1.08;
     }
 
 
     .hero h1 span{
       color:var(--pink);
-
       font-style:italic;
     }
 
 
     .hero p{
-      max-width:720px;
+      max-width:680px;
 
       margin:auto;
 
@@ -240,65 +237,75 @@
 
 
     /* =========================
-       CTA PRINCIPAL
+       INTRO CARD
     ========================= */
 
-    .custom-main{
+    .custom-intro{
       width:min(1080px,92%);
 
-      margin:0 auto 22px;
-
-      padding:34px;
+      margin:0 auto 24px;
 
       display:grid;
-      grid-template-columns:1.2fr .8fr;
+      grid-template-columns:1.15fr .85fr;
 
-      align-items:center;
+      overflow:hidden;
 
-      gap:35px;
+      background:white;
 
+      border:1px solid var(--border);
       border-radius:22px;
 
-      background:
-        linear-gradient(
-          135deg,
-          var(--wine),
-          #941a2b
-        );
-
-      color:white;
-
-      box-shadow:
-        0 10px 30px rgba(95,15,30,.16);
+      box-shadow:var(--shadow);
     }
 
 
-    .custom-copy h2{
-      margin-bottom:9px;
+    .intro-content{
+      padding:42px;
+    }
+
+
+    .eyebrow{
+      display:inline-block;
+
+      margin-bottom:12px;
+
+      color:var(--pink);
+
+      font-size:11px;
+      font-weight:800;
+
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+
+    .intro-content h2{
+      max-width:500px;
+
+      margin-bottom:12px;
+
+      color:var(--wine);
 
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size:31px;
+      font-size:34px;
       font-weight:500;
+      line-height:1.15;
     }
 
 
-    .custom-copy p{
-      max-width:600px;
+    .intro-content p{
+      max-width:560px;
 
-      color:#fbe6ea;
+      margin-bottom:20px;
 
-      font-size:15px;
+      color:var(--muted);
+
+      font-size:14px;
       line-height:1.65;
-    }
-
-
-    .custom-action{
-      display:flex;
-      justify-content:flex-end;
     }
 
 
@@ -307,18 +314,15 @@
       align-items:center;
       justify-content:center;
 
-      min-width:220px;
-
-      padding:14px 22px;
+      padding:12px 19px;
 
       border-radius:100px;
 
-      background:#fff8f7;
+      background:var(--wine);
+      color:white;
 
-      color:var(--wine);
-
-      font-size:14px;
-      font-weight:800;
+      font-size:13px;
+      font-weight:750;
 
       transition:.2s ease;
     }
@@ -327,7 +331,69 @@
     .custom-btn:hover{
       transform:translateY(-2px);
 
-      background:white;
+      background:var(--red);
+    }
+
+
+    .intro-side{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:35px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fdf0f2,
+          #f8dfe3
+        );
+    }
+
+
+    .intro-message{
+      max-width:290px;
+
+      text-align:center;
+    }
+
+
+    .intro-message .heart{
+      margin-bottom:12px;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:45px;
+    }
+
+
+    .intro-message strong{
+      display:block;
+
+      margin-bottom:7px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:22px;
+      font-weight:500;
+    }
+
+
+    .intro-message span{
+      color:var(--muted);
+
+      font-size:12px;
+      line-height:1.6;
     }
 
 
@@ -336,36 +402,51 @@
        CÓMO FUNCIONA
     ========================= */
 
-    .section-title{
+    .process{
       width:min(1080px,92%);
 
-      margin:34px auto 16px;
+      margin:0 auto 25px;
+
+      padding:30px 0 4px;
+    }
+
+
+    .section-heading{
+      margin-bottom:19px;
 
       text-align:center;
     }
 
 
-    .section-title h2{
+    .section-heading span{
+      display:block;
+
       margin-bottom:5px;
 
+      color:var(--pink);
+
+      font-size:11px;
+      font-weight:800;
+
+      text-transform:uppercase;
+      letter-spacing:.1em;
+    }
+
+
+    .section-heading h2{
       color:var(--wine);
 
-      font-size:28px;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:30px;
+      font-weight:500;
     }
 
 
-    .section-title p{
-      color:var(--muted);
-
-      font-size:14px;
-    }
-
-
-    .steps{
-      width:min(1080px,92%);
-
-      margin:0 auto 32px;
-
+    .process-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
 
@@ -373,10 +454,10 @@
     }
 
 
-    .step{
-      min-height:170px;
+    .process-card{
+      min-height:205px;
 
-      padding:23px;
+      padding:25px;
 
       background:white;
 
@@ -387,8 +468,8 @@
     }
 
 
-    .step-number{
-      margin-bottom:14px;
+    .process-number{
+      margin-bottom:13px;
 
       color:var(--pink);
 
@@ -397,54 +478,57 @@
         "Times New Roman",
         serif;
 
-      font-size:29px;
+      font-size:28px;
       font-style:italic;
     }
 
 
-    .step h3{
-      margin-bottom:6px;
+    .process-card h3{
+      margin-bottom:7px;
 
       color:var(--wine);
 
-      font-size:19px;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:21px;
+      font-weight:500;
     }
 
 
-    .step p{
+    .process-card p{
       color:var(--muted);
 
-      font-size:13px;
-      line-height:1.55;
+      font-size:12px;
+      line-height:1.6;
     }
 
 
 
     /* =========================
-       QUÉ NECESITO
+       QUÉ PUEDES PERSONALIZAR
     ========================= */
 
-    .details-box{
+    .options{
       width:min(1080px,92%);
 
       margin:0 auto 30px;
 
-      padding:28px;
+      padding:27px;
+
+      background:var(--blush);
 
       border:1px solid var(--border);
       border-radius:20px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fffefe,
-          #fff6f4
-        );
     }
 
 
-    .details-box h2{
-      margin-bottom:14px;
+    .options h2{
+      margin-bottom:18px;
+
+      text-align:center;
 
       color:var(--wine);
 
@@ -458,71 +542,141 @@
     }
 
 
-    .details-list{
+    .options-grid{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
+      grid-template-columns:repeat(4,1fr);
 
-      gap:10px 28px;
+      gap:10px;
     }
 
 
-    .details-item{
-      position:relative;
+    .option{
+      padding:16px 10px;
 
-      padding-left:18px;
+      text-align:center;
 
-      color:#4d4345;
+      background:rgba(255,255,255,.72);
 
-      font-size:14px;
+      border:1px solid var(--border);
+      border-radius:14px;
     }
 
 
-    .details-item::before{
-      content:"♡";
+    .option strong{
+      display:block;
 
-      position:absolute;
-      left:0;
+      color:var(--wine);
 
-      color:var(--pink);
+      font-size:13px;
+    }
+
+
+    .option span{
+      display:block;
+
+      margin-top:3px;
+
+      color:var(--muted);
+
+      font-size:10px;
     }
 
 
 
     /* =========================
-       NOTA
+       SOLICITAR
     ========================= */
 
-    .note{
-      width:min(900px,92%);
+    .request{
+      width:min(1080px,92%);
 
       margin:0 auto 30px;
 
-      padding:20px 22px;
+      padding:34px;
 
-      text-align:center;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
 
-      background:var(--pink-soft);
+      gap:30px;
 
-      border:1px solid var(--border);
-      border-radius:17px;
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #92182a
+        );
+
+      color:white;
+
+      border-radius:20px;
     }
 
 
-    .note strong{
+    .request-content{
+      max-width:650px;
+    }
+
+
+    .request-content span{
       display:block;
 
-      margin-bottom:4px;
+      margin-bottom:5px;
 
-      color:var(--wine);
+      color:#f5cbd2;
 
-      font-size:15px;
+      font-size:11px;
+      font-weight:800;
+
+      text-transform:uppercase;
+      letter-spacing:.1em;
     }
 
 
-    .note p{
-      color:var(--muted);
+    .request-content h2{
+      margin-bottom:7px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:27px;
+      font-weight:500;
+    }
+
+
+    .request-content p{
+      color:#f9e2e6;
+
+      font-size:13px;
+      line-height:1.6;
+    }
+
+
+    .request-button{
+      flex-shrink:0;
+
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:12px 18px;
+
+      border-radius:100px;
+
+      background:white;
+      color:var(--wine);
 
       font-size:12px;
+      font-weight:800;
+
+      transition:.2s ease;
+    }
+
+
+    .request-button:hover{
+      transform:translateY(-2px);
     }
 
 
@@ -702,7 +856,7 @@
       .hero{
         width:92%;
 
-        padding:26px 0 20px;
+        padding:27px 0 21px;
       }
 
 
@@ -723,141 +877,106 @@
       }
 
 
-      .custom-main{
+      .custom-intro{
         width:94%;
 
         grid-template-columns:1fr;
-
-        gap:18px;
-
-        padding:22px 18px;
 
         border-radius:17px;
       }
 
 
-      .custom-copy h2{
-        font-size:24px;
+      .intro-content{
+        padding:25px 20px;
       }
 
 
-      .custom-copy p{
-        font-size:13px;
+      .intro-content h2{
+        font-size:27px;
       }
 
 
-      .custom-action{
-        justify-content:flex-start;
-      }
-
-
-      .custom-btn{
-        min-width:0;
-
-        padding:11px 16px;
-
+      .intro-content p{
         font-size:12px;
       }
 
 
-      .section-title{
-        width:92%;
-
-        margin-top:25px;
+      .intro-side{
+        padding:25px 20px;
       }
 
 
-      .section-title h2{
+      .process{
+        width:94%;
+
+        padding-top:23px;
+      }
+
+
+      .section-heading h2{
+        font-size:25px;
+      }
+
+
+      .process-grid{
+        grid-template-columns:1fr;
+
+        gap:9px;
+      }
+
+
+      .process-card{
+        min-height:auto;
+
+        padding:18px;
+      }
+
+
+      .process-number{
+        margin-bottom:6px;
+
         font-size:22px;
       }
 
 
-      .section-title p{
-        font-size:12px;
+      .process-card h3{
+        font-size:18px;
       }
 
 
-      .steps{
+      .options{
         width:94%;
 
-        grid-template-columns:1fr;
-
-        gap:9px;
-
-        margin-bottom:22px;
+        padding:19px 14px;
       }
 
 
-      .step{
-        min-height:auto;
-
-        padding:17px;
-
-        border-radius:15px;
+      .options h2{
+        font-size:22px;
       }
 
 
-      .step-number{
-        margin-bottom:7px;
+      .options-grid{
+        grid-template-columns:repeat(2,1fr);
 
+        gap:7px;
+      }
+
+
+      .request{
+        width:94%;
+
+        padding:23px 19px;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:16px;
+      }
+
+
+      .request-content h2{
         font-size:23px;
-      }
-
-
-      .step h3{
-        font-size:17px;
-      }
-
-
-      .step p{
-        font-size:12px;
-      }
-
-
-      .details-box{
-        width:94%;
-
-        margin-bottom:20px;
-
-        padding:19px 17px;
-
-        border-radius:16px;
-      }
-
-
-      .details-box h2{
-        font-size:21px;
-      }
-
-
-      .details-list{
-        grid-template-columns:1fr;
-
-        gap:8px;
-      }
-
-
-      .details-item{
-        font-size:12px;
-      }
-
-
-      .note{
-        width:94%;
-
-        margin-bottom:20px;
-
-        padding:16px;
-      }
-
-
-      .note strong{
-        font-size:13px;
-      }
-
-
-      .note p{
-        font-size:11px;
       }
 
 
@@ -933,17 +1052,11 @@
 
   <div class="topbar">
 
-    <span>
-      ⇩ Productos digitales
-    </span>
+    <span>⇩ Productos digitales</span>
 
-    <span>
-      ♡ Pago seguro con PayPal
-    </span>
+    <span>♡ Pago seguro con PayPal</span>
 
-    <span>
-      ZuzuBayo Digital Goodies
-    </span>
+    <span>ZuzuBayo Digital Goodies</span>
 
   </div>
 
@@ -969,7 +1082,6 @@
       </a>
 
 
-
       <nav class="desktop-nav">
 
         <a href="index.html">
@@ -992,7 +1104,7 @@
           href="invitaciones.html"
           class="back-button"
         >
-          ← Volver a invitaciones
+          ← Volver
         </a>
 
       </nav>
@@ -1033,21 +1145,19 @@
 
       <h1>
 
-        Invitaciones
+        Crea algo
 
         <span>
-          personalizadas ♡
+          solo para ti ♡
         </span>
 
       </h1>
 
 
       <p>
-
         ¿Tienes una idea especial en mente?
-        Cuéntanos cómo imaginas tu invitación
-        y crearemos un diseño pensado para tu evento.
-
+        Cuéntanos qué estás celebrando y creemos
+        una invitación digital pensada para tu ocasión.
       </p>
 
 
@@ -1055,166 +1165,220 @@
 
 
 
-    <!-- CTA -->
+    <!-- INTRO -->
 
-    <section class="custom-main">
+    <section class="custom-intro">
 
 
-      <div class="custom-copy">
+      <div class="intro-content">
+
+        <span class="eyebrow">
+          ZuzuBayo Custom
+        </span>
+
 
         <h2>
-          Hagamos algo especial para ti ♡
+          Tu celebración, tu estilo, tu invitación.
         </h2>
 
+
         <p>
-
-          Una invitación personalizada te permite elegir
-          el estilo, colores, información y detalles
-          que mejor representen tu celebración.
-
+          Las invitaciones personalizadas son para esos
+          momentos en los que buscas algo diferente a
+          nuestras colecciones. Tú nos cuentas la idea,
+          los detalles y el estilo que buscas.
         </p>
 
-      </div>
-
-
-      <div class="custom-action">
-
-        <!--
-        MÁS ADELANTE:
-        aquí conectaremos Instagram,
-        email o formulario.
-        -->
 
         <a
           href="#solicitar"
           class="custom-btn"
         >
-          Quiero mi invitación →
+          Crear la mía →
         </a>
 
       </div>
 
 
+
+      <div class="intro-side">
+
+        <div class="intro-message">
+
+          <div class="heart">
+            ♡
+          </div>
+
+          <strong>
+            Hecho especialmente para tu momento
+          </strong>
+
+          <span>
+            Una opción para celebraciones,
+            temáticas o ideas que necesitan
+            un toque más personal.
+          </span>
+
+        </div>
+
+      </div>
+
+
     </section>
 
 
 
-    <!-- CÓMO FUNCIONA -->
+    <!-- PROCESO -->
 
-    <section class="section-title">
+    <section class="process">
+
+
+      <div class="section-heading">
+
+        <span>
+          Así funciona
+        </span>
+
+        <h2>
+          De tu idea a tu invitación
+        </h2>
+
+      </div>
+
+
+
+      <div class="process-grid">
+
+
+        <article class="process-card">
+
+          <div class="process-number">
+            01
+          </div>
+
+          <h3>
+            Cuéntanos tu idea
+          </h3>
+
+          <p>
+            Dinos qué celebras, la fecha,
+            el estilo que buscas y los detalles
+            importantes de tu evento.
+          </p>
+
+        </article>
+
+
+
+        <article class="process-card">
+
+          <div class="process-number">
+            02
+          </div>
+
+          <h3>
+            Creamos tu diseño
+          </h3>
+
+          <p>
+            Usamos la información de tu celebración
+            para preparar una propuesta que combine
+            con el estilo que elegiste.
+          </p>
+
+        </article>
+
+
+
+        <article class="process-card">
+
+          <div class="process-number">
+            03
+          </div>
+
+          <h3>
+            Recibe tu invitación
+          </h3>
+
+          <p>
+            Una vez terminado el diseño,
+            recibirás tu invitación digital lista
+            para compartir con tus invitados.
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- OPCIONES -->
+
+    <section class="options">
 
       <h2>
-        ¿Cómo funciona?
-      </h2>
-
-      <p>
-        Un proceso sencillo para crear tu invitación.
-      </p>
-
-    </section>
-
-
-
-    <section class="steps">
-
-
-      <article class="step">
-
-        <div class="step-number">
-          01
-        </div>
-
-        <h3>
-          Cuéntanos tu idea
-        </h3>
-
-        <p>
-          Dinos qué estás celebrando,
-          qué estilo buscas y cualquier detalle
-          importante para tu diseño.
-        </p>
-
-      </article>
-
-
-
-      <article class="step">
-
-        <div class="step-number">
-          02
-        </div>
-
-        <h3>
-          Creamos tu diseño
-        </h3>
-
-        <p>
-          Preparamos una propuesta digital
-          basada en la información y estilo
-          que elegiste.
-        </p>
-
-      </article>
-
-
-
-      <article class="step">
-
-        <div class="step-number">
-          03
-        </div>
-
-        <h3>
-          Recibe y comparte
-        </h3>
-
-        <p>
-          Una vez finalizada,
-          recibirás tu invitación digital
-          lista para compartir.
-        </p>
-
-      </article>
-
-
-    </section>
-
-
-
-    <!-- INFORMACIÓN -->
-
-    <section class="details-box">
-
-      <h2>
-        ¿Qué información necesitaremos? ♡
+        Podemos adaptar los detalles ♡
       </h2>
 
 
-      <div class="details-list">
+      <div class="options-grid">
 
-        <div class="details-item">
-          Tipo de celebración
+
+        <div class="option">
+
+          <strong>
+            Colores
+          </strong>
+
+          <span>
+            Tu paleta favorita
+          </span>
+
         </div>
 
-        <div class="details-item">
-          Nombre o nombres
+
+        <div class="option">
+
+          <strong>
+            Texto
+          </strong>
+
+          <span>
+            Datos de tu evento
+          </span>
+
         </div>
 
-        <div class="details-item">
-          Fecha y hora
+
+        <div class="option">
+
+          <strong>
+            Estilo
+          </strong>
+
+          <span>
+            Según tu celebración
+          </span>
+
         </div>
 
-        <div class="details-item">
-          Lugar o dirección
+
+        <div class="option">
+
+          <strong>
+            Temática
+          </strong>
+
+          <span>
+            Un concepto especial
+          </span>
+
         </div>
 
-        <div class="details-item">
-          Colores o estilo que prefieres
-        </div>
-
-        <div class="details-item">
-          Texto especial que quieras incluir
-        </div>
 
       </div>
 
@@ -1222,21 +1386,51 @@
 
 
 
-    <!-- SOLICITUD -->
+    <!-- SOLICITAR -->
 
     <section
-      class="note"
+      class="request"
       id="solicitar"
     >
 
-      <strong>
-        Solicitudes personalizadas próximamente ♡
-      </strong>
 
-      <p>
-        Estamos preparando la forma más sencilla
-        para que puedas enviar los detalles de tu evento.
-      </p>
+      <div class="request-content">
+
+        <span>
+          Invitaciones personalizadas
+        </span>
+
+
+        <h2>
+          ¿Lista para crear la tuya? ♡
+        </h2>
+
+
+        <p>
+          Escríbenos con la idea de tu celebración,
+          la fecha, el tipo de evento y el estilo
+          que tienes en mente. Te ayudaremos a
+          comenzar tu pedido personalizado.
+        </p>
+
+      </div>
+
+
+      <!--
+        POR AHORA ESTE BOTÓN LLEVA AL CONTACTO
+        DE TU PÁGINA PRINCIPAL.
+
+        CUANDO TENGAMOS TU INSTAGRAM / EMAIL
+        DEFINITIVO, CAMBIAMOS SOLO ESTE href.
+      -->
+
+      <a
+        href="index.html#contacto"
+        class="request-button"
+      >
+        Contactar a ZuzuBayo →
+      </a>
+
 
     </section>
 
@@ -1250,24 +1444,11 @@
       <div class="benefit">
 
         <strong>
-          Hecha para ti
-        </strong>
-
-        <span>
-          Diseño personalizado
-        </span>
-
-      </div>
-
-
-      <div class="benefit">
-
-        <strong>
           100% digital
         </strong>
 
         <span>
-          Fácil de compartir
+          Sin envíos físicos
         </span>
 
       </div>
@@ -1276,11 +1457,24 @@
       <div class="benefit">
 
         <strong>
-          Pago seguro
+          Personalizada
         </strong>
 
         <span>
-          Mediante PayPal
+          Para tu celebración
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Atención directa
+        </strong>
+
+        <span>
+          Para definir tu diseño
         </span>
 
       </div>
@@ -1303,6 +1497,7 @@
 
       <div class="footer-brand">
 
+
         <div class="footer-logo">
 
           <img
@@ -1312,9 +1507,11 @@
 
         </div>
 
+
         <p>
           Digital goodies made with love ♡
         </p>
+
 
       </div>
 
