@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -14,26 +13,27 @@
 
   <meta
     name="description"
-    content="Recursos digitales de NextFlight para comenzar y preparar aplicaciones."
+    content="NextFlight: recursos, guía y acompañamiento para ayudarte a comenzar paso a paso."
   >
 
   <style>
 
     :root{
-      --wine:#7f1020;
-      --red:#a81429;
-      --pink:#e36f7c;
-      --pink-soft:#f8dfe3;
-      --blush:#fdf0f2;
-      --cream:#fffaf6;
+      --wine:#7b1422;
+      --wine-dark:#65101b;
+      --rose:#c95c70;
+      --rose-light:#e58a99;
+      --blush:#fbecef;
+      --blush-2:#fff5f4;
+      --cream:#fffaf7;
       --white:#ffffff;
 
       --text:#211b1c;
-      --muted:#75696b;
-      --border:#efd9dd;
+      --muted:#716568;
+      --border:#edd9dc;
 
-      --shadow:0 8px 28px rgba(84,30,38,.07);
-      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
+      --shadow:0 12px 35px rgba(89,31,40,.07);
+      --shadow-hover:0 16px 40px rgba(89,31,40,.11);
     }
 
 
@@ -59,6 +59,7 @@
 
       background:var(--cream);
       color:var(--text);
+
       line-height:1.6;
     }
 
@@ -76,20 +77,23 @@
 
 
 
-    /* TOP BAR */
+    /* =========================
+       BARRA SUPERIOR
+    ========================= */
 
     .topbar{
       min-height:34px;
-
-      padding:7px 16px;
 
       display:flex;
       align-items:center;
       justify-content:center;
 
-      gap:50px;
+      gap:55px;
+
+      padding:7px 16px;
 
       background:var(--wine);
+
       color:white;
 
       font-size:13px;
@@ -103,14 +107,17 @@
 
 
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header{
       position:sticky;
       top:0;
+
       z-index:1000;
 
-      background:rgba(255,250,246,.96);
+      background:rgba(255,250,247,.96);
 
       border-bottom:1px solid var(--border);
 
@@ -148,15 +155,20 @@
     }
 
 
+    .desktop-nav a{
+      transition:.2s ease;
+    }
+
+
     .desktop-nav a:hover{
-      color:var(--red);
+      color:var(--rose);
     }
 
 
     .back-button{
       padding:9px 17px;
 
-      border:1px solid var(--pink);
+      border:1px solid var(--rose-light);
       border-radius:100px;
 
       color:var(--wine);
@@ -169,35 +181,42 @@
 
 
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero{
-      width:min(1000px,92%);
+      width:min(1120px,92%);
 
-      margin:0 auto;
+      margin:auto;
 
-      padding:58px 0 25px;
+      padding:65px 0 55px;
 
-      text-align:center;
+      display:grid;
+      grid-template-columns:1fr .9fr;
+
+      align-items:center;
+
+      gap:65px;
     }
 
 
     .breadcrumb{
       margin-bottom:18px;
 
-      color:var(--pink);
+      color:var(--rose);
 
-      font-size:14px;
+      font-size:13px;
     }
 
 
-    .breadcrumb a{
-      color:var(--pink);
+    .breadcrumb a:hover{
+      text-decoration:underline;
     }
 
 
     .hero h1{
-      margin-bottom:17px;
+      margin-bottom:10px;
 
       color:var(--wine);
 
@@ -206,152 +225,211 @@
         "Times New Roman",
         serif;
 
-      font-size:clamp(46px,5vw,62px);
+      font-size:clamp(52px,6vw,74px);
+
       font-weight:500;
 
-      line-height:1.08;
+      line-height:1.05;
     }
 
 
-    .hero h1 span{
-      color:var(--pink);
+    .hero-tagline{
+      margin-bottom:20px;
+
+      color:var(--rose);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:26px;
       font-style:italic;
     }
 
 
-    .hero p{
-      max-width:780px;
+    .hero-copy p{
+      max-width:560px;
 
-      margin:0 auto;
+      margin-bottom:27px;
 
       color:#443b3d;
 
-      font-size:17px;
-      line-height:1.7;
+      font-size:16px;
+
+      line-height:1.8;
     }
 
 
 
-    /* INTRO */
+    /* =========================
+       BOTONES
+    ========================= */
 
-    .intro{
-      width:min(900px,92%);
+    .primary-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
 
-      margin:26px auto 25px;
+      gap:8px;
 
-      text-align:center;
+      padding:13px 23px;
+
+      border-radius:100px;
+
+      background:var(--wine);
+
+      color:white;
+
+      font-size:14px;
+      font-weight:750;
+
+      transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
     }
 
 
-    .intro h2{
-      margin-bottom:5px;
+    .primary-btn:hover{
+      transform:translateY(-2px);
+
+      background:var(--wine-dark);
+
+      box-shadow:0 9px 20px rgba(89,31,40,.13);
+    }
+
+
+    .secondary-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:11px 19px;
+
+      border:1px solid var(--rose-light);
+      border-radius:100px;
 
       color:var(--wine);
 
-      font-size:29px;
+      font-size:13px;
+      font-weight:750;
+
+      transition:.2s ease;
     }
 
 
-    .intro p{
-      color:#51474a;
-
-      font-size:16px;
+    .secondary-btn:hover{
+      background:var(--blush);
     }
 
 
 
-    /* TARJETAS */
+    /* =========================
+       HERO VISUAL
+    ========================= */
 
-    .category-list{
-      width:min(1120px,92%);
-
-      margin:0 auto 34px;
-
-      display:flex;
-      flex-direction:column;
-
-      gap:14px;
-    }
-
-
-    .category-card{
+    .hero-visual{
       position:relative;
 
-      min-height:190px;
+      min-height:390px;
 
       overflow:hidden;
 
-      display:grid;
-      grid-template-columns:100px 1fr;
-
+      display:flex;
       align-items:center;
+      justify-content:center;
 
-      gap:28px;
+      padding:40px;
 
-      padding:28px 38px;
+      border:1px solid var(--border);
+      border-radius:28px;
 
       background:
         linear-gradient(
-          135deg,
-          #fffefe,
-          #fff5f4
+          145deg,
+          #fff4f2,
+          #f7dfe3
         );
 
-      border:1px solid var(--border);
-      border-radius:22px;
-
       box-shadow:var(--shadow);
-
-      transition:
-        transform .22s ease,
-        box-shadow .22s ease,
-        border-color .22s ease;
     }
 
 
-    .category-card:hover{
-      transform:translateY(-3px);
-
-      box-shadow:var(--shadow-hover);
-
-      border-color:#e5b9c1;
-    }
-
-
-    .category-card::after{
+    .hero-visual::before{
       content:"";
 
       position:absolute;
 
-      width:230px;
-      height:230px;
+      width:270px;
+      height:270px;
 
-      right:-85px;
-      bottom:-95px;
+      top:-100px;
+      right:-80px;
 
       border-radius:50%;
 
-      background:rgba(248,223,227,.65);
-
-      pointer-events:none;
+      background:rgba(255,255,255,.55);
     }
 
 
-    .category-number{
+    .hero-visual::after{
+      content:"✦";
+
+      position:absolute;
+
+      right:38px;
+      bottom:25px;
+
+      color:var(--rose-light);
+
+      font-size:38px;
+    }
+
+
+    .guide-cover{
       position:relative;
       z-index:2;
 
-      height:100%;
+      width:74%;
+      max-width:330px;
 
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
+      padding:60px 28px;
 
-      padding-top:3px;
+      text-align:center;
 
-      border-right:1px solid #e9b9c1;
+      border-radius:7px 19px 19px 7px;
 
-      color:var(--pink);
+      background:
+        linear-gradient(
+          145deg,
+          #f4cdd4,
+          #fbe8eb
+        );
+
+      box-shadow:
+        0 22px 42px rgba(89,31,40,.13);
+    }
+
+
+    .guide-cover small{
+      display:block;
+
+      margin-bottom:14px;
+
+      color:var(--wine);
+
+      font-size:10px;
+      font-weight:800;
+
+      letter-spacing:.18em;
+    }
+
+
+    .guide-cover strong{
+      display:block;
+
+      color:var(--wine);
 
       font-family:
         Georgia,
@@ -359,173 +437,406 @@
         serif;
 
       font-size:34px;
-      font-style:italic;
-    }
 
-
-    .category-content{
-      position:relative;
-      z-index:2;
-    }
-
-
-    .category-title{
-      display:flex;
-      align-items:center;
-
-      gap:12px;
-
-      margin-bottom:10px;
-    }
-
-
-    .category-title h2{
-      color:var(--wine);
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size:30px;
       font-weight:500;
+
+      line-height:1.15;
     }
 
 
-    .category-symbol{
-      color:var(--pink);
-
-      font-size:28px;
-    }
-
-
-    .category-options{
-      display:flex;
-      flex-wrap:wrap;
-
-      gap:4px 12px;
-
-      max-width:780px;
-
-      margin-bottom:17px;
-
-      color:#393133;
-
-      font-size:17px;
-    }
-
-
-    .category-options span:not(:last-child)::after{
-      content:"•";
-
-      margin-left:12px;
-
-      color:var(--pink);
-    }
-
-
-    .category-link{
-      display:inline-flex;
-      align-items:center;
-
-      padding-top:10px;
-
-      border-top:1px solid #edcdd2;
-
-      color:var(--wine);
-
-      font-size:15px;
-      font-weight:750;
-    }
-
-
-
-    /* INFO */
-
-    .info-strip{
-      width:min(1120px,92%);
-
-      margin:0 auto 32px;
-
-      padding:24px 28px;
-
-      background:var(--pink-soft);
-
-      border:1px solid var(--border);
-      border-radius:18px;
-    }
-
-
-    .info-strip h3{
-      margin-bottom:4px;
-
-      color:var(--wine);
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size:21px;
-      font-weight:500;
-    }
-
-
-    .info-strip p{
-      max-width:760px;
-
-      color:var(--muted);
-
-      font-size:13px;
-    }
-
-
-
-    /* BENEFICIOS */
-
-    .benefits{
-      width:min(920px,92%);
-
-      margin:0 auto 32px;
-
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-
-      overflow:hidden;
-
-      background:var(--blush);
-
-      border:1px solid var(--border);
-      border-radius:17px;
-    }
-
-
-    .benefit{
-      padding:18px;
-
-      text-align:center;
-
-      border-right:1px solid var(--border);
-    }
-
-
-    .benefit:last-child{
-      border-right:none;
-    }
-
-
-    .benefit strong{
+    .guide-cover span{
       display:block;
 
-      margin-bottom:3px;
+      margin-top:15px;
 
-      color:var(--wine);
+      color:var(--rose);
 
       font-size:14px;
     }
 
 
-    .benefit span{
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro{
+      width:min(800px,92%);
+
+      margin:0 auto 38px;
+
+      text-align:center;
+    }
+
+
+    .intro h2{
+      margin-bottom:7px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:38px;
+      font-weight:500;
+    }
+
+
+    .intro p{
+      color:var(--muted);
+
+      font-size:15px;
+    }
+
+
+
+    /* =========================
+       GUÍA
+    ========================= */
+
+    .guide-section{
+      width:min(1080px,92%);
+
+      margin:0 auto 60px;
+
+      overflow:hidden;
+
+      display:grid;
+      grid-template-columns:.78fr 1.22fr;
+
+      border:1px solid var(--border);
+      border-radius:25px;
+
+      background:white;
+
+      box-shadow:var(--shadow);
+    }
+
+
+    .guide-preview{
+      min-height:340px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:35px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fae7ea,
+          #fff7f5
+        );
+    }
+
+
+    .mini-guide{
+      width:215px;
+
+      padding:52px 25px;
+
+      text-align:center;
+
+      border-radius:6px 15px 15px 6px;
+
+      background:#f6d8de;
+
+      box-shadow:
+        0 17px 35px rgba(84,30,38,.11);
+    }
+
+
+    .mini-guide small{
+      display:block;
+
+      margin-bottom:17px;
+
+      color:var(--rose);
+
+      font-size:10px;
+      font-weight:800;
+
+      letter-spacing:.14em;
+    }
+
+
+    .mini-guide strong{
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:27px;
+      font-weight:500;
+
+      line-height:1.2;
+    }
+
+
+    .guide-info{
+      padding:48px;
+    }
+
+
+    .guide-info .label{
+      margin-bottom:8px;
+
+      color:var(--rose);
+
+      font-size:11px;
+      font-weight:800;
+
+      letter-spacing:.12em;
+
+      text-transform:uppercase;
+    }
+
+
+    .guide-info h2{
+      margin-bottom:13px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:35px;
+      font-weight:500;
+    }
+
+
+    .guide-info > p{
+      max-width:600px;
+
+      margin-bottom:21px;
+
+      color:var(--muted);
+
+      font-size:15px;
+
+      line-height:1.75;
+    }
+
+
+    .guide-points{
+      display:flex;
+      flex-direction:column;
+
+      gap:10px;
+
+      margin-bottom:26px;
+    }
+
+
+    .guide-point{
+      color:#443b3d;
+
+      font-size:14px;
+    }
+
+
+    .guide-point::before{
+      content:"♡";
+
+      margin-right:10px;
+
+      color:var(--rose);
+    }
+
+
+
+    /* =========================
+       CÓMO FUNCIONA
+    ========================= */
+
+    .process{
+      width:min(1080px,92%);
+
+      margin:0 auto 65px;
+    }
+
+
+    .section-heading{
+      margin-bottom:35px;
+
+      text-align:center;
+    }
+
+
+    .section-heading h2{
+      margin-bottom:6px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:39px;
+      font-weight:500;
+    }
+
+
+    .section-heading p{
+      color:var(--muted);
+
+      font-size:14px;
+    }
+
+
+    .process-grid{
+      display:grid;
+
+      grid-template-columns:repeat(4,1fr);
+
+      gap:20px;
+    }
+
+
+    .process-item{
+      padding:10px 15px;
+
+      text-align:center;
+    }
+
+
+    .process-icon{
+      width:78px;
+      height:78px;
+
+      margin:0 auto 14px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      border-radius:50%;
+
+      background:var(--blush);
+
+      color:var(--rose);
+
+      font-family:Georgia,serif;
+
+      font-size:27px;
+    }
+
+
+    .process-number{
+      margin-bottom:4px;
+
+      color:var(--rose);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:18px;
+      font-style:italic;
+    }
+
+
+    .process-item h3{
+      margin-bottom:7px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:18px;
+      font-weight:500;
+    }
+
+
+    .process-item p{
+      color:var(--muted);
+
+      font-size:12px;
+
+      line-height:1.65;
+    }
+
+
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp-section{
+      padding:60px 20px;
+
+      text-align:center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fae3e7,
+          #fff4f1
+        );
+
+      border-top:1px solid var(--border);
+    }
+
+
+    .whatsapp-section .small-title{
+      margin-bottom:7px;
+
+      color:var(--rose);
+
+      font-size:11px;
+      font-weight:800;
+
+      letter-spacing:.13em;
+
+      text-transform:uppercase;
+    }
+
+
+    .whatsapp-section h2{
+      margin-bottom:10px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:40px;
+      font-weight:500;
+    }
+
+
+    .whatsapp-section p{
+      max-width:590px;
+
+      margin:0 auto 23px;
+
+      color:var(--muted);
+
+      font-size:14px;
+
+      line-height:1.7;
+    }
+
+
+    .whatsapp-note{
+      display:block;
+
+      margin-top:12px;
+
       color:var(--muted);
 
       font-size:11px;
@@ -533,14 +844,16 @@
 
 
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer{
       background:
         linear-gradient(
           135deg,
-          #76101f,
-          #8e1727
+          #74101f,
+          #8a1626
         );
 
       color:white;
@@ -548,16 +861,16 @@
 
 
     .footer-inner{
-      width:min(1120px,92%);
+      width:min(1080px,92%);
 
       margin:auto;
 
       display:grid;
       grid-template-columns:1.3fr .8fr .8fr;
 
-      gap:34px;
+      gap:38px;
 
-      padding:30px 0 25px;
+      padding:35px 0 29px;
     }
 
 
@@ -567,16 +880,16 @@
 
 
     .footer-brand p{
-      margin-top:8px;
+      margin-top:9px;
 
-      color:#f8dde2;
+      color:#f7dce1;
 
       font-size:12px;
     }
 
 
     .footer-col h4{
-      margin-bottom:9px;
+      margin-bottom:10px;
 
       font-size:13px;
     }
@@ -587,30 +900,38 @@
 
       margin-bottom:6px;
 
-      color:#f8dde2;
+      color:#f7dce1;
 
       font-size:12px;
     }
 
 
+    .footer-col a:hover{
+      color:white;
+    }
+
+
     .copyright{
-      padding:10px 15px;
+      padding:11px 15px;
 
       text-align:center;
 
       border-top:
-        1px solid rgba(255,255,255,.15);
+        1px solid rgba(255,255,255,.14);
 
-      color:#f6dbe0;
+      color:#f5d9df;
 
       font-size:11px;
     }
 
 
 
-    /* MOBILE */
+    /* =========================
+       MÓVIL
+    ========================= */
 
     @media(max-width:760px){
+
 
       .topbar{
         min-height:28px;
@@ -649,36 +970,65 @@
       .hero{
         width:92%;
 
-        padding:34px 0 18px;
+        grid-template-columns:1fr;
+
+        gap:28px;
+
+        padding:38px 0 35px;
+
+        text-align:center;
       }
 
 
       .breadcrumb{
-        margin-bottom:13px;
-
         font-size:11px;
       }
 
 
       .hero h1{
-        margin-bottom:14px;
-
-        font-size:40px;
+        font-size:49px;
       }
 
 
-      .hero p{
+      .hero-tagline{
+        font-size:21px;
+      }
+
+
+      .hero-copy p{
+        margin-left:auto;
+        margin-right:auto;
+
         font-size:14px;
       }
 
 
+      .hero-visual{
+        min-height:270px;
+
+        padding:30px;
+      }
+
+
+      .guide-cover{
+        width:82%;
+
+        padding:45px 20px;
+      }
+
+
+      .guide-cover strong{
+        font-size:27px;
+      }
+
+
       .intro{
-        margin:20px auto 18px;
+        margin-bottom:25px;
       }
 
 
       .intro h2{
-        font-size:24px;
+        font-size:30px;
       }
 
 
@@ -687,111 +1037,84 @@
       }
 
 
-      .category-list{
+      .guide-section{
         width:94%;
 
-        gap:10px;
+        grid-template-columns:1fr;
 
-        margin-bottom:24px;
+        margin-bottom:40px;
       }
 
 
-      .category-card{
-        min-height:auto;
-
-        grid-template-columns:46px 1fr;
-
-        gap:14px;
-
-        padding:20px 16px;
-
-        border-radius:17px;
+      .guide-preview{
+        min-height:250px;
       }
 
 
-      .category-card::after{
-        width:140px;
-        height:140px;
-
-        right:-70px;
-        bottom:-80px;
+      .guide-info{
+        padding:28px 22px;
       }
 
 
-      .category-number{
-        justify-content:flex-start;
-
-        font-size:24px;
+      .guide-info h2{
+        font-size:28px;
       }
 
 
-      .category-title h2{
-        font-size:21px;
-      }
-
-
-      .category-symbol{
-        font-size:20px;
-      }
-
-
-      .category-options{
-        gap:3px 8px;
-
-        margin-bottom:12px;
-
+      .guide-info > p{
         font-size:13px;
       }
 
 
-      .category-options span:not(:last-child)::after{
-        margin-left:8px;
-      }
-
-
-      .category-link{
-        font-size:12px;
-      }
-
-
-      .info-strip{
+      .process{
         width:94%;
 
-        margin-bottom:20px;
-
-        padding:17px;
+        margin-bottom:42px;
       }
 
 
-      .info-strip h3{
-        font-size:17px;
+      .section-heading h2{
+        font-size:31px;
       }
 
 
-      .info-strip p{
+      .process-grid{
+        grid-template-columns:1fr 1fr;
+
+        gap:22px 6px;
+      }
+
+
+      .process-icon{
+        width:64px;
+        height:64px;
+
+        font-size:22px;
+      }
+
+
+      .process-item{
+        padding:5px 8px;
+      }
+
+
+      .process-item h3{
+        font-size:15px;
+      }
+
+
+      .process-item p{
         font-size:11px;
       }
 
 
-      .benefits{
-        width:94%;
-
-        margin-bottom:20px;
+      .whatsapp-section{
+        padding:43px 18px;
       }
 
 
-      .benefit{
-        padding:11px 5px;
-      }
-
-
-      .benefit strong{
-        font-size:11px;
-      }
-
-
-      .benefit span{
-        display:none;
+      .whatsapp-section h2{
+        font-size:31px;
       }
 
 
@@ -800,19 +1123,12 @@
 
         grid-template-columns:1fr 1fr;
 
-        gap:20px;
-
-        padding:22px 0 18px;
+        gap:22px;
       }
 
 
       .footer-brand{
         grid-column:1 / -1;
-      }
-
-
-      .footer-logo img{
-        width:130px;
       }
 
     }
@@ -822,32 +1138,39 @@
 </head>
 
 
+
 <body>
 
 
-  <!-- TOP BAR -->
+  <!-- =========================
+       BARRA SUPERIOR
+  ========================== -->
 
   <div class="topbar">
 
-    <span>⇩ Productos digitales</span>
+    <span>✦ Recursos digitales</span>
 
-    <span>♡ Pago seguro con PayPal</span>
+    <span>♡ Acompañamiento personalizado</span>
 
-    <span>ZuzuBayo Digital Goodies</span>
+    <span>NextFlight by ZuzuBayo</span>
 
   </div>
 
 
 
-  <!-- HEADER -->
+  <!-- =========================
+       NAVEGACIÓN
+  ========================== -->
 
   <header>
 
     <div class="nav">
 
+
       <a
         href="index.html"
         class="logo"
+        aria-label="Ir al inicio"
       >
 
         <img
@@ -858,28 +1181,38 @@
       </a>
 
 
+
       <nav class="desktop-nav">
 
         <a href="index.html">
           Inicio
         </a>
 
-        <a href="guias.html">
-          Guías
+        <a href="#guia">
+          Para comenzar
         </a>
 
-        <a href="journals.html">
-          Journals & Listas
+        <a href="#como-funciona">
+          Cómo funciona
+        </a>
+
+        <a
+          href="https://wa.me/16309351804?text=Hola%2C%20vi%20NextFlight%20en%20ZuzuBayo%20y%20me%20gustaría%20recibir%20información%20para%20comenzar."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
         </a>
 
         <a
           href="index.html#categorias"
           class="back-button"
         >
-          ← Volver a categorías
+          ← Volver al inicio
         </a>
 
       </nav>
+
 
     </div>
 
@@ -890,227 +1223,380 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
 
-      <div class="breadcrumb">
 
-        <a href="index.html">
-          Inicio
+      <div class="hero-copy">
+
+
+        <div class="breadcrumb">
+
+          <a href="index.html">
+            Inicio
+          </a>
+
+          &nbsp;/&nbsp;
+
+          NextFlight
+
+        </div>
+
+
+        <h1>
+          NextFlight ♡
+        </h1>
+
+
+        <div class="hero-tagline">
+          Tu próximo paso empieza aquí.
+        </div>
+
+
+        <p>
+          Un espacio creado para ayudarte a comenzar con más
+          claridad y organización. Encuentra una guía para dar
+          tus primeros pasos y, cuando estés lista, escríbeme
+          para recibir orientación personalizada.
+        </p>
+
+
+        <a
+          href="#guia"
+          class="primary-btn"
+        >
+          Empezar aquí →
         </a>
 
-        &nbsp;/&nbsp;
-
-        NextFlight
 
       </div>
 
 
-      <h1>
 
-        NextFlight
+      <!--
+        MÁS ADELANTE PODEMOS REEMPLAZAR
+        ESTA PORTADA POR LA IMAGEN REAL
+        DE TU GUÍA.
+      -->
 
-        <span>
-          ♡
-        </span>
-
-      </h1>
+      <div class="hero-visual">
 
 
-      <p>
+        <div class="guide-cover">
 
-        Recursos digitales para ayudarte a dar tus primeros pasos
-        y prepararte mejor al momento de enviar aplicaciones.
+          <small>
+            NEXTFLIGHT
+          </small>
 
-      </p>
+          <strong>
+            Para comenzar
+          </strong>
+
+          <span>
+            Guía paso a paso ♡
+          </span>
+
+        </div>
+
+
+      </div>
+
 
     </section>
 
 
 
-    <!-- INTRO -->
+    <!-- =========================
+         INTRO
+    ========================== -->
 
     <section class="intro">
 
       <h2>
-        ¿Por dónde quieres empezar? ♡
+        Empieza con lo esencial ♡
       </h2>
 
       <p>
-        Elige la sección que necesites para avanzar paso a paso.
+        Primero conoce el proceso. Después podemos hablar
+        personalmente sobre lo que necesitas.
       </p>
 
     </section>
 
 
 
-    <!-- CATEGORÍAS -->
+    <!-- =========================
+         GUÍA PARA COMENZAR
+    ========================== -->
 
-    <section class="category-list">
-
-
-      <!-- 01 PARA COMENZAR -->
-
-      <a
-        href="productos.html?categoria=nextflight-comenzar"
-        class="category-card"
-      >
-
-        <div class="category-number">
-          01
-        </div>
+    <section
+      class="guide-section"
+      id="guia"
+    >
 
 
-        <div class="category-content">
+      <div class="guide-preview">
 
 
-          <div class="category-title">
+        <div class="mini-guide">
 
-            <h2>
-              PARA COMENZAR
-            </h2>
+          <small>
+            NEXTFLIGHT
+          </small>
 
-            <span class="category-symbol">
-              ♡
-            </span>
-
-          </div>
-
-
-          <div class="category-options">
-
-            <span>Primeros pasos</span>
-            <span>Qué necesitas</span>
-            <span>Cómo empezar</span>
-            <span>Organización</span>
-
-          </div>
-
-
-          <div class="category-link">
-            Empezar aquí →
-          </div>
-
+          <strong>
+            Guía para comenzar ♡
+          </strong>
 
         </div>
 
-      </a>
+
+      </div>
 
 
 
-      <!-- 02 PREPARAR APLICACIONES -->
+      <div class="guide-info">
 
-      <a
-        href="productos.html?categoria=nextflight-aplicaciones"
-        class="category-card"
-      >
 
-        <div class="category-number">
-          02
+        <div class="label">
+          Recurso NextFlight
         </div>
 
 
-        <div class="category-content">
+        <h2>
+          Para comenzar
+        </h2>
 
 
-          <div class="category-title">
+        <p>
+          Esta guía estará pensada para ayudarte a entender
+          qué necesitas antes de comenzar y organizar tus
+          próximos pasos de una manera sencilla.
+        </p>
 
-            <h2>
-              PREPARAR APLICACIONES
-            </h2>
 
-            <span class="category-symbol">
-              ✦
-            </span>
 
+        <div class="guide-points">
+
+          <div class="guide-point">
+            Conoce los primeros pasos.
           </div>
 
-
-          <div class="category-options">
-
-            <span>Currículum</span>
-            <span>Solicitudes</span>
-            <span>Documentos</span>
-            <span>Preparación</span>
-
+          <div class="guide-point">
+            Organiza lo que necesitas preparar.
           </div>
 
-
-          <div class="category-link">
-            Preparar mi aplicación →
+          <div class="guide-point">
+            Evita sentirte perdida durante el proceso.
           </div>
 
+          <div class="guide-point">
+            Prepárate antes de contactarme.
+          </div>
 
         </div>
 
-      </a>
+
+
+        <!--
+          POR AHORA ESTE BOTÓN LLEVA
+          A LA SIGUIENTE SECCIÓN.
+
+          CUANDO TERMINEMOS TU GUÍA REAL,
+          PODEMOS CAMBIARLO PARA ABRIRLA.
+        -->
+
+        <a
+          href="#como-funciona"
+          class="secondary-btn"
+        >
+          Ver cómo funciona →
+        </a>
+
+
+      </div>
 
 
     </section>
 
 
 
-    <!-- INFO -->
+    <!-- =========================
+         CÓMO FUNCIONA
+    ========================== -->
 
-    <section class="info-strip">
+    <section
+      class="process"
+      id="como-funciona"
+    >
 
-      <h3>
-        Empieza con lo esencial ♡
-      </h3>
+
+      <div class="section-heading">
+
+        <h2>
+          ¿Cómo funciona? ♡
+        </h2>
+
+        <p>
+          Queremos mantenerlo sencillo.
+        </p>
+
+      </div>
+
+
+
+      <div class="process-grid">
+
+
+        <!-- PASO 1 -->
+
+        <div class="process-item">
+
+          <div class="process-icon">
+            ♡
+          </div>
+
+          <div class="process-number">
+            01
+          </div>
+
+          <h3>
+            Revisa la guía
+          </h3>
+
+          <p>
+            Empieza con la información básica para
+            entender mejor el proceso.
+          </p>
+
+        </div>
+
+
+
+        <!-- PASO 2 -->
+
+        <div class="process-item">
+
+          <div class="process-icon">
+            ✉
+          </div>
+
+          <div class="process-number">
+            02
+          </div>
+
+          <h3>
+            Escríbeme
+          </h3>
+
+          <p>
+            Cuando estés lista, contáctame directamente
+            por WhatsApp.
+          </p>
+
+        </div>
+
+
+
+        <!-- PASO 3 -->
+
+        <div class="process-item">
+
+          <div class="process-icon">
+            ♡
+          </div>
+
+          <div class="process-number">
+            03
+          </div>
+
+          <h3>
+            Cuéntame qué necesitas
+          </h3>
+
+          <p>
+            Explícame en qué parte del proceso estás
+            y qué necesitas preparar.
+          </p>
+
+        </div>
+
+
+
+        <!-- PASO 4 -->
+
+        <div class="process-item">
+
+          <div class="process-icon">
+            ✦
+          </div>
+
+          <div class="process-number">
+            04
+          </div>
+
+          <h3>
+            Avanzamos
+          </h3>
+
+          <p>
+            A partir de ahí podremos continuar
+            de manera personalizada.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         WHATSAPP
+    ========================== -->
+
+    <section
+      class="whatsapp-section"
+      id="contacto"
+    >
+
+
+      <div class="small-title">
+        Contacto directo
+      </div>
+
+
+      <h2>
+        ¿Lista para comenzar? ♡
+      </h2>
+
 
       <p>
-        NextFlight reúne recursos prácticos para ayudarte
-        a entender por dónde comenzar y qué necesitas preparar
-        antes de enviar una aplicación.
+        Escríbeme por WhatsApp y cuéntame en qué parte
+        del proceso estás. Tu mensaje ya aparecerá preparado
+        para que sea mucho más fácil comenzar.
       </p>
 
-    </section>
+
+      <a
+        href="https://wa.me/16309351804?text=Hola%2C%20vi%20NextFlight%20en%20ZuzuBayo%20y%20me%20gustaría%20recibir%20información%20para%20comenzar."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="primary-btn"
+      >
+        Escríbeme por WhatsApp →
+      </a>
 
 
-
-    <!-- BENEFICIOS -->
-
-    <section class="benefits">
-
-
-      <div class="benefit">
-
-        <strong>
-          Paso a paso
-        </strong>
-
-        <span>
-          Empieza desde cero
-        </span>
-
-      </div>
-
-
-      <div class="benefit">
-
-        <strong>
-          Recursos prácticos
-        </strong>
-
-        <span>
-          Información útil
-        </span>
-
-      </div>
-
-
-      <div class="benefit">
-
-        <strong>
-          100% digital
-        </strong>
-
-        <span>
-          Aprende a tu ritmo
-        </span>
-
-      </div>
+      <span class="whatsapp-note">
+        Atención personalizada a través de WhatsApp.
+      </span>
 
 
     </section>
@@ -1120,27 +1606,37 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
+
 
     <div class="footer-inner">
 
 
       <div class="footer-brand">
 
+
         <div class="footer-logo">
 
-          <img
-            src="logo.png"
-            alt="ZuzuBayo"
-          >
+          <a href="index.html">
+
+            <img
+              src="logo.png"
+              alt="ZuzuBayo"
+            >
+
+          </a>
 
         </div>
+
 
         <p>
           NextFlight · by ZuzuBayo ♡
         </p>
+
 
       </div>
 
@@ -1149,59 +1645,58 @@
       <div class="footer-col">
 
         <h4>
-          Explora
+          NextFlight
+        </h4>
+
+        <a href="#guia">
+          Para comenzar
+        </a>
+
+        <a href="#como-funciona">
+          Cómo funciona
+        </a>
+
+        <a
+          href="https://wa.me/16309351804?text=Hola%2C%20vi%20NextFlight%20en%20ZuzuBayo%20y%20me%20gustaría%20recibir%20información%20para%20comenzar."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          ZuzuBayo
         </h4>
 
         <a href="index.html">
           Inicio
         </a>
 
-        <a href="nextflight.html">
-          NextFlight
+        <a href="invitaciones.html">
+          Invitaciones
         </a>
 
-        <a href="guias.html">
-          Guías
-        </a>
-
-        <a href="journals.html">
-          Journals & Listas
-        </a>
-
-      </div>
-
-
-
-      <div class="footer-col">
-
-        <h4>
-          Ayuda
-        </h4>
-
-        <a href="index.html#faq">
-          FAQ
-        </a>
-
-        <a href="index.html#contacto">
-          Contacto
-        </a>
-
-        <a href="index.html#sobre">
-          Sobre ZuzuBayo
+        <a href="plantillas.html">
+          Plantillas
         </a>
 
       </div>
 
 
     </div>
+
 
 
     <div class="copyright">
-
-      © 2026 ZuzuBayo ·
-      Todos los derechos reservados
-
+      © 2026 ZuzuBayo · Todos los derechos reservados
     </div>
+
 
   </footer>
 
