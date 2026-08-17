@@ -14,15 +14,10 @@
 
   <meta
     name="description"
-    content="NextFlight by ZuzuBayo. Guía y orientación para ayudarte a comenzar paso a paso."
+    content="NextFlight by ZuzuBayo. Orientación personalizada y guía para ayudarte a comenzar paso a paso."
   >
 
-
   <style>
-
-    /* =========================================
-       COLORES
-    ========================================= */
 
     :root{
       --wine:#7f1020;
@@ -32,9 +27,11 @@
       --blush:#fdf0f2;
       --cream:#fffaf5;
       --white:#ffffff;
+
       --text:#201b1c;
       --muted:#75696b;
       --border:#efd9dd;
+
       --shadow:0 10px 30px rgba(84,30,38,.08);
     }
 
@@ -72,15 +69,15 @@
 
 
     a{
-      color:inherit;
       text-decoration:none;
+      color:inherit;
     }
 
 
 
-    /* =========================================
-       BARRA SUPERIOR
-    ========================================= */
+    /* =========================
+       TOP BAR
+    ========================= */
 
     .topbar{
       min-height:34px;
@@ -107,14 +104,13 @@
 
 
 
-    /* =========================================
+    /* =========================
        HEADER
-    ========================================= */
+    ========================= */
 
     header{
       position:sticky;
       top:0;
-
       z-index:1000;
 
       background:rgba(255,250,245,.96);
@@ -155,13 +151,23 @@
     }
 
 
-    .desktop-nav a{
-      transition:.2s ease;
+    .desktop-nav a:hover{
+      color:var(--pink);
     }
 
 
-    .desktop-nav a:hover{
-      color:var(--pink);
+    .whatsapp-nav{
+      padding:9px 17px;
+
+      border-radius:100px;
+
+      background:var(--wine);
+      color:white !important;
+    }
+
+
+    .whatsapp-nav:hover{
+      background:var(--wine-dark);
     }
 
 
@@ -170,6 +176,8 @@
 
       border:1px solid var(--pink);
       border-radius:100px;
+
+      color:var(--wine);
     }
 
 
@@ -179,16 +187,16 @@
 
 
 
-    /* =========================================
+    /* =========================
        HERO
-    ========================================= */
+    ========================= */
 
     .hero{
       width:min(1080px,92%);
 
       margin:auto;
 
-      padding:55px 0 65px;
+      padding:62px 0 70px;
 
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -200,7 +208,7 @@
 
 
     .breadcrumb{
-      margin-bottom:15px;
+      margin-bottom:16px;
 
       color:var(--pink);
 
@@ -214,7 +222,7 @@
 
 
     .hero h1{
-      margin-bottom:8px;
+      margin-bottom:10px;
 
       color:var(--wine);
 
@@ -231,7 +239,7 @@
 
 
     .tagline{
-      margin-bottom:20px;
+      margin-bottom:18px;
 
       color:var(--pink);
 
@@ -240,7 +248,7 @@
         "Times New Roman",
         serif;
 
-      font-size:26px;
+      font-size:27px;
       font-style:italic;
     }
 
@@ -248,7 +256,7 @@
     .hero p{
       max-width:520px;
 
-      margin-bottom:25px;
+      margin-bottom:26px;
 
       color:#514749;
 
@@ -258,17 +266,12 @@
     }
 
 
-
-    /* =========================================
-       BOTONES
-    ========================================= */
-
     .primary-btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
 
-      padding:13px 23px;
+      padding:14px 25px;
 
       border-radius:100px;
 
@@ -276,7 +279,7 @@
       color:white;
 
       font-size:14px;
-      font-weight:750;
+      font-weight:800;
 
       transition:.2s ease;
     }
@@ -289,6 +292,107 @@
 
       box-shadow:
         0 8px 20px rgba(84,30,38,.13);
+    }
+
+
+    .hero-note{
+      display:block;
+
+      margin-top:11px;
+
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       IMAGEN
+    ========================= */
+
+    .hero-image{
+      overflow:hidden;
+
+      border:1px solid var(--border);
+      border-radius:25px;
+
+      background:white;
+
+      box-shadow:var(--shadow);
+    }
+
+
+    .hero-image img{
+      width:100%;
+      height:420px;
+
+      object-fit:cover;
+    }
+
+
+
+    /* =========================
+       GUÍA
+    ========================= */
+
+    .guide{
+      padding:62px 20px;
+
+      background:white;
+
+      border-top:1px solid var(--border);
+    }
+
+
+    .guide-inner{
+      width:min(900px,100%);
+
+      margin:auto;
+
+      text-align:center;
+    }
+
+
+    .guide-label{
+      margin-bottom:8px;
+
+      color:var(--pink);
+
+      font-size:11px;
+      font-weight:800;
+
+      letter-spacing:.13em;
+
+      text-transform:uppercase;
+    }
+
+
+    .guide h2{
+      margin-bottom:12px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:39px;
+      font-weight:500;
+    }
+
+
+    .guide p{
+      max-width:600px;
+
+      margin:0 auto 23px;
+
+      color:var(--muted);
+
+      font-size:14px;
+
+      line-height:1.75;
     }
 
 
@@ -318,212 +422,6 @@
     }
 
 
-
-    /* =========================================
-       IMAGEN NEXTFLIGHT
-    ========================================= */
-
-    .hero-image{
-      overflow:hidden;
-
-      border:1px solid var(--border);
-      border-radius:25px;
-
-      background:white;
-
-      box-shadow:var(--shadow);
-    }
-
-
-    .hero-image img{
-      width:100%;
-      height:420px;
-
-      object-fit:cover;
-    }
-
-
-
-    /* =========================================
-       GUÍA
-    ========================================= */
-
-    .guide{
-      padding:65px 20px;
-
-      background:white;
-
-      border-top:1px solid var(--border);
-      border-bottom:1px solid var(--border);
-    }
-
-
-    .guide-inner{
-      width:min(950px,100%);
-
-      margin:auto;
-
-      display:grid;
-      grid-template-columns:.85fr 1.15fr;
-
-      align-items:center;
-
-      gap:60px;
-    }
-
-
-    .guide-preview{
-      position:relative;
-
-      min-height:310px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      padding:35px;
-
-      overflow:hidden;
-
-      border-radius:24px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #fae2e6,
-          #fff5f2
-        );
-    }
-
-
-    .guide-preview::before{
-      content:"✦";
-
-      position:absolute;
-
-      top:20px;
-      left:25px;
-
-      color:var(--pink);
-
-      font-size:24px;
-    }
-
-
-    .guide-preview::after{
-      content:"♡";
-
-      position:absolute;
-
-      right:25px;
-      bottom:18px;
-
-      color:var(--wine);
-
-      font-size:25px;
-    }
-
-
-    .guide-cover{
-      width:205px;
-
-      padding:50px 23px;
-
-      text-align:center;
-
-      border-radius:6px 16px 16px 6px;
-
-      background:#f6d5db;
-
-      box-shadow:
-        0 18px 35px rgba(84,30,38,.12);
-    }
-
-
-    .guide-cover small{
-      display:block;
-
-      margin-bottom:15px;
-
-      color:var(--pink);
-
-      font-size:10px;
-      font-weight:800;
-
-      letter-spacing:.16em;
-    }
-
-
-    .guide-cover strong{
-      display:block;
-
-      color:var(--wine);
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size:27px;
-      font-weight:500;
-
-      line-height:1.2;
-    }
-
-
-    .guide-cover span{
-      display:block;
-
-      margin-top:15px;
-
-      color:var(--pink);
-
-      font-size:13px;
-    }
-
-
-    .guide-copy .small-title{
-      margin-bottom:7px;
-
-      color:var(--pink);
-
-      font-size:11px;
-      font-weight:800;
-
-      letter-spacing:.13em;
-
-      text-transform:uppercase;
-    }
-
-
-    .guide-copy h2{
-      margin-bottom:13px;
-
-      color:var(--wine);
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size:39px;
-      font-weight:500;
-    }
-
-
-    .guide-copy p{
-      max-width:510px;
-
-      margin-bottom:23px;
-
-      color:var(--muted);
-
-      font-size:15px;
-
-      line-height:1.75;
-    }
-
-
     .coming-text{
       display:block;
 
@@ -536,77 +434,9 @@
 
 
 
-    /* =========================================
-       CONTACTO / WHATSAPP
-    ========================================= */
-
-    .contact{
-      padding:65px 20px;
-
-      text-align:center;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fce9ec,
-          #fff6f2
-        );
-    }
-
-
-    .contact-inner{
-      width:min(700px,100%);
-
-      margin:auto;
-    }
-
-
-    .contact .small-title{
-      margin-bottom:8px;
-
-      color:var(--pink);
-
-      font-size:11px;
-      font-weight:800;
-
-      letter-spacing:.13em;
-
-      text-transform:uppercase;
-    }
-
-
-    .contact h2{
-      margin-bottom:12px;
-
-      color:var(--wine);
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size:41px;
-      font-weight:500;
-    }
-
-
-    .contact p{
-      max-width:560px;
-
-      margin:0 auto 24px;
-
-      color:var(--muted);
-
-      font-size:14px;
-
-      line-height:1.7;
-    }
-
-
-
-    /* =========================================
+    /* =========================
        FOOTER
-    ========================================= */
+    ========================= */
 
     footer{
       background:var(--wine);
@@ -666,9 +496,9 @@
 
 
 
-    /* =========================================
-       MÓVIL
-    ========================================= */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media(max-width:760px){
 
@@ -714,7 +544,7 @@
 
         gap:28px;
 
-        padding:38px 0 42px;
+        padding:40px 0 45px;
 
         text-align:center;
       }
@@ -745,6 +575,7 @@
 
       .hero-image img{
         height:auto;
+
         aspect-ratio:1 / 1;
 
         object-fit:cover;
@@ -756,44 +587,12 @@
       }
 
 
-      .guide-inner{
-        grid-template-columns:1fr;
-
-        gap:30px;
-
-        text-align:center;
-      }
-
-
-      .guide-preview{
-        min-height:250px;
-      }
-
-
-      .guide-copy h2{
+      .guide h2{
         font-size:31px;
       }
 
 
-      .guide-copy p{
-        margin-left:auto;
-        margin-right:auto;
-
-        font-size:13px;
-      }
-
-
-      .contact{
-        padding:48px 18px;
-      }
-
-
-      .contact h2{
-        font-size:32px;
-      }
-
-
-      .contact p{
+      .guide p{
         font-size:13px;
       }
 
@@ -828,31 +627,31 @@
 <body>
 
 
-  <!-- =========================================
-       BARRA SUPERIOR
-  ========================================== -->
+  <!-- =========================
+       TOP BAR
+  ========================== -->
 
   <div class="topbar">
-
-    <span>
-      ✦ Recursos digitales
-    </span>
 
     <span>
       ♡ Orientación personalizada
     </span>
 
     <span>
-      NextFlight by ZuzuBayo
+      ✦ NextFlight by ZuzuBayo
+    </span>
+
+    <span>
+      Escríbeme para comenzar
     </span>
 
   </div>
 
 
 
-  <!-- =========================================
+  <!-- =========================
        HEADER
-  ========================================== -->
+  ========================== -->
 
   <header>
 
@@ -883,8 +682,13 @@
           Guía
         </a>
 
-        <a href="#contacto">
-          Contacto
+        <a
+          href="https://wa.me/16309351804?text=Hola%2C%20vi%20NextFlight%20en%20ZuzuBayo%20y%20me%20gustaria%20recibir%20informacion%20para%20comenzar."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-nav"
+        >
+          WhatsApp
         </a>
 
         <a
@@ -906,9 +710,9 @@
   <main>
 
 
-    <!-- =========================================
-         NEXTFLIGHT
-    ========================================== -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
 
@@ -941,10 +745,9 @@
 
 
         <p>
-          Un espacio con recursos y orientación
-          para ayudarte a comenzar con más claridad,
-          organizar tus próximos pasos y avanzar
-          a tu ritmo.
+          Te ayudo de manera personalizada
+          a comenzar y organizar tu proceso
+          con mayor claridad.
         </p>
 
 
@@ -958,11 +761,16 @@
         </a>
 
 
+        <span class="hero-note">
+          Cuéntame qué necesitas y empezamos desde ahí.
+        </span>
+
+
       </div>
 
 
 
-      <!-- MISMA IMAGEN DE LA TARJETA DE NEXTFLIGHT -->
+      <!-- MISMA IMAGEN QUE USAS EN LA TARJETA -->
 
       <div class="hero-image">
 
@@ -978,9 +786,9 @@
 
 
 
-    <!-- =========================================
-         GUÍA PARA COMENZAR
-    ========================================== -->
+    <!-- =========================
+         GUÍA
+    ========================== -->
 
     <section
       class="guide"
@@ -991,127 +799,36 @@
       <div class="guide-inner">
 
 
-        <div class="guide-preview">
-
-
-          <!--
-            ESTA ES TEMPORAL.
-            CUANDO TENGAMOS LA PORTADA REAL
-            DE LA GUÍA LA PODEMOS PONER AQUÍ.
-          -->
-
-          <div class="guide-cover">
-
-            <small>
-              NEXTFLIGHT
-            </small>
-
-            <strong>
-              Guía para comenzar
-            </strong>
-
-            <span>
-              paso a paso ♡
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-
-        <div class="guide-copy">
-
-
-          <div class="small-title">
-            NextFlight
-          </div>
-
-
-          <h2>
-            Guía para comenzar ♡
-          </h2>
-
-
-          <p>
-            Una guía sencilla para ayudarte a conocer
-            lo esencial, organizar lo que necesitas
-            y dar tus primeros pasos con mayor claridad.
-          </p>
-
-
-
-          <!--
-            CUANDO CREES LA GUÍA:
-            cambia href="#" por el nombre
-            del archivo, por ejemplo:
-
-            href="guia-nextflight.pdf"
-          -->
-
-          <a
-            href="#"
-            class="secondary-btn"
-            onclick="alert('La guía NextFlight estará disponible próximamente ♡'); return false;"
-          >
-            Ver guía →
-          </a>
-
-
-          <span class="coming-text">
-            Próximamente disponible ♡
-          </span>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- =========================================
-         CONTACTO
-    ========================================== -->
-
-    <section
-      class="contact"
-      id="contacto"
-    >
-
-
-      <div class="contact-inner">
-
-
-        <div class="small-title">
-          Contacto directo
+        <div class="guide-label">
+          Próximo recurso
         </div>
 
 
         <h2>
-          ¿Necesitas orientación? ♡
+          Guía para comenzar ♡
         </h2>
 
 
         <p>
-          Cuéntame en qué parte del proceso estás
-          o qué necesitas preparar y podemos comenzar
-          desde ahí.
+          Próximamente encontrarás aquí una guía sencilla
+          con información para ayudarte a conocer
+          los primeros pasos y prepararte mejor
+          antes de comenzar.
         </p>
 
 
         <a
-          href="https://wa.me/16309351804?text=Hola%2C%20vi%20NextFlight%20en%20ZuzuBayo%20y%20me%20gustaria%20recibir%20informacion%20para%20comenzar."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="primary-btn"
+          href="#"
+          class="secondary-btn"
+          onclick="alert('La guía NextFlight estará disponible próximamente ♡'); return false;"
         >
-          Hablar por WhatsApp →
+          Ver guía →
         </a>
+
+
+        <span class="coming-text">
+          Próximamente disponible ♡
+        </span>
 
 
       </div>
@@ -1124,9 +841,9 @@
 
 
 
-  <!-- =========================================
+  <!-- =========================
        FOOTER
-  ========================================== -->
+  ========================== -->
 
   <footer>
 
@@ -1158,8 +875,12 @@
           Guía
         </a>
 
-        <a href="#contacto">
-          Contacto
+        <a
+          href="https://wa.me/16309351804?text=Hola%2C%20vi%20NextFlight%20en%20ZuzuBayo%20y%20me%20gustaria%20recibir%20informacion%20para%20comenzar."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
         </a>
 
         <a href="index.html#categorias">
