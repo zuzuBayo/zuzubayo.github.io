@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Invitaciones Digitales | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Invitaciones digitales para cumpleaños, baby shower, bodas, XV años, graduaciones, aniversarios, días especiales y diseños personalizados."
+  >
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#d96a75;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf5;
+      --white:#ffffff;
+
+      --text:#201b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 25px rgba(84,30,38,.08);
+      --shadow-hover:0 14px 35px rgba(84,30,38,.14);
+
+      --radius:18px;
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.5;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+
+
+    /* TOP BAR */
+
+    .topbar{
+      min-height:30px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:26px;
+
+      padding:6px 16px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:11px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,245,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:72px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:24px;
+
+      font-size:13px;
+      font-weight:650;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-home{
+      padding:8px 14px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-home:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* HERO */
+
+    .hero{
+      width:min(1120px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1fr .72fr;
+
+      align-items:center;
+
+      gap:34px;
+
+      padding:34px 0 24px;
+    }
+
+
+    .hero-copy{
+      max-width:590px;
+    }
+
+
+    .breadcrumb{
+      color:var(--muted);
+
+      font-size:10px;
+
+      margin-bottom:10px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--red);
+      font-weight:700;
+    }
+
+
+    .eyebrow{
+      color:var(--red);
+
+      font-size:10px;
+      font-weight:800;
+
+      letter-spacing:.12em;
+
+      margin-bottom:6px;
+    }
+
+
+    .hero h1{
+      color:var(--wine);
+
+      font-size:48px;
+      line-height:1.03;
+
+      margin-bottom:12px;
+    }
+
+
+    .hero h1 span{
+      display:block;
+
+      color:var(--pink);
+    }
+
+
+    .hero p{
+      max-width:520px;
+
+      color:#51484a;
+
+      font-size:14px;
+    }
+
+
+    .hero-image{
+      height:290px;
+
+      overflow:hidden;
+
+      border-radius:24px;
+
+      border:1px solid var(--border);
+
+      box-shadow:var(--shadow);
+
+      background:var(--blush);
+    }
+
+
+    .hero-image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+    }
+
+
+
+    /* INTRO */
+
+    .intro{
+      width:min(850px,92%);
+
+      margin:4px auto 26px;
+
+      text-align:center;
+    }
+
+
+    .intro h2{
+      color:var(--wine);
+
+      font-size:25px;
+
+      margin-bottom:5px;
+    }
+
+
+    .intro p{
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+
+    /* PRINCIPALES */
+
+    .main-categories{
+      width:min(1120px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      gap:14px;
+
+      margin-bottom:34px;
+    }
+
+
+    .main-card{
+      min-height:165px;
+
+      padding:22px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+
+      border:1px solid var(--border);
+      border-radius:20px;
+
+      box-shadow:var(--shadow);
+
+      transition:.22s ease;
+    }
+
+
+    .main-card:hover{
+      transform:translateY(-4px);
+
+      box-shadow:var(--shadow-hover);
+    }
+
+
+    .main-card:nth-child(1){
+      background:
+        linear-gradient(145deg,#fff,#fbe2e6);
+    }
+
+
+    .main-card:nth-child(2){
+      background:
+        linear-gradient(145deg,#fff7f3,#f8dadd);
+    }
+
+
+    .main-card:nth-child(3){
+      background:
+        linear-gradient(145deg,#fff,#f9edf0);
+    }
+
+
+    .main-number{
+      color:var(--pink);
+
+      font-size:11px;
+      font-weight:800;
+
+      margin-bottom:auto;
+    }
+
+
+    .main-card h3{
+      color:var(--wine);
+
+      font-size:19px;
+
+      margin-bottom:4px;
+    }
+
+
+    .main-card p{
+      color:var(--muted);
+
+      font-size:10px;
+
+      margin-bottom:9px;
+    }
+
+
+    .card-link{
+      color:var(--red);
+
+      font-size:10px;
+      font-weight:800;
+    }
+
+
+
+    /* SECCIONES */
+
+    .collection{
+      width:min(1120px,92%);
+
+      margin:0 auto 36px;
+    }
+
+
+    .collection-head{
+      margin-bottom:15px;
+    }
+
+
+    .collection-head h2{
+      color:var(--wine);
+
+      font-size:24px;
+
+      margin-bottom:3px;
+    }
+
+
+    .collection-head p{
+      color:var(--muted);
+
+      font-size:10px;
+    }
+
+
+
+    /* SUBCATEGORIAS */
+
+    .occasion-grid{
+      display:grid;
+
+      grid-template-columns:repeat(3,1fr);
+
+      gap:12px;
+    }
+
+
+    .occasion-card{
+      min-height:125px;
+
+      position:relative;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+
+      overflow:hidden;
+
+      padding:16px;
+
+      background:white;
+
+      border:1px solid var(--border);
+      border-radius:16px;
+
+      box-shadow:var(--shadow);
+
+      transition:.2s ease;
+    }
+
+
+    .occasion-card:hover{
+      transform:translateY(-3px);
+
+      border-color:#e5b9c1;
+
+      box-shadow:var(--shadow-hover);
+    }
+
+
+    .occasion-card::before{
+      content:"";
+
+      width:70px;
+      height:70px;
+
+      position:absolute;
+
+      top:-24px;
+      right:-15px;
+
+      border-radius:50%;
+
+      background:var(--pink-soft);
+
+      opacity:.8;
+    }
+
+
+    .occasion-card h3{
+      color:var(--wine);
+
+      font-size:15px;
+
+      margin-bottom:3px;
+    }
+
+
+    .occasion-card p{
+      color:var(--muted);
+
+      font-size:9px;
+    }
+
+
+    .soon{
+      display:inline-block;
+
+      margin-top:6px;
+
+      color:var(--red);
+
+      font-size:8px;
+      font-weight:800;
+    }
+
+
+
+    /* DIAS ESPECIALES */
+
+    .special-grid{
+      display:grid;
+
+      grid-template-columns:repeat(4,1fr);
+
+      gap:10px;
+    }
+
+
+    .special-card{
+      min-height:95px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      text-align:center;
+
+      padding:14px;
+
+      background:white;
+
+      border:1px solid var(--border);
+      border-radius:15px;
+
+      box-shadow:var(--shadow);
+
+      transition:.2s ease;
+    }
+
+
+    .special-card:hover{
+      transform:translateY(-3px);
+
+      background:var(--blush);
+    }
+
+
+    .special-card h3{
+      color:var(--wine);
+
+      font-size:13px;
+    }
+
+
+
+    /* PERSONALIZADAS */
+
+    .custom-box{
+      width:min(1120px,92%);
+
+      margin:0 auto 32px;
+
+      padding:25px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:22px;
+
+      border:1px solid var(--border);
+      border-radius:20px;
+
+      background:
+        linear-gradient(135deg,#fff,#fbe3e7);
+
+      box-shadow:var(--shadow);
+    }
+
+
+    .custom-copy h2{
+      color:var(--wine);
+
+      font-size:22px;
+
+      margin-bottom:5px;
+    }
+
+
+    .custom-copy p{
+      max-width:620px;
+
+      color:var(--muted);
+
+      font-size:10px;
+    }
+
+
+    .custom-btn{
+      flex-shrink:0;
+
+      padding:10px 16px;
+
+      border-radius:10px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:10px;
+      font-weight:800;
+    }
+
+
+
+    /* BENEFICIOS */
+
+    .benefits{
+      width:min(950px,92%);
+
+      margin:0 auto 30px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .benefit{
+      text-align:center;
+
+      padding:15px;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      color:var(--wine);
+
+      font-size:10px;
+
+      margin-bottom:2px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:8px;
+    }
+
+
+
+    /* FOOTER */
+
+    footer{
+      background:var(--wine);
+
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1120px,92%);
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+
+      padding:20px 0;
+    }
+
+
+    .footer-logo img{
+      width:135px;
+    }
+
+
+    .footer-text{
+      color:#f6dce1;
+
+      font-size:9px;
+    }
+
+
+    .footer-links{
+      display:flex;
+
+      gap:16px;
+
+      font-size:9px;
+
+      color:#f6dce1;
+    }
+
+
+
+    /* MOBILE */
+
+    @media(max-width:700px){
+
+
+      .topbar{
+        min-height:25px;
+
+        gap:11px;
+
+        padding:5px 8px;
+
+        font-size:8px;
+
+        overflow:hidden;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+
+      .nav{
+        width:94%;
+
+        min-height:58px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+
+      .hero{
+        width:92%;
+
+        grid-template-columns:1fr;
+
+        gap:11px;
+
+        padding:20px 0 15px;
+      }
+
+
+      .hero h1{
+        font-size:31px;
+      }
+
+
+      .hero p{
+        font-size:10px;
+      }
+
+
+      .hero-image{
+        height:160px;
+
+        border-radius:16px;
+      }
+
+
+
+      .intro{
+        margin-bottom:17px;
+      }
+
+
+      .intro h2{
+        font-size:19px;
+      }
+
+
+      .intro p{
+        font-size:9px;
+      }
+
+
+
+      .main-categories{
+        width:94%;
+
+        grid-template-columns:1fr;
+
+        gap:8px;
+
+        margin-bottom:24px;
+      }
+
+
+      .main-card{
+        min-height:100px;
+
+        padding:14px;
+
+        border-radius:14px;
+      }
+
+
+      .main-card h3{
+        font-size:15px;
+      }
+
+
+      .main-card p{
+        font-size:8px;
+      }
+
+
+
+      .collection{
+        width:94%;
+
+        margin-bottom:26px;
+      }
+
+
+      .collection-head{
+        margin-bottom:10px;
+      }
+
+
+      .collection-head h2{
+        font-size:18px;
+      }
+
+
+      .collection-head p{
+        font-size:8px;
+      }
+
+
+
+      .occasion-grid{
+        grid-template-columns:repeat(2,1fr);
+
+        gap:8px;
+      }
+
+
+      .occasion-card{
+        min-height:100px;
+
+        padding:11px;
+
+        border-radius:13px;
+      }
+
+
+      .occasion-card h3{
+        font-size:12px;
+      }
+
+
+      .occasion-card p{
+        font-size:7px;
+      }
+
+
+
+      .special-grid{
+        grid-template-columns:repeat(2,1fr);
+
+        gap:8px;
+      }
+
+
+      .special-card{
+        min-height:72px;
+
+        padding:9px;
+      }
+
+
+      .special-card h3{
+        font-size:10px;
+      }
+
+
+
+      .custom-box{
+        width:94%;
+
+        padding:15px;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:11px;
+
+        margin-bottom:22px;
+      }
+
+
+      .custom-copy h2{
+        font-size:16px;
+      }
+
+
+      .custom-copy p{
+        font-size:8px;
+      }
+
+
+      .custom-btn{
+        padding:8px 12px;
+
+        font-size:8px;
+      }
+
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .benefit{
+        padding:10px 5px;
+      }
+
+
+      .benefit strong{
+        font-size:8px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+
+      .footer-inner{
+        width:92%;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+        padding:16px 0;
+      }
+
+
+      .footer-logo img{
+        width:120px;
+      }
+
+
+      .footer-links{
+        flex-wrap:wrap;
+
+        gap:10px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>⇩ Productos digitales</span>
+
+    <span>♡ Pago seguro con PayPal</span>
+
+    <span>ZuzuBayo Digital Goodies</span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a href="index.html" class="logo">
+
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+
+      </a>
+
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="#ocasiones">
+          Ocasiones
+        </a>
+
+        <a href="#dias">
+          Días especiales
+        </a>
+
+        <a href="#personalizadas">
+          Personalizadas
+        </a>
+
+        <a
+          href="index.html#categorias"
+          class="back-home"
+        >
+          ← Todas las categorías
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div class="hero-copy">
+
+
+        <div class="breadcrumb">
+
+          <a href="index.html">
+            Inicio
+          </a>
+
+          &nbsp; / &nbsp;
+
+          Invitaciones
+
+        </div>
+
+
+        <div class="eyebrow">
+          ZUZUBAYO DIGITAL GOODIES
+        </div>
+
+
+        <h1>
+
+          Invitaciones
+
+          <span>
+            digitales ♡
+          </span>
+
+        </h1>
+
+
+        <p>
+
+          Encuentra diseños para celebrar momentos
+          especiales, fechas importantes y eventos
+          que merecen algo bonito y único.
+
+        </p>
+
+
+      </div>
+
+
+
+      <div class="hero-image">
+
+        <img
+          src="invitaciones.png"
+          alt="Invitaciones digitales ZuzuBayo"
+        >
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <h2>
+        ¿Qué estás celebrando? ♡
+      </h2>
+
+      <p>
+        Explora nuestras colecciones y encuentra
+        el estilo perfecto para tu ocasión.
+      </p>
+
+    </section>
+
+
+
+    <!-- 3 CATEGORÍAS PRINCIPALES -->
+
+    <section class="main-categories">
+
+
+      <a
+        href="#ocasiones"
+        class="main-card"
+      >
+
+        <span class="main-number">
+          01
+        </span>
+
+        <h3>
+          Ocasiones especiales
+        </h3>
+
+        <p>
+          Cumpleaños, baby shower, bodas, XV años,
+          graduaciones y aniversarios.
+        </p>
+
+        <span class="card-link">
+          Explorar ocasiones →
+        </span>
+
+      </a>
+
+
+
+      <a
+        href="#dias"
+        class="main-card"
+      >
+
+        <span class="main-number">
+          02
+        </span>
+
+        <h3>
+          Días especiales
+        </h3>
+
+        <p>
+          Diseños para celebrar fechas especiales
+          durante todo el año.
+        </p>
+
+        <span class="card-link">
+          Ver días especiales →
+        </span>
+
+      </a>
+
+
+
+      <a
+        href="#personalizadas"
+        class="main-card"
+      >
+
+        <span class="main-number">
+          03
+        </span>
+
+        <h3>
+          Personalizadas
+        </h3>
+
+        <p>
+          Una invitación creada especialmente
+          para tu evento.
+        </p>
+
+        <span class="card-link">
+          Más información →
+        </span>
+
+      </a>
+
+
+    </section>
+
+
+
+    <!-- OCASIONES ESPECIALES -->
+
+    <section
+      class="collection"
+      id="ocasiones"
+    >
+
+
+      <div class="collection-head">
+
+        <h2>
+          Ocasiones especiales ♡
+        </h2>
+
+        <p>
+          Encuentra invitaciones para los momentos
+          que quieres recordar.
+        </p>
+
+      </div>
+
+
+
+      <div class="occasion-grid">
+
+
+        <a
+          href="#"
+          class="occasion-card"
+        >
+
+          <h3>
+            Cumpleaños
+          </h3>
+
+          <p>
+            Invitaciones para celebrar otro año especial.
+          </p>
+
+          <span class="soon">
+            Ver diseños →
+          </span>
+
+        </a>
+
+
+
+        <a
+          href="#"
+          class="occasion-card"
+        >
+
+          <h3>
+            Baby Shower
+          </h3>
+
+          <p>
+            Diseños dulces para dar la bienvenida al bebé.
+          </p>
+
+          <span class="soon">
+            Ver diseños →
+          </span>
+
+        </a>
+
+
+
+        <a
+          href="#"
+          class="occasion-card"
+        >
+
+          <h3>
+            Bodas
+          </h3>
+
+          <p>
+            Invitaciones elegantes para celebrar el amor.
+          </p>
+
+          <span class="soon">
+            Ver diseños →
+          </span>
+
+        </a>
+
+
+
+        <a
+          href="#"
+          class="occasion-card"
+        >
+
+          <h3>
+            XV años
+          </h3>
+
+          <p>
+            Diseños especiales para una celebración inolvidable.
+          </p>
+
+          <span class="soon">
+            Ver diseños →
+          </span>
+
+        </a>
+
+
+
+        <a
+          href="#"
+          class="occasion-card"
+        >
+
+          <h3>
+            Graduación
+          </h3>
+
+          <p>
+            Celebra una nueva etapa y todos tus logros.
+          </p>
+
+          <span class="soon">
+            Ver diseños →
+          </span>
+
+        </a>
+
+
+
+        <a
+          href="#"
+          class="occasion-card"
+        >
+
+          <h3>
+            Aniversarios
+          </h3>
+
+          <p>
+            Una manera bonita de celebrar momentos juntos.
+          </p>
+
+          <span class="soon">
+            Ver diseños →
+          </span>
+
+        </a>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- DÍAS ESPECIALES -->
+
+    <section
+      class="collection"
+      id="dias"
+    >
+
+
+      <div class="collection-head">
+
+        <h2>
+          Días especiales ♡
+        </h2>
+
+        <p>
+          Diseños de temporada para compartir
+          momentos durante todo el año.
+        </p>
+
+      </div>
+
+
+
+      <div class="special-grid">
+
+
+        <a href="#" class="special-card">
+          <h3>San Valentín</h3>
+        </a>
+
+
+        <a href="#" class="special-card">
+          <h3>Día de las Madres</h3>
+        </a>
+
+
+        <a href="#" class="special-card">
+          <h3>Navidad</h3>
+        </a>
+
+
+        <a href="#" class="special-card">
+          <h3>Halloween</h3>
+        </a>
+
+
+        <a href="#" class="special-card">
+          <h3>Año Nuevo</h3>
+        </a>
+
+
+        <a href="#" class="special-card">
+          <h3>Thanksgiving</h3>
+        </a>
+
+
+        <a href="#" class="special-card">
+          <h3>Pascua</h3>
+        </a>
+
+
+        <a href="#" class="special-card">
+          <h3>Más temporadas</h3>
+        </a>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- PERSONALIZADAS -->
+
+    <section
+      class="custom-box"
+      id="personalizadas"
+    >
+
+
+      <div class="custom-copy">
+
+        <h2>
+          ¿Buscas algo totalmente tuyo? ♡
+        </h2>
+
+        <p>
+
+          También podrás solicitar una invitación
+          personalizada para tu evento. Tú nos dices
+          la ocasión, estilo y detalles, y creamos
+          algo especial para ti.
+
+        </p>
+
+      </div>
+
+
+      <a
+        href="#"
+        class="custom-btn"
+      >
+        Invitación personalizada →
+      </a>
+
+
+    </section>
+
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+
+      <div class="benefit">
+
+        <strong>
+          100% digital
+        </strong>
+
+        <span>
+          Sin envíos físicos
+        </span>
+
+      </div>
+
+
+
+      <div class="benefit">
+
+        <strong>
+          Fácil de compartir
+        </strong>
+
+        <span>
+          Desde tu teléfono
+        </span>
+
+      </div>
+
+
+
+      <div class="benefit">
+
+        <strong>
+          Pago seguro
+        </strong>
+
+        <span>
+          Mediante PayPal
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div>
+
+        <div class="footer-logo">
+
+          <img
+            src="logo.png"
+            alt="ZuzuBayo"
+          >
+
+        </div>
+
+        <div class="footer-text">
+          Digital goodies made with love ♡
+        </div>
+
+      </div>
+
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="index.html#categorias">
+          Categorías
+        </a>
+
+        <a href="#ocasiones">
+          Invitaciones
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
