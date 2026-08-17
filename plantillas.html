@@ -1,27 +1,1466 @@
-<a href="productos.html?categoria=redes-sociales" class="template-card">
+<!DOCTYPE html>
+<html lang="es">
 
-  <div class="template-number">
-    01
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Plantillas Digitales | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Plantillas digitales para redes sociales, negocios, eventos, organización y estudio."
+  >
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar{
+      min-height:34px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:50px;
+
+      padding:7px 16px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:13px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,246,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:78px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+      height:auto;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:28px;
+
+      font-size:15px;
+      font-weight:600;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:9px 17px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      width:min(1050px,92%);
+
+      margin:auto;
+
+      padding:44px 0 30px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:18px;
+
+      color:var(--pink);
+
+      font-size:13px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--pink);
+    }
+
+
+    .hero h1{
+      margin-bottom:15px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:55px;
+      font-weight:500;
+
+      line-height:1.05;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:750px;
+
+      margin:auto;
+
+      color:#51474a;
+
+      font-size:17px;
+      line-height:1.65;
+    }
+
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro{
+      width:min(920px,92%);
+
+      margin:4px auto 25px;
+
+      text-align:center;
+    }
+
+
+    .intro h2{
+      margin-bottom:6px;
+
+      color:var(--wine);
+
+      font-size:29px;
+    }
+
+
+    .intro p{
+      color:var(--muted);
+
+      font-size:15px;
+    }
+
+
+
+    /* =========================
+       TARJETAS
+    ========================= */
+
+    .template-list{
+      width:min(1120px,92%);
+
+      margin:0 auto 36px;
+
+      display:flex;
+      flex-direction:column;
+
+      gap:15px;
+    }
+
+
+    .template-card{
+      position:relative;
+
+      min-height:190px;
+
+      overflow:hidden;
+
+      display:grid;
+      grid-template-columns:100px 1fr;
+
+      align-items:center;
+
+      gap:28px;
+
+      padding:28px 38px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffefe,
+          #fff5f4
+        );
+
+      border:1px solid var(--border);
+      border-radius:22px;
+
+      box-shadow:var(--shadow);
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+    }
+
+
+    .template-card:hover{
+      transform:translateY(-3px);
+
+      box-shadow:var(--shadow-hover);
+
+      border-color:#e5b9c1;
+    }
+
+
+    .template-card::after{
+      content:"";
+
+      position:absolute;
+
+      width:230px;
+      height:230px;
+
+      right:-85px;
+      bottom:-95px;
+
+      border-radius:50%;
+
+      background:rgba(248,223,227,.65);
+
+      pointer-events:none;
+    }
+
+
+    .template-number{
+      position:relative;
+      z-index:2;
+
+      height:100%;
+
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+
+      padding-top:4px;
+
+      border-right:1px solid #e9b9c1;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:34px;
+      font-style:italic;
+    }
+
+
+    .template-content{
+      position:relative;
+      z-index:2;
+    }
+
+
+    .template-title{
+      display:flex;
+      align-items:center;
+
+      gap:12px;
+
+      margin-bottom:10px;
+    }
+
+
+    .template-title h2{
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:31px;
+      font-weight:500;
+
+      line-height:1.1;
+    }
+
+
+    .template-symbol{
+      color:var(--pink);
+
+      font-size:27px;
+    }
+
+
+    .template-options{
+      display:flex;
+      flex-wrap:wrap;
+
+      gap:4px 12px;
+
+      max-width:760px;
+
+      margin-bottom:18px;
+
+      color:#393133;
+
+      font-size:17px;
+    }
+
+
+    .template-options span:not(:last-child)::after{
+      content:"•";
+
+      margin-left:12px;
+
+      color:var(--pink);
+    }
+
+
+    .template-link{
+      display:inline-flex;
+      align-items:center;
+
+      gap:7px;
+
+      padding-top:10px;
+
+      border-top:1px solid #edcdd2;
+
+      color:var(--wine);
+
+      font-size:15px;
+      font-weight:750;
+    }
+
+
+
+    /* =========================
+       INFO
+    ========================= */
+
+    .info-strip{
+      width:min(1120px,92%);
+
+      margin:0 auto 32px;
+
+      padding:24px 28px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+
+    .info-strip h3{
+      margin-bottom:4px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:21px;
+      font-weight:500;
+    }
+
+
+    .info-strip p{
+      max-width:650px;
+
+      color:var(--muted);
+
+      font-size:13px;
+    }
+
+
+    .info-strip a{
+      flex-shrink:0;
+
+      padding:10px 16px;
+
+      border-radius:100px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:12px;
+      font-weight:800;
+    }
+
+
+
+    /* =========================
+       BENEFICIOS
+    ========================= */
+
+    .benefits{
+      width:min(920px,92%);
+
+      margin:0 auto 32px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--blush);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .benefit{
+      padding:18px;
+
+      text-align:center;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      margin-bottom:3px;
+
+      color:var(--wine);
+
+      font-size:14px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
+
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1120px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+
+      gap:34px;
+
+      padding:30px 0 25px;
+    }
+
+
+    .footer-logo img{
+      width:160px;
+    }
+
+
+    .footer-brand p{
+      margin-top:8px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .footer-col h4{
+      margin-bottom:9px;
+
+      font-size:13px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .copyright{
+      padding:10px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:760px){
+
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+
+        min-height:62px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:27px 0 21px;
+      }
+
+
+      .breadcrumb{
+        margin-bottom:10px;
+
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:39px;
+      }
+
+
+      .hero p{
+        font-size:14px;
+      }
+
+
+      .intro{
+        width:92%;
+
+        margin-bottom:18px;
+      }
+
+
+      .intro h2{
+        font-size:24px;
+      }
+
+
+      .intro p{
+        font-size:13px;
+      }
+
+
+      .template-list{
+        width:94%;
+
+        gap:10px;
+
+        margin-bottom:24px;
+      }
+
+
+      .template-card{
+        min-height:auto;
+
+        grid-template-columns:46px 1fr;
+
+        gap:14px;
+
+        padding:20px 16px;
+
+        border-radius:17px;
+      }
+
+
+      .template-card::after{
+        width:140px;
+        height:140px;
+
+        right:-70px;
+        bottom:-80px;
+      }
+
+
+      .template-number{
+        justify-content:flex-start;
+
+        font-size:24px;
+      }
+
+
+      .template-title{
+        margin-bottom:8px;
+      }
+
+
+      .template-title h2{
+        font-size:22px;
+      }
+
+
+      .template-symbol{
+        font-size:19px;
+      }
+
+
+      .template-options{
+        gap:3px 8px;
+
+        margin-bottom:13px;
+
+        font-size:13px;
+        line-height:1.6;
+      }
+
+
+      .template-options span:not(:last-child)::after{
+        margin-left:8px;
+      }
+
+
+      .template-link{
+        font-size:12px;
+      }
+
+
+      .info-strip{
+        width:94%;
+
+        margin-bottom:20px;
+
+        padding:17px;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:11px;
+      }
+
+
+      .info-strip h3{
+        font-size:17px;
+      }
+
+
+      .info-strip p{
+        font-size:11px;
+      }
+
+
+      .info-strip a{
+        padding:8px 12px;
+
+        font-size:11px;
+      }
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .benefit{
+        padding:11px 5px;
+      }
+
+
+      .benefit strong{
+        font-size:11px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+
+        padding:22px 0 18px;
+      }
+
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+
+      .footer-logo img{
+        width:130px;
+      }
+
+
+      .footer-brand p{
+        font-size:11px;
+      }
+
+
+      .footer-col h4{
+        font-size:12px;
+      }
+
+
+      .footer-col a{
+        font-size:11px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>
+      ⇩ Productos digitales
+    </span>
+
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
+
+    <span>
+      ZuzuBayo Digital Goodies
+    </span>
+
   </div>
 
-  <div class="template-content">
 
-    <div class="template-title">
-      <h2>REDES SOCIALES</h2>
-      <span>♡</span>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+
+      </a>
+
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="productos.html">
+          Productos
+        </a>
+
+        <a
+          href="index.html#categorias"
+          class="back-button"
+        >
+          ← Volver a categorías
+        </a>
+
+      </nav>
+
+
     </div>
 
-    <div class="template-options">
-      <span>Posts</span>
-      <span>Stories</span>
-      <span>Carruseles</span>
-      <span>Contenido digital</span>
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div class="breadcrumb">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        &nbsp;/&nbsp;
+
+        Plantillas
+
+      </div>
+
+
+      <h1>
+
+        Plantillas
+
+        <span>
+          digitales ♡
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        Recursos digitales pensados para ayudarte
+        a crear más rápido, organizar mejor tus ideas
+        y darle una presentación bonita a tus proyectos.
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <h2>
+        ¿Qué necesitas crear? ♡
+      </h2>
+
+      <p>
+        Elige una categoría y descubre las colecciones disponibles.
+      </p>
+
+    </section>
+
+
+
+    <!-- CATEGORÍAS -->
+
+    <section class="template-list">
+
+
+      <!-- 01 REDES SOCIALES -->
+
+      <a
+        href="productos.html?categoria=redes-sociales"
+        class="template-card"
+      >
+
+
+        <div class="template-number">
+          01
+        </div>
+
+
+        <div class="template-content">
+
+
+          <div class="template-title">
+
+            <h2>
+              REDES SOCIALES
+            </h2>
+
+            <span class="template-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+          <div class="template-options">
+
+            <span>
+              Posts
+            </span>
+
+            <span>
+              Stories
+            </span>
+
+            <span>
+              Carruseles
+            </span>
+
+            <span>
+              Contenido digital
+            </span>
+
+          </div>
+
+
+          <div class="template-link">
+            Explorar redes sociales →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- 02 NEGOCIOS -->
+
+      <a
+        href="productos.html?categoria=negocios"
+        class="template-card"
+      >
+
+
+        <div class="template-number">
+          02
+        </div>
+
+
+        <div class="template-content">
+
+
+          <div class="template-title">
+
+            <h2>
+              NEGOCIOS
+            </h2>
+
+            <span class="template-symbol">
+              ✦
+            </span>
+
+          </div>
+
+
+          <div class="template-options">
+
+            <span>
+              Menús
+            </span>
+
+            <span>
+              Listas de precios
+            </span>
+
+            <span>
+              Flyers
+            </span>
+
+            <span>
+              Tarjetas
+            </span>
+
+          </div>
+
+
+          <div class="template-link">
+            Explorar negocios →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- 03 EVENTOS -->
+
+      <a
+        href="productos.html?categoria=eventos"
+        class="template-card"
+      >
+
+
+        <div class="template-number">
+          03
+        </div>
+
+
+        <div class="template-content">
+
+
+          <div class="template-title">
+
+            <h2>
+              EVENTOS
+            </h2>
+
+            <span class="template-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+          <div class="template-options">
+
+            <span>
+              Programas
+            </span>
+
+            <span>
+              Tarjetas
+            </span>
+
+            <span>
+              Signage
+            </span>
+
+            <span>
+              Material digital
+            </span>
+
+          </div>
+
+
+          <div class="template-link">
+            Explorar eventos →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- 04 ORGANIZACIÓN -->
+
+      <a
+        href="productos.html?categoria=organizacion-estudio"
+        class="template-card"
+      >
+
+
+        <div class="template-number">
+          04
+        </div>
+
+
+        <div class="template-content">
+
+
+          <div class="template-title">
+
+            <h2>
+              ORGANIZACIÓN & ESTUDIO
+            </h2>
+
+            <span class="template-symbol">
+              ✦
+            </span>
+
+          </div>
+
+
+          <div class="template-options">
+
+            <span>
+              Horarios
+            </span>
+
+            <span>
+              Calendarios
+            </span>
+
+            <span>
+              Checklists
+            </span>
+
+            <span>
+              Recursos de estudio
+            </span>
+
+          </div>
+
+
+          <div class="template-link">
+            Explorar organización →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+    </section>
+
+
+
+    <!-- INFO -->
+
+    <section class="info-strip">
+
+
+      <div>
+
+        <h3>
+          Nuevas plantillas llegarán poco a poco ♡
+        </h3>
+
+        <p>
+          Empezaremos con colecciones pequeñas y
+          agregaremos nuevos recursos conforme
+          ZuzuBayo vaya creciendo.
+        </p>
+
+      </div>
+
+
+      <a href="productos.html">
+        Ver productos →
+      </a>
+
+
+    </section>
+
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+
+      <div class="benefit">
+
+        <strong>
+          100% digital
+        </strong>
+
+        <span>
+          Sin envíos físicos
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Fácil de usar
+        </strong>
+
+        <span>
+          Pensadas para ayudarte
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Pago seguro
+        </strong>
+
+        <span>
+          PayPal al elegir producto
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+
+        <div class="footer-logo">
+
+          <img
+            src="logo.png"
+            alt="ZuzuBayo"
+          >
+
+        </div>
+
+
+        <p>
+          Digital goodies made with love ♡
+        </p>
+
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Explora
+        </h4>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="plantillas.html">
+          Plantillas
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Ayuda
+        </h4>
+
+        <a href="index.html#faq">
+          FAQ
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+      </div>
+
+
     </div>
 
-    <div class="template-link">
-      Explorar redes sociales →
+
+
+    <div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
+
     </div>
 
-  </div>
 
-</a>
+  </footer>
+
+
+</body>
+
+</html>
