@@ -2,13 +2,8 @@
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Invitaciones Digitales | ZuzuBayo</title>
 
@@ -16,7 +11,6 @@
     name="description"
     content="Invitaciones digitales para ocasiones especiales, días especiales y diseños personalizados de ZuzuBayo."
   >
-
 
   <style>
 
@@ -80,13 +74,12 @@
 
 
 
-    /* =========================
+    /* ==========================================
        TOP BAR
-    ========================= */
+    ========================================== */
 
     .topbar{
       min-height:34px;
-
       padding:7px 16px;
 
       display:flex;
@@ -109,9 +102,9 @@
 
 
 
-    /* =========================
+    /* ==========================================
        HEADER
-    ========================= */
+    ========================================== */
 
     header{
       position:sticky;
@@ -178,31 +171,28 @@
 
 
 
-    /* =========================
-       HERO
-    ========================= */
+    /* ==========================================
+       HERO LIMPIO
+       MISMO ESTILO DE PLANTILLAS
+    ========================================== */
 
     .hero{
-      width:min(1120px,92%);
-      margin:auto;
+      width:min(1000px,92%);
 
-      display:grid;
-      grid-template-columns:1fr .95fr;
+      margin:0 auto;
 
-      align-items:center;
+      padding:58px 0 25px;
 
-      gap:48px;
-
-      padding:42px 0 30px;
+      text-align:center;
     }
 
 
     .breadcrumb{
-      margin-bottom:24px;
+      margin-bottom:18px;
 
       color:var(--pink);
 
-      font-size:13px;
+      font-size:14px;
     }
 
 
@@ -212,36 +202,36 @@
 
 
     .hero h1{
-      margin-bottom:24px;
+      margin-bottom:17px;
 
       color:var(--wine);
-
-      font-size:clamp(46px,5vw,66px);
-
-      line-height:1;
-      letter-spacing:-.03em;
-    }
-
-
-    .hero h1 span{
-      display:block;
-
-      margin-top:8px;
-
-      color:var(--pink);
 
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
+      font-size:clamp(46px,5vw,62px);
+      font-weight:500;
+
+      line-height:1.08;
+
+      letter-spacing:-.025em;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+
       font-style:italic;
       font-weight:500;
     }
 
 
-    .hero-copy > p{
-      max-width:520px;
+    .hero p{
+      max-width:780px;
+
+      margin:0 auto;
 
       color:#443b3d;
 
@@ -250,44 +240,15 @@
     }
 
 
-    .hero-image{
-      height:360px;
 
-      overflow:hidden;
-
-      border-radius:24px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fbe4e8,
-          #fff5f3
-        );
-
-      border:1px solid var(--border);
-
-      box-shadow:var(--shadow);
-    }
-
-
-    .hero-image img{
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-      object-position:center;
-    }
-
-
-
-    /* =========================
-       INTRO
-    ========================= */
+    /* ==========================================
+       ¿QUÉ ESTÁS CELEBRANDO?
+    ========================================== */
 
     .celebration-intro{
       width:min(900px,92%);
 
-      margin:8px auto 24px;
+      margin:26px auto 25px;
 
       text-align:center;
     }
@@ -310,9 +271,9 @@
 
 
 
-    /* =========================
-       OPCIONES
-    ========================= */
+    /* ==========================================
+       TARJETAS PRINCIPALES
+    ========================================== */
 
     .choice-wrapper{
       width:min(1120px,92%);
@@ -334,6 +295,7 @@
       overflow:hidden;
 
       display:grid;
+
       grid-template-columns:100px 1fr;
 
       align-items:center;
@@ -458,7 +420,7 @@
 
       gap:4px 12px;
 
-      max-width:680px;
+      max-width:760px;
 
       margin-bottom:17px;
 
@@ -495,9 +457,9 @@
 
 
 
-    /* =========================
+    /* ==========================================
        PERSONALIZADAS
-    ========================= */
+    ========================================== */
 
     .custom-card{
       position:relative;
@@ -507,6 +469,7 @@
       overflow:hidden;
 
       display:grid;
+
       grid-template-columns:100px 1fr auto;
 
       align-items:center;
@@ -537,8 +500,7 @@
 
       position:absolute;
 
-      border:
-        2px solid rgba(255,255,255,.1);
+      border:2px solid rgba(255,255,255,.1);
 
       border-radius:50%;
     }
@@ -634,9 +596,9 @@
 
 
 
-    /* =========================
+    /* ==========================================
        BENEFICIOS
-    ========================= */
+    ========================================== */
 
     .benefits{
       width:min(1120px,92%);
@@ -644,6 +606,7 @@
       margin:0 auto 34px;
 
       display:grid;
+
       grid-template-columns:repeat(3,1fr);
 
       overflow:hidden;
@@ -675,6 +638,7 @@
 
     .benefit-icon{
       min-width:48px;
+
       width:48px;
       height:48px;
 
@@ -711,9 +675,9 @@
 
 
 
-    /* =========================
+    /* ==========================================
        FOOTER
-    ========================= */
+    ========================================== */
 
     footer{
       background:
@@ -733,6 +697,7 @@
       margin:auto;
 
       display:grid;
+
       grid-template-columns:1.4fr .8fr .8fr 1fr;
 
       gap:40px;
@@ -774,8 +739,7 @@
 
       border-radius:50%;
 
-      background:
-        rgba(255,255,255,.1);
+      background:rgba(255,255,255,.1);
 
       color:white;
 
@@ -831,9 +795,9 @@
 
 
 
-    /* =========================
+    /* ==========================================
        MOBILE
-    ========================= */
+    ========================================== */
 
     @media(max-width:760px){
 
@@ -873,47 +837,51 @@
       }
 
 
+
+      /* HERO MOBILE */
+
       .hero{
         width:92%;
 
-        grid-template-columns:1fr;
+        padding:34px 0 18px;
 
-        gap:18px;
-
-        padding:25px 0 22px;
+        text-align:center;
       }
 
 
       .breadcrumb{
-        margin-bottom:14px;
+        margin-bottom:13px;
 
         font-size:11px;
       }
 
 
       .hero h1{
-        margin-bottom:16px;
+        margin-bottom:14px;
 
-        font-size:39px;
+        font-size:40px;
+
+        line-height:1.08;
       }
 
 
-      .hero-copy > p{
+      .hero h1 span{
+        display:inline;
+      }
+
+
+      .hero p{
+        max-width:500px;
+
         font-size:14px;
 
         line-height:1.6;
       }
 
 
-      .hero-image{
-        height:210px;
-
-        border-radius:18px;
-      }
-
 
       .celebration-intro{
-        margin:4px auto 18px;
+        margin:20px auto 18px;
       }
 
 
@@ -925,6 +893,7 @@
       .celebration-intro p{
         font-size:13px;
       }
+
 
 
       .choice-wrapper{
@@ -984,6 +953,7 @@
         margin-bottom:12px;
 
         font-size:13px;
+
         line-height:1.6;
       }
 
@@ -996,6 +966,7 @@
       .choice-link{
         font-size:12px;
       }
+
 
 
       .custom-card{
@@ -1036,6 +1007,7 @@
       }
 
 
+
       .benefits{
         width:94%;
 
@@ -1061,6 +1033,7 @@
 
       .benefit-icon{
         min-width:40px;
+
         width:40px;
         height:40px;
 
@@ -1076,6 +1049,7 @@
       .benefit p{
         font-size:11px;
       }
+
 
 
       .footer-inner{
@@ -1126,15 +1100,15 @@
     }
 
   </style>
-
 </head>
-
 
 
 <body>
 
 
-  <!-- TOP BAR -->
+  <!-- ==========================================
+       TOP BAR
+  =========================================== -->
 
   <div class="topbar">
 
@@ -1154,7 +1128,9 @@
 
 
 
-  <!-- HEADER -->
+  <!-- ==========================================
+       HEADER
+  =========================================== -->
 
   <header>
 
@@ -1218,66 +1194,55 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ========================================
+         HERO NUEVO
+         SIN IMAGEN
+    ========================================= -->
 
     <section class="hero">
 
 
-      <div class="hero-copy">
+      <div class="breadcrumb">
 
+        <a href="index.html">
+          Inicio
+        </a>
 
-        <div class="breadcrumb">
+        &nbsp;/&nbsp;
 
-          <a href="index.html">
-            Inicio
-          </a>
-
-          &nbsp;/&nbsp;
-
-          Invitaciones
-
-        </div>
-
-
-        <h1>
-
-          Invitaciones
-
-          <span>
-            digitales ♡
-          </span>
-
-        </h1>
-
-
-        <p>
-
-          Encuentra diseños para celebrar
-          momentos especiales, fechas importantes
-          y eventos que merecen algo bonito y único.
-
-        </p>
-
+        Invitaciones
 
       </div>
 
 
 
-      <div class="hero-image">
+      <h1>
 
-        <img
-          src="invitaciones.png"
-          alt="Invitaciones digitales ZuzuBayo"
-        >
+        Invitaciones
 
-      </div>
+        <span>
+          digitales ♡
+        </span>
+
+      </h1>
+
+
+
+      <p>
+
+        Encuentra diseños para celebrar momentos especiales,
+        fechas importantes y eventos que merecen algo bonito y único.
+
+      </p>
 
 
     </section>
 
 
 
-    <!-- INTRO -->
+    <!-- ========================================
+         INTRO
+    ========================================= -->
 
     <section class="celebration-intro">
 
@@ -1296,12 +1261,14 @@
 
 
 
-    <!-- OPCIONES -->
+    <!-- ========================================
+         OPCIONES
+    ========================================= -->
 
     <section class="choice-wrapper">
 
 
-      <!-- OCASIONES ESPECIALES -->
+      <!-- 01 OCASIONES ESPECIALES -->
 
       <a
         href="ocasiones.html"
@@ -1373,7 +1340,7 @@
 
 
 
-      <!-- DÍAS ESPECIALES -->
+      <!-- 02 DÍAS ESPECIALES -->
 
       <a
         href="dias-especiales.html"
@@ -1441,7 +1408,7 @@
 
 
 
-      <!-- PERSONALIZADAS -->
+      <!-- 03 PERSONALIZADAS -->
 
       <div class="custom-card">
 
@@ -1462,10 +1429,8 @@
 
 
           <p>
-
             Invitaciones personalizadas
             hechas especialmente para tu evento.
-
           </p>
 
 
@@ -1488,7 +1453,9 @@
 
 
 
-    <!-- BENEFICIOS -->
+    <!-- ========================================
+         BENEFICIOS
+    ========================================= -->
 
     <section class="benefits">
 
@@ -1574,7 +1541,9 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- ==========================================
+       FOOTER
+  =========================================== -->
 
   <footer>
 
