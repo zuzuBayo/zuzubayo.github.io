@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Días Especiales | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Invitaciones digitales para San Valentín, Día de las Madres, Navidad, Halloween y más temporadas."
+  >
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar{
+      min-height:34px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:42px;
+
+      padding:7px 16px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:13px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,246,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:76px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:26px;
+
+      font-size:15px;
+      font-weight:600;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:9px 16px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      width:min(1040px,92%);
+
+      margin:auto;
+
+      padding:42px 0 28px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:16px;
+
+      color:var(--pink);
+
+      font-size:13px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--pink);
+    }
+
+
+    .hero h1{
+      margin-bottom:10px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:50px;
+      line-height:1.08;
+      font-weight:500;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:700px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:15px;
+      line-height:1.6;
+    }
+
+
+
+    /* =========================
+       LISTA
+    ========================= */
+
+    .special-list{
+      width:min(1080px,92%);
+
+      margin:0 auto 34px;
+
+      display:flex;
+      flex-direction:column;
+
+      gap:14px;
+    }
+
+
+    .special-card{
+      position:relative;
+
+      min-height:150px;
+
+      overflow:hidden;
+
+      display:grid;
+      grid-template-columns:90px 1fr auto;
+
+      align-items:center;
+
+      gap:26px;
+
+      padding:26px 34px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffefe,
+          #fff7f5
+        );
+
+      border:1px solid var(--border);
+
+      border-radius:20px;
+
+      box-shadow:var(--shadow);
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+    }
+
+
+    .special-card:hover{
+      transform:translateY(-3px);
+
+      box-shadow:var(--shadow-hover);
+
+      border-color:#e5b9c1;
+    }
+
+
+    .special-card::after{
+      content:"";
+
+      position:absolute;
+
+      width:180px;
+      height:180px;
+
+      right:-80px;
+      bottom:-100px;
+
+      border-radius:50%;
+
+      background:rgba(248,223,227,.55);
+
+      pointer-events:none;
+    }
+
+
+    .special-number{
+      position:relative;
+      z-index:2;
+
+      height:100%;
+
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+
+      padding-top:2px;
+
+      border-right:1px solid #e9b9c1;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:31px;
+      font-style:italic;
+    }
+
+
+    .special-content{
+      position:relative;
+      z-index:2;
+    }
+
+
+    .special-title{
+      display:flex;
+      align-items:center;
+
+      gap:10px;
+
+      margin-bottom:7px;
+    }
+
+
+    .special-title h2{
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:27px;
+      font-weight:500;
+    }
+
+
+    .special-symbol{
+      color:var(--pink);
+      font-size:20px;
+    }
+
+
+    .special-content p{
+      max-width:640px;
+
+      color:var(--muted);
+
+      font-size:14px;
+      line-height:1.5;
+    }
+
+
+    .special-link{
+      position:relative;
+      z-index:2;
+
+      white-space:nowrap;
+
+      color:var(--wine);
+
+      font-size:14px;
+      font-weight:750;
+    }
+
+
+
+    /* =========================
+       PERSONALIZADA
+    ========================= */
+
+    .custom-strip{
+      width:min(1080px,92%);
+
+      margin:0 auto 30px;
+
+      padding:22px 26px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+
+      border-radius:18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--wine),
+          #941a2b
+        );
+
+      color:white;
+    }
+
+
+    .custom-strip h3{
+      margin-bottom:4px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:20px;
+      font-weight:500;
+    }
+
+
+    .custom-strip p{
+      color:#f8dfe4;
+
+      font-size:13px;
+    }
+
+
+    .custom-strip a{
+      flex-shrink:0;
+
+      padding:10px 16px;
+
+      border-radius:100px;
+
+      background:white;
+
+      color:var(--wine);
+
+      font-size:12px;
+      font-weight:800;
+    }
+
+
+
+    /* =========================
+       BENEFICIOS
+    ========================= */
+
+    .benefits{
+      width:min(900px,92%);
+
+      margin:0 auto 30px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--blush);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .benefit{
+      padding:17px;
+
+      text-align:center;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      margin-bottom:2px;
+
+      color:var(--wine);
+
+      font-size:14px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
+
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1100px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+
+      gap:34px;
+
+      padding:28px 0 24px;
+    }
+
+
+    .footer-logo img{
+      width:155px;
+    }
+
+
+    .footer-brand p{
+      margin-top:8px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .footer-col h4{
+      margin-bottom:9px;
+
+      font-size:13px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .copyright{
+      padding:10px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:760px){
+
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+        min-height:62px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:26px 0 20px;
+      }
+
+
+      .breadcrumb{
+        margin-bottom:10px;
+
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:36px;
+      }
+
+
+      .hero p{
+        font-size:13px;
+      }
+
+
+      .special-list{
+        width:94%;
+
+        gap:10px;
+
+        margin-bottom:22px;
+      }
+
+
+      .special-card{
+        min-height:auto;
+
+        grid-template-columns:42px 1fr;
+
+        gap:13px;
+
+        padding:18px 15px;
+
+        border-radius:16px;
+      }
+
+
+      .special-card::after{
+        width:120px;
+        height:120px;
+
+        right:-60px;
+        bottom:-70px;
+      }
+
+
+      .special-number{
+        justify-content:flex-start;
+
+        font-size:22px;
+      }
+
+
+      .special-title{
+        margin-bottom:5px;
+      }
+
+
+      .special-title h2{
+        font-size:20px;
+      }
+
+
+      .special-symbol{
+        font-size:16px;
+      }
+
+
+      .special-content p{
+        font-size:12px;
+      }
+
+
+      .special-link{
+        grid-column:2;
+
+        margin-top:3px;
+
+        font-size:11px;
+      }
+
+
+      .custom-strip{
+        width:94%;
+
+        margin-bottom:20px;
+
+        padding:16px;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+      }
+
+
+      .custom-strip h3{
+        font-size:17px;
+      }
+
+
+      .custom-strip p{
+        font-size:11px;
+      }
+
+
+      .custom-strip a{
+        padding:8px 12px;
+
+        font-size:11px;
+      }
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .benefit{
+        padding:11px 5px;
+      }
+
+
+      .benefit strong{
+        font-size:11px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+
+        padding:22px 0 18px;
+      }
+
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+
+      .footer-logo img{
+        width:130px;
+      }
+
+
+      .footer-brand p{
+        font-size:11px;
+      }
+
+
+      .footer-col h4{
+        font-size:12px;
+      }
+
+
+      .footer-col a{
+        font-size:11px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>
+      ⇩ Productos digitales
+    </span>
+
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
+
+    <span>
+      ZuzuBayo Digital Goodies
+    </span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+
+      </a>
+
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+        <a
+          href="invitaciones.html"
+          class="back-button"
+        >
+          ← Volver a invitaciones
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div class="breadcrumb">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        &nbsp;/&nbsp;
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        &nbsp;/&nbsp;
+
+        Días especiales
+
+      </div>
+
+
+      <h1>
+
+        Días
+
+        <span>
+          especiales ♡
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        Encuentra invitaciones digitales para
+        temporadas, celebraciones y fechas
+        especiales durante todo el año.
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- DÍAS ESPECIALES -->
+
+    <section class="special-list">
+
+
+      <!-- 01 SAN VALENTÍN -->
+
+      <a
+        href="san-valentin.html"
+        class="special-card"
+      >
+
+
+        <div class="special-number">
+          01
+        </div>
+
+
+        <div class="special-content">
+
+
+          <div class="special-title">
+
+            <h2>
+              San Valentín
+            </h2>
+
+            <span class="special-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+          <p>
+            Diseños para celebrar el amor,
+            la amistad, cenas, fiestas y momentos especiales.
+          </p>
+
+
+        </div>
+
+
+        <span class="special-link">
+          Ver diseños →
+        </span>
+
+
+      </a>
+
+
+
+      <!-- 02 DÍA DE LAS MADRES -->
+
+      <a
+        href="dia-de-las-madres.html"
+        class="special-card"
+      >
+
+
+        <div class="special-number">
+          02
+        </div>
+
+
+        <div class="special-content">
+
+
+          <div class="special-title">
+
+            <h2>
+              Día de las Madres
+            </h2>
+
+            <span class="special-symbol">
+              ✦
+            </span>
+
+          </div>
+
+
+          <p>
+            Invitaciones para brunch,
+            reuniones, celebraciones
+            y momentos dedicados a mamá.
+          </p>
+
+
+        </div>
+
+
+        <span class="special-link">
+          Ver diseños →
+        </span>
+
+
+      </a>
+
+
+
+      <!-- 03 NAVIDAD -->
+
+      <a
+        href="navidad.html"
+        class="special-card"
+      >
+
+
+        <div class="special-number">
+          03
+        </div>
+
+
+        <div class="special-content">
+
+
+          <div class="special-title">
+
+            <h2>
+              Navidad
+            </h2>
+
+            <span class="special-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+          <p>
+            Invitaciones para fiestas,
+            posadas, cenas y reuniones
+            llenas de magia.
+          </p>
+
+
+        </div>
+
+
+        <span class="special-link">
+          Ver diseños →
+        </span>
+
+
+      </a>
+
+
+
+      <!-- 04 HALLOWEEN -->
+
+      <a
+        href="halloween.html"
+        class="special-card"
+      >
+
+
+        <div class="special-number">
+          04
+        </div>
+
+
+        <div class="special-content">
+
+
+          <div class="special-title">
+
+            <h2>
+              Halloween
+            </h2>
+
+            <span class="special-symbol">
+              ✦
+            </span>
+
+          </div>
+
+
+          <p>
+            Diseños para fiestas,
+            celebraciones infantiles,
+            eventos y noches especiales.
+          </p>
+
+
+        </div>
+
+
+        <span class="special-link">
+          Ver diseños →
+        </span>
+
+
+      </a>
+
+
+
+      <!-- 05 MÁS TEMPORADAS -->
+
+      <a
+        href="mas-temporadas.html"
+        class="special-card"
+      >
+
+
+        <div class="special-number">
+          05
+        </div>
+
+
+        <div class="special-content">
+
+
+          <div class="special-title">
+
+            <h2>
+              Más temporadas
+            </h2>
+
+            <span class="special-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+          <p>
+            Año Nuevo, Thanksgiving,
+            Pascua y nuevas colecciones
+            durante el año.
+          </p>
+
+
+        </div>
+
+
+        <span class="special-link">
+          Explorar →
+        </span>
+
+
+      </a>
+
+
+    </section>
+
+
+
+    <!-- PERSONALIZADA -->
+
+    <section class="custom-strip">
+
+
+      <div>
+
+        <h3>
+          ¿No encuentras la fecha que buscas? ♡
+        </h3>
+
+        <p>
+          Podemos crear una invitación
+          especialmente para tu celebración.
+        </p>
+
+      </div>
+
+
+      <a href="personalizadas.html">
+        Crear personalizada →
+      </a>
+
+
+    </section>
+
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+
+      <div class="benefit">
+
+        <strong>
+          100% digital
+        </strong>
+
+        <span>
+          Sin envíos físicos
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Fácil de compartir
+        </strong>
+
+        <span>
+          Desde tu celular
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Pago seguro
+        </strong>
+
+        <span>
+          PayPal al elegir producto
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+
+        <div class="footer-logo">
+
+          <img
+            src="logo.png"
+            alt="ZuzuBayo"
+          >
+
+        </div>
+
+
+        <p>
+          Digital goodies made with love ♡
+        </p>
+
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Explora
+        </h4>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Ayuda
+        </h4>
+
+        <a href="index.html#faq">
+          FAQ
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
