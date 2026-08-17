@@ -14,10 +14,6 @@
 
   <style>
 
-    /* =====================================================
-       ZUZUBAYO — VARIABLES
-    ===================================================== */
-
     :root {
       --wine: #7f1020;
       --red: #a81429;
@@ -29,22 +25,14 @@
 
       --text: #201b1c;
       --muted: #75696b;
-
       --border: #efd9dd;
 
-      --shadow:
-        0 8px 25px rgba(84, 30, 38, 0.08);
-
-      --shadow-hover:
-        0 14px 35px rgba(84, 30, 38, 0.14);
+      --shadow: 0 8px 25px rgba(84, 30, 38, 0.08);
+      --shadow-hover: 0 14px 35px rgba(84, 30, 38, 0.14);
 
       --radius: 18px;
     }
 
-
-    /* =====================================================
-       RESET
-    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -52,9 +40,11 @@
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family:
@@ -69,24 +59,23 @@
       line-height: 1.5;
     }
 
+
     img {
       display: block;
       max-width: 100%;
     }
+
 
     a {
       text-decoration: none;
       color: inherit;
     }
 
-    button {
-      font: inherit;
-    }
 
 
-    /* =====================================================
+    /* ==============================
        TOP BAR
-    ===================================================== */
+    ============================== */
 
     .topbar {
       min-height: 30px;
@@ -108,14 +97,16 @@
       text-align: center;
     }
 
+
     .topbar span {
       white-space: nowrap;
     }
 
 
-    /* =====================================================
+
+    /* ==============================
        HEADER
-    ===================================================== */
+    ============================== */
 
     header {
       position: sticky;
@@ -128,6 +119,7 @@
 
       backdrop-filter: blur(10px);
     }
+
 
     .nav {
       width: min(1180px, 92%);
@@ -142,27 +134,33 @@
       gap: 25px;
     }
 
+
     .logo img {
       width: 190px;
       height: auto;
     }
 
+
     .desktop-nav {
       display: flex;
       align-items: center;
+
       gap: 26px;
 
       font-size: 13px;
       font-weight: 650;
     }
 
+
     .desktop-nav a {
       transition: 0.2s ease;
     }
 
+
     .desktop-nav a:hover {
       color: var(--red);
     }
+
 
     .shop-pill {
       background: var(--wine);
@@ -173,14 +171,16 @@
       border-radius: 100px;
     }
 
+
     .shop-pill:hover {
       background: var(--red);
     }
 
 
-    /* =====================================================
+
+    /* ==============================
        HERO
-    ===================================================== */
+    ============================== */
 
     .hero {
       width: min(1180px, 92%);
@@ -196,9 +196,11 @@
       padding: 34px 0 24px;
     }
 
+
     .hero-copy {
       max-width: 590px;
     }
+
 
     .eyebrow {
       display: inline-flex;
@@ -215,21 +217,22 @@
       margin-bottom: 8px;
     }
 
+
     .hero h1 {
       font-size: clamp(38px, 5vw, 54px);
 
       line-height: 1.02;
-
       letter-spacing: -0.035em;
 
       margin-bottom: 14px;
     }
 
+
     .hero h1 span {
       display: block;
-
       color: var(--pink);
     }
+
 
     .hero-copy > p {
       max-width: 530px;
@@ -241,12 +244,14 @@
       margin-bottom: 20px;
     }
 
+
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
 
       gap: 10px;
     }
+
 
     .btn {
       display: inline-flex;
@@ -265,6 +270,7 @@
       transition: 0.2s ease;
     }
 
+
     .btn-primary {
       background: var(--wine);
       color: white;
@@ -272,11 +278,12 @@
       border: 1px solid var(--wine);
     }
 
+
     .btn-primary:hover {
       background: var(--red);
-
       transform: translateY(-1px);
     }
+
 
     .btn-secondary {
       border: 1px solid var(--pink);
@@ -286,9 +293,11 @@
       background: transparent;
     }
 
+
     .btn-secondary:hover {
       background: var(--blush);
     }
+
 
     .hero-mini-info {
       display: flex;
@@ -304,16 +313,12 @@
     }
 
 
-    /* Mascota */
-
     .hero-art {
       height: 330px;
 
       display: flex;
       align-items: flex-end;
       justify-content: center;
-
-      position: relative;
 
       overflow: hidden;
 
@@ -328,6 +333,7 @@
         );
     }
 
+
     .hero-art .mascota {
       width: 100%;
       height: 100%;
@@ -337,22 +343,26 @@
     }
 
 
-    /* =====================================================
-       SHOP INTRO
-    ===================================================== */
+
+    /* ==============================
+       CATEGORÍAS
+    ============================== */
 
     .shop-section {
       width: min(1180px, 92%);
+
       margin: auto;
 
       padding: 20px 0 30px;
     }
+
 
     .section-head {
       text-align: center;
 
       margin-bottom: 18px;
     }
+
 
     .section-head h2 {
       color: var(--wine);
@@ -362,16 +372,12 @@
       margin-bottom: 5px;
     }
 
+
     .section-head p {
       color: var(--muted);
-
       font-size: 12px;
     }
 
-
-    /* =====================================================
-       CATEGORY GRID
-    ===================================================== */
 
     .categories {
       display: grid;
@@ -381,8 +387,17 @@
       gap: 14px;
     }
 
+
+    /*
+      IMPORTANTE:
+      ahora .category-card puede ser un <a>
+      completo y TODO el recuadro es clickeable.
+    */
+
     .category-card {
       position: relative;
+
+      display: block;
 
       overflow: hidden;
 
@@ -394,14 +409,28 @@
 
       box-shadow: var(--shadow);
 
-      transition: 0.22s ease;
+      cursor: pointer;
+
+      transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
     }
+
 
     .category-card:hover {
       transform: translateY(-4px);
 
       box-shadow: var(--shadow-hover);
+
+      border-color: #e8bdc5;
     }
+
+
+    .category-card:active {
+      transform: scale(0.99);
+    }
+
 
     .category-image {
       height: 175px;
@@ -411,22 +440,33 @@
       background: var(--blush);
     }
 
+
     .category-image img {
       width: 100%;
       height: 100%;
 
       object-fit: cover;
+
+      transition: transform 0.3s ease;
     }
+
+
+    .category-card:hover .category-image img {
+      transform: scale(1.025);
+    }
+
 
     .category-body {
       padding: 13px;
     }
+
 
     .category-body h3 {
       font-size: 16px;
 
       margin-bottom: 4px;
     }
+
 
     .category-body p {
       min-height: 32px;
@@ -438,24 +478,41 @@
       margin-bottom: 9px;
     }
 
+
     .category-btn {
-      border: none;
-
-      background: transparent;
-
       color: var(--red);
-
-      cursor: pointer;
 
       font-size: 10px;
       font-weight: 800;
-
-      padding: 0;
     }
 
-    .category-btn:hover {
+
+    .category-card:hover .category-btn {
       color: var(--wine);
     }
+
+
+
+    /* PLANNERS */
+
+    .category-card-coming {
+      cursor: default;
+    }
+
+
+    .category-card-coming:hover {
+      transform: none;
+
+      box-shadow: var(--shadow);
+
+      border-color: var(--border);
+    }
+
+
+    .category-card-coming:hover .category-image img {
+      transform: none;
+    }
+
 
     .coming-badge {
       position: absolute;
@@ -477,134 +534,18 @@
     }
 
 
-    /* =====================================================
-       PRODUCT AREA — PREPARADO PARA EL FUTURO
-    ===================================================== */
 
-    .products-area {
-      background: var(--white);
-
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-
-      margin-top: 12px;
-    }
-
-    .products-inner {
-      width: min(1180px, 92%);
-      margin: auto;
-
-      padding: 30px 0;
-    }
-
-    .products-title {
-      text-align: center;
-
-      margin-bottom: 18px;
-    }
-
-    .products-title h2 {
-      color: var(--wine);
-
-      font-size: 25px;
-
-      margin-bottom: 4px;
-    }
-
-    .products-title p {
-      color: var(--muted);
-
-      font-size: 11px;
-    }
-
-
-    /* filtros */
-
-    .filters {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      flex-wrap: wrap;
-
-      gap: 7px;
-
-      margin-bottom: 22px;
-    }
-
-    .filter-btn {
-      border: 1px solid var(--border);
-
-      background: var(--cream);
-
-      color: var(--text);
-
-      border-radius: 100px;
-
-      padding: 7px 12px;
-
-      cursor: pointer;
-
-      font-size: 9px;
-      font-weight: 750;
-
-      transition: 0.2s ease;
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: var(--wine);
-      border-color: var(--wine);
-
-      color: white;
-    }
-
-
-    /* mensaje hasta que subamos productos */
-
-    .empty-shop {
-      max-width: 650px;
-
-      margin: auto;
-
-      padding: 26px 20px;
-
-      border-radius: 18px;
-
-      background: var(--blush);
-
-      text-align: center;
-    }
-
-    .empty-shop h3 {
-      color: var(--wine);
-
-      font-size: 18px;
-
-      margin-bottom: 5px;
-    }
-
-    .empty-shop p {
-      color: var(--muted);
-
-      font-size: 11px;
-
-      max-width: 470px;
-
-      margin: auto;
-    }
-
-
-    /* =====================================================
-       BENEFITS
-    ===================================================== */
+    /* ==============================
+       BENEFICIOS
+    ============================== */
 
     .benefits {
       width: min(1050px, 92%);
 
-      margin: 26px auto;
+      margin: 12px auto 26px;
 
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
 
       overflow: hidden;
@@ -615,6 +556,7 @@
 
       background: var(--pink-soft);
     }
+
 
     .benefit {
       display: flex;
@@ -627,9 +569,11 @@
       border-right: 1px solid var(--border);
     }
 
+
     .benefit:last-child {
       border-right: none;
     }
+
 
     .benefit-icon {
       min-width: 34px;
@@ -649,11 +593,13 @@
       font-size: 17px;
     }
 
+
     .benefit h3 {
       font-size: 11px;
 
       margin-bottom: 2px;
     }
+
 
     .benefit p {
       color: var(--muted);
@@ -662,9 +608,10 @@
     }
 
 
-    /* =====================================================
-       PAYPAL
-    ===================================================== */
+
+    /* ==============================
+       PAYPAL — SOLO INFORMACIÓN
+    ============================== */
 
     .payment {
       width: min(930px, 92%);
@@ -688,6 +635,7 @@
       box-shadow: var(--shadow);
     }
 
+
     .payment-copy h2 {
       color: var(--wine);
 
@@ -696,13 +644,15 @@
       margin-bottom: 4px;
     }
 
+
     .payment-copy p {
       color: var(--muted);
 
       font-size: 10px;
 
-      max-width: 560px;
+      max-width: 570px;
     }
+
 
     .paypal-badge {
       flex-shrink: 0;
@@ -721,9 +671,10 @@
     }
 
 
-    /* =====================================================
-       ABOUT
-    ===================================================== */
+
+    /* ==============================
+       SOBRE ZUZUBAYO
+    ============================== */
 
     .about {
       background: var(--blush);
@@ -731,6 +682,7 @@
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
+
 
     .about-inner {
       width: min(950px, 92%);
@@ -740,12 +692,14 @@
       padding: 26px 0;
 
       display: grid;
+
       grid-template-columns: 95px 1fr;
 
       gap: 22px;
 
       align-items: center;
     }
+
 
     .about-image {
       width: 90px;
@@ -758,6 +712,7 @@
       background: white;
     }
 
+
     .about-image img {
       width: 100%;
       height: 100%;
@@ -766,6 +721,7 @@
       object-position: center top;
     }
 
+
     .about-copy h2 {
       color: var(--wine);
 
@@ -773,6 +729,7 @@
 
       margin-bottom: 5px;
     }
+
 
     .about-copy p {
       max-width: 700px;
@@ -783,9 +740,10 @@
     }
 
 
-    /* =====================================================
+
+    /* ==============================
        FAQ
-    ===================================================== */
+    ============================== */
 
     .faq {
       width: min(850px, 92%);
@@ -794,6 +752,7 @@
 
       padding: 28px 0;
     }
+
 
     .faq h2 {
       text-align: center;
@@ -804,6 +763,7 @@
 
       margin-bottom: 15px;
     }
+
 
     details {
       background: white;
@@ -817,12 +777,14 @@
       margin-bottom: 7px;
     }
 
+
     summary {
       cursor: pointer;
 
       font-size: 11px;
       font-weight: 750;
     }
+
 
     details p {
       color: var(--muted);
@@ -833,9 +795,10 @@
     }
 
 
-    /* =====================================================
-       CONTACT
-    ===================================================== */
+
+    /* ==============================
+       CONTACTO
+    ============================== */
 
     .contact {
       width: min(850px, 92%);
@@ -855,6 +818,7 @@
       box-shadow: var(--shadow);
     }
 
+
     .contact h2 {
       color: var(--wine);
 
@@ -862,6 +826,7 @@
 
       margin-bottom: 5px;
     }
+
 
     .contact p {
       color: var(--muted);
@@ -873,6 +838,7 @@
       margin: 0 auto 14px;
     }
 
+
     .contact-buttons {
       display: flex;
       justify-content: center;
@@ -881,6 +847,7 @@
 
       gap: 8px;
     }
+
 
     .contact-link {
       display: inline-flex;
@@ -899,14 +866,16 @@
       font-weight: 750;
     }
 
+
     .contact-link:hover {
       background: var(--blush);
     }
 
 
-    /* =====================================================
+
+    /* ==============================
        FOOTER
-    ===================================================== */
+    ============================== */
 
     footer {
       background: var(--wine);
@@ -914,12 +883,14 @@
       color: white;
     }
 
+
     .footer-inner {
       width: min(1180px, 92%);
 
       margin: auto;
 
       display: grid;
+
       grid-template-columns: 1.5fr 0.8fr 0.8fr;
 
       gap: 30px;
@@ -927,10 +898,12 @@
       padding: 23px 0 17px;
     }
 
+
     .footer-logo img {
       width: 150px;
       height: auto;
     }
+
 
     .footer-brand p {
       color: #f7dce1;
@@ -940,11 +913,13 @@
       margin-top: 6px;
     }
 
+
     .footer-col h4 {
       font-size: 10px;
 
       margin-bottom: 7px;
     }
+
 
     .footer-col a {
       display: block;
@@ -955,6 +930,7 @@
 
       margin-bottom: 5px;
     }
+
 
     .copyright {
       border-top:
@@ -970,11 +946,27 @@
     }
 
 
-    /* =====================================================
+
+    /* ==============================
+       TABLET
+    ============================== */
+
+    @media (max-width: 950px) {
+
+      .categories {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    }
+
+
+
+    /* ==============================
        MOBILE
-    ===================================================== */
+    ============================== */
 
     @media (max-width: 760px) {
+
 
       .topbar {
         min-height: 25px;
@@ -988,12 +980,14 @@
         overflow: hidden;
       }
 
+
       .topbar span:nth-child(3) {
         display: none;
       }
 
 
-      /* header */
+
+      /* HEADER */
 
       .nav {
         width: 94%;
@@ -1001,16 +995,19 @@
         min-height: 58px;
       }
 
+
       .logo img {
         width: 145px;
       }
+
 
       .desktop-nav {
         display: none;
       }
 
 
-      /* hero */
+
+      /* HERO */
 
       .hero {
         width: 92%;
@@ -1022,11 +1019,13 @@
         padding: 20px 0 10px;
       }
 
+
       .hero h1 {
         font-size: 31px;
 
         margin-bottom: 9px;
       }
+
 
       .hero-copy > p {
         font-size: 11px;
@@ -1034,11 +1033,13 @@
         margin-bottom: 13px;
       }
 
+
       .eyebrow {
         font-size: 8px;
 
         margin-bottom: 5px;
       }
+
 
       .btn {
         min-height: 35px;
@@ -1048,9 +1049,11 @@
         font-size: 9px;
       }
 
+
       .hero-mini-info {
         display: none;
       }
+
 
       .hero-art {
         height: 185px;
@@ -1059,7 +1062,8 @@
       }
 
 
-      /* categorías */
+
+      /* CATEGORÍAS */
 
       .shop-section {
         width: 94%;
@@ -1067,17 +1071,21 @@
         padding: 12px 0 18px;
       }
 
+
       .section-head {
         margin-bottom: 11px;
       }
+
 
       .section-head h2 {
         font-size: 19px;
       }
 
+
       .section-head p {
         font-size: 9px;
       }
+
 
       .categories {
         grid-template-columns: repeat(2, 1fr);
@@ -1085,29 +1093,36 @@
         gap: 8px;
       }
 
+
       .category-card {
         border-radius: 13px;
       }
+
 
       .category-image {
         height: 110px;
       }
 
+
       .category-body {
         padding: 8px;
       }
+
 
       .category-body h3 {
         font-size: 12px;
       }
 
+
       .category-body p {
         display: none;
       }
 
+
       .category-btn {
         font-size: 8px;
       }
+
 
       .coming-badge {
         top: 6px;
@@ -1119,52 +1134,8 @@
       }
 
 
-      /* productos */
 
-      .products-inner {
-        width: 94%;
-
-        padding: 21px 0;
-      }
-
-      .products-title {
-        margin-bottom: 12px;
-      }
-
-      .products-title h2 {
-        font-size: 18px;
-      }
-
-      .products-title p {
-        font-size: 9px;
-      }
-
-      .filters {
-        gap: 5px;
-
-        margin-bottom: 14px;
-      }
-
-      .filter-btn {
-        padding: 6px 9px;
-
-        font-size: 7px;
-      }
-
-      .empty-shop {
-        padding: 20px 13px;
-      }
-
-      .empty-shop h3 {
-        font-size: 14px;
-      }
-
-      .empty-shop p {
-        font-size: 9px;
-      }
-
-
-      /* benefits */
+      /* BENEFICIOS */
 
       .benefits {
         width: 94%;
@@ -1176,19 +1147,23 @@
         border-radius: 14px;
       }
 
+
       .benefit {
         padding: 10px 8px;
 
         gap: 7px;
       }
 
+
       .benefit:nth-child(2) {
         border-right: none;
       }
 
+
       .benefit:nth-child(-n+2) {
         border-bottom: 1px solid var(--border);
       }
+
 
       .benefit-icon {
         min-width: 28px;
@@ -1198,16 +1173,19 @@
         font-size: 13px;
       }
 
+
       .benefit h3 {
         font-size: 9px;
       }
+
 
       .benefit p {
         display: none;
       }
 
 
-      /* PayPal */
+
+      /* PAYPAL */
 
       .payment {
         width: 94%;
@@ -1219,13 +1197,16 @@
         margin-bottom: 18px;
       }
 
+
       .payment-copy h2 {
         font-size: 14px;
       }
 
+
       .payment-copy p {
         font-size: 8px;
       }
+
 
       .paypal-badge {
         padding: 7px 9px;
@@ -1234,7 +1215,8 @@
       }
 
 
-      /* about */
+
+      /* ABOUT */
 
       .about-inner {
         width: 92%;
@@ -1246,18 +1228,22 @@
         padding: 18px 0;
       }
 
+
       .about-image {
         width: 60px;
         height: 60px;
       }
 
+
       .about-copy h2 {
         font-size: 15px;
       }
 
+
       .about-copy p {
         font-size: 8px;
       }
+
 
 
       /* FAQ */
@@ -1266,24 +1252,29 @@
         padding: 20px 0;
       }
 
+
       .faq h2 {
         font-size: 18px;
       }
+
 
       details {
         padding: 10px 11px;
       }
 
+
       summary {
         font-size: 9px;
       }
+
 
       details p {
         font-size: 8px;
       }
 
 
-      /* Contact */
+
+      /* CONTACTO */
 
       .contact {
         width: 92%;
@@ -1293,13 +1284,16 @@
         margin-bottom: 20px;
       }
 
+
       .contact h2 {
         font-size: 16px;
       }
 
+
       .contact p {
         font-size: 8px;
       }
+
 
       .contact-link {
         font-size: 8px;
@@ -1308,7 +1302,8 @@
       }
 
 
-      /* footer */
+
+      /* FOOTER */
 
       .footer-inner {
         width: 92%;
@@ -1320,9 +1315,11 @@
         padding: 18px 0 13px;
       }
 
+
       .footer-brand {
         grid-column: 1 / -1;
       }
+
 
       .footer-logo img {
         width: 125px;
@@ -1331,15 +1328,14 @@
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- =====================================================
-       TOP BAR
-  ====================================================== -->
+  <!-- TOP BAR -->
 
   <div class="topbar">
 
@@ -1353,9 +1349,7 @@
 
 
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
+  <!-- HEADER -->
 
   <header>
 
@@ -1373,6 +1367,7 @@
       </a>
 
 
+
       <nav class="desktop-nav">
 
         <a href="#inicio">
@@ -1383,10 +1378,6 @@
           Categorías
         </a>
 
-        <a href="#productos">
-          Productos
-        </a>
-
         <a href="#sobre">
           Sobre ZuzuBayo
         </a>
@@ -1395,8 +1386,12 @@
           FAQ
         </a>
 
+        <a href="#contacto">
+          Contacto
+        </a>
+
         <a
-          href="#productos"
+          href="#categorias"
           class="shop-pill"
         >
           Tienda ♡
@@ -1414,9 +1409,7 @@
   <main>
 
 
-    <!-- ===================================================
-         HERO
-    ==================================================== -->
+    <!-- HERO -->
 
     <section
       class="hero"
@@ -1464,10 +1457,10 @@
 
 
           <a
-            href="#productos"
+            href="#categorias"
             class="btn btn-secondary"
           >
-            Ver novedades ♡
+            Ver categorías ♡
           </a>
 
 
@@ -1504,9 +1497,7 @@
 
 
 
-    <!-- ===================================================
-         CATEGORÍAS
-    ==================================================== -->
+    <!-- CATEGORÍAS -->
 
     <section
       class="shop-section"
@@ -1534,7 +1525,11 @@
 
         <!-- INVITACIONES -->
 
-        <article class="category-card">
+        <a
+          href="invitaciones.html"
+          class="category-card"
+        >
+
 
           <div class="category-image">
 
@@ -1553,27 +1548,29 @@
             </h3>
 
             <p>
-              Diseños digitales para cumpleaños, eventos
-              y momentos especiales.
+              Ocasiones especiales, días especiales
+              e invitaciones personalizadas.
             </p>
 
 
-            <button
-              class="category-btn"
-              data-filter="invitaciones"
-            >
+            <span class="category-btn">
               Ver invitaciones →
-            </button>
+            </span>
 
           </div>
 
-        </article>
+
+        </a>
 
 
 
         <!-- PLANTILLAS -->
 
-        <article class="category-card">
+        <a
+          href="plantillas.html"
+          class="category-card"
+        >
+
 
           <div class="category-image">
 
@@ -1592,27 +1589,29 @@
             </h3>
 
             <p>
-              Recursos digitales editables para crear
-              más rápido y bonito.
+              Redes sociales, negocios, eventos,
+              organización y estudio.
             </p>
 
 
-            <button
-              class="category-btn"
-              data-filter="plantillas"
-            >
+            <span class="category-btn">
               Ver plantillas →
-            </button>
+            </span>
 
           </div>
 
-        </article>
+
+        </a>
 
 
 
         <!-- STICKERS -->
 
-        <article class="category-card">
+        <a
+          href="stickers.html"
+          class="category-card"
+        >
+
 
           <div class="category-image">
 
@@ -1631,27 +1630,29 @@
             </h3>
 
             <p>
-              Detalles digitales para personalizar tus
-              proyectos y contenido.
+              Cute & aesthetic, self-care, productivity,
+              temporadas y packs ZuzuBayo.
             </p>
 
 
-            <button
-              class="category-btn"
-              data-filter="stickers"
-            >
+            <span class="category-btn">
               Ver stickers →
-            </button>
+            </span>
 
           </div>
 
-        </article>
+
+        </a>
 
 
 
         <!-- JOURNALS -->
 
-        <article class="category-card">
+        <a
+          href="journals.html"
+          class="category-card"
+        >
+
 
           <div class="category-image">
 
@@ -1670,27 +1671,29 @@
             </h3>
 
             <p>
-              Bienestar, organización, checklists
-              y reflexión personal.
+              Self-care, gratitud, hábitos,
+              checklists, hogar y estudio.
             </p>
 
 
-            <button
-              class="category-btn"
-              data-filter="journals"
-            >
+            <span class="category-btn">
               Ver journals →
-            </button>
+            </span>
 
           </div>
 
-        </article>
+
+        </a>
 
 
 
         <!-- GUIAS -->
 
-        <article class="category-card">
+        <a
+          href="guias.html"
+          class="category-card"
+        >
+
 
           <div class="category-image">
 
@@ -1709,27 +1712,29 @@
             </h3>
 
             <p>
-              Recursos prácticos y contenido
-              explicado paso a paso.
+              Productividad, marketing, organización,
+              emprendimiento, Canva y más.
             </p>
 
 
-            <button
-              class="category-btn"
-              data-filter="guias"
-            >
+            <span class="category-btn">
               Ver guías →
-            </button>
+            </span>
 
           </div>
 
-        </article>
+
+        </a>
 
 
 
         <!-- NEXTFLIGHT -->
 
-        <article class="category-card">
+        <a
+          href="nextflight.html"
+          class="category-card"
+        >
+
 
           <div class="category-image">
 
@@ -1748,27 +1753,28 @@
             </h3>
 
             <p>
-              Guías y recursos digitales para
-              avanzar en tu camino aeronáutico.
+              Career Guides, Interview Prep,
+              Study Resources, Resume y Checklists.
             </p>
 
 
-            <button
-              class="category-btn"
-              data-filter="nextflight"
-            >
+            <span class="category-btn">
               Explorar NextFlight →
-            </button>
+            </span>
 
           </div>
 
-        </article>
+
+        </a>
 
 
 
-        <!-- PLANNERS -->
+        <!-- PLANNERS — NO CLICKEABLE -->
 
-        <article class="category-card">
+        <article
+          class="category-card category-card-coming"
+        >
+
 
           <span class="coming-badge">
             COMING SOON
@@ -1792,8 +1798,8 @@
             </h3>
 
             <p>
-              Una nueva colección de organización
-              digital viene en camino.
+              Daily, Weekly, Monthly, Student,
+              Self-Care y Budget.
             </p>
 
 
@@ -1803,6 +1809,7 @@
 
           </div>
 
+
         </article>
 
 
@@ -1813,155 +1820,7 @@
 
 
 
-    <!-- ===================================================
-         PRODUCTOS
-         Aquí agregaremos los productos reales después.
-    ==================================================== -->
-
-    <section
-      class="products-area"
-      id="productos"
-    >
-
-
-      <div class="products-inner">
-
-
-        <div class="products-title">
-
-          <h2>
-            Productos ZuzuBayo
-          </h2>
-
-          <p>
-            Esta sección crecerá contigo ♡
-          </p>
-
-        </div>
-
-
-
-        <div class="filters">
-
-
-          <button
-            class="filter-btn active"
-            data-filter="todos"
-          >
-            Todos
-          </button>
-
-
-          <button
-            class="filter-btn"
-            data-filter="invitaciones"
-          >
-            Invitaciones
-          </button>
-
-
-          <button
-            class="filter-btn"
-            data-filter="plantillas"
-          >
-            Plantillas
-          </button>
-
-
-          <button
-            class="filter-btn"
-            data-filter="stickers"
-          >
-            Stickers
-          </button>
-
-
-          <button
-            class="filter-btn"
-            data-filter="journals"
-          >
-            Journals
-          </button>
-
-
-          <button
-            class="filter-btn"
-            data-filter="guias"
-          >
-            Guías
-          </button>
-
-
-          <button
-            class="filter-btn"
-            data-filter="nextflight"
-          >
-            NextFlight
-          </button>
-
-
-        </div>
-
-
-
-        <!--
-        ================================================
-        AQUÍ AGREGAREMOS PRODUCTOS REALES.
-
-        Después una tarjeta podrá verse así:
-
-        <article
-          class="product-card"
-          data-category="invitaciones"
-        >
-
-          IMAGEN
-
-          NOMBRE
-
-          PRECIO
-
-          BOTÓN PAYPAL
-
-        </article>
-
-        ================================================
-        -->
-
-
-        <div
-          class="empty-shop"
-          id="empty-shop"
-        >
-
-
-          <h3>
-            Nuevos goodies están en camino ♡
-          </h3>
-
-
-          <p>
-
-            Estamos preparando los primeros productos
-            digitales de ZuzuBayo. Muy pronto podrás
-            encontrarlos aquí.
-
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ===================================================
-         BENEFICIOS
-    ==================================================== -->
+    <!-- BENEFICIOS -->
 
     <section class="benefits">
 
@@ -2057,9 +1916,7 @@
 
 
 
-    <!-- ===================================================
-         PAYPAL
-    ==================================================== -->
+    <!-- PAYPAL -->
 
     <section class="payment">
 
@@ -2073,10 +1930,9 @@
 
         <p>
 
-          Cuando nuestros productos estén disponibles,
-          podrás completar tu compra mediante PayPal.
-          Cada botón de compra se conectará directamente
-          al producto correspondiente.
+          PayPal será nuestro método de pago seguro.
+          El botón para comprar aparecerá únicamente
+          cuando selecciones un producto específico.
 
         </p>
 
@@ -2092,9 +1948,7 @@
 
 
 
-    <!-- ===================================================
-         SOBRE ZUZUBAYO
-    ==================================================== -->
+    <!-- SOBRE ZUZUBAYO -->
 
     <section
       class="about"
@@ -2144,9 +1998,7 @@
 
 
 
-    <!-- ===================================================
-         FAQ
-    ==================================================== -->
+    <!-- FAQ -->
 
     <section
       class="faq"
@@ -2169,7 +2021,7 @@
 
         <p>
 
-          No. ZuzuBayo está enfocado en productos digitales.
+          No. Los productos de ZuzuBayo son digitales.
           No recibirás un producto físico por correo.
 
         </p>
@@ -2187,9 +2039,9 @@
 
         <p>
 
-          Cuando activemos las ventas, cada producto
-          indicará claramente cómo recibirás o descargarás
-          tus archivos después de completar el pago.
+          Cada producto indicará cómo recibirás o
+          descargarás tus archivos después de completar
+          el pago.
 
         </p>
 
@@ -2206,9 +2058,9 @@
 
         <p>
 
-          La tienda utilizará PayPal como método de pago.
-          Los botones de compra se agregarán cuando
-          publiquemos cada producto.
+          Los productos disponibles podrán comprarse
+          mediante PayPal. El botón de pago aparecerá
+          dentro del producto correspondiente.
 
         </p>
 
@@ -2226,8 +2078,8 @@
         <p>
 
           Dependerá del producto, pero muchos recursos
-          estarán diseñados para utilizarse desde
-          celular, tablet o computadora.
+          podrán utilizarse desde celular, tablet
+          o computadora.
 
         </p>
 
@@ -2244,9 +2096,9 @@
 
         <p>
 
-          Los planners forman parte de una colección futura
-          de ZuzuBayo y actualmente están marcados como
-          Coming Soon.
+          Los planners forman parte de una colección
+          futura de ZuzuBayo y actualmente están
+          marcados como Coming Soon.
 
         </p>
 
@@ -2257,9 +2109,7 @@
 
 
 
-    <!-- ===================================================
-         CONTACTO
-    ==================================================== -->
+    <!-- CONTACTO -->
 
     <section
       class="contact"
@@ -2274,9 +2124,9 @@
 
       <p>
 
-        Si tienes una pregunta sobre un producto,
-        una descarga o una compra, aquí podrás
-        encontrar las formas de contactar a ZuzuBayo.
+        Si tienes alguna pregunta sobre un producto,
+        una descarga o una compra, puedes comunicarte
+        con ZuzuBayo.
 
       </p>
 
@@ -2285,9 +2135,7 @@
       <div class="contact-buttons">
 
 
-        <!--
-        MÁS ADELANTE CAMBIAREMOS # POR TU INSTAGRAM REAL
-        -->
+        <!-- CAMBIAREMOS # POR TU INSTAGRAM -->
 
         <a
           href="#"
@@ -2297,9 +2145,7 @@
         </a>
 
 
-        <!--
-        MÁS ADELANTE CAMBIAREMOS # POR TU EMAIL REAL
-        -->
+        <!-- CAMBIAREMOS # POR TU EMAIL -->
 
         <a
           href="#"
@@ -2319,9 +2165,7 @@
 
 
 
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -2363,13 +2207,23 @@
         </a>
 
 
-        <a href="#productos">
-          Productos
+        <a href="invitaciones.html">
+          Invitaciones
         </a>
 
 
-        <a href="#sobre">
-          Sobre ZuzuBayo
+        <a href="plantillas.html">
+          Plantillas
+        </a>
+
+
+        <a href="guias.html">
+          Guías
+        </a>
+
+
+        <a href="nextflight.html">
+          NextFlight
         </a>
 
 
@@ -2394,8 +2248,8 @@
         </a>
 
 
-        <a href="#productos">
-          Productos digitales
+        <a href="#sobre">
+          Sobre ZuzuBayo
         </a>
 
 
@@ -2416,91 +2270,6 @@
   </footer>
 
 
-
-  <!-- =====================================================
-       JAVASCRIPT
-       Hace funcionar las categorías/filtros.
-  ====================================================== -->
-
-  <script>
-
-    const categoryButtons =
-      document.querySelectorAll(".category-btn[data-filter]");
-
-    const filterButtons =
-      document.querySelectorAll(".filter-btn");
-
-    const productsSection =
-      document.getElementById("productos");
-
-
-    function activateFilter(category) {
-
-      filterButtons.forEach(button => {
-
-        button.classList.remove("active");
-
-        if (
-          button.dataset.filter === category
-        ) {
-
-          button.classList.add("active");
-
-        }
-
-      });
-
-    }
-
-
-    categoryButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        function() {
-
-          const category =
-            this.dataset.filter;
-
-          activateFilter(category);
-
-
-          productsSection.scrollIntoView({
-            behavior: "smooth"
-          });
-
-        }
-      );
-
-    });
-
-
-    filterButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        function() {
-
-          const category =
-            this.dataset.filter;
-
-          activateFilter(category);
-
-
-          /*
-          Cuando tengamos productos reales,
-          aquí también filtraremos las tarjetas
-          según su categoría.
-          */
-
-        }
-      );
-
-    });
-
-  </script>
-
-
 </body>
 
-</html>]
+</html>
