@@ -20,64 +20,40 @@
 
   <style>
 
-    /* =====================================================
-       ZUZUBAYO — COLORES
-    ===================================================== */
-
-    :root {
-
+    :root{
       --wine:#7f1020;
       --wine-dark:#68101c;
       --red:#a81429;
-
       --pink:#e36f7c;
       --pink-soft:#f8dfe3;
       --blush:#fdf0f2;
-
       --cream:#fffaf6;
       --white:#ffffff;
 
       --text:#211b1c;
       --muted:#75696b;
-
       --border:#efd9dd;
 
-      --shadow:
-        0 8px 28px rgba(84,30,38,.07);
-
-      --shadow-hover:
-        0 13px 35px rgba(84,30,38,.12);
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
 
       --radius:20px;
-
     }
 
 
-
-    /* =====================================================
-       RESET
-    ===================================================== */
-
-    * {
-
+    *{
       box-sizing:border-box;
-
       margin:0;
-
       padding:0;
-
     }
 
 
-    html {
-
+    html{
       scroll-behavior:smooth;
-
     }
 
 
-    body {
-
+    body{
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -86,236 +62,168 @@
         sans-serif;
 
       background:var(--cream);
-
       color:var(--text);
-
       line-height:1.6;
-
     }
 
 
-    img {
-
+    img{
       display:block;
-
       max-width:100%;
-
     }
 
 
-    a {
-
+    a{
       color:inherit;
-
       text-decoration:none;
-
     }
 
 
 
-    /* =====================================================
+    /* =========================
        TOP BAR
-    ===================================================== */
+    ========================= */
 
-    .topbar {
-
+    .topbar{
       min-height:34px;
 
       padding:7px 16px;
 
       display:flex;
-
       align-items:center;
-
       justify-content:center;
 
       gap:50px;
 
       background:var(--wine);
-
       color:white;
 
       font-size:13px;
-
       font-weight:600;
-
     }
 
 
-    .topbar span {
-
+    .topbar span{
       white-space:nowrap;
-
     }
 
 
 
-    /* =====================================================
+    /* =========================
        HEADER
-    ===================================================== */
+    ========================= */
 
-    header {
-
+    header{
       position:sticky;
-
       top:0;
-
       z-index:1000;
 
-      background:
-        rgba(255,250,246,.96);
+      background:rgba(255,250,246,.96);
 
-      border-bottom:
-        1px solid var(--border);
+      border-bottom:1px solid var(--border);
 
-      backdrop-filter:
-        blur(10px);
-
+      backdrop-filter:blur(10px);
     }
 
 
-    .nav {
-
+    .nav{
       width:min(1180px,92%);
-
       min-height:78px;
 
       margin:auto;
 
       display:flex;
-
       align-items:center;
-
       justify-content:space-between;
 
       gap:25px;
-
     }
 
 
-    .logo img {
-
+    .logo img{
       width:190px;
-
       height:auto;
-
     }
 
 
-    .desktop-nav {
-
+    .desktop-nav{
       display:flex;
-
       align-items:center;
 
       gap:28px;
 
       font-size:15px;
-
       font-weight:600;
-
     }
 
 
-    .desktop-nav a {
-
-      transition:.2s ease;
-
-    }
-
-
-    .desktop-nav a:hover {
-
+    .desktop-nav a:hover{
       color:var(--red);
-
     }
 
 
-    .back-button {
-
+    .back-button{
       padding:9px 17px;
 
-      border:
-        1px solid var(--pink);
-
+      border:1px solid var(--pink);
       border-radius:100px;
 
       color:var(--wine);
-
-      background:transparent;
-
     }
 
 
-    .back-button:hover {
-
+    .back-button:hover{
       background:var(--blush);
-
     }
 
 
 
-    /* =====================================================
+    /* =========================
        HERO
-    ===================================================== */
+    ========================= */
 
-    .hero {
-
+    .hero{
       width:min(1120px,92%);
-
       margin:auto;
 
       display:grid;
-
-      grid-template-columns:
-        1fr .95fr;
+      grid-template-columns:1fr .95fr;
 
       align-items:center;
 
       gap:48px;
 
-      padding:
-        42px 0 30px;
-
+      padding:42px 0 30px;
     }
 
 
-    .breadcrumb {
-
+    .breadcrumb{
       margin-bottom:24px;
 
       color:var(--pink);
 
       font-size:13px;
-
     }
 
 
-    .breadcrumb a {
-
+    .breadcrumb a{
       color:var(--pink);
-
     }
 
 
-    .hero h1 {
-
+    .hero h1{
       margin-bottom:24px;
 
       color:var(--wine);
 
-      font-size:
-        clamp(46px,5vw,66px);
+      font-size:clamp(46px,5vw,66px);
 
       line-height:1;
-
       letter-spacing:-.03em;
-
     }
 
 
-    .hero h1 span {
-
+    .hero h1 span{
       display:block;
 
       margin-top:8px;
@@ -328,30 +236,21 @@
         serif;
 
       font-style:italic;
-
       font-weight:500;
-
     }
 
 
-    .hero-copy > p {
-
+    .hero-copy > p{
       max-width:520px;
 
       color:#443b3d;
 
       font-size:17px;
-
       line-height:1.7;
-
     }
 
 
-
-    /* HERO IMAGE */
-
-    .hero-image {
-
+    .hero-image{
       height:360px;
 
       overflow:hidden;
@@ -365,91 +264,69 @@
           #fff5f3
         );
 
-      border:
-        1px solid var(--border);
+      border:1px solid var(--border);
 
-      box-shadow:
-        var(--shadow);
-
+      box-shadow:var(--shadow);
     }
 
 
-    .hero-image img {
-
+    .hero-image img{
       width:100%;
-
       height:100%;
 
       object-fit:cover;
-
       object-position:center;
-
     }
 
 
 
-    /* =====================================================
+    /* =========================
        INTRO
-    ===================================================== */
+    ========================= */
 
-    .celebration-intro {
-
+    .celebration-intro{
       width:min(900px,92%);
 
-      margin:
-        8px auto 24px;
+      margin:8px auto 24px;
 
       text-align:center;
-
     }
 
 
-    .celebration-intro h2 {
-
+    .celebration-intro h2{
       margin-bottom:5px;
 
       color:var(--wine);
 
       font-size:29px;
-
     }
 
 
-    .celebration-intro p {
-
+    .celebration-intro p{
       color:#51474a;
 
       font-size:16px;
-
     }
 
 
 
-    /* =====================================================
-       TARJETAS PRINCIPALES
-    ===================================================== */
+    /* =========================
+       OPCIONES
+    ========================= */
 
-    .choice-wrapper {
-
+    .choice-wrapper{
       width:min(1120px,92%);
 
-      margin:
-        0 auto 30px;
+      margin:0 auto 34px;
 
       display:flex;
-
       flex-direction:column;
 
       gap:14px;
-
     }
 
 
-
-    /* TARJETA CLARA */
-
-    .choice-card {
-
+    .choice-card{
       position:relative;
 
       min-height:190px;
@@ -457,16 +334,13 @@
       overflow:hidden;
 
       display:grid;
-
-      grid-template-columns:
-        100px 1fr;
+      grid-template-columns:100px 1fr;
 
       align-items:center;
 
       gap:28px;
 
-      padding:
-        28px 38px;
+      padding:28px 38px;
 
       background:
         linear-gradient(
@@ -475,74 +349,60 @@
           #fff5f4
         );
 
-      border:
-        1px solid var(--border);
+      border:1px solid var(--border);
 
       border-radius:22px;
 
-      box-shadow:
-        var(--shadow);
+      box-shadow:var(--shadow);
 
       transition:
         transform .22s ease,
-        box-shadow .22s ease;
-
+        box-shadow .22s ease,
+        border-color .22s ease;
     }
 
 
-    .choice-card:hover {
+    .choice-card:hover{
+      transform:translateY(-3px);
 
-      transform:
-        translateY(-3px);
+      box-shadow:var(--shadow-hover);
 
-      box-shadow:
-        var(--shadow-hover);
-
+      border-color:#e5b9c1;
     }
 
 
-    .choice-card::after {
-
+    .choice-card::after{
       content:"";
 
       position:absolute;
 
       width:230px;
-
       height:230px;
 
       right:-85px;
-
       bottom:-95px;
 
       border-radius:50%;
 
-      background:
-        rgba(248,223,227,.65);
+      background:rgba(248,223,227,.65);
 
       pointer-events:none;
-
     }
 
 
-    .choice-number {
-
+    .choice-number{
       position:relative;
-
       z-index:2;
 
       height:100%;
 
       display:flex;
-
       align-items:flex-start;
-
       justify-content:center;
 
       padding-top:3px;
 
-      border-right:
-        1px solid #e9b9c1;
+      border-right:1px solid #e9b9c1;
 
       color:var(--pink);
 
@@ -552,36 +412,27 @@
         serif;
 
       font-size:34px;
-
       font-style:italic;
-
     }
 
 
-    .choice-content {
-
+    .choice-content{
       position:relative;
-
       z-index:2;
-
     }
 
 
-    .choice-title-row {
-
+    .choice-title-row{
       display:flex;
-
       align-items:center;
 
       gap:12px;
 
       margin-bottom:10px;
-
     }
 
 
-    .choice-card h3 {
-
+    .choice-card h3{
       color:var(--wine);
 
       font-family:
@@ -590,81 +441,65 @@
         serif;
 
       font-size:30px;
-
       font-weight:500;
-
     }
 
 
-    .choice-symbol {
-
+    .choice-symbol{
       color:var(--pink);
 
       font-size:28px;
-
     }
 
 
-    .choice-options {
-
+    .choice-options{
       display:flex;
-
       flex-wrap:wrap;
 
-      gap:
-        4px 12px;
+      gap:4px 12px;
 
-      max-width:650px;
+      max-width:680px;
 
       margin-bottom:17px;
 
       color:#393133;
 
       font-size:17px;
-
     }
 
 
-    .choice-options span:not(:last-child)::after {
-
+    .choice-options span:not(:last-child)::after{
       content:"•";
 
       margin-left:12px;
 
       color:var(--pink);
-
     }
 
 
-    .choice-link {
-
+    .choice-link{
       display:inline-flex;
-
       align-items:center;
 
       gap:7px;
 
       padding-top:10px;
 
-      border-top:
-        1px solid #edcdd2;
+      border-top:1px solid #edcdd2;
 
       color:var(--wine);
 
       font-size:15px;
-
       font-weight:750;
-
     }
 
 
 
-    /* =====================================================
+    /* =========================
        PERSONALIZADAS
-    ===================================================== */
+    ========================= */
 
-    .custom-card {
-
+    .custom-card{
       position:relative;
 
       min-height:190px;
@@ -672,16 +507,13 @@
       overflow:hidden;
 
       display:grid;
-
-      grid-template-columns:
-        100px 1fr auto;
+      grid-template-columns:100px 1fr auto;
 
       align-items:center;
 
       gap:28px;
 
-      padding:
-        28px 38px;
+      padding:28px 38px;
 
       border-radius:22px;
 
@@ -695,77 +527,56 @@
       color:white;
 
       box-shadow:
-        0 10px 30px
-        rgba(95,15,30,.18);
-
+        0 10px 30px rgba(95,15,30,.18);
     }
 
 
     .custom-card::before,
-    .custom-card::after {
-
+    .custom-card::after{
       content:"";
 
       position:absolute;
 
       border:
-        2px solid
-        rgba(255,255,255,.1);
+        2px solid rgba(255,255,255,.1);
 
       border-radius:50%;
-
     }
 
 
-    .custom-card::before {
-
+    .custom-card::before{
       width:220px;
-
       height:220px;
 
       right:-100px;
-
       top:-110px;
-
     }
 
 
-    .custom-card::after {
-
+    .custom-card::after{
       width:140px;
-
       height:140px;
 
       right:-40px;
-
       top:-60px;
-
     }
 
 
-    .custom-card
-    .choice-number {
-
+    .custom-card .choice-number{
       border-right:
-        1px solid
-        rgba(255,255,255,.35);
+        1px solid rgba(255,255,255,.35);
 
       color:#f3a7b0;
-
     }
 
 
-    .custom-content {
-
+    .custom-content{
       position:relative;
-
       z-index:2;
-
     }
 
 
-    .custom-content h3 {
-
+    .custom-content h3{
       max-width:500px;
 
       margin-bottom:8px;
@@ -778,129 +589,97 @@
         serif;
 
       font-size:29px;
-
       line-height:1.15;
-
       font-weight:500;
-
     }
 
 
-    .custom-content p {
-
+    .custom-content p{
       max-width:500px;
 
       color:#fbe6ea;
 
       font-size:16px;
-
     }
 
 
-    .custom-btn {
-
+    .custom-btn{
       position:relative;
-
       z-index:2;
 
       min-width:205px;
 
-      padding:
-        14px 22px;
+      padding:14px 22px;
 
       text-align:center;
 
       border-radius:100px;
 
-      background:
-        #fff8f7;
+      background:#fff8f7;
 
       color:var(--wine);
 
       font-size:15px;
-
       font-weight:800;
 
       transition:.2s ease;
-
     }
 
 
-    .custom-btn:hover {
-
-      transform:
-        translateY(-2px);
+    .custom-btn:hover{
+      transform:translateY(-2px);
 
       background:white;
-
     }
 
 
 
-    /* =====================================================
+    /* =========================
        BENEFICIOS
-    ===================================================== */
+    ========================= */
 
-    .benefits {
-
+    .benefits{
       width:min(1120px,92%);
 
-      margin:
-        0 auto 34px;
+      margin:0 auto 34px;
 
       display:grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
+      grid-template-columns:repeat(3,1fr);
 
       overflow:hidden;
 
-      border:
-        1px solid var(--border);
+      border:1px solid var(--border);
 
       border-radius:18px;
 
       background:var(--blush);
-
     }
 
 
-    .benefit {
-
+    .benefit{
       display:flex;
-
       align-items:center;
 
       gap:14px;
 
-      padding:
-        18px 24px;
+      padding:18px 24px;
 
-      border-right:
-        1px solid var(--border);
-
+      border-right:1px solid var(--border);
     }
 
 
-    .benefit:last-child {
-
+    .benefit:last-child{
       border-right:none;
-
     }
 
 
-    .benefit-icon {
-
+    .benefit-icon{
       min-width:48px;
-
       width:48px;
-
       height:48px;
 
       display:flex;
-
       align-items:center;
-
       justify-content:center;
 
       border-radius:50%;
@@ -910,39 +689,33 @@
       color:var(--red);
 
       font-size:22px;
-
     }
 
 
-    .benefit h4 {
-
+    .benefit h4{
       margin-bottom:2px;
 
       color:var(--wine);
 
       font-size:15px;
-
     }
 
 
-    .benefit p {
-
+    .benefit p{
       color:var(--muted);
 
       font-size:13px;
 
       line-height:1.4;
-
     }
 
 
 
-    /* =====================================================
+    /* =========================
        FOOTER
-    ===================================================== */
+    ========================= */
 
-    footer {
-
+    footer{
       background:
         linear-gradient(
           135deg,
@@ -951,68 +724,52 @@
         );
 
       color:white;
-
     }
 
 
-    .footer-inner {
-
+    .footer-inner{
       width:min(1120px,92%);
 
       margin:auto;
 
       display:grid;
-
-      grid-template-columns:
-        1.4fr .8fr .8fr 1fr;
+      grid-template-columns:1.4fr .8fr .8fr 1fr;
 
       gap:40px;
 
-      padding:
-        34px 0 28px;
-
+      padding:34px 0 28px;
     }
 
 
-    .footer-logo img {
-
+    .footer-logo img{
       width:170px;
-
     }
 
 
-    .footer-brand p {
-
+    .footer-brand p{
       margin-top:10px;
 
       color:#f9dfe4;
 
       font-size:13px;
-
     }
 
 
-    .socials {
-
+    .socials{
       display:flex;
 
       gap:8px;
 
       margin-top:16px;
-
     }
 
 
-    .social-circle {
-
+    .social-circle{
       width:32px;
-
       height:32px;
 
       display:flex;
-
       align-items:center;
-
       justify-content:center;
 
       border-radius:50%;
@@ -1023,21 +780,17 @@
       color:white;
 
       font-size:12px;
-
     }
 
 
-    .footer-col h4 {
-
+    .footer-col h4{
       margin-bottom:10px;
 
       font-size:14px;
-
     }
 
 
-    .footer-col a {
-
+    .footer-col a{
       display:block;
 
       margin-bottom:7px;
@@ -1045,354 +798,231 @@
       color:#f8dce1;
 
       font-size:13px;
-
     }
 
 
-    .small-business {
-
+    .small-business{
       padding:18px;
 
       border:
-        1px solid
-        rgba(255,255,255,.3);
+        1px solid rgba(255,255,255,.3);
 
       border-radius:16px;
 
       color:#fbe7ea;
 
       font-size:13px;
-
       line-height:1.6;
-
     }
 
 
-    .copyright {
-
-      padding:
-        11px 15px;
+    .copyright{
+      padding:11px 15px;
 
       text-align:center;
 
       border-top:
-        1px solid
-        rgba(255,255,255,.15);
+        1px solid rgba(255,255,255,.15);
 
       color:#f6dbe0;
 
       font-size:11px;
-
     }
 
 
 
-    /* =====================================================
-       TABLET
-    ===================================================== */
-
-    @media(max-width:900px) {
-
-      .hero {
-
-        gap:25px;
-
-      }
-
-
-      .footer-inner {
-
-        grid-template-columns:
-          1fr 1fr;
-
-      }
-
-    }
-
-
-
-    /* =====================================================
+    /* =========================
        MOBILE
-    ===================================================== */
+    ========================= */
 
-    @media(max-width:760px) {
+    @media(max-width:760px){
 
 
-      /* TOPBAR */
-
-      .topbar {
-
+      .topbar{
         min-height:28px;
 
         gap:12px;
 
-        padding:
-          6px 8px;
+        padding:6px 8px;
 
         overflow:hidden;
 
         font-size:10px;
-
       }
 
 
-      .topbar span:nth-child(3) {
-
+      .topbar span:nth-child(3){
         display:none;
-
       }
 
 
-
-      /* HEADER */
-
-      .nav {
-
+      .nav{
         width:94%;
 
         min-height:62px;
-
       }
 
 
-      .logo img {
-
+      .logo img{
         width:145px;
-
       }
 
 
-      .desktop-nav {
-
+      .desktop-nav{
         display:none;
-
       }
 
 
-
-      /* HERO */
-
-      .hero {
-
+      .hero{
         width:92%;
 
         grid-template-columns:1fr;
 
         gap:18px;
 
-        padding:
-          25px 0 22px;
-
+        padding:25px 0 22px;
       }
 
 
-      .breadcrumb {
-
+      .breadcrumb{
         margin-bottom:14px;
 
         font-size:11px;
-
       }
 
 
-      .hero h1 {
-
+      .hero h1{
         margin-bottom:16px;
 
         font-size:39px;
-
       }
 
 
-      .hero h1 span {
-
-        margin-top:5px;
-
-      }
-
-
-      .hero-copy > p {
-
+      .hero-copy > p{
         font-size:14px;
 
         line-height:1.6;
-
       }
 
 
-      .hero-image {
-
+      .hero-image{
         height:210px;
 
         border-radius:18px;
-
       }
 
 
-
-      /* INTRO */
-
-      .celebration-intro {
-
-        margin:
-          4px auto 18px;
-
+      .celebration-intro{
+        margin:4px auto 18px;
       }
 
 
-      .celebration-intro h2 {
-
+      .celebration-intro h2{
         font-size:24px;
-
       }
 
 
-      .celebration-intro p {
-
+      .celebration-intro p{
         font-size:13px;
-
       }
 
 
-
-      /* CARDS */
-
-      .choice-wrapper {
-
+      .choice-wrapper{
         width:94%;
 
         gap:10px;
-
       }
 
 
-      .choice-card {
-
+      .choice-card{
         min-height:auto;
 
-        grid-template-columns:
-          46px 1fr;
+        grid-template-columns:46px 1fr;
 
         gap:14px;
 
-        padding:
-          20px 16px;
+        padding:20px 16px;
 
         border-radius:17px;
-
       }
 
 
-      .choice-card::after {
-
+      .choice-card::after{
         width:140px;
-
         height:140px;
 
         right:-70px;
-
         bottom:-80px;
-
       }
 
 
-      .choice-number {
-
+      .choice-number{
         justify-content:flex-start;
 
         font-size:24px;
-
       }
 
 
-      .choice-card h3 {
-
+      .choice-card h3{
         font-size:21px;
-
       }
 
 
-      .choice-symbol {
-
+      .choice-symbol{
         font-size:20px;
-
       }
 
 
-      .choice-title-row {
-
+      .choice-title-row{
         margin-bottom:8px;
-
       }
 
 
-      .choice-options {
-
-        gap:
-          3px 8px;
+      .choice-options{
+        gap:3px 8px;
 
         margin-bottom:12px;
 
         font-size:13px;
-
         line-height:1.6;
-
       }
 
 
-      .choice-options
-      span:not(:last-child)::after {
-
+      .choice-options span:not(:last-child)::after{
         margin-left:8px;
-
       }
 
 
-      .choice-link {
-
+      .choice-link{
         font-size:12px;
-
       }
 
 
-
-      /* CUSTOM */
-
-      .custom-card {
-
+      .custom-card{
         min-height:auto;
 
-        grid-template-columns:
-          46px 1fr;
+        grid-template-columns:46px 1fr;
 
         gap:14px;
 
-        padding:
-          20px 16px;
+        padding:20px 16px;
 
         border-radius:17px;
-
       }
 
 
-      .custom-content h3 {
-
+      .custom-content h3{
         font-size:20px;
-
       }
 
 
-      .custom-content p {
-
+      .custom-content p{
         font-size:13px;
-
       }
 
 
-      .custom-btn {
-
-        grid-column:
-          2;
+      .custom-btn{
+        grid-column:2;
 
         justify-self:start;
 
@@ -1400,141 +1030,97 @@
 
         margin-top:3px;
 
-        padding:
-          10px 15px;
+        padding:10px 15px;
 
         font-size:12px;
-
       }
 
 
-
-      /* BENEFICIOS */
-
-      .benefits {
-
+      .benefits{
         width:94%;
 
         grid-template-columns:1fr;
 
         margin-bottom:22px;
-
       }
 
 
-      .benefit {
-
-        padding:
-          14px 16px;
+      .benefit{
+        padding:14px 16px;
 
         border-right:none;
 
-        border-bottom:
-          1px solid var(--border);
-
+        border-bottom:1px solid var(--border);
       }
 
 
-      .benefit:last-child {
-
+      .benefit:last-child{
         border-bottom:none;
-
       }
 
 
-      .benefit-icon {
-
+      .benefit-icon{
         min-width:40px;
-
         width:40px;
-
         height:40px;
 
         font-size:18px;
-
       }
 
 
-      .benefit h4 {
-
+      .benefit h4{
         font-size:13px;
-
       }
 
 
-      .benefit p {
-
+      .benefit p{
         font-size:11px;
-
       }
 
 
-
-      /* FOOTER */
-
-      .footer-inner {
-
+      .footer-inner{
         width:92%;
 
-        grid-template-columns:
-          1fr 1fr;
+        grid-template-columns:1fr 1fr;
 
         gap:24px;
 
-        padding:
-          26px 0 22px;
-
+        padding:26px 0 22px;
       }
 
 
-      .footer-brand {
-
-        grid-column:
-          1 / -1;
-
+      .footer-brand{
+        grid-column:1 / -1;
       }
 
 
-      .small-business {
-
-        grid-column:
-          1 / -1;
-
+      .small-business{
+        grid-column:1 / -1;
       }
 
 
-      .footer-logo img {
-
+      .footer-logo img{
         width:145px;
-
       }
 
 
-      .footer-brand p {
-
+      .footer-brand p{
         font-size:11px;
-
       }
 
 
-      .footer-col h4 {
-
+      .footer-col h4{
         font-size:12px;
-
       }
 
 
-      .footer-col a {
-
+      .footer-col a{
         font-size:11px;
-
       }
 
 
-      .small-business {
-
+      .small-business{
         font-size:11px;
-
       }
 
     }
@@ -1548,9 +1134,7 @@
 <body>
 
 
-  <!-- =====================================================
-       TOP BAR
-  ====================================================== -->
+  <!-- TOP BAR -->
 
   <div class="topbar">
 
@@ -1570,9 +1154,7 @@
 
 
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
+  <!-- HEADER -->
 
   <header>
 
@@ -1601,17 +1183,17 @@
         </a>
 
 
-        <a href="#ocasiones">
+        <a href="ocasiones.html">
           Ocasiones
         </a>
 
 
-        <a href="#dias">
+        <a href="dias-especiales.html">
           Días especiales
         </a>
 
 
-        <a href="#personalizadas">
+        <a href="personalizadas.html">
           Personalizadas
         </a>
 
@@ -1636,9 +1218,7 @@
   <main>
 
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
+    <!-- HERO -->
 
     <section class="hero">
 
@@ -1659,7 +1239,6 @@
         </div>
 
 
-
         <h1>
 
           Invitaciones
@@ -1669,7 +1248,6 @@
           </span>
 
         </h1>
-
 
 
         <p>
@@ -1685,8 +1263,6 @@
 
 
 
-      <!-- AQUÍ VA TU IMAGEN -->
-
       <div class="hero-image">
 
         <img
@@ -1701,9 +1277,7 @@
 
 
 
-    <!-- =====================================================
-         INTRO
-    ====================================================== -->
+    <!-- INTRO -->
 
     <section class="celebration-intro">
 
@@ -1722,19 +1296,16 @@
 
 
 
-    <!-- =====================================================
-         OPCIONES
-    ====================================================== -->
+    <!-- OPCIONES -->
 
     <section class="choice-wrapper">
 
 
-      <!-- OCASIONES -->
+      <!-- OCASIONES ESPECIALES -->
 
       <a
-        href="#"
+        href="ocasiones.html"
         class="choice-card"
-        id="ocasiones"
       >
 
 
@@ -1805,9 +1376,8 @@
       <!-- DÍAS ESPECIALES -->
 
       <a
-        href="#"
+        href="dias-especiales.html"
         class="choice-card"
-        id="dias"
       >
 
 
@@ -1873,10 +1443,7 @@
 
       <!-- PERSONALIZADAS -->
 
-      <div
-        class="custom-card"
-        id="personalizadas"
-      >
+      <div class="custom-card">
 
 
         <div class="choice-number">
@@ -1907,7 +1474,7 @@
 
 
         <a
-          href="#"
+          href="personalizadas.html"
           class="custom-btn"
         >
           Crear la mía →
@@ -1921,9 +1488,7 @@
 
 
 
-    <!-- =====================================================
-         BENEFICIOS
-    ====================================================== -->
+    <!-- BENEFICIOS -->
 
     <section class="benefits">
 
@@ -2009,9 +1574,7 @@
 
 
 
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -2071,17 +1634,17 @@
         </a>
 
 
-        <a href="#ocasiones">
+        <a href="ocasiones.html">
           Ocasiones
         </a>
 
 
-        <a href="#dias">
+        <a href="dias-especiales.html">
           Días especiales
         </a>
 
 
-        <a href="#personalizadas">
+        <a href="personalizadas.html">
           Personalizadas
         </a>
 
