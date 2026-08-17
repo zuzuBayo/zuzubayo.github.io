@@ -17,7 +17,6 @@
     content="Invitaciones digitales para cumpleaños, baby shower, bodas, XV años, graduaciones y aniversarios."
   >
 
-
   <style>
 
     :root{
@@ -35,8 +34,6 @@
 
       --shadow:0 8px 28px rgba(84,30,38,.07);
       --shadow-hover:0 13px 35px rgba(84,30,38,.12);
-
-      --radius:20px;
     }
 
 
@@ -78,7 +75,10 @@
     }
 
 
-    /* TOP BAR */
+
+    /* =========================
+       TOP BAR
+    ========================= */
 
     .topbar{
       min-height:34px;
@@ -87,7 +87,7 @@
       align-items:center;
       justify-content:center;
 
-      gap:40px;
+      gap:42px;
 
       padding:7px 16px;
 
@@ -104,7 +104,10 @@
     }
 
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header{
       position:sticky;
@@ -169,14 +172,17 @@
     }
 
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero{
-      width:min(1100px,92%);
+      width:min(1040px,92%);
 
       margin:auto;
 
-      padding:38px 0 24px;
+      padding:42px 0 28px;
 
       text-align:center;
     }
@@ -197,6 +203,8 @@
 
 
     .hero h1{
+      margin-bottom:10px;
+
       color:var(--wine);
 
       font-family:
@@ -204,12 +212,9 @@
         "Times New Roman",
         serif;
 
-      font-size:48px;
+      font-size:50px;
+      line-height:1.08;
       font-weight:500;
-
-      line-height:1.1;
-
-      margin-bottom:10px;
     }
 
 
@@ -221,37 +226,56 @@
 
 
     .hero p{
-      max-width:680px;
+      max-width:700px;
 
       margin:auto;
 
       color:var(--muted);
 
       font-size:15px;
+      line-height:1.6;
     }
 
 
-    /* GRID */
 
-    .occasion-grid{
-      width:min(1100px,92%);
+    /* =========================
+       LISTA DE OCASIONES
+    ========================= */
+
+    .occasion-list{
+      width:min(1080px,92%);
 
       margin:0 auto 34px;
 
-      display:grid;
+      display:flex;
+      flex-direction:column;
 
-      grid-template-columns:repeat(3,1fr);
-
-      gap:16px;
+      gap:14px;
     }
 
 
     .occasion-card{
-      display:block;
+      position:relative;
+
+      min-height:150px;
 
       overflow:hidden;
 
-      background:var(--white);
+      display:grid;
+      grid-template-columns:90px 1fr auto;
+
+      align-items:center;
+
+      gap:26px;
+
+      padding:26px 34px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffefe,
+          #fff7f5
+        );
 
       border:1px solid var(--border);
 
@@ -259,50 +283,84 @@
 
       box-shadow:var(--shadow);
 
-      transition:.22s ease;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
     }
 
 
     .occasion-card:hover{
-      transform:translateY(-4px);
+      transform:translateY(-3px);
 
       box-shadow:var(--shadow-hover);
 
-      border-color:#e7bcc3;
+      border-color:#e5b9c1;
     }
 
 
-    .occasion-image{
-      height:210px;
+    .occasion-card::after{
+      content:"";
 
-      overflow:hidden;
+      position:absolute;
 
-      background:var(--blush);
+      width:180px;
+      height:180px;
+
+      right:-80px;
+      bottom:-100px;
+
+      border-radius:50%;
+
+      background:rgba(248,223,227,.55);
+
+      pointer-events:none;
     }
 
 
-    .occasion-image img{
-      width:100%;
+    .occasion-number{
+      position:relative;
+      z-index:2;
+
       height:100%;
 
-      object-fit:cover;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
 
-      transition:transform .3s ease;
+      padding-top:2px;
+
+      border-right:1px solid #e9b9c1;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:31px;
+      font-style:italic;
     }
 
 
-    .occasion-card:hover
-    .occasion-image img{
-      transform:scale(1.025);
+    .occasion-content{
+      position:relative;
+      z-index:2;
     }
 
 
-    .occasion-body{
-      padding:17px;
+    .occasion-title{
+      display:flex;
+      align-items:center;
+
+      gap:10px;
+
+      margin-bottom:7px;
     }
 
 
-    .occasion-body h2{
+    .occasion-title h2{
       color:var(--wine);
 
       font-family:
@@ -310,32 +368,44 @@
         "Times New Roman",
         serif;
 
-      font-size:24px;
-
+      font-size:27px;
       font-weight:500;
-
-      margin-bottom:5px;
     }
 
 
-    .occasion-body p{
+    .occasion-symbol{
+      color:var(--pink);
+      font-size:20px;
+    }
+
+
+    .occasion-content p{
+      max-width:640px;
+
       color:var(--muted);
 
-      font-size:13px;
-
-      margin-bottom:10px;
+      font-size:14px;
+      line-height:1.5;
     }
 
 
     .occasion-link{
-      color:var(--red);
+      position:relative;
+      z-index:2;
 
-      font-size:13px;
+      white-space:nowrap;
+
+      color:var(--wine);
+
+      font-size:14px;
       font-weight:750;
     }
 
 
-    /* BENEFITS */
+
+    /* =========================
+       BENEFICIOS
+    ========================= */
 
     .benefits{
       width:min(900px,92%);
@@ -343,23 +413,21 @@
       margin:0 auto 30px;
 
       display:grid;
-
       grid-template-columns:repeat(3,1fr);
 
       overflow:hidden;
 
-      background:var(--pink-soft);
+      background:var(--blush);
 
       border:1px solid var(--border);
-
       border-radius:17px;
     }
 
 
     .benefit{
-      text-align:center;
-
       padding:17px;
+
+      text-align:center;
 
       border-right:1px solid var(--border);
     }
@@ -373,11 +441,11 @@
     .benefit strong{
       display:block;
 
+      margin-bottom:2px;
+
       color:var(--wine);
 
       font-size:14px;
-
-      margin-bottom:2px;
     }
 
 
@@ -388,10 +456,19 @@
     }
 
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer{
-      background:var(--wine);
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
+
       color:white;
     }
 
@@ -401,23 +478,22 @@
 
       margin:auto;
 
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
 
-      gap:24px;
+      gap:34px;
 
-      padding:22px 0;
+      padding:28px 0 24px;
     }
 
 
     .footer-logo img{
-      width:145px;
+      width:155px;
     }
 
 
-    .footer-text{
-      margin-top:7px;
+    .footer-brand p{
+      margin-top:8px;
 
       color:#f8dde2;
 
@@ -425,10 +501,17 @@
     }
 
 
-    .footer-links{
-      display:flex;
+    .footer-col h4{
+      margin-bottom:9px;
 
-      gap:16px;
+      font-size:13px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
 
       color:#f8dde2;
 
@@ -436,9 +519,27 @@
     }
 
 
-    /* MOBILE */
+    .copyright{
+      padding:10px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media(max-width:760px){
+
 
       .topbar{
         min-height:28px;
@@ -460,7 +561,6 @@
 
       .nav{
         width:94%;
-
         min-height:62px;
       }
 
@@ -478,7 +578,7 @@
       .hero{
         width:92%;
 
-        padding:25px 0 18px;
+        padding:26px 0 20px;
       }
 
 
@@ -490,7 +590,7 @@
 
 
       .hero h1{
-        font-size:35px;
+        font-size:36px;
       }
 
 
@@ -499,43 +599,69 @@
       }
 
 
-      .occasion-grid{
+      .occasion-list{
         width:94%;
 
-        grid-template-columns:repeat(2,1fr);
-
-        gap:9px;
+        gap:10px;
 
         margin-bottom:22px;
       }
 
 
       .occasion-card{
-        border-radius:15px;
+        min-height:auto;
+
+        grid-template-columns:42px 1fr;
+
+        gap:13px;
+
+        padding:18px 15px;
+
+        border-radius:16px;
       }
 
 
-      .occasion-image{
-        height:135px;
+      .occasion-card::after{
+        width:120px;
+        height:120px;
+
+        right:-60px;
+        bottom:-70px;
       }
 
 
-      .occasion-body{
-        padding:11px;
+      .occasion-number{
+        justify-content:flex-start;
+
+        font-size:22px;
       }
 
 
-      .occasion-body h2{
-        font-size:17px;
+      .occasion-title{
+        margin-bottom:5px;
       }
 
 
-      .occasion-body p{
-        display:none;
+      .occasion-title h2{
+        font-size:20px;
+      }
+
+
+      .occasion-symbol{
+        font-size:16px;
+      }
+
+
+      .occasion-content p{
+        font-size:12px;
       }
 
 
       .occasion-link{
+        grid-column:2;
+
+        margin-top:3px;
+
         font-size:11px;
       }
 
@@ -565,26 +691,35 @@
       .footer-inner{
         width:92%;
 
-        flex-direction:column;
+        grid-template-columns:1fr 1fr;
 
-        align-items:flex-start;
+        gap:20px;
 
-        gap:10px;
+        padding:22px 0 18px;
+      }
 
-        padding:18px 0;
+
+      .footer-brand{
+        grid-column:1 / -1;
       }
 
 
       .footer-logo img{
-        width:125px;
+        width:130px;
       }
 
 
-      .footer-links{
-        flex-wrap:wrap;
+      .footer-brand p{
+        font-size:11px;
+      }
 
-        gap:10px;
 
+      .footer-col h4{
+        font-size:12px;
+      }
+
+
+      .footer-col a{
         font-size:11px;
       }
 
@@ -630,11 +765,14 @@
         href="index.html"
         class="logo"
       >
+
         <img
           src="logo.png"
           alt="ZuzuBayo"
         >
+
       </a>
+
 
 
       <nav class="desktop-nav">
@@ -645,6 +783,10 @@
 
         <a href="invitaciones.html">
           Invitaciones
+        </a>
+
+        <a href="dias-especiales.html">
+          Días especiales
         </a>
 
         <a
@@ -703,9 +845,9 @@
 
       <p>
 
-        Elige el momento que quieres celebrar
-        y descubre diseños digitales creados
-        para cada ocasión.
+        Elige el momento que quieres celebrar.
+        Cada ocasión tendrá su propia colección
+        de invitaciones digitales.
 
       </p>
 
@@ -716,226 +858,287 @@
 
     <!-- OCASIONES -->
 
-    <section class="occasion-grid">
+    <section class="occasion-list">
 
 
-      <!-- CUMPLEAÑOS -->
+      <!-- 01 CUMPLEAÑOS -->
 
       <a
         href="cumpleanos.html"
         class="occasion-card"
       >
 
-        <div class="occasion-image">
 
-          <img
-            src="cumpleanos.png"
-            alt="Invitaciones de cumpleaños"
-          >
-
+        <div class="occasion-number">
+          01
         </div>
 
 
-        <div class="occasion-body">
+        <div class="occasion-content">
 
-          <h2>
-            Cumpleaños
-          </h2>
+
+          <div class="occasion-title">
+
+            <h2>
+              Cumpleaños
+            </h2>
+
+            <span class="occasion-symbol">
+              ♡
+            </span>
+
+          </div>
+
 
           <p>
-            Diseños para celebrar otro año especial.
+            Invitaciones para celebrar otro año,
+            desde fiestas infantiles hasta celebraciones
+            para adultos.
           </p>
 
-          <span class="occasion-link">
-            Ver diseños →
-          </span>
 
         </div>
+
+
+        <span class="occasion-link">
+          Ver diseños →
+        </span>
+
 
       </a>
 
 
 
-      <!-- BABY SHOWER -->
+      <!-- 02 BABY SHOWER -->
 
       <a
         href="baby-shower.html"
         class="occasion-card"
       >
 
-        <div class="occasion-image">
 
-          <img
-            src="baby-shower.png"
-            alt="Invitaciones para baby shower"
-          >
-
+        <div class="occasion-number">
+          02
         </div>
 
 
-        <div class="occasion-body">
+        <div class="occasion-content">
 
-          <h2>
-            Baby Shower
-          </h2>
+
+          <div class="occasion-title">
+
+            <h2>
+              Baby Shower
+            </h2>
+
+            <span class="occasion-symbol">
+              ✦
+            </span>
+
+          </div>
+
 
           <p>
-            Diseños dulces para una llegada muy especial.
+            Diseños digitales para celebrar
+            la llegada de alguien muy especial.
           </p>
 
-          <span class="occasion-link">
-            Ver diseños →
-          </span>
 
         </div>
+
+
+        <span class="occasion-link">
+          Ver diseños →
+        </span>
+
 
       </a>
 
 
 
-      <!-- BODAS -->
+      <!-- 03 BODAS -->
 
       <a
         href="bodas.html"
         class="occasion-card"
       >
 
-        <div class="occasion-image">
 
-          <img
-            src="bodas.png"
-            alt="Invitaciones digitales de boda"
-          >
-
+        <div class="occasion-number">
+          03
         </div>
 
 
-        <div class="occasion-body">
+        <div class="occasion-content">
 
-          <h2>
-            Bodas
-          </h2>
+
+          <div class="occasion-title">
+
+            <h2>
+              Bodas
+            </h2>
+
+            <span class="occasion-symbol">
+              ♡
+            </span>
+
+          </div>
+
 
           <p>
-            Invitaciones elegantes para celebrar el amor.
+            Invitaciones digitales elegantes,
+            románticas y pensadas para tu gran día.
           </p>
 
-          <span class="occasion-link">
-            Ver diseños →
-          </span>
 
         </div>
+
+
+        <span class="occasion-link">
+          Ver diseños →
+        </span>
+
 
       </a>
 
 
 
-      <!-- XV -->
+      <!-- 04 XV AÑOS -->
 
       <a
         href="xv-anos.html"
         class="occasion-card"
       >
 
-        <div class="occasion-image">
 
-          <img
-            src="xv-anos.png"
-            alt="Invitaciones digitales de XV años"
-          >
-
+        <div class="occasion-number">
+          04
         </div>
 
 
-        <div class="occasion-body">
+        <div class="occasion-content">
 
-          <h2>
-            XV años
-          </h2>
+
+          <div class="occasion-title">
+
+            <h2>
+              XV años
+            </h2>
+
+            <span class="occasion-symbol">
+              ✦
+            </span>
+
+          </div>
+
 
           <p>
-            Diseños para una celebración inolvidable.
+            Diseños especiales para una celebración
+            inolvidable y totalmente tuya.
           </p>
 
-          <span class="occasion-link">
-            Ver diseños →
-          </span>
 
         </div>
+
+
+        <span class="occasion-link">
+          Ver diseños →
+        </span>
+
 
       </a>
 
 
 
-      <!-- GRADUACIÓN -->
+      <!-- 05 GRADUACIÓN -->
 
       <a
         href="graduacion.html"
         class="occasion-card"
       >
 
-        <div class="occasion-image">
 
-          <img
-            src="graduacion.png"
-            alt="Invitaciones digitales de graduación"
-          >
-
+        <div class="occasion-number">
+          05
         </div>
 
 
-        <div class="occasion-body">
+        <div class="occasion-content">
 
-          <h2>
-            Graduación
-          </h2>
+
+          <div class="occasion-title">
+
+            <h2>
+              Graduación
+            </h2>
+
+            <span class="occasion-symbol">
+              ♡
+            </span>
+
+          </div>
+
 
           <p>
-            Celebra todo el esfuerzo y una nueva etapa.
+            Celebra tus logros y el comienzo
+            de una nueva etapa.
           </p>
 
-          <span class="occasion-link">
-            Ver diseños →
-          </span>
 
         </div>
+
+
+        <span class="occasion-link">
+          Ver diseños →
+        </span>
+
 
       </a>
 
 
 
-      <!-- ANIVERSARIOS -->
+      <!-- 06 ANIVERSARIOS -->
 
       <a
         href="aniversarios.html"
         class="occasion-card"
       >
 
-        <div class="occasion-image">
 
-          <img
-            src="aniversarios.png"
-            alt="Invitaciones digitales de aniversario"
-          >
-
+        <div class="occasion-number">
+          06
         </div>
 
 
-        <div class="occasion-body">
+        <div class="occasion-content">
 
-          <h2>
-            Aniversarios
-          </h2>
+
+          <div class="occasion-title">
+
+            <h2>
+              Aniversarios
+            </h2>
+
+            <span class="occasion-symbol">
+              ✦
+            </span>
+
+          </div>
+
 
           <p>
-            Diseños para celebrar historias y momentos juntos.
+            Invitaciones para celebrar historias,
+            momentos compartidos y años juntos.
           </p>
 
-          <span class="occasion-link">
-            Ver diseños →
-          </span>
 
         </div>
+
+
+        <span class="occasion-link">
+          Ver diseños →
+        </span>
+
 
       </a>
 
@@ -982,7 +1185,7 @@
         </strong>
 
         <span>
-          PayPal en cada producto
+          PayPal al elegir producto
         </span>
 
       </div>
@@ -1003,7 +1206,8 @@
     <div class="footer-inner">
 
 
-      <div>
+      <div class="footer-brand">
+
 
         <div class="footer-logo">
 
@@ -1014,14 +1218,21 @@
 
         </div>
 
-        <div class="footer-text">
+
+        <p>
           Digital goodies made with love ♡
-        </div>
+        </p>
+
 
       </div>
 
 
-      <div class="footer-links">
+
+      <div class="footer-col">
+
+        <h4>
+          Explora
+        </h4>
 
         <a href="index.html">
           Inicio
@@ -1031,12 +1242,43 @@
           Invitaciones
         </a>
 
-        <a href="#">
-          Ocasiones especiales
+        <a href="dias-especiales.html">
+          Días especiales
         </a>
 
       </div>
 
+
+
+      <div class="footer-col">
+
+        <h4>
+          Ayuda
+        </h4>
+
+        <a href="index.html#faq">
+          FAQ
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
 
     </div>
 
