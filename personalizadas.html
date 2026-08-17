@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Invitaciones Personalizadas | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Solicita una invitación digital personalizada para tu evento con ZuzuBayo."
+  >
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --wine-dark:#68101c;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar{
+      min-height:34px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:42px;
+
+      padding:7px 16px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:13px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,246,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:76px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:26px;
+
+      font-size:15px;
+      font-weight:600;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:9px 16px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      width:min(980px,92%);
+
+      margin:auto;
+
+      padding:42px 0 28px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:16px;
+
+      color:var(--pink);
+
+      font-size:13px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--pink);
+    }
+
+
+    .hero h1{
+      margin-bottom:11px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:50px;
+      line-height:1.08;
+      font-weight:500;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:720px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:15px;
+      line-height:1.65;
+    }
+
+
+
+    /* =========================
+       CTA PRINCIPAL
+    ========================= */
+
+    .custom-main{
+      width:min(1080px,92%);
+
+      margin:0 auto 22px;
+
+      padding:34px;
+
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+
+      align-items:center;
+
+      gap:35px;
+
+      border-radius:22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--wine),
+          #941a2b
+        );
+
+      color:white;
+
+      box-shadow:
+        0 10px 30px rgba(95,15,30,.16);
+    }
+
+
+    .custom-copy h2{
+      margin-bottom:9px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:31px;
+      font-weight:500;
+    }
+
+
+    .custom-copy p{
+      max-width:600px;
+
+      color:#fbe6ea;
+
+      font-size:15px;
+      line-height:1.65;
+    }
+
+
+    .custom-action{
+      display:flex;
+      justify-content:flex-end;
+    }
+
+
+    .custom-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      min-width:220px;
+
+      padding:14px 22px;
+
+      border-radius:100px;
+
+      background:#fff8f7;
+
+      color:var(--wine);
+
+      font-size:14px;
+      font-weight:800;
+
+      transition:.2s ease;
+    }
+
+
+    .custom-btn:hover{
+      transform:translateY(-2px);
+
+      background:white;
+    }
+
+
+
+    /* =========================
+       CÓMO FUNCIONA
+    ========================= */
+
+    .section-title{
+      width:min(1080px,92%);
+
+      margin:34px auto 16px;
+
+      text-align:center;
+    }
+
+
+    .section-title h2{
+      margin-bottom:5px;
+
+      color:var(--wine);
+
+      font-size:28px;
+    }
+
+
+    .section-title p{
+      color:var(--muted);
+
+      font-size:14px;
+    }
+
+
+    .steps{
+      width:min(1080px,92%);
+
+      margin:0 auto 32px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      gap:14px;
+    }
+
+
+    .step{
+      min-height:170px;
+
+      padding:23px;
+
+      background:white;
+
+      border:1px solid var(--border);
+      border-radius:18px;
+
+      box-shadow:var(--shadow);
+    }
+
+
+    .step-number{
+      margin-bottom:14px;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:29px;
+      font-style:italic;
+    }
+
+
+    .step h3{
+      margin-bottom:6px;
+
+      color:var(--wine);
+
+      font-size:19px;
+    }
+
+
+    .step p{
+      color:var(--muted);
+
+      font-size:13px;
+      line-height:1.55;
+    }
+
+
+
+    /* =========================
+       QUÉ NECESITO
+    ========================= */
+
+    .details-box{
+      width:min(1080px,92%);
+
+      margin:0 auto 30px;
+
+      padding:28px;
+
+      border:1px solid var(--border);
+      border-radius:20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffefe,
+          #fff6f4
+        );
+    }
+
+
+    .details-box h2{
+      margin-bottom:14px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:26px;
+      font-weight:500;
+    }
+
+
+    .details-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+
+      gap:10px 28px;
+    }
+
+
+    .details-item{
+      position:relative;
+
+      padding-left:18px;
+
+      color:#4d4345;
+
+      font-size:14px;
+    }
+
+
+    .details-item::before{
+      content:"♡";
+
+      position:absolute;
+      left:0;
+
+      color:var(--pink);
+    }
+
+
+
+    /* =========================
+       NOTA
+    ========================= */
+
+    .note{
+      width:min(900px,92%);
+
+      margin:0 auto 30px;
+
+      padding:20px 22px;
+
+      text-align:center;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .note strong{
+      display:block;
+
+      margin-bottom:4px;
+
+      color:var(--wine);
+
+      font-size:15px;
+    }
+
+
+    .note p{
+      color:var(--muted);
+
+      font-size:12px;
+    }
+
+
+
+    /* =========================
+       BENEFICIOS
+    ========================= */
+
+    .benefits{
+      width:min(900px,92%);
+
+      margin:0 auto 30px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--blush);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .benefit{
+      padding:17px;
+
+      text-align:center;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      margin-bottom:2px;
+
+      color:var(--wine);
+
+      font-size:14px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
+
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1100px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+
+      gap:34px;
+
+      padding:28px 0 24px;
+    }
+
+
+    .footer-logo img{
+      width:155px;
+    }
+
+
+    .footer-brand p{
+      margin-top:8px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .footer-col h4{
+      margin-bottom:9px;
+
+      font-size:13px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .copyright{
+      padding:10px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:760px){
+
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+        min-height:62px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:26px 0 20px;
+      }
+
+
+      .breadcrumb{
+        margin-bottom:10px;
+
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:36px;
+      }
+
+
+      .hero p{
+        font-size:13px;
+      }
+
+
+      .custom-main{
+        width:94%;
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+        padding:22px 18px;
+
+        border-radius:17px;
+      }
+
+
+      .custom-copy h2{
+        font-size:24px;
+      }
+
+
+      .custom-copy p{
+        font-size:13px;
+      }
+
+
+      .custom-action{
+        justify-content:flex-start;
+      }
+
+
+      .custom-btn{
+        min-width:0;
+
+        padding:11px 16px;
+
+        font-size:12px;
+      }
+
+
+      .section-title{
+        width:92%;
+
+        margin-top:25px;
+      }
+
+
+      .section-title h2{
+        font-size:22px;
+      }
+
+
+      .section-title p{
+        font-size:12px;
+      }
+
+
+      .steps{
+        width:94%;
+
+        grid-template-columns:1fr;
+
+        gap:9px;
+
+        margin-bottom:22px;
+      }
+
+
+      .step{
+        min-height:auto;
+
+        padding:17px;
+
+        border-radius:15px;
+      }
+
+
+      .step-number{
+        margin-bottom:7px;
+
+        font-size:23px;
+      }
+
+
+      .step h3{
+        font-size:17px;
+      }
+
+
+      .step p{
+        font-size:12px;
+      }
+
+
+      .details-box{
+        width:94%;
+
+        margin-bottom:20px;
+
+        padding:19px 17px;
+
+        border-radius:16px;
+      }
+
+
+      .details-box h2{
+        font-size:21px;
+      }
+
+
+      .details-list{
+        grid-template-columns:1fr;
+
+        gap:8px;
+      }
+
+
+      .details-item{
+        font-size:12px;
+      }
+
+
+      .note{
+        width:94%;
+
+        margin-bottom:20px;
+
+        padding:16px;
+      }
+
+
+      .note strong{
+        font-size:13px;
+      }
+
+
+      .note p{
+        font-size:11px;
+      }
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .benefit{
+        padding:11px 5px;
+      }
+
+
+      .benefit strong{
+        font-size:11px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+
+        padding:22px 0 18px;
+      }
+
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+
+      .footer-logo img{
+        width:130px;
+      }
+
+
+      .footer-brand p{
+        font-size:11px;
+      }
+
+
+      .footer-col h4{
+        font-size:12px;
+      }
+
+
+      .footer-col a{
+        font-size:11px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>
+      ⇩ Productos digitales
+    </span>
+
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
+
+    <span>
+      ZuzuBayo Digital Goodies
+    </span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+
+      </a>
+
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+        <a href="dias-especiales.html">
+          Días especiales
+        </a>
+
+        <a
+          href="invitaciones.html"
+          class="back-button"
+        >
+          ← Volver a invitaciones
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div class="breadcrumb">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        &nbsp;/&nbsp;
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        &nbsp;/&nbsp;
+
+        Personalizadas
+
+      </div>
+
+
+      <h1>
+
+        Invitaciones
+
+        <span>
+          personalizadas ♡
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        ¿Tienes una idea especial en mente?
+        Cuéntanos cómo imaginas tu invitación
+        y crearemos un diseño pensado para tu evento.
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="custom-main">
+
+
+      <div class="custom-copy">
+
+        <h2>
+          Hagamos algo especial para ti ♡
+        </h2>
+
+        <p>
+
+          Una invitación personalizada te permite elegir
+          el estilo, colores, información y detalles
+          que mejor representen tu celebración.
+
+        </p>
+
+      </div>
+
+
+      <div class="custom-action">
+
+        <!--
+        MÁS ADELANTE:
+        aquí conectaremos Instagram,
+        email o formulario.
+        -->
+
+        <a
+          href="#solicitar"
+          class="custom-btn"
+        >
+          Quiero mi invitación →
+        </a>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- CÓMO FUNCIONA -->
+
+    <section class="section-title">
+
+      <h2>
+        ¿Cómo funciona?
+      </h2>
+
+      <p>
+        Un proceso sencillo para crear tu invitación.
+      </p>
+
+    </section>
+
+
+
+    <section class="steps">
+
+
+      <article class="step">
+
+        <div class="step-number">
+          01
+        </div>
+
+        <h3>
+          Cuéntanos tu idea
+        </h3>
+
+        <p>
+          Dinos qué estás celebrando,
+          qué estilo buscas y cualquier detalle
+          importante para tu diseño.
+        </p>
+
+      </article>
+
+
+
+      <article class="step">
+
+        <div class="step-number">
+          02
+        </div>
+
+        <h3>
+          Creamos tu diseño
+        </h3>
+
+        <p>
+          Preparamos una propuesta digital
+          basada en la información y estilo
+          que elegiste.
+        </p>
+
+      </article>
+
+
+
+      <article class="step">
+
+        <div class="step-number">
+          03
+        </div>
+
+        <h3>
+          Recibe y comparte
+        </h3>
+
+        <p>
+          Una vez finalizada,
+          recibirás tu invitación digital
+          lista para compartir.
+        </p>
+
+      </article>
+
+
+    </section>
+
+
+
+    <!-- INFORMACIÓN -->
+
+    <section class="details-box">
+
+      <h2>
+        ¿Qué información necesitaremos? ♡
+      </h2>
+
+
+      <div class="details-list">
+
+        <div class="details-item">
+          Tipo de celebración
+        </div>
+
+        <div class="details-item">
+          Nombre o nombres
+        </div>
+
+        <div class="details-item">
+          Fecha y hora
+        </div>
+
+        <div class="details-item">
+          Lugar o dirección
+        </div>
+
+        <div class="details-item">
+          Colores o estilo que prefieres
+        </div>
+
+        <div class="details-item">
+          Texto especial que quieras incluir
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SOLICITUD -->
+
+    <section
+      class="note"
+      id="solicitar"
+    >
+
+      <strong>
+        Solicitudes personalizadas próximamente ♡
+      </strong>
+
+      <p>
+        Estamos preparando la forma más sencilla
+        para que puedas enviar los detalles de tu evento.
+      </p>
+
+    </section>
+
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+
+      <div class="benefit">
+
+        <strong>
+          Hecha para ti
+        </strong>
+
+        <span>
+          Diseño personalizado
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          100% digital
+        </strong>
+
+        <span>
+          Fácil de compartir
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Pago seguro
+        </strong>
+
+        <span>
+          Mediante PayPal
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+
+          <img
+            src="logo.png"
+            alt="ZuzuBayo"
+          >
+
+        </div>
+
+        <p>
+          Digital goodies made with love ♡
+        </p>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Explora
+        </h4>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+        <a href="dias-especiales.html">
+          Días especiales
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Ayuda
+        </h4>
+
+        <a href="index.html#faq">
+          FAQ
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
