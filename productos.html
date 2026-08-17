@@ -14,9 +14,8 @@
 
   <meta
     name="description"
-    content="Explora los productos digitales de ZuzuBayo."
+    content="Explora productos digitales de ZuzuBayo."
   >
-
 
   <style>
 
@@ -34,6 +33,7 @@
       --border:#efd9dd;
 
       --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
     }
 
 
@@ -377,7 +377,8 @@
 
 
     /* =========================
-       FUTURE PRODUCT GRID
+       PRODUCTOS REALES
+       SE ACTIVARÁ MÁS ADELANTE
     ========================= */
 
     .product-grid{
@@ -405,6 +406,8 @@
 
     .product-card:hover{
       transform:translateY(-4px);
+
+      box-shadow:var(--shadow-hover);
     }
 
 
@@ -498,10 +501,10 @@
 
 
     /* =========================
-       PERSONALIZED CTA
+       CTA EXTRA
     ========================= */
 
-    .custom-cta{
+    .extra-cta{
       width:min(1080px,92%);
 
       margin:0 auto 30px;
@@ -521,7 +524,7 @@
     }
 
 
-    .custom-cta h3{
+    .extra-cta h3{
       margin-bottom:3px;
 
       color:var(--wine);
@@ -536,14 +539,14 @@
     }
 
 
-    .custom-cta p{
+    .extra-cta p{
       color:var(--muted);
 
       font-size:12px;
     }
 
 
-    .custom-cta a{
+    .extra-cta a{
       flex-shrink:0;
 
       padding:10px 15px;
@@ -560,7 +563,7 @@
 
 
     /* =========================
-       BENEFITS
+       BENEFICIOS
     ========================= */
 
     .benefits{
@@ -696,7 +699,6 @@
 
     @media(max-width:760px){
 
-
       .topbar{
         min-height:28px;
 
@@ -831,7 +833,7 @@
       }
 
 
-      .custom-cta{
+      .extra-cta{
         width:94%;
 
         margin-bottom:20px;
@@ -845,7 +847,7 @@
       }
 
 
-      .custom-cta h3{
+      .extra-cta h3{
         font-size:17px;
       }
 
@@ -969,16 +971,12 @@
           Invitaciones
         </a>
 
-        <a href="ocasiones.html">
-          Ocasiones
-        </a>
-
-        <a href="dias-especiales.html">
-          Días especiales
+        <a href="plantillas.html">
+          Plantillas
         </a>
 
         <a
-          href="invitaciones.html"
+          href="index.html#categorias"
           class="back-button"
           id="backButton"
         >
@@ -1006,16 +1004,16 @@
         class="breadcrumb"
         id="breadcrumb"
       >
-        Inicio / Invitaciones / Productos
+        Inicio / Productos
       </div>
 
 
       <h1 id="categoryTitle">
 
-        Nuestra
+        Productos
 
         <span>
-          colección ♡
+          ZuzuBayo ♡
         </span>
 
       </h1>
@@ -1023,8 +1021,7 @@
 
       <p id="categoryDescription">
 
-        Explora nuestra colección de productos
-        digitales ZuzuBayo.
+        Explora nuestros productos digitales.
 
       </p>
 
@@ -1033,37 +1030,35 @@
 
 
 
-    <!-- PRODUCTOS -->
+    <!-- PRODUCT AREA -->
 
     <section class="products-wrap">
 
 
       <div class="products-heading">
 
+
         <h2 id="collectionTitle">
-          Diseños disponibles
+          Colección
         </h2>
+
 
         <span>
           Digital goodies made with love ♡
         </span>
 
+
       </div>
 
 
 
-      <!--
-      AHORA MISMO SE MUESTRA ESTO.
-
-      CUANDO TENGAMOS PRODUCTOS,
-      LO OCULTAMOS Y ACTIVAMOS
-      product-grid.
-      -->
+      <!-- VACÍO POR AHORA -->
 
       <div
         class="empty-state"
         id="emptyState"
       >
+
 
         <div class="empty-mark">
           ♡
@@ -1078,34 +1073,36 @@
         <p id="emptyText">
 
           Muy pronto encontrarás aquí
-          nuevos diseños digitales creados
-          especialmente para esta categoría.
+          nuevos productos digitales.
 
         </p>
 
 
         <a
-          href="invitaciones.html"
+          href="index.html#categorias"
           class="empty-button"
+          id="emptyButton"
         >
-          Explorar invitaciones →
+          Explorar categorías →
         </a>
+
 
       </div>
 
 
 
-      <!--
-      AQUÍ IRÁN LOS PRODUCTOS REALES
-      MÁS ADELANTE.
-      -->
+      <!-- PRODUCTOS FUTUROS -->
 
       <div
         class="product-grid"
         id="productGrid"
       >
 
-        <!-- PRODUCTOS FUTUROS -->
+        <!--
+          AQUÍ AGREGAREMOS
+          LOS PRODUCTOS REALES
+          MÁS ADELANTE.
+        -->
 
       </div>
 
@@ -1114,27 +1111,32 @@
 
 
 
-    <!-- PERSONALIZADA -->
+    <!-- CTA DINÁMICO -->
 
-    <section class="custom-cta">
+    <section
+      class="extra-cta"
+      id="extraCta"
+    >
 
 
       <div>
 
-        <h3>
+        <h3 id="extraTitle">
           ¿Buscas algo diferente? ♡
         </h3>
 
-        <p>
-          También puedes solicitar una
-          invitación personalizada para tu celebración.
+        <p id="extraText">
+          Explora más productos digitales ZuzuBayo.
         </p>
 
       </div>
 
 
-      <a href="personalizadas.html">
-        Ver personalizadas →
+      <a
+        href="index.html#categorias"
+        id="extraButton"
+      >
+        Explorar →
       </a>
 
 
@@ -1163,11 +1165,11 @@
       <div class="benefit">
 
         <strong>
-          Fácil de compartir
+          Fácil de usar
         </strong>
 
         <span>
-          Desde tu celular
+          Desde tus dispositivos
         </span>
 
       </div>
@@ -1203,6 +1205,7 @@
 
       <div class="footer-brand">
 
+
         <div class="footer-logo">
 
           <img
@@ -1216,6 +1219,7 @@
         <p>
           Digital goodies made with love ♡
         </p>
+
 
       </div>
 
@@ -1235,12 +1239,12 @@
           Invitaciones
         </a>
 
-        <a href="ocasiones.html">
-          Ocasiones
+        <a href="plantillas.html">
+          Plantillas
         </a>
 
-        <a href="dias-especiales.html">
-          Días especiales
+        <a href="index.html#categorias">
+          Todas las categorías
         </a>
 
       </div>
@@ -1284,18 +1288,21 @@
 
 
 
-  <!-- =========================
-       CATEGORY SYSTEM
-  ========================== -->
+  <!-- =====================================================
+       SISTEMA UNIVERSAL DE CATEGORÍAS
+  ====================================================== -->
 
   <script>
 
     const categories = {
 
 
-      /* OCASIONES ESPECIALES */
+      /* =================================================
+         INVITACIONES — OCASIONES
+      ================================================= */
 
-      "cumpleanos": {
+
+      "cumpleanos":{
 
         title:
           'Invitaciones de <span>cumpleaños ♡</span>',
@@ -1306,16 +1313,25 @@
         collection:
           'Cumpleaños',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Ocasiones especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'ocasiones.html'
+          'ocasiones.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "baby-shower": {
+      "baby-shower":{
 
         title:
           'Invitaciones para <span>Baby Shower ♡</span>',
@@ -1326,16 +1342,25 @@
         collection:
           'Baby Shower',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Ocasiones especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'ocasiones.html'
+          'ocasiones.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "bodas": {
+      "bodas":{
 
         title:
           'Invitaciones de <span>boda ♡</span>',
@@ -1346,16 +1371,25 @@
         collection:
           'Bodas',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Ocasiones especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'ocasiones.html'
+          'ocasiones.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "xv-anos": {
+      "xv-anos":{
 
         title:
           'Invitaciones de <span>XV años ♡</span>',
@@ -1366,16 +1400,25 @@
         collection:
           'XV años',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Ocasiones especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'ocasiones.html'
+          'ocasiones.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "graduacion": {
+      "graduacion":{
 
         title:
           'Invitaciones de <span>graduación ♡</span>',
@@ -1386,16 +1429,25 @@
         collection:
           'Graduación',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Ocasiones especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'ocasiones.html'
+          'ocasiones.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "aniversarios": {
+      "aniversarios":{
 
         title:
           'Invitaciones de <span>aniversario ♡</span>',
@@ -1406,39 +1458,60 @@
         collection:
           'Aniversarios',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Ocasiones especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'ocasiones.html'
+          'ocasiones.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
 
-      /* DÍAS ESPECIALES */
+      /* =================================================
+         INVITACIONES — DÍAS ESPECIALES
+      ================================================= */
 
-      "san-valentin": {
+
+      "san-valentin":{
 
         title:
           'San Valentín <span>♡</span>',
 
         description:
-          'Diseños digitales para celebrar el amor, la amistad y los momentos especiales.',
+          'Diseños digitales para celebrar el amor, la amistad y momentos especiales.',
 
         collection:
           'San Valentín',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Días especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'dias-especiales.html'
+          'dias-especiales.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "dia-de-las-madres": {
+      "dia-de-las-madres":{
 
         title:
           'Día de las <span>Madres ♡</span>',
@@ -1449,16 +1522,25 @@
         collection:
           'Día de las Madres',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Días especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'dias-especiales.html'
+          'dias-especiales.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "navidad": {
+      "navidad":{
 
         title:
           'Navidad <span>♡</span>',
@@ -1469,16 +1551,25 @@
         collection:
           'Navidad',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Días especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'dias-especiales.html'
+          'dias-especiales.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "halloween": {
+      "halloween":{
 
         title:
           'Halloween <span>♡</span>',
@@ -1489,31 +1580,171 @@
         collection:
           'Halloween',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Días especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'dias-especiales.html'
+          'dias-especiales.html',
+
+        type:
+          'invitaciones'
 
       },
 
 
-      "mas-temporadas": {
+      "mas-temporadas":{
 
         title:
           'Más <span>temporadas ♡</span>',
 
         description:
-          'Descubre nuevas colecciones para diferentes temporadas y fechas especiales durante el año.',
+          'Descubre colecciones para diferentes temporadas y fechas especiales durante el año.',
 
         collection:
           'Más temporadas',
 
+        section:
+          'Invitaciones',
+
         parent:
           'Días especiales',
 
+        sectionUrl:
+          'invitaciones.html',
+
         back:
-          'dias-especiales.html'
+          'dias-especiales.html',
+
+        type:
+          'invitaciones'
+
+      },
+
+
+
+      /* =================================================
+         PLANTILLAS
+      ================================================= */
+
+
+      "redes-sociales":{
+
+        title:
+          'Plantillas para <span>redes sociales ♡</span>',
+
+        description:
+          'Diseños digitales para crear contenido bonito, organizado y consistente para tus redes.',
+
+        collection:
+          'Redes sociales',
+
+        section:
+          'Plantillas',
+
+        parent:
+          '',
+
+        sectionUrl:
+          'plantillas.html',
+
+        back:
+          'plantillas.html',
+
+        type:
+          'plantillas'
+
+      },
+
+
+      "negocios":{
+
+        title:
+          'Plantillas para <span>negocios ♡</span>',
+
+        description:
+          'Recursos digitales para presentar tu negocio de una manera clara, bonita y profesional.',
+
+        collection:
+          'Negocios',
+
+        section:
+          'Plantillas',
+
+        parent:
+          '',
+
+        sectionUrl:
+          'plantillas.html',
+
+        back:
+          'plantillas.html',
+
+        type:
+          'plantillas'
+
+      },
+
+
+      "eventos":{
+
+        title:
+          'Plantillas para <span>eventos ♡</span>',
+
+        description:
+          'Recursos digitales para ayudarte a organizar y presentar los detalles de tus eventos.',
+
+        collection:
+          'Eventos',
+
+        section:
+          'Plantillas',
+
+        parent:
+          '',
+
+        sectionUrl:
+          'plantillas.html',
+
+        back:
+          'plantillas.html',
+
+        type:
+          'plantillas'
+
+      },
+
+
+      "organizacion-estudio":{
+
+        title:
+          'Organización & <span>estudio ♡</span>',
+
+        description:
+          'Plantillas digitales para organizar horarios, tareas, estudios y actividades de una forma sencilla.',
+
+        collection:
+          'Organización & estudio',
+
+        section:
+          'Plantillas',
+
+        parent:
+          '',
+
+        sectionUrl:
+          'plantillas.html',
+
+        back:
+          'plantillas.html',
+
+        type:
+          'plantillas'
 
       }
 
@@ -1521,7 +1752,9 @@
 
 
 
-    /* LEER LA CATEGORÍA DE LA URL */
+    /* =====================================================
+       LEER URL
+    ====================================================== */
 
     const params =
       new URLSearchParams(
@@ -1538,10 +1771,14 @@
 
 
 
-    /* CAMBIAR CONTENIDO */
+    /* =====================================================
+       SI EXISTE LA CATEGORÍA
+    ====================================================== */
 
     if(category){
 
+
+      /* TÍTULO */
 
       document
         .getElementById("categoryTitle")
@@ -1549,11 +1786,17 @@
         category.title;
 
 
+
+      /* DESCRIPCIÓN */
+
       document
         .getElementById("categoryDescription")
         .textContent =
         category.description;
 
+
+
+      /* NOMBRE COLECCIÓN */
 
       document
         .getElementById("collectionTitle")
@@ -1561,19 +1804,43 @@
         category.collection;
 
 
+
+      /* BOTÓN VOLVER */
+
       document
-        .getElementById("breadcrumb")
-        .innerHTML =
+        .getElementById("backButton")
+        .href =
+        category.back;
+
+
+
+      /* BREADCRUMB */
+
+      let breadcrumbHTML =
 
         '<a href="index.html">Inicio</a>' +
 
         ' &nbsp;/&nbsp; ' +
 
-        '<a href="invitaciones.html">Invitaciones</a>' +
+        '<a href="' +
+        category.sectionUrl +
+        '">' +
+        category.section +
+        '</a>';
 
-        ' &nbsp;/&nbsp; ' +
 
-        category.parent +
+      if(category.parent){
+
+        breadcrumbHTML +=
+
+          ' &nbsp;/&nbsp; ' +
+
+          category.parent;
+
+      }
+
+
+      breadcrumbHTML +=
 
         ' &nbsp;/&nbsp; ' +
 
@@ -1581,10 +1848,13 @@
 
 
       document
-        .getElementById("backButton")
-        .href =
-        category.back;
+        .getElementById("breadcrumb")
+        .innerHTML =
+        breadcrumbHTML;
 
+
+
+      /* MENSAJE CUANDO AÚN NO HAY PRODUCTOS */
 
       document
         .getElementById("emptyText")
@@ -1597,6 +1867,91 @@
         '. Agregaremos los productos conforme estén listos.';
 
 
+
+      /* BOTÓN DEL EMPTY STATE */
+
+      document
+        .getElementById("emptyButton")
+        .href =
+        category.back;
+
+
+      document
+        .getElementById("emptyButton")
+        .textContent =
+        '← Volver a ' +
+        category.section.toLowerCase();
+
+
+
+      /* =================================================
+         CTA DIFERENTE SEGÚN CATEGORÍA
+      ================================================= */
+
+
+      if(category.type === "invitaciones"){
+
+
+        document
+          .getElementById("extraTitle")
+          .textContent =
+          '¿Buscas algo diferente? ♡';
+
+
+        document
+          .getElementById("extraText")
+          .textContent =
+          'También puedes solicitar una invitación personalizada para tu celebración.';
+
+
+        document
+          .getElementById("extraButton")
+          .href =
+          'personalizadas.html';
+
+
+        document
+          .getElementById("extraButton")
+          .textContent =
+          'Ver personalizadas →';
+
+
+      }
+
+
+      else if(category.type === "plantillas"){
+
+
+        document
+          .getElementById("extraTitle")
+          .textContent =
+          'Explora más plantillas ♡';
+
+
+        document
+          .getElementById("extraText")
+          .textContent =
+          'Descubre otras categorías de plantillas digitales para tus proyectos.';
+
+
+        document
+          .getElementById("extraButton")
+          .href =
+          'plantillas.html';
+
+
+        document
+          .getElementById("extraButton")
+          .textContent =
+          'Ver plantillas →';
+
+
+      }
+
+
+
+      /* TITLE DEL NAVEGADOR */
+
       document.title =
         category.collection +
         " | ZuzuBayo";
@@ -1605,7 +1960,10 @@
     }
 
 
-    /* SI ALGUIEN ENTRA SIN CATEGORÍA */
+
+    /* =====================================================
+       SI ENTRAN SIN ?categoria=
+    ====================================================== */
 
     else{
 
@@ -1629,9 +1987,57 @@
 
 
       document
+        .getElementById("breadcrumb")
+        .innerHTML =
+        '<a href="index.html">Inicio</a> &nbsp;/&nbsp; Productos';
+
+
+      document
+        .getElementById("backButton")
+        .href =
+        'index.html#categorias';
+
+
+      document
         .getElementById("emptyText")
         .textContent =
-        'Selecciona una categoría desde nuestra sección de invitaciones para comenzar.';
+        'Selecciona una categoría desde nuestra tienda para comenzar.';
+
+
+      document
+        .getElementById("emptyButton")
+        .href =
+        'index.html#categorias';
+
+
+      document
+        .getElementById("emptyButton")
+        .textContent =
+        'Explorar categorías →';
+
+
+      document
+        .getElementById("extraTitle")
+        .textContent =
+        'Descubre ZuzuBayo ♡';
+
+
+      document
+        .getElementById("extraText")
+        .textContent =
+        'Explora invitaciones, plantillas y más productos digitales.';
+
+
+      document
+        .getElementById("extraButton")
+        .href =
+        'index.html#categorias';
+
+
+      document
+        .getElementById("extraButton")
+        .textContent =
+        'Ver categorías →';
 
 
     }
