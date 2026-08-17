@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Productos | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Explora los productos digitales de ZuzuBayo."
+  >
+
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar{
+      min-height:34px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:42px;
+
+      padding:7px 16px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:13px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,246,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:76px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:26px;
+
+      font-size:15px;
+      font-weight:600;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:9px 16px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      width:min(1020px,92%);
+
+      margin:auto;
+
+      padding:46px 0 27px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:16px;
+
+      color:var(--pink);
+
+      font-size:13px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--pink);
+    }
+
+
+    .hero h1{
+      margin-bottom:11px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:50px;
+      font-weight:500;
+      line-height:1.08;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:700px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:15px;
+      line-height:1.65;
+    }
+
+
+
+    /* =========================
+       PRODUCT AREA
+    ========================= */
+
+    .products-wrap{
+      width:min(1080px,92%);
+
+      margin:0 auto 30px;
+    }
+
+
+    .products-heading{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+
+      gap:20px;
+
+      margin-bottom:15px;
+    }
+
+
+    .products-heading h2{
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:27px;
+      font-weight:500;
+    }
+
+
+    .products-heading span{
+      color:var(--muted);
+
+      font-size:12px;
+    }
+
+
+
+    /* =========================
+       EMPTY STATE
+    ========================= */
+
+    .empty-state{
+      min-height:310px;
+
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+
+      padding:40px 25px;
+
+      text-align:center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffefe,
+          #fff6f5
+        );
+
+      border:1px solid var(--border);
+      border-radius:22px;
+
+      box-shadow:var(--shadow);
+    }
+
+
+    .empty-mark{
+      margin-bottom:10px;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:36px;
+      font-style:italic;
+    }
+
+
+    .empty-state h3{
+      margin-bottom:7px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:25px;
+      font-weight:500;
+    }
+
+
+    .empty-state p{
+      max-width:520px;
+
+      margin-bottom:17px;
+
+      color:var(--muted);
+
+      font-size:13px;
+    }
+
+
+    .empty-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:10px 16px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+
+      font-size:12px;
+      font-weight:750;
+
+      transition:.2s ease;
+    }
+
+
+    .empty-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       FUTURE PRODUCT GRID
+    ========================= */
+
+    .product-grid{
+      display:none;
+
+      grid-template-columns:repeat(3,1fr);
+
+      gap:16px;
+    }
+
+
+    .product-card{
+      overflow:hidden;
+
+      background:white;
+
+      border:1px solid var(--border);
+      border-radius:19px;
+
+      box-shadow:var(--shadow);
+
+      transition:.22s ease;
+    }
+
+
+    .product-card:hover{
+      transform:translateY(-4px);
+    }
+
+
+    .product-image{
+      aspect-ratio:4 / 3;
+
+      overflow:hidden;
+
+      background:var(--blush);
+    }
+
+
+    .product-image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+    }
+
+
+    .product-info{
+      padding:16px;
+    }
+
+
+    .product-category{
+      margin-bottom:5px;
+
+      color:var(--pink);
+
+      font-size:10px;
+      font-weight:800;
+
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+
+    .product-info h3{
+      margin-bottom:6px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:21px;
+      font-weight:500;
+    }
+
+
+    .product-info p{
+      margin-bottom:12px;
+
+      color:var(--muted);
+
+      font-size:12px;
+    }
+
+
+    .product-footer{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:10px;
+
+      padding-top:10px;
+
+      border-top:1px solid var(--border);
+    }
+
+
+    .product-price{
+      color:var(--wine);
+
+      font-size:16px;
+      font-weight:800;
+    }
+
+
+    .product-view{
+      color:var(--red);
+
+      font-size:11px;
+      font-weight:750;
+    }
+
+
+
+    /* =========================
+       PERSONALIZED CTA
+    ========================= */
+
+    .custom-cta{
+      width:min(1080px,92%);
+
+      margin:0 auto 30px;
+
+      padding:22px 26px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+
+    .custom-cta h3{
+      margin-bottom:3px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:19px;
+      font-weight:500;
+    }
+
+
+    .custom-cta p{
+      color:var(--muted);
+
+      font-size:12px;
+    }
+
+
+    .custom-cta a{
+      flex-shrink:0;
+
+      padding:10px 15px;
+
+      border-radius:100px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:11px;
+      font-weight:750;
+    }
+
+
+
+    /* =========================
+       BENEFITS
+    ========================= */
+
+    .benefits{
+      width:min(900px,92%);
+
+      margin:0 auto 30px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--blush);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .benefit{
+      padding:17px;
+
+      text-align:center;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      margin-bottom:2px;
+
+      color:var(--wine);
+
+      font-size:14px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
+
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1100px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+
+      gap:34px;
+
+      padding:28px 0 24px;
+    }
+
+
+    .footer-logo img{
+      width:155px;
+    }
+
+
+    .footer-brand p{
+      margin-top:8px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .footer-col h4{
+      margin-bottom:9px;
+
+      font-size:13px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .copyright{
+      padding:10px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:760px){
+
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+        min-height:62px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:27px 0 20px;
+      }
+
+
+      .breadcrumb{
+        margin-bottom:10px;
+
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:36px;
+      }
+
+
+      .hero p{
+        font-size:13px;
+      }
+
+
+      .products-wrap{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .products-heading h2{
+        font-size:21px;
+      }
+
+
+      .products-heading span{
+        display:none;
+      }
+
+
+      .empty-state{
+        min-height:250px;
+
+        padding:30px 18px;
+
+        border-radius:17px;
+      }
+
+
+      .empty-mark{
+        font-size:29px;
+      }
+
+
+      .empty-state h3{
+        font-size:21px;
+      }
+
+
+      .empty-state p{
+        font-size:12px;
+      }
+
+
+      .product-grid{
+        grid-template-columns:repeat(2,1fr);
+
+        gap:9px;
+      }
+
+
+      .product-info{
+        padding:11px;
+      }
+
+
+      .product-info h3{
+        font-size:17px;
+      }
+
+
+      .product-info p{
+        display:none;
+      }
+
+
+      .product-footer{
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:3px;
+      }
+
+
+      .product-price{
+        font-size:14px;
+      }
+
+
+      .custom-cta{
+        width:94%;
+
+        margin-bottom:20px;
+
+        padding:16px;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:10px;
+      }
+
+
+      .custom-cta h3{
+        font-size:17px;
+      }
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .benefit{
+        padding:11px 5px;
+      }
+
+
+      .benefit strong{
+        font-size:11px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+
+        padding:22px 0 18px;
+      }
+
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+
+      .footer-logo img{
+        width:130px;
+      }
+
+
+      .footer-brand p{
+        font-size:11px;
+      }
+
+
+      .footer-col h4{
+        font-size:12px;
+      }
+
+
+      .footer-col a{
+        font-size:11px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>
+      ⇩ Productos digitales
+    </span>
+
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
+
+    <span>
+      ZuzuBayo Digital Goodies
+    </span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+
+      </a>
+
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+        <a href="dias-especiales.html">
+          Días especiales
+        </a>
+
+        <a
+          href="invitaciones.html"
+          class="back-button"
+          id="backButton"
+        >
+          ← Volver
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div
+        class="breadcrumb"
+        id="breadcrumb"
+      >
+        Inicio / Invitaciones / Productos
+      </div>
+
+
+      <h1 id="categoryTitle">
+
+        Nuestra
+
+        <span>
+          colección ♡
+        </span>
+
+      </h1>
+
+
+      <p id="categoryDescription">
+
+        Explora nuestra colección de productos
+        digitales ZuzuBayo.
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- PRODUCTOS -->
+
+    <section class="products-wrap">
+
+
+      <div class="products-heading">
+
+        <h2 id="collectionTitle">
+          Diseños disponibles
+        </h2>
+
+        <span>
+          Digital goodies made with love ♡
+        </span>
+
+      </div>
+
+
+
+      <!--
+      AHORA MISMO SE MUESTRA ESTO.
+
+      CUANDO TENGAMOS PRODUCTOS,
+      LO OCULTAMOS Y ACTIVAMOS
+      product-grid.
+      -->
+
+      <div
+        class="empty-state"
+        id="emptyState"
+      >
+
+        <div class="empty-mark">
+          ♡
+        </div>
+
+
+        <h3>
+          Estamos preparando esta colección
+        </h3>
+
+
+        <p id="emptyText">
+
+          Muy pronto encontrarás aquí
+          nuevos diseños digitales creados
+          especialmente para esta categoría.
+
+        </p>
+
+
+        <a
+          href="invitaciones.html"
+          class="empty-button"
+        >
+          Explorar invitaciones →
+        </a>
+
+      </div>
+
+
+
+      <!--
+      AQUÍ IRÁN LOS PRODUCTOS REALES
+      MÁS ADELANTE.
+      -->
+
+      <div
+        class="product-grid"
+        id="productGrid"
+      >
+
+        <!-- PRODUCTOS FUTUROS -->
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- PERSONALIZADA -->
+
+    <section class="custom-cta">
+
+
+      <div>
+
+        <h3>
+          ¿Buscas algo diferente? ♡
+        </h3>
+
+        <p>
+          También puedes solicitar una
+          invitación personalizada para tu celebración.
+        </p>
+
+      </div>
+
+
+      <a href="personalizadas.html">
+        Ver personalizadas →
+      </a>
+
+
+    </section>
+
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+
+      <div class="benefit">
+
+        <strong>
+          100% digital
+        </strong>
+
+        <span>
+          Sin envíos físicos
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Fácil de compartir
+        </strong>
+
+        <span>
+          Desde tu celular
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Pago seguro
+        </strong>
+
+        <span>
+          PayPal al elegir producto
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+
+          <img
+            src="logo.png"
+            alt="ZuzuBayo"
+          >
+
+        </div>
+
+
+        <p>
+          Digital goodies made with love ♡
+        </p>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Explora
+        </h4>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="ocasiones.html">
+          Ocasiones
+        </a>
+
+        <a href="dias-especiales.html">
+          Días especiales
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Ayuda
+        </h4>
+
+        <a href="index.html#faq">
+          FAQ
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
+
+    </div>
+
+
+  </footer>
+
+
+
+  <!-- =========================
+       CATEGORY SYSTEM
+  ========================== -->
+
+  <script>
+
+    const categories = {
+
+
+      /* OCASIONES ESPECIALES */
+
+      "cumpleanos": {
+
+        title:
+          'Invitaciones de <span>cumpleaños ♡</span>',
+
+        description:
+          'Encuentra invitaciones digitales para celebrar otro año de una forma bonita y especial.',
+
+        collection:
+          'Cumpleaños',
+
+        parent:
+          'Ocasiones especiales',
+
+        back:
+          'ocasiones.html'
+
+      },
+
+
+      "baby-shower": {
+
+        title:
+          'Invitaciones para <span>Baby Shower ♡</span>',
+
+        description:
+          'Diseños digitales para celebrar la llegada de alguien muy especial.',
+
+        collection:
+          'Baby Shower',
+
+        parent:
+          'Ocasiones especiales',
+
+        back:
+          'ocasiones.html'
+
+      },
+
+
+      "bodas": {
+
+        title:
+          'Invitaciones de <span>boda ♡</span>',
+
+        description:
+          'Diseños digitales elegantes y románticos para compartir los detalles de tu gran día.',
+
+        collection:
+          'Bodas',
+
+        parent:
+          'Ocasiones especiales',
+
+        back:
+          'ocasiones.html'
+
+      },
+
+
+      "xv-anos": {
+
+        title:
+          'Invitaciones de <span>XV años ♡</span>',
+
+        description:
+          'Invitaciones digitales para una celebración inolvidable y completamente especial.',
+
+        collection:
+          'XV años',
+
+        parent:
+          'Ocasiones especiales',
+
+        back:
+          'ocasiones.html'
+
+      },
+
+
+      "graduacion": {
+
+        title:
+          'Invitaciones de <span>graduación ♡</span>',
+
+        description:
+          'Celebra tus logros con invitaciones digitales para compartir este momento especial.',
+
+        collection:
+          'Graduación',
+
+        parent:
+          'Ocasiones especiales',
+
+        back:
+          'ocasiones.html'
+
+      },
+
+
+      "aniversarios": {
+
+        title:
+          'Invitaciones de <span>aniversario ♡</span>',
+
+        description:
+          'Diseños digitales para celebrar historias, recuerdos y momentos compartidos.',
+
+        collection:
+          'Aniversarios',
+
+        parent:
+          'Ocasiones especiales',
+
+        back:
+          'ocasiones.html'
+
+      },
+
+
+
+      /* DÍAS ESPECIALES */
+
+      "san-valentin": {
+
+        title:
+          'San Valentín <span>♡</span>',
+
+        description:
+          'Diseños digitales para celebrar el amor, la amistad y los momentos especiales.',
+
+        collection:
+          'San Valentín',
+
+        parent:
+          'Días especiales',
+
+        back:
+          'dias-especiales.html'
+
+      },
+
+
+      "dia-de-las-madres": {
+
+        title:
+          'Día de las <span>Madres ♡</span>',
+
+        description:
+          'Diseños especiales para celebrar a mamá y compartir momentos inolvidables.',
+
+        collection:
+          'Día de las Madres',
+
+        parent:
+          'Días especiales',
+
+        back:
+          'dias-especiales.html'
+
+      },
+
+
+      "navidad": {
+
+        title:
+          'Navidad <span>♡</span>',
+
+        description:
+          'Invitaciones digitales para fiestas, cenas, posadas y reuniones navideñas.',
+
+        collection:
+          'Navidad',
+
+        parent:
+          'Días especiales',
+
+        back:
+          'dias-especiales.html'
+
+      },
+
+
+      "halloween": {
+
+        title:
+          'Halloween <span>♡</span>',
+
+        description:
+          'Diseños digitales para fiestas, eventos y celebraciones de Halloween.',
+
+        collection:
+          'Halloween',
+
+        parent:
+          'Días especiales',
+
+        back:
+          'dias-especiales.html'
+
+      },
+
+
+      "mas-temporadas": {
+
+        title:
+          'Más <span>temporadas ♡</span>',
+
+        description:
+          'Descubre nuevas colecciones para diferentes temporadas y fechas especiales durante el año.',
+
+        collection:
+          'Más temporadas',
+
+        parent:
+          'Días especiales',
+
+        back:
+          'dias-especiales.html'
+
+      }
+
+    };
+
+
+
+    /* LEER LA CATEGORÍA DE LA URL */
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const categoryKey =
+      params.get("categoria");
+
+
+    const category =
+      categories[categoryKey];
+
+
+
+    /* CAMBIAR CONTENIDO */
+
+    if(category){
+
+
+      document
+        .getElementById("categoryTitle")
+        .innerHTML =
+        category.title;
+
+
+      document
+        .getElementById("categoryDescription")
+        .textContent =
+        category.description;
+
+
+      document
+        .getElementById("collectionTitle")
+        .textContent =
+        category.collection;
+
+
+      document
+        .getElementById("breadcrumb")
+        .innerHTML =
+
+        '<a href="index.html">Inicio</a>' +
+
+        ' &nbsp;/&nbsp; ' +
+
+        '<a href="invitaciones.html">Invitaciones</a>' +
+
+        ' &nbsp;/&nbsp; ' +
+
+        category.parent +
+
+        ' &nbsp;/&nbsp; ' +
+
+        category.collection;
+
+
+      document
+        .getElementById("backButton")
+        .href =
+        category.back;
+
+
+      document
+        .getElementById("emptyText")
+        .textContent =
+
+        'Muy pronto encontrarás aquí nuestra colección de ' +
+
+        category.collection +
+
+        '. Agregaremos los productos conforme estén listos.';
+
+
+      document.title =
+        category.collection +
+        " | ZuzuBayo";
+
+
+    }
+
+
+    /* SI ALGUIEN ENTRA SIN CATEGORÍA */
+
+    else{
+
+
+      document
+        .getElementById("categoryTitle")
+        .innerHTML =
+        'Productos <span>ZuzuBayo ♡</span>';
+
+
+      document
+        .getElementById("categoryDescription")
+        .textContent =
+        'Elige una categoría para explorar nuestros productos digitales.';
+
+
+      document
+        .getElementById("collectionTitle")
+        .textContent =
+        'Colecciones';
+
+
+      document
+        .getElementById("emptyText")
+        .textContent =
+        'Selecciona una categoría desde nuestra sección de invitaciones para comenzar.';
+
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
