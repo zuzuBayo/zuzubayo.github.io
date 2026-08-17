@@ -2,8 +2,13 @@
 <html lang="es">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>ZuzuBayo | Digital Goodies</title>
 
@@ -12,41 +17,63 @@
     content="Invitaciones, plantillas, stickers, journals, guías y recursos digitales de ZuzuBayo."
   >
 
+
   <style>
 
+    /* =====================================================
+       COLORES ZUZUBAYO
+    ===================================================== */
+
     :root {
-      --wine: #7f1020;
-      --red: #a81429;
-      --pink: #d96a75;
-      --pink-soft: #f8dfe3;
-      --blush: #fdf0f2;
-      --cream: #fffaf5;
-      --white: #ffffff;
 
-      --text: #201b1c;
-      --muted: #75696b;
-      --border: #efd9dd;
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#d96a75;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf5;
+      --white:#ffffff;
 
-      --shadow: 0 8px 25px rgba(84, 30, 38, 0.08);
-      --shadow-hover: 0 14px 35px rgba(84, 30, 38, 0.14);
+      --text:#201b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
 
-      --radius: 18px;
+      --shadow:
+        0 8px 25px rgba(84,30,38,.08);
+
+      --shadow-hover:
+        0 14px 35px rgba(84,30,38,.14);
+
+      --radius:18px;
+
     }
 
 
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+
+      box-sizing:border-box;
+
+      margin:0;
+
+      padding:0;
+
     }
 
 
     html {
-      scroll-behavior: smooth;
+
+      scroll-behavior:smooth;
+
     }
 
 
     body {
+
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -54,275 +81,373 @@
         Arial,
         sans-serif;
 
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.5;
+      background:var(--cream);
+
+      color:var(--text);
+
+      line-height:1.55;
+
     }
 
 
     img {
-      display: block;
-      max-width: 100%;
+
+      display:block;
+
+      max-width:100%;
+
     }
 
 
     a {
-      text-decoration: none;
-      color: inherit;
+
+      text-decoration:none;
+
+      color:inherit;
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        TOP BAR
-    ============================== */
+    ===================================================== */
 
     .topbar {
-      min-height: 30px;
 
-      background: var(--wine);
-      color: white;
+      min-height:34px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display:flex;
 
-      gap: 26px;
+      align-items:center;
 
-      padding: 6px 16px;
+      justify-content:center;
 
-      font-size: 11px;
-      font-weight: 600;
+      gap:28px;
 
-      text-align: center;
+      padding:7px 16px;
+
+      background:var(--wine);
+
+      color:white;
+
+      font-size:13px;
+
+      font-weight:600;
+
+      text-align:center;
+
     }
 
 
     .topbar span {
-      white-space: nowrap;
+
+      white-space:nowrap;
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        HEADER
-    ============================== */
+    ===================================================== */
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
 
-      background: rgba(255, 250, 245, 0.96);
+      position:sticky;
 
-      border-bottom: 1px solid var(--border);
+      top:0;
 
-      backdrop-filter: blur(10px);
+      z-index:1000;
+
+      background:
+        rgba(255,250,245,.96);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter:
+        blur(10px);
+
     }
 
 
     .nav {
-      width: min(1180px, 92%);
-      min-height: 72px;
 
-      margin: auto;
+      width:min(1180px,92%);
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      min-height:72px;
 
-      gap: 25px;
+      margin:auto;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      gap:25px;
+
     }
 
 
     .logo img {
-      width: 190px;
-      height: auto;
+
+      width:190px;
+
+      height:auto;
+
     }
 
 
     .desktop-nav {
-      display: flex;
-      align-items: center;
 
-      gap: 26px;
+      display:flex;
 
-      font-size: 13px;
-      font-weight: 650;
+      align-items:center;
+
+      gap:26px;
+
+      font-size:15px;
+
+      font-weight:650;
+
     }
 
 
     .desktop-nav a {
-      transition: 0.2s ease;
+
+      transition:.2s ease;
+
     }
 
 
     .desktop-nav a:hover {
-      color: var(--red);
+
+      color:var(--red);
+
     }
 
 
     .shop-pill {
-      background: var(--wine);
-      color: white !important;
 
-      padding: 8px 15px;
+      padding:9px 16px;
 
-      border-radius: 100px;
+      border-radius:100px;
+
+      background:var(--wine);
+
+      color:white !important;
+
     }
 
 
     .shop-pill:hover {
-      background: var(--red);
+
+      background:var(--red);
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        HERO
-    ============================== */
+    ===================================================== */
 
     .hero {
-      width: min(1180px, 92%);
-      margin: auto;
 
-      display: grid;
-      grid-template-columns: 1.1fr 0.75fr;
+      width:min(1180px,92%);
 
-      align-items: center;
+      margin:auto;
 
-      gap: 38px;
+      display:grid;
 
-      padding: 34px 0 24px;
+      grid-template-columns:
+        1.1fr .75fr;
+
+      align-items:center;
+
+      gap:38px;
+
+      padding:34px 0 24px;
+
     }
 
 
     .hero-copy {
-      max-width: 590px;
+
+      max-width:590px;
+
     }
 
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
 
-      color: var(--red);
+      display:inline-flex;
 
-      font-size: 11px;
-      font-weight: 800;
+      align-items:center;
 
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      margin-bottom:8px;
 
-      margin-bottom: 8px;
+      color:var(--red);
+
+      font-size:13px;
+
+      font-weight:800;
+
+      letter-spacing:.12em;
+
+      text-transform:uppercase;
+
     }
 
 
     .hero h1 {
-      font-size: clamp(38px, 5vw, 54px);
 
-      line-height: 1.02;
-      letter-spacing: -0.035em;
+      margin-bottom:14px;
 
-      margin-bottom: 14px;
+      font-size:
+        clamp(38px,5vw,54px);
+
+      line-height:1.02;
+
+      letter-spacing:-.035em;
+
     }
 
 
     .hero h1 span {
-      display: block;
-      color: var(--pink);
+
+      display:block;
+
+      color:var(--pink);
+
     }
 
 
     .hero-copy > p {
-      max-width: 530px;
 
-      color: #484042;
+      max-width:540px;
 
-      font-size: 15px;
+      margin-bottom:20px;
 
-      margin-bottom: 20px;
+      color:#484042;
+
+      font-size:17px;
+
+      line-height:1.6;
+
     }
 
 
     .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
 
-      gap: 10px;
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:10px;
+
     }
 
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
 
-      min-height: 42px;
+      min-height:44px;
 
-      padding: 10px 18px;
+      display:inline-flex;
 
-      border-radius: 10px;
+      align-items:center;
 
-      font-size: 12px;
-      font-weight: 750;
+      justify-content:center;
 
-      transition: 0.2s ease;
+      padding:10px 19px;
+
+      border-radius:10px;
+
+      font-size:14px;
+
+      font-weight:750;
+
+      transition:.2s ease;
+
     }
 
 
     .btn-primary {
-      background: var(--wine);
-      color: white;
 
-      border: 1px solid var(--wine);
+      background:var(--wine);
+
+      color:white;
+
+      border:
+        1px solid var(--wine);
+
     }
 
 
     .btn-primary:hover {
-      background: var(--red);
-      transform: translateY(-1px);
+
+      background:var(--red);
+
+      transform:
+        translateY(-1px);
+
     }
 
 
     .btn-secondary {
-      border: 1px solid var(--pink);
 
-      color: var(--wine);
+      border:
+        1px solid var(--pink);
 
-      background: transparent;
+      background:transparent;
+
+      color:var(--wine);
+
     }
 
 
     .btn-secondary:hover {
-      background: var(--blush);
+
+      background:var(--blush);
+
     }
 
 
     .hero-mini-info {
-      display: flex;
-      flex-wrap: wrap;
 
-      gap: 14px;
+      display:flex;
 
-      margin-top: 15px;
+      flex-wrap:wrap;
 
-      color: var(--muted);
+      gap:14px;
 
-      font-size: 10px;
+      margin-top:15px;
+
+      color:var(--muted);
+
+      font-size:12px;
+
     }
 
 
+
+    /* HERO IMAGE */
+
     .hero-art {
-      height: 330px;
 
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
+      height:330px;
 
-      overflow: hidden;
+      display:flex;
 
-      border-radius: 26px;
+      align-items:flex-end;
+
+      justify-content:center;
+
+      overflow:hidden;
+
+      border-radius:26px;
 
       background:
         radial-gradient(
@@ -331,164 +456,215 @@
           #fff6f2 65%,
           transparent 100%
         );
+
     }
 
 
     .hero-art .mascota {
-      width: 100%;
-      height: 100%;
 
-      object-fit: contain;
-      object-position: center bottom;
+      width:100%;
+
+      height:100%;
+
+      object-fit:contain;
+
+      object-position:
+        center bottom;
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        CATEGORÍAS
-    ============================== */
+    ===================================================== */
 
     .shop-section {
-      width: min(1180px, 92%);
 
-      margin: auto;
+      width:min(1180px,92%);
 
-      padding: 20px 0 30px;
+      margin:auto;
+
+      padding:22px 0 32px;
+
     }
 
 
     .section-head {
-      text-align: center;
 
-      margin-bottom: 18px;
+      margin-bottom:20px;
+
+      text-align:center;
+
     }
 
 
     .section-head h2 {
-      color: var(--wine);
 
-      font-size: 27px;
+      margin-bottom:6px;
 
-      margin-bottom: 5px;
+      color:var(--wine);
+
+      font-size:30px;
+
     }
 
 
     .section-head p {
-      color: var(--muted);
-      font-size: 12px;
+
+      color:var(--muted);
+
+      font-size:14px;
+
     }
 
 
     .categories {
-      display: grid;
 
-      grid-template-columns: repeat(4, 1fr);
+      display:grid;
 
-      gap: 14px;
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap:14px;
+
     }
 
 
-    /*
-      IMPORTANTE:
-      ahora .category-card puede ser un <a>
-      completo y TODO el recuadro es clickeable.
-    */
+
+    /* TODA LA TARJETA ES CLICKEABLE */
 
     .category-card {
-      position: relative;
 
-      display: block;
+      position:relative;
 
-      overflow: hidden;
+      display:block;
 
-      background: var(--white);
+      overflow:hidden;
 
-      border: 1px solid var(--border);
+      background:var(--white);
 
-      border-radius: var(--radius);
+      border:
+        1px solid var(--border);
 
-      box-shadow: var(--shadow);
+      border-radius:
+        var(--radius);
 
-      cursor: pointer;
+      box-shadow:
+        var(--shadow);
+
+      cursor:pointer;
 
       transition:
-        transform 0.22s ease,
-        box-shadow 0.22s ease,
-        border-color 0.22s ease;
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+
     }
 
 
     .category-card:hover {
-      transform: translateY(-4px);
 
-      box-shadow: var(--shadow-hover);
+      transform:
+        translateY(-4px);
 
-      border-color: #e8bdc5;
+      box-shadow:
+        var(--shadow-hover);
+
+      border-color:#e8bdc5;
+
     }
 
 
     .category-card:active {
-      transform: scale(0.99);
+
+      transform:
+        scale(.99);
+
     }
 
 
     .category-image {
-      height: 175px;
 
-      overflow: hidden;
+      height:175px;
 
-      background: var(--blush);
+      overflow:hidden;
+
+      background:var(--blush);
+
     }
 
 
     .category-image img {
-      width: 100%;
-      height: 100%;
 
-      object-fit: cover;
+      width:100%;
 
-      transition: transform 0.3s ease;
+      height:100%;
+
+      object-fit:cover;
+
+      transition:
+        transform .3s ease;
+
     }
 
 
-    .category-card:hover .category-image img {
-      transform: scale(1.025);
+    .category-card:hover
+    .category-image img {
+
+      transform:
+        scale(1.025);
+
     }
 
 
     .category-body {
-      padding: 13px;
+
+      padding:14px;
+
     }
 
 
     .category-body h3 {
-      font-size: 16px;
 
-      margin-bottom: 4px;
+      margin-bottom:5px;
+
+      font-size:18px;
+
     }
 
 
     .category-body p {
-      min-height: 32px;
 
-      color: var(--muted);
+      min-height:42px;
 
-      font-size: 10px;
+      margin-bottom:10px;
 
-      margin-bottom: 9px;
+      color:var(--muted);
+
+      font-size:13px;
+
+      line-height:1.5;
+
     }
 
 
     .category-btn {
-      color: var(--red);
 
-      font-size: 10px;
-      font-weight: 800;
+      color:var(--red);
+
+      font-size:12px;
+
+      font-weight:800;
+
     }
 
 
-    .category-card:hover .category-btn {
-      color: var(--wine);
+    .category-card:hover
+    .category-btn {
+
+      color:var(--wine);
+
     }
 
 
@@ -496,493 +672,634 @@
     /* PLANNERS */
 
     .category-card-coming {
-      cursor: default;
+
+      cursor:default;
+
     }
 
 
     .category-card-coming:hover {
-      transform: none;
 
-      box-shadow: var(--shadow);
+      transform:none;
 
-      border-color: var(--border);
+      box-shadow:
+        var(--shadow);
+
+      border-color:
+        var(--border);
+
     }
 
 
-    .category-card-coming:hover .category-image img {
-      transform: none;
+    .category-card-coming:hover
+    .category-image img {
+
+      transform:none;
+
     }
 
 
     .coming-badge {
-      position: absolute;
 
-      top: 9px;
-      right: 9px;
+      position:absolute;
 
-      z-index: 2;
+      top:9px;
 
-      background: var(--wine);
-      color: white;
+      right:9px;
 
-      border-radius: 100px;
+      z-index:2;
 
-      padding: 5px 8px;
+      padding:6px 9px;
 
-      font-size: 8px;
-      font-weight: 800;
+      border-radius:100px;
+
+      background:var(--wine);
+
+      color:white;
+
+      font-size:10px;
+
+      font-weight:800;
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        BENEFICIOS
-    ============================== */
+    ===================================================== */
 
     .benefits {
-      width: min(1050px, 92%);
 
-      margin: 12px auto 26px;
+      width:min(1050px,92%);
 
-      display: grid;
+      margin:14px auto 28px;
 
-      grid-template-columns: repeat(4, 1fr);
+      display:grid;
 
-      overflow: hidden;
+      grid-template-columns:
+        repeat(4,1fr);
 
-      border: 1px solid var(--border);
+      overflow:hidden;
 
-      border-radius: 18px;
+      background:
+        var(--pink-soft);
 
-      background: var(--pink-soft);
+      border:
+        1px solid var(--border);
+
+      border-radius:18px;
+
     }
 
 
     .benefit {
-      display: flex;
-      align-items: center;
 
-      gap: 10px;
+      display:flex;
 
-      padding: 15px 13px;
+      align-items:center;
 
-      border-right: 1px solid var(--border);
+      gap:11px;
+
+      padding:16px 14px;
+
+      border-right:
+        1px solid var(--border);
+
     }
 
 
     .benefit:last-child {
-      border-right: none;
+
+      border-right:none;
+
     }
 
 
     .benefit-icon {
-      min-width: 34px;
-      width: 34px;
-      height: 34px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      min-width:36px;
 
-      border-radius: 50%;
+      width:36px;
 
-      background: white;
+      height:36px;
 
-      color: var(--red);
+      display:flex;
 
-      font-size: 17px;
+      align-items:center;
+
+      justify-content:center;
+
+      border-radius:50%;
+
+      background:white;
+
+      color:var(--red);
+
+      font-size:18px;
+
     }
 
 
     .benefit h3 {
-      font-size: 11px;
 
-      margin-bottom: 2px;
+      margin-bottom:2px;
+
+      font-size:13px;
+
     }
 
 
     .benefit p {
-      color: var(--muted);
 
-      font-size: 8px;
+      color:var(--muted);
+
+      font-size:11px;
+
     }
 
 
 
-    /* ==============================
-       PAYPAL — SOLO INFORMACIÓN
-    ============================== */
+    /* =====================================================
+       PAYPAL
+    ===================================================== */
 
     .payment {
-      width: min(930px, 92%);
 
-      margin: 0 auto 28px;
+      width:min(930px,92%);
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      margin:
+        0 auto 30px;
 
-      gap: 20px;
+      display:flex;
 
-      background: var(--white);
+      align-items:center;
 
-      border: 1px solid var(--border);
+      justify-content:
+        space-between;
 
-      border-radius: 18px;
+      gap:20px;
 
-      padding: 18px 22px;
+      padding:20px 22px;
 
-      box-shadow: var(--shadow);
+      background:var(--white);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:18px;
+
+      box-shadow:
+        var(--shadow);
+
     }
 
 
     .payment-copy h2 {
-      color: var(--wine);
 
-      font-size: 18px;
+      margin-bottom:5px;
 
-      margin-bottom: 4px;
+      color:var(--wine);
+
+      font-size:21px;
+
     }
 
 
     .payment-copy p {
-      color: var(--muted);
 
-      font-size: 10px;
+      max-width:580px;
 
-      max-width: 570px;
+      color:var(--muted);
+
+      font-size:13px;
+
+      line-height:1.55;
+
     }
 
 
     .paypal-badge {
-      flex-shrink: 0;
 
-      padding: 9px 14px;
+      flex-shrink:0;
 
-      border-radius: 10px;
+      padding:
+        10px 15px;
 
-      background: #f7f8fb;
+      border-radius:10px;
 
-      border: 1px solid #e4e6ea;
+      background:#f7f8fb;
 
-      font-weight: 800;
+      border:
+        1px solid #e4e6ea;
 
-      font-size: 13px;
+      font-size:15px;
+
+      font-weight:800;
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        SOBRE ZUZUBAYO
-    ============================== */
+    ===================================================== */
 
     .about {
-      background: var(--blush);
 
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background:var(--blush);
+
+      border-top:
+        1px solid var(--border);
+
+      border-bottom:
+        1px solid var(--border);
+
     }
 
 
     .about-inner {
-      width: min(950px, 92%);
 
-      margin: auto;
+      width:min(950px,92%);
 
-      padding: 26px 0;
+      margin:auto;
 
-      display: grid;
+      padding:28px 0;
 
-      grid-template-columns: 95px 1fr;
+      display:grid;
 
-      gap: 22px;
+      grid-template-columns:
+        95px 1fr;
 
-      align-items: center;
+      align-items:center;
+
+      gap:22px;
+
     }
 
 
     .about-image {
-      width: 90px;
-      height: 90px;
 
-      border-radius: 50%;
+      width:90px;
 
-      overflow: hidden;
+      height:90px;
 
-      background: white;
+      overflow:hidden;
+
+      border-radius:50%;
+
+      background:white;
+
     }
 
 
     .about-image img {
-      width: 100%;
-      height: 100%;
 
-      object-fit: cover;
-      object-position: center top;
+      width:100%;
+
+      height:100%;
+
+      object-fit:cover;
+
+      object-position:
+        center top;
+
     }
 
 
     .about-copy h2 {
-      color: var(--wine);
 
-      font-size: 19px;
+      margin-bottom:6px;
 
-      margin-bottom: 5px;
+      color:var(--wine);
+
+      font-size:22px;
+
     }
 
 
     .about-copy p {
-      max-width: 700px;
 
-      color: #594f51;
+      max-width:700px;
 
-      font-size: 11px;
+      color:#594f51;
+
+      font-size:14px;
+
+      line-height:1.6;
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        FAQ
-    ============================== */
+    ===================================================== */
 
     .faq {
-      width: min(850px, 92%);
 
-      margin: auto;
+      width:min(850px,92%);
 
-      padding: 28px 0;
+      margin:auto;
+
+      padding:30px 0;
+
     }
 
 
     .faq h2 {
-      text-align: center;
 
-      color: var(--wine);
+      margin-bottom:16px;
 
-      font-size: 23px;
+      text-align:center;
 
-      margin-bottom: 15px;
+      color:var(--wine);
+
+      font-size:26px;
+
     }
 
 
     details {
-      background: white;
 
-      border: 1px solid var(--border);
+      margin-bottom:8px;
 
-      border-radius: 12px;
+      padding:14px 16px;
 
-      padding: 12px 14px;
+      background:white;
 
-      margin-bottom: 7px;
+      border:
+        1px solid var(--border);
+
+      border-radius:12px;
+
     }
 
 
     summary {
-      cursor: pointer;
 
-      font-size: 11px;
-      font-weight: 750;
+      cursor:pointer;
+
+      font-size:14px;
+
+      font-weight:750;
+
     }
 
 
     details p {
-      color: var(--muted);
 
-      font-size: 10px;
+      padding-top:8px;
 
-      padding-top: 7px;
+      color:var(--muted);
+
+      font-size:13px;
+
+      line-height:1.6;
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        CONTACTO
-    ============================== */
+    ===================================================== */
 
     .contact {
-      width: min(850px, 92%);
 
-      margin: 0 auto 30px;
+      width:min(850px,92%);
 
-      text-align: center;
+      margin:
+        0 auto 32px;
 
-      background: white;
+      padding:24px;
 
-      border: 1px solid var(--border);
+      text-align:center;
 
-      border-radius: 18px;
+      background:white;
 
-      padding: 23px;
+      border:
+        1px solid var(--border);
 
-      box-shadow: var(--shadow);
+      border-radius:18px;
+
+      box-shadow:
+        var(--shadow);
+
     }
 
 
     .contact h2 {
-      color: var(--wine);
 
-      font-size: 21px;
+      margin-bottom:6px;
 
-      margin-bottom: 5px;
+      color:var(--wine);
+
+      font-size:24px;
+
     }
 
 
     .contact p {
-      color: var(--muted);
 
-      font-size: 10px;
+      max-width:560px;
 
-      max-width: 540px;
+      margin:
+        0 auto 15px;
 
-      margin: 0 auto 14px;
+      color:var(--muted);
+
+      font-size:13px;
+
+      line-height:1.6;
+
     }
 
 
     .contact-buttons {
-      display: flex;
-      justify-content: center;
 
-      flex-wrap: wrap;
+      display:flex;
 
-      gap: 8px;
+      justify-content:center;
+
+      flex-wrap:wrap;
+
+      gap:8px;
+
     }
 
 
     .contact-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
 
-      border: 1px solid var(--pink);
+      display:inline-flex;
 
-      border-radius: 9px;
+      align-items:center;
 
-      padding: 8px 13px;
+      justify-content:center;
 
-      color: var(--wine);
+      padding:
+        9px 14px;
 
-      font-size: 10px;
-      font-weight: 750;
+      border:
+        1px solid var(--pink);
+
+      border-radius:9px;
+
+      color:var(--wine);
+
+      font-size:13px;
+
+      font-weight:750;
+
     }
 
 
     .contact-link:hover {
-      background: var(--blush);
+
+      background:var(--blush);
+
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        FOOTER
-    ============================== */
+    ===================================================== */
 
     footer {
-      background: var(--wine);
 
-      color: white;
+      background:var(--wine);
+
+      color:white;
+
     }
 
 
     .footer-inner {
-      width: min(1180px, 92%);
 
-      margin: auto;
+      width:min(1180px,92%);
 
-      display: grid;
+      margin:auto;
 
-      grid-template-columns: 1.5fr 0.8fr 0.8fr;
+      padding:
+        24px 0 19px;
 
-      gap: 30px;
+      display:grid;
 
-      padding: 23px 0 17px;
+      grid-template-columns:
+        1.5fr .8fr .8fr;
+
+      gap:30px;
+
     }
 
 
     .footer-logo img {
-      width: 150px;
-      height: auto;
+
+      width:150px;
+
+      height:auto;
+
     }
 
 
     .footer-brand p {
-      color: #f7dce1;
 
-      font-size: 9px;
+      margin-top:7px;
 
-      margin-top: 6px;
+      color:#f7dce1;
+
+      font-size:12px;
+
     }
 
 
     .footer-col h4 {
-      font-size: 10px;
 
-      margin-bottom: 7px;
+      margin-bottom:8px;
+
+      font-size:13px;
+
     }
 
 
     .footer-col a {
-      display: block;
 
-      color: #f5dce0;
+      display:block;
 
-      font-size: 9px;
+      margin-bottom:6px;
 
-      margin-bottom: 5px;
+      color:#f5dce0;
+
+      font-size:12px;
+
     }
 
 
     .copyright {
+
+      padding:
+        10px 15px;
+
+      text-align:center;
+
       border-top:
-        1px solid rgba(255, 255, 255, 0.15);
+        1px solid
+        rgba(255,255,255,.15);
 
-      text-align: center;
+      color:#f1d7dc;
 
-      color: #f1d7dc;
+      font-size:11px;
 
-      font-size: 8px;
-
-      padding: 9px 15px;
     }
 
 
 
-    /* ==============================
+    /* =====================================================
        TABLET
-    ============================== */
+    ===================================================== */
 
-    @media (max-width: 950px) {
+    @media(max-width:950px) {
 
       .categories {
-        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-columns:
+          repeat(3,1fr);
+
       }
 
     }
 
 
 
-    /* ==============================
-       MOBILE
-    ============================== */
+    /* =====================================================
+       TELÉFONO
+    ===================================================== */
 
-    @media (max-width: 760px) {
+    @media(max-width:760px) {
 
+
+      /* TOP BAR */
 
       .topbar {
-        min-height: 25px;
 
-        gap: 12px;
+        min-height:28px;
 
-        padding: 5px 8px;
+        gap:12px;
 
-        font-size: 8px;
+        padding:6px 8px;
 
-        overflow: hidden;
+        overflow:hidden;
+
+        font-size:10px;
+
       }
 
 
       .topbar span:nth-child(3) {
-        display: none;
+
+        display:none;
+
       }
 
 
@@ -990,19 +1307,25 @@
       /* HEADER */
 
       .nav {
-        width: 94%;
 
-        min-height: 58px;
+        width:94%;
+
+        min-height:60px;
+
       }
 
 
       .logo img {
-        width: 145px;
+
+        width:145px;
+
       }
 
 
       .desktop-nav {
-        display: none;
+
+        display:none;
+
       }
 
 
@@ -1010,55 +1333,73 @@
       /* HERO */
 
       .hero {
-        width: 92%;
 
-        grid-template-columns: 1fr;
+        width:92%;
 
-        gap: 8px;
+        grid-template-columns:1fr;
 
-        padding: 20px 0 10px;
+        gap:9px;
+
+        padding:
+          22px 0 12px;
+
       }
 
 
       .hero h1 {
-        font-size: 31px;
 
-        margin-bottom: 9px;
+        margin-bottom:10px;
+
+        font-size:34px;
+
       }
 
 
       .hero-copy > p {
-        font-size: 11px;
 
-        margin-bottom: 13px;
+        margin-bottom:14px;
+
+        font-size:14px;
+
+        line-height:1.55;
+
       }
 
 
       .eyebrow {
-        font-size: 8px;
 
-        margin-bottom: 5px;
+        margin-bottom:6px;
+
+        font-size:10px;
+
       }
 
 
       .btn {
-        min-height: 35px;
 
-        padding: 8px 13px;
+        min-height:38px;
 
-        font-size: 9px;
+        padding:
+          9px 14px;
+
+        font-size:12px;
+
       }
 
 
       .hero-mini-info {
-        display: none;
+
+        display:none;
+
       }
 
 
       .hero-art {
-        height: 185px;
 
-        border-radius: 17px;
+        height:185px;
+
+        border-radius:17px;
+
       }
 
 
@@ -1066,71 +1407,111 @@
       /* CATEGORÍAS */
 
       .shop-section {
-        width: 94%;
 
-        padding: 12px 0 18px;
+        width:94%;
+
+        padding:
+          14px 0 20px;
+
       }
 
 
       .section-head {
-        margin-bottom: 11px;
+
+        margin-bottom:13px;
+
       }
 
 
       .section-head h2 {
-        font-size: 19px;
+
+        margin-bottom:5px;
+
+        font-size:23px;
+
       }
 
 
       .section-head p {
-        font-size: 9px;
+
+        font-size:12px;
+
+        line-height:1.5;
+
       }
 
 
       .categories {
-        grid-template-columns: repeat(2, 1fr);
 
-        gap: 8px;
+        grid-template-columns:
+          repeat(2,1fr);
+
+        gap:9px;
+
       }
 
 
       .category-card {
-        border-radius: 13px;
+
+        border-radius:13px;
+
       }
 
 
       .category-image {
-        height: 110px;
+
+        height:110px;
+
       }
 
 
       .category-body {
-        padding: 8px;
+
+        padding:10px;
+
       }
 
 
       .category-body h3 {
-        font-size: 12px;
+
+        margin-bottom:6px;
+
+        font-size:15px;
+
       }
 
 
+      /*
+       En teléfono seguimos ocultando
+       el párrafo para que las tarjetas
+       no se vuelvan gigantes.
+      */
+
       .category-body p {
-        display: none;
+
+        display:none;
+
       }
 
 
       .category-btn {
-        font-size: 8px;
+
+        font-size:11px;
+
       }
 
 
       .coming-badge {
-        top: 6px;
-        right: 6px;
 
-        padding: 4px 6px;
+        top:6px;
 
-        font-size: 6px;
+        right:6px;
+
+        padding:
+          5px 7px;
+
+        font-size:8px;
+
       }
 
 
@@ -1138,49 +1519,69 @@
       /* BENEFICIOS */
 
       .benefits {
-        width: 94%;
 
-        grid-template-columns: repeat(2, 1fr);
+        width:94%;
 
-        margin: 18px auto;
+        grid-template-columns:
+          repeat(2,1fr);
 
-        border-radius: 14px;
+        margin:
+          20px auto;
+
+        border-radius:14px;
+
       }
 
 
       .benefit {
-        padding: 10px 8px;
 
-        gap: 7px;
+        padding:
+          12px 9px;
+
+        gap:8px;
+
       }
 
 
       .benefit:nth-child(2) {
-        border-right: none;
+
+        border-right:none;
+
       }
 
 
       .benefit:nth-child(-n+2) {
-        border-bottom: 1px solid var(--border);
+
+        border-bottom:
+          1px solid var(--border);
+
       }
 
 
       .benefit-icon {
-        min-width: 28px;
-        width: 28px;
-        height: 28px;
 
-        font-size: 13px;
+        min-width:30px;
+
+        width:30px;
+
+        height:30px;
+
+        font-size:14px;
+
       }
 
 
       .benefit h3 {
-        font-size: 9px;
+
+        font-size:11px;
+
       }
 
 
       .benefit p {
-        display: none;
+
+        display:none;
+
       }
 
 
@@ -1188,30 +1589,41 @@
       /* PAYPAL */
 
       .payment {
-        width: 94%;
 
-        padding: 13px;
+        width:94%;
 
-        gap: 10px;
+        margin-bottom:20px;
 
-        margin-bottom: 18px;
+        padding:15px;
+
+        gap:10px;
+
       }
 
 
       .payment-copy h2 {
-        font-size: 14px;
+
+        font-size:17px;
+
       }
 
 
       .payment-copy p {
-        font-size: 8px;
+
+        font-size:11px;
+
+        line-height:1.5;
+
       }
 
 
       .paypal-badge {
-        padding: 7px 9px;
 
-        font-size: 9px;
+        padding:
+          8px 10px;
+
+        font-size:11px;
+
       }
 
 
@@ -1219,29 +1631,41 @@
       /* ABOUT */
 
       .about-inner {
-        width: 92%;
 
-        grid-template-columns: 62px 1fr;
+        width:92%;
 
-        gap: 12px;
+        padding:20px 0;
 
-        padding: 18px 0;
+        grid-template-columns:
+          68px 1fr;
+
+        gap:13px;
+
       }
 
 
       .about-image {
-        width: 60px;
-        height: 60px;
+
+        width:66px;
+
+        height:66px;
+
       }
 
 
       .about-copy h2 {
-        font-size: 15px;
+
+        font-size:18px;
+
       }
 
 
       .about-copy p {
-        font-size: 8px;
+
+        font-size:11px;
+
+        line-height:1.55;
+
       }
 
 
@@ -1249,27 +1673,40 @@
       /* FAQ */
 
       .faq {
-        padding: 20px 0;
+
+        padding:22px 0;
+
       }
 
 
       .faq h2 {
-        font-size: 18px;
+
+        font-size:21px;
+
       }
 
 
       details {
-        padding: 10px 11px;
+
+        padding:
+          12px 13px;
+
       }
 
 
       summary {
-        font-size: 9px;
+
+        font-size:12px;
+
       }
 
 
       details p {
-        font-size: 8px;
+
+        font-size:11px;
+
+        line-height:1.55;
+
       }
 
 
@@ -1277,28 +1714,40 @@
       /* CONTACTO */
 
       .contact {
-        width: 92%;
 
-        padding: 18px 12px;
+        width:92%;
 
-        margin-bottom: 20px;
+        margin-bottom:22px;
+
+        padding:
+          20px 14px;
+
       }
 
 
       .contact h2 {
-        font-size: 16px;
+
+        font-size:19px;
+
       }
 
 
       .contact p {
-        font-size: 8px;
+
+        font-size:11px;
+
+        line-height:1.55;
+
       }
 
 
       .contact-link {
-        font-size: 8px;
 
-        padding: 7px 10px;
+        padding:
+          8px 11px;
+
+        font-size:11px;
+
       }
 
 
@@ -1306,23 +1755,60 @@
       /* FOOTER */
 
       .footer-inner {
-        width: 92%;
 
-        grid-template-columns: 1fr 1fr;
+        width:92%;
 
-        gap: 17px;
+        padding:
+          20px 0 15px;
 
-        padding: 18px 0 13px;
+        grid-template-columns:
+          1fr 1fr;
+
+        gap:18px;
+
       }
 
 
       .footer-brand {
-        grid-column: 1 / -1;
+
+        grid-column:
+          1 / -1;
+
       }
 
 
       .footer-logo img {
-        width: 125px;
+
+        width:125px;
+
+      }
+
+
+      .footer-brand p {
+
+        font-size:11px;
+
+      }
+
+
+      .footer-col h4 {
+
+        font-size:12px;
+
+      }
+
+
+      .footer-col a {
+
+        font-size:11px;
+
+      }
+
+
+      .copyright {
+
+        font-size:10px;
+
       }
 
     }
@@ -1332,24 +1818,35 @@
 </head>
 
 
+
 <body>
 
 
-  <!-- TOP BAR -->
+  <!-- =====================================================
+       TOP BAR
+  ====================================================== -->
 
   <div class="topbar">
 
-    <span>⇩ Descarga digital</span>
+    <span>
+      ⇩ Descarga digital
+    </span>
 
-    <span>♡ Pago seguro con PayPal</span>
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
 
-    <span>Productos digitales hechos para ti</span>
+    <span>
+      Productos digitales hechos para ti
+    </span>
 
   </div>
 
 
 
-  <!-- HEADER -->
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
   <header>
 
@@ -1360,35 +1857,43 @@
         href="#inicio"
         class="logo"
       >
+
         <img
           src="logo.png"
           alt="ZuzuBayo"
         >
+
       </a>
 
 
 
       <nav class="desktop-nav">
 
+
         <a href="#inicio">
           Inicio
         </a>
+
 
         <a href="#categorias">
           Categorías
         </a>
 
+
         <a href="#sobre">
           Sobre ZuzuBayo
         </a>
+
 
         <a href="#faq">
           FAQ
         </a>
 
+
         <a href="#contacto">
           Contacto
         </a>
+
 
         <a
           href="#categorias"
@@ -1396,6 +1901,7 @@
         >
           Tienda ♡
         </a>
+
 
       </nav>
 
@@ -1409,7 +1915,9 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
     <section
       class="hero"
@@ -1438,11 +1946,13 @@
 
         <p>
 
-          Invitaciones, plantillas, stickers, journals,
-          guías y recursos digitales creados para hacer
-          tu vida más fácil, bonita y organizada.
+          Invitaciones, plantillas, stickers,
+          journals, guías y recursos digitales
+          creados para hacer tu vida más fácil,
+          bonita y organizada.
 
         </p>
+
 
 
         <div class="hero-buttons">
@@ -1467,13 +1977,20 @@
         </div>
 
 
+
         <div class="hero-mini-info">
 
-          <span>♡ 100% digital</span>
+          <span>
+            ♡ 100% digital
+          </span>
 
-          <span>✧ Creado con amor</span>
+          <span>
+            ✧ Creado con amor
+          </span>
 
-          <span>⇩ Fácil de descargar</span>
+          <span>
+            ⇩ Fácil de descargar
+          </span>
 
         </div>
 
@@ -1497,7 +2014,9 @@
 
 
 
-    <!-- CATEGORÍAS -->
+    <!-- =====================================================
+         CATEGORÍAS
+    ====================================================== -->
 
     <section
       class="shop-section"
@@ -1512,8 +2031,8 @@
         </h2>
 
         <p>
-          Encuentra lo que necesitas y descubre nuevas formas
-          de crear, organizar y disfrutar.
+          Encuentra lo que necesitas y descubre
+          nuevas formas de crear, organizar y disfrutar.
         </p>
 
       </div>
@@ -1548,10 +2067,10 @@
             </h3>
 
             <p>
-              Ocasiones especiales, días especiales
-              e invitaciones personalizadas.
+              Ocasiones especiales,
+              días especiales e invitaciones
+              personalizadas.
             </p>
-
 
             <span class="category-btn">
               Ver invitaciones →
@@ -1589,10 +2108,10 @@
             </h3>
 
             <p>
-              Redes sociales, negocios, eventos,
-              organización y estudio.
+              Redes sociales, negocios,
+              eventos, organización
+              y estudio.
             </p>
-
 
             <span class="category-btn">
               Ver plantillas →
@@ -1630,10 +2149,10 @@
             </h3>
 
             <p>
-              Cute & aesthetic, self-care, productivity,
+              Cute & aesthetic,
+              self-care, productivity,
               temporadas y packs ZuzuBayo.
             </p>
-
 
             <span class="category-btn">
               Ver stickers →
@@ -1671,10 +2190,10 @@
             </h3>
 
             <p>
-              Self-care, gratitud, hábitos,
-              checklists, hogar y estudio.
+              Self-care, gratitud,
+              hábitos, checklists,
+              hogar y estudio.
             </p>
-
 
             <span class="category-btn">
               Ver journals →
@@ -1712,10 +2231,10 @@
             </h3>
 
             <p>
-              Productividad, marketing, organización,
-              emprendimiento, Canva y más.
+              Productividad, marketing,
+              organización, emprendimiento,
+              Canva y más.
             </p>
-
 
             <span class="category-btn">
               Ver guías →
@@ -1754,9 +2273,9 @@
 
             <p>
               Career Guides, Interview Prep,
-              Study Resources, Resume y Checklists.
+              Study Resources, Resume
+              y Checklists.
             </p>
-
 
             <span class="category-btn">
               Explorar NextFlight →
@@ -1769,10 +2288,13 @@
 
 
 
-        <!-- PLANNERS — NO CLICKEABLE -->
+        <!-- PLANNERS -->
 
         <article
-          class="category-card category-card-coming"
+          class="
+            category-card
+            category-card-coming
+          "
         >
 
 
@@ -1798,10 +2320,10 @@
             </h3>
 
             <p>
-              Daily, Weekly, Monthly, Student,
-              Self-Care y Budget.
+              Daily, Weekly, Monthly,
+              Student, Self-Care
+              y Budget.
             </p>
-
 
             <span class="category-btn">
               Próximamente ♡
@@ -1820,7 +2342,9 @@
 
 
 
-    <!-- BENEFICIOS -->
+    <!-- =====================================================
+         BENEFICIOS
+    ====================================================== -->
 
     <section class="benefits">
 
@@ -1916,7 +2440,9 @@
 
 
 
-    <!-- PAYPAL -->
+    <!-- =====================================================
+         PAYPAL
+    ====================================================== -->
 
     <section class="payment">
 
@@ -1926,7 +2452,6 @@
         <h2>
           Pago seguro con PayPal ♡
         </h2>
-
 
         <p>
 
@@ -1948,7 +2473,9 @@
 
 
 
-    <!-- SOBRE ZUZUBAYO -->
+    <!-- =====================================================
+         SOBRE ZUZUBAYO
+    ====================================================== -->
 
     <section
       class="about"
@@ -1976,15 +2503,16 @@
             Sobre ZuzuBayo ♡
           </h2>
 
-
           <p>
 
-            ZuzuBayo es un espacio creativo de productos
-            digitales pensado para hacer las cosas un poco
-            más bonitas, prácticas y especiales. Aquí
-            encontrarás recursos para organizarte,
-            crear, aprender, celebrar y acompañar
-            tus metas.
+            ZuzuBayo es un espacio creativo
+            de productos digitales pensado
+            para hacer las cosas un poco más
+            bonitas, prácticas y especiales.
+
+            Aquí encontrarás recursos para
+            organizarte, crear, aprender,
+            celebrar y acompañar tus metas.
 
           </p>
 
@@ -1998,7 +2526,9 @@
 
 
 
-    <!-- FAQ -->
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
 
     <section
       class="faq"
@@ -2018,12 +2548,10 @@
           ¿Los productos son físicos?
         </summary>
 
-
         <p>
-
-          No. Los productos de ZuzuBayo son digitales.
-          No recibirás un producto físico por correo.
-
+          No. Los productos de ZuzuBayo
+          son digitales. No recibirás
+          un producto físico por correo.
         </p>
 
       </details>
@@ -2036,13 +2564,10 @@
           ¿Cómo recibiré mi compra?
         </summary>
 
-
         <p>
-
-          Cada producto indicará cómo recibirás o
-          descargarás tus archivos después de completar
-          el pago.
-
+          Cada producto indicará cómo
+          recibirás o descargarás tus archivos
+          después de completar el pago.
         </p>
 
       </details>
@@ -2055,13 +2580,11 @@
           ¿Cómo podré pagar?
         </summary>
 
-
         <p>
-
-          Los productos disponibles podrán comprarse
-          mediante PayPal. El botón de pago aparecerá
-          dentro del producto correspondiente.
-
+          Los productos disponibles podrán
+          comprarse mediante PayPal.
+          El botón de pago aparecerá dentro
+          del producto correspondiente.
         </p>
 
       </details>
@@ -2071,16 +2594,14 @@
       <details>
 
         <summary>
-          ¿Puedo utilizar los productos en mi celular?
+          ¿Puedo utilizar los productos
+          en mi celular?
         </summary>
 
-
         <p>
-
-          Dependerá del producto, pero muchos recursos
-          podrán utilizarse desde celular, tablet
-          o computadora.
-
+          Dependerá del producto, pero muchos
+          recursos podrán utilizarse desde
+          celular, tablet o computadora.
         </p>
 
       </details>
@@ -2090,16 +2611,15 @@
       <details>
 
         <summary>
-          ¿Cuándo estarán disponibles los planners?
+          ¿Cuándo estarán disponibles
+          los planners?
         </summary>
 
-
         <p>
-
-          Los planners forman parte de una colección
-          futura de ZuzuBayo y actualmente están
-          marcados como Coming Soon.
-
+          Los planners forman parte de
+          una colección futura de ZuzuBayo
+          y actualmente están marcados
+          como Coming Soon.
         </p>
 
       </details>
@@ -2109,7 +2629,9 @@
 
 
 
-    <!-- CONTACTO -->
+    <!-- =====================================================
+         CONTACTO
+    ====================================================== -->
 
     <section
       class="contact"
@@ -2124,9 +2646,9 @@
 
       <p>
 
-        Si tienes alguna pregunta sobre un producto,
-        una descarga o una compra, puedes comunicarte
-        con ZuzuBayo.
+        Si tienes alguna pregunta sobre
+        un producto, una descarga o una compra,
+        puedes comunicarte con ZuzuBayo.
 
       </p>
 
@@ -2135,8 +2657,6 @@
       <div class="contact-buttons">
 
 
-        <!-- CAMBIAREMOS # POR TU INSTAGRAM -->
-
         <a
           href="#"
           class="contact-link"
@@ -2144,8 +2664,6 @@
           Instagram
         </a>
 
-
-        <!-- CAMBIAREMOS # POR TU EMAIL -->
 
         <a
           href="#"
@@ -2165,7 +2683,9 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
   <footer>
 
@@ -2196,6 +2716,7 @@
 
 
       <div class="footer-col">
+
 
         <h4>
           Explora
@@ -2233,6 +2754,7 @@
 
       <div class="footer-col">
 
+
         <h4>
           Ayuda
         </h4>
@@ -2262,7 +2784,8 @@
 
     <div class="copyright">
 
-      © 2026 ZuzuBayo · Todos los derechos reservados
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
 
     </div>
 
