@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Ocasiones Especiales | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Invitaciones digitales para cumpleaños, baby shower, bodas, XV años, graduaciones y aniversarios."
+  >
+
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
+
+      --radius:20px;
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+
+    /* TOP BAR */
+
+    .topbar{
+      min-height:34px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:40px;
+
+      padding:7px 16px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:13px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,246,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:76px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:26px;
+
+      font-size:15px;
+      font-weight:600;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:9px 16px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+    /* HERO */
+
+    .hero{
+      width:min(1100px,92%);
+
+      margin:auto;
+
+      padding:38px 0 24px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:16px;
+
+      color:var(--pink);
+
+      font-size:13px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--pink);
+    }
+
+
+    .hero h1{
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:48px;
+      font-weight:500;
+
+      line-height:1.1;
+
+      margin-bottom:10px;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:680px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:15px;
+    }
+
+
+    /* GRID */
+
+    .occasion-grid{
+      width:min(1100px,92%);
+
+      margin:0 auto 34px;
+
+      display:grid;
+
+      grid-template-columns:repeat(3,1fr);
+
+      gap:16px;
+    }
+
+
+    .occasion-card{
+      display:block;
+
+      overflow:hidden;
+
+      background:var(--white);
+
+      border:1px solid var(--border);
+
+      border-radius:20px;
+
+      box-shadow:var(--shadow);
+
+      transition:.22s ease;
+    }
+
+
+    .occasion-card:hover{
+      transform:translateY(-4px);
+
+      box-shadow:var(--shadow-hover);
+
+      border-color:#e7bcc3;
+    }
+
+
+    .occasion-image{
+      height:210px;
+
+      overflow:hidden;
+
+      background:var(--blush);
+    }
+
+
+    .occasion-image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      transition:transform .3s ease;
+    }
+
+
+    .occasion-card:hover
+    .occasion-image img{
+      transform:scale(1.025);
+    }
+
+
+    .occasion-body{
+      padding:17px;
+    }
+
+
+    .occasion-body h2{
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:24px;
+
+      font-weight:500;
+
+      margin-bottom:5px;
+    }
+
+
+    .occasion-body p{
+      color:var(--muted);
+
+      font-size:13px;
+
+      margin-bottom:10px;
+    }
+
+
+    .occasion-link{
+      color:var(--red);
+
+      font-size:13px;
+      font-weight:750;
+    }
+
+
+    /* BENEFITS */
+
+    .benefits{
+      width:min(900px,92%);
+
+      margin:0 auto 30px;
+
+      display:grid;
+
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+
+      border-radius:17px;
+    }
+
+
+    .benefit{
+      text-align:center;
+
+      padding:17px;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      color:var(--wine);
+
+      font-size:14px;
+
+      margin-bottom:2px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+    /* FOOTER */
+
+    footer{
+      background:var(--wine);
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1100px,92%);
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:24px;
+
+      padding:22px 0;
+    }
+
+
+    .footer-logo img{
+      width:145px;
+    }
+
+
+    .footer-text{
+      margin-top:7px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .footer-links{
+      display:flex;
+
+      gap:16px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    /* MOBILE */
+
+    @media(max-width:760px){
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+
+        min-height:62px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:25px 0 18px;
+      }
+
+
+      .breadcrumb{
+        margin-bottom:10px;
+
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:35px;
+      }
+
+
+      .hero p{
+        font-size:13px;
+      }
+
+
+      .occasion-grid{
+        width:94%;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:9px;
+
+        margin-bottom:22px;
+      }
+
+
+      .occasion-card{
+        border-radius:15px;
+      }
+
+
+      .occasion-image{
+        height:135px;
+      }
+
+
+      .occasion-body{
+        padding:11px;
+      }
+
+
+      .occasion-body h2{
+        font-size:17px;
+      }
+
+
+      .occasion-body p{
+        display:none;
+      }
+
+
+      .occasion-link{
+        font-size:11px;
+      }
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .benefit{
+        padding:11px 5px;
+      }
+
+
+      .benefit strong{
+        font-size:11px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+        padding:18px 0;
+      }
+
+
+      .footer-logo img{
+        width:125px;
+      }
+
+
+      .footer-links{
+        flex-wrap:wrap;
+
+        gap:10px;
+
+        font-size:11px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>
+      ⇩ Productos digitales
+    </span>
+
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
+
+    <span>
+      ZuzuBayo Digital Goodies
+    </span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+      </a>
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a
+          href="invitaciones.html"
+          class="back-button"
+        >
+          ← Volver a invitaciones
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div class="breadcrumb">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        &nbsp;/&nbsp;
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        &nbsp;/&nbsp;
+
+        Ocasiones especiales
+
+      </div>
+
+
+      <h1>
+
+        Ocasiones
+
+        <span>
+          especiales ♡
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        Elige el momento que quieres celebrar
+        y descubre diseños digitales creados
+        para cada ocasión.
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- OCASIONES -->
+
+    <section class="occasion-grid">
+
+
+      <!-- CUMPLEAÑOS -->
+
+      <a
+        href="cumpleanos.html"
+        class="occasion-card"
+      >
+
+        <div class="occasion-image">
+
+          <img
+            src="cumpleanos.png"
+            alt="Invitaciones de cumpleaños"
+          >
+
+        </div>
+
+
+        <div class="occasion-body">
+
+          <h2>
+            Cumpleaños
+          </h2>
+
+          <p>
+            Diseños para celebrar otro año especial.
+          </p>
+
+          <span class="occasion-link">
+            Ver diseños →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- BABY SHOWER -->
+
+      <a
+        href="baby-shower.html"
+        class="occasion-card"
+      >
+
+        <div class="occasion-image">
+
+          <img
+            src="baby-shower.png"
+            alt="Invitaciones para baby shower"
+          >
+
+        </div>
+
+
+        <div class="occasion-body">
+
+          <h2>
+            Baby Shower
+          </h2>
+
+          <p>
+            Diseños dulces para una llegada muy especial.
+          </p>
+
+          <span class="occasion-link">
+            Ver diseños →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- BODAS -->
+
+      <a
+        href="bodas.html"
+        class="occasion-card"
+      >
+
+        <div class="occasion-image">
+
+          <img
+            src="bodas.png"
+            alt="Invitaciones digitales de boda"
+          >
+
+        </div>
+
+
+        <div class="occasion-body">
+
+          <h2>
+            Bodas
+          </h2>
+
+          <p>
+            Invitaciones elegantes para celebrar el amor.
+          </p>
+
+          <span class="occasion-link">
+            Ver diseños →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- XV -->
+
+      <a
+        href="xv-anos.html"
+        class="occasion-card"
+      >
+
+        <div class="occasion-image">
+
+          <img
+            src="xv-anos.png"
+            alt="Invitaciones digitales de XV años"
+          >
+
+        </div>
+
+
+        <div class="occasion-body">
+
+          <h2>
+            XV años
+          </h2>
+
+          <p>
+            Diseños para una celebración inolvidable.
+          </p>
+
+          <span class="occasion-link">
+            Ver diseños →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- GRADUACIÓN -->
+
+      <a
+        href="graduacion.html"
+        class="occasion-card"
+      >
+
+        <div class="occasion-image">
+
+          <img
+            src="graduacion.png"
+            alt="Invitaciones digitales de graduación"
+          >
+
+        </div>
+
+
+        <div class="occasion-body">
+
+          <h2>
+            Graduación
+          </h2>
+
+          <p>
+            Celebra todo el esfuerzo y una nueva etapa.
+          </p>
+
+          <span class="occasion-link">
+            Ver diseños →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- ANIVERSARIOS -->
+
+      <a
+        href="aniversarios.html"
+        class="occasion-card"
+      >
+
+        <div class="occasion-image">
+
+          <img
+            src="aniversarios.png"
+            alt="Invitaciones digitales de aniversario"
+          >
+
+        </div>
+
+
+        <div class="occasion-body">
+
+          <h2>
+            Aniversarios
+          </h2>
+
+          <p>
+            Diseños para celebrar historias y momentos juntos.
+          </p>
+
+          <span class="occasion-link">
+            Ver diseños →
+          </span>
+
+        </div>
+
+      </a>
+
+
+    </section>
+
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+
+      <div class="benefit">
+
+        <strong>
+          100% digital
+        </strong>
+
+        <span>
+          Sin envíos físicos
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Fácil de compartir
+        </strong>
+
+        <span>
+          Desde tu celular
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Pago seguro
+        </strong>
+
+        <span>
+          PayPal en cada producto
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div>
+
+        <div class="footer-logo">
+
+          <img
+            src="logo.png"
+            alt="ZuzuBayo"
+          >
+
+        </div>
+
+        <div class="footer-text">
+          Digital goodies made with love ♡
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="#">
+          Ocasiones especiales
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
