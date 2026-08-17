@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Stickers Digitales | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Stickers digitales cute, aesthetic, self-care, productivity, celebraciones y packs ZuzuBayo."
+  >
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar{
+      min-height:34px;
+
+      padding:7px 16px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:50px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:13px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,246,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:78px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:28px;
+
+      font-size:15px;
+      font-weight:600;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:9px 17px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      width:min(1000px,92%);
+
+      margin:0 auto;
+
+      padding:58px 0 25px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:18px;
+
+      color:var(--pink);
+
+      font-size:14px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--pink);
+    }
+
+
+    .hero h1{
+      margin-bottom:17px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:clamp(46px,5vw,62px);
+      font-weight:500;
+
+      line-height:1.08;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:760px;
+
+      margin:0 auto;
+
+      color:#443b3d;
+
+      font-size:17px;
+      line-height:1.7;
+    }
+
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro{
+      width:min(900px,92%);
+
+      margin:26px auto 25px;
+
+      text-align:center;
+    }
+
+
+    .intro h2{
+      margin-bottom:5px;
+
+      color:var(--wine);
+
+      font-size:29px;
+    }
+
+
+    .intro p{
+      color:#51474a;
+
+      font-size:16px;
+    }
+
+
+
+    /* =========================
+       TARJETAS
+    ========================= */
+
+    .category-list{
+      width:min(1120px,92%);
+
+      margin:0 auto 34px;
+
+      display:flex;
+      flex-direction:column;
+
+      gap:14px;
+    }
+
+
+    .category-card{
+      position:relative;
+
+      min-height:190px;
+
+      overflow:hidden;
+
+      display:grid;
+      grid-template-columns:100px 1fr;
+
+      align-items:center;
+
+      gap:28px;
+
+      padding:28px 38px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffefe,
+          #fff5f4
+        );
+
+      border:1px solid var(--border);
+      border-radius:22px;
+
+      box-shadow:var(--shadow);
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+    }
+
+
+    .category-card:hover{
+      transform:translateY(-3px);
+
+      box-shadow:var(--shadow-hover);
+
+      border-color:#e5b9c1;
+    }
+
+
+    .category-card::after{
+      content:"";
+
+      position:absolute;
+
+      width:230px;
+      height:230px;
+
+      right:-85px;
+      bottom:-95px;
+
+      border-radius:50%;
+
+      background:rgba(248,223,227,.65);
+
+      pointer-events:none;
+    }
+
+
+    .category-number{
+      position:relative;
+      z-index:2;
+
+      height:100%;
+
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+
+      padding-top:3px;
+
+      border-right:1px solid #e9b9c1;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:34px;
+      font-style:italic;
+    }
+
+
+    .category-content{
+      position:relative;
+      z-index:2;
+    }
+
+
+    .category-title{
+      display:flex;
+      align-items:center;
+
+      gap:12px;
+
+      margin-bottom:10px;
+    }
+
+
+    .category-title h2{
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:30px;
+      font-weight:500;
+    }
+
+
+    .category-symbol{
+      color:var(--pink);
+
+      font-size:28px;
+    }
+
+
+    .category-options{
+      display:flex;
+      flex-wrap:wrap;
+
+      gap:4px 12px;
+
+      max-width:760px;
+
+      margin-bottom:17px;
+
+      color:#393133;
+
+      font-size:17px;
+    }
+
+
+    .category-options span:not(:last-child)::after{
+      content:"•";
+
+      margin-left:12px;
+
+      color:var(--pink);
+    }
+
+
+    .category-link{
+      display:inline-flex;
+      align-items:center;
+
+      gap:7px;
+
+      padding-top:10px;
+
+      border-top:1px solid #edcdd2;
+
+      color:var(--wine);
+
+      font-size:15px;
+      font-weight:750;
+    }
+
+
+
+    /* =========================
+       INFO
+    ========================= */
+
+    .info-strip{
+      width:min(1120px,92%);
+
+      margin:0 auto 32px;
+
+      padding:24px 28px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+
+    .info-strip h3{
+      margin-bottom:4px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:21px;
+      font-weight:500;
+    }
+
+
+    .info-strip p{
+      max-width:680px;
+
+      color:var(--muted);
+
+      font-size:13px;
+    }
+
+
+    .info-strip a{
+      flex-shrink:0;
+
+      padding:10px 16px;
+
+      border-radius:100px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:12px;
+      font-weight:800;
+    }
+
+
+
+    /* =========================
+       BENEFICIOS
+    ========================= */
+
+    .benefits{
+      width:min(920px,92%);
+
+      margin:0 auto 32px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--blush);
+
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+
+    .benefit{
+      padding:18px;
+
+      text-align:center;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      margin-bottom:3px;
+
+      color:var(--wine);
+
+      font-size:14px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
+
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1120px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+
+      gap:34px;
+
+      padding:30px 0 25px;
+    }
+
+
+    .footer-logo img{
+      width:160px;
+    }
+
+
+    .footer-brand p{
+      margin-top:8px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .footer-col h4{
+      margin-bottom:9px;
+
+      font-size:13px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#f8dde2;
+
+      font-size:12px;
+    }
+
+
+    .copyright{
+      padding:10px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:760px){
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+        min-height:62px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:34px 0 18px;
+
+        text-align:center;
+      }
+
+
+      .breadcrumb{
+        margin-bottom:13px;
+
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        margin-bottom:14px;
+
+        font-size:40px;
+
+        line-height:1.08;
+      }
+
+
+      .hero p{
+        font-size:14px;
+
+        line-height:1.6;
+      }
+
+
+      .intro{
+        margin:20px auto 18px;
+      }
+
+
+      .intro h2{
+        font-size:24px;
+      }
+
+
+      .intro p{
+        font-size:13px;
+      }
+
+
+      .category-list{
+        width:94%;
+
+        gap:10px;
+
+        margin-bottom:24px;
+      }
+
+
+      .category-card{
+        min-height:auto;
+
+        grid-template-columns:46px 1fr;
+
+        gap:14px;
+
+        padding:20px 16px;
+
+        border-radius:17px;
+      }
+
+
+      .category-card::after{
+        width:140px;
+        height:140px;
+
+        right:-70px;
+        bottom:-80px;
+      }
+
+
+      .category-number{
+        justify-content:flex-start;
+
+        font-size:24px;
+      }
+
+
+      .category-title{
+        margin-bottom:8px;
+      }
+
+
+      .category-title h2{
+        font-size:21px;
+      }
+
+
+      .category-symbol{
+        font-size:20px;
+      }
+
+
+      .category-options{
+        gap:3px 8px;
+
+        margin-bottom:12px;
+
+        font-size:13px;
+        line-height:1.6;
+      }
+
+
+      .category-options span:not(:last-child)::after{
+        margin-left:8px;
+      }
+
+
+      .category-link{
+        font-size:12px;
+      }
+
+
+      .info-strip{
+        width:94%;
+
+        margin-bottom:20px;
+
+        padding:17px;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:11px;
+      }
+
+
+      .info-strip h3{
+        font-size:17px;
+      }
+
+
+      .info-strip p{
+        font-size:11px;
+      }
+
+
+      .info-strip a{
+        padding:8px 12px;
+
+        font-size:11px;
+      }
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:20px;
+      }
+
+
+      .benefit{
+        padding:11px 5px;
+      }
+
+
+      .benefit strong{
+        font-size:11px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+
+        padding:22px 0 18px;
+      }
+
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+
+      .footer-logo img{
+        width:130px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>
+      ⇩ Productos digitales
+    </span>
+
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
+
+    <span>
+      ZuzuBayo Digital Goodies
+    </span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+
+      </a>
+
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="plantillas.html">
+          Plantillas
+        </a>
+
+        <a
+          href="index.html#categorias"
+          class="back-button"
+        >
+          ← Volver a categorías
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div class="breadcrumb">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        &nbsp;/&nbsp;
+
+        Stickers
+
+      </div>
+
+
+      <h1>
+
+        Stickers
+
+        <span>
+          digitales ♡
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        Packs digitales para darle personalidad,
+        organización y un toque bonito a tus notas,
+        planners, dispositivos y proyectos digitales.
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <h2>
+        ¿Qué estilo buscas? ♡
+      </h2>
+
+      <p>
+        Elige una colección y descubre los packs disponibles.
+      </p>
+
+    </section>
+
+
+
+    <!-- CATEGORÍAS -->
+
+    <section class="category-list">
+
+
+      <!-- 01 -->
+
+      <a
+        href="productos.html?categoria=stickers-cute"
+        class="category-card"
+      >
+
+        <div class="category-number">
+          01
+        </div>
+
+
+        <div class="category-content">
+
+
+          <div class="category-title">
+
+            <h2>
+              CUTE & AESTHETIC
+            </h2>
+
+            <span class="category-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+          <div class="category-options">
+
+            <span>Cute</span>
+            <span>Aesthetic</span>
+            <span>Decorativos</span>
+            <span>Packs temáticos</span>
+
+          </div>
+
+
+          <div class="category-link">
+            Explorar stickers →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- 02 -->
+
+      <a
+        href="productos.html?categoria=stickers-self-care"
+        class="category-card"
+      >
+
+        <div class="category-number">
+          02
+        </div>
+
+
+        <div class="category-content">
+
+
+          <div class="category-title">
+
+            <h2>
+              SELF-CARE
+            </h2>
+
+            <span class="category-symbol">
+              ✦
+            </span>
+
+          </div>
+
+
+          <div class="category-options">
+
+            <span>Wellness</span>
+            <span>Rutinas</span>
+            <span>Hábitos</span>
+            <span>Motivación</span>
+
+          </div>
+
+
+          <div class="category-link">
+            Explorar self-care →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- 03 -->
+
+      <a
+        href="productos.html?categoria=stickers-productivity"
+        class="category-card"
+      >
+
+        <div class="category-number">
+          03
+        </div>
+
+
+        <div class="category-content">
+
+
+          <div class="category-title">
+
+            <h2>
+              PRODUCTIVITY
+            </h2>
+
+            <span class="category-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+          <div class="category-options">
+
+            <span>To-do</span>
+            <span>Goals</span>
+            <span>Study</span>
+            <span>Organization</span>
+
+          </div>
+
+
+          <div class="category-link">
+            Explorar productivity →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- 04 -->
+
+      <a
+        href="productos.html?categoria=stickers-temporadas"
+        class="category-card"
+      >
+
+        <div class="category-number">
+          04
+        </div>
+
+
+        <div class="category-content">
+
+
+          <div class="category-title">
+
+            <h2>
+              CELEBRACIONES & TEMPORADAS
+            </h2>
+
+            <span class="category-symbol">
+              ✦
+            </span>
+
+          </div>
+
+
+          <div class="category-options">
+
+            <span>Cumpleaños</span>
+            <span>Navidad</span>
+            <span>Halloween</span>
+            <span>Fechas especiales</span>
+
+          </div>
+
+
+          <div class="category-link">
+            Explorar temporadas →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- 05 -->
+
+      <a
+        href="productos.html?categoria=stickers-zuzubayo"
+        class="category-card"
+      >
+
+        <div class="category-number">
+          05
+        </div>
+
+
+        <div class="category-content">
+
+
+          <div class="category-title">
+
+            <h2>
+              PACKS ZUZUBAYO
+            </h2>
+
+            <span class="category-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+          <div class="category-options">
+
+            <span>Exclusive packs</span>
+            <span>Mini collections</span>
+            <span>ZuzuBayo style</span>
+
+          </div>
+
+
+          <div class="category-link">
+            Explorar packs →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+    </section>
+
+
+
+    <!-- INFO -->
+
+    <section class="info-strip">
+
+
+      <div>
+
+        <h3>
+          Pequeños packs, muchas posibilidades ♡
+        </h3>
+
+        <p>
+          Aquí podremos agregar colecciones económicas,
+          packs pequeños y nuevos diseños conforme crezca la tienda.
+        </p>
+
+      </div>
+
+
+      <a href="productos.html">
+        Ver productos →
+      </a>
+
+
+    </section>
+
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="benefits">
+
+
+      <div class="benefit">
+
+        <strong>
+          100% digital
+        </strong>
+
+        <span>
+          Sin envíos físicos
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Packs variados
+        </strong>
+
+        <span>
+          Para distintos estilos
+        </span>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <strong>
+          Pago seguro
+        </strong>
+
+        <span>
+          PayPal al elegir producto
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+
+        <div class="footer-logo">
+
+          <img
+            src="logo.png"
+            alt="ZuzuBayo"
+          >
+
+        </div>
+
+
+        <p>
+          Digital goodies made with love ♡
+        </p>
+
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Explora
+        </h4>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="invitaciones.html">
+          Invitaciones
+        </a>
+
+        <a href="plantillas.html">
+          Plantillas
+        </a>
+
+        <a href="stickers.html">
+          Stickers
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Ayuda
+        </h4>
+
+        <a href="index.html#faq">
+          FAQ
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
