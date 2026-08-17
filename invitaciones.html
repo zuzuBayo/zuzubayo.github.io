@@ -5,50 +5,79 @@
 
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Invitaciones Digitales | ZuzuBayo</title>
 
   <meta
     name="description"
-    content="Invitaciones digitales para cumpleaños, baby shower, bodas, XV años, graduaciones, aniversarios, días especiales y diseños personalizados."
+    content="Invitaciones digitales para ocasiones especiales, días especiales y diseños personalizados de ZuzuBayo."
   >
+
 
   <style>
 
-    :root{
+    /* =====================================================
+       ZUZUBAYO — COLORES
+    ===================================================== */
+
+    :root {
+
       --wine:#7f1020;
+      --wine-dark:#68101c;
       --red:#a81429;
-      --pink:#d96a75;
+
+      --pink:#e36f7c;
       --pink-soft:#f8dfe3;
       --blush:#fdf0f2;
-      --cream:#fffaf5;
+
+      --cream:#fffaf6;
       --white:#ffffff;
 
-      --text:#201b1c;
+      --text:#211b1c;
       --muted:#75696b;
+
       --border:#efd9dd;
 
-      --shadow:0 8px 25px rgba(84,30,38,.08);
-      --shadow-hover:0 14px 35px rgba(84,30,38,.14);
+      --shadow:
+        0 8px 28px rgba(84,30,38,.07);
 
-      --radius:18px;
+      --shadow-hover:
+        0 13px 35px rgba(84,30,38,.12);
+
+      --radius:20px;
+
     }
 
 
-    *{
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+
       box-sizing:border-box;
+
       margin:0;
+
       padding:0;
+
     }
 
 
-    html{
+    html {
+
       scroll-behavior:smooth;
+
     }
 
 
-    body{
+    body {
+
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -57,936 +86,1455 @@
         sans-serif;
 
       background:var(--cream);
+
       color:var(--text);
-      line-height:1.5;
+
+      line-height:1.6;
+
     }
 
 
-    img{
+    img {
+
       display:block;
+
       max-width:100%;
+
     }
 
 
-    a{
+    a {
+
       color:inherit;
+
       text-decoration:none;
+
     }
 
 
 
-    /* TOP BAR */
+    /* =====================================================
+       TOP BAR
+    ===================================================== */
 
-    .topbar{
-      min-height:30px;
+    .topbar {
+
+      min-height:34px;
+
+      padding:7px 16px;
 
       display:flex;
+
       align-items:center;
+
       justify-content:center;
 
-      gap:26px;
-
-      padding:6px 16px;
+      gap:50px;
 
       background:var(--wine);
+
       color:white;
 
-      font-size:11px;
+      font-size:13px;
+
       font-weight:600;
+
     }
 
 
-    .topbar span{
+    .topbar span {
+
       white-space:nowrap;
+
     }
 
 
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
-    header{
+    header {
+
       position:sticky;
+
       top:0;
+
       z-index:1000;
 
-      background:rgba(255,250,245,.96);
+      background:
+        rgba(255,250,246,.96);
 
-      border-bottom:1px solid var(--border);
+      border-bottom:
+        1px solid var(--border);
 
-      backdrop-filter:blur(10px);
+      backdrop-filter:
+        blur(10px);
+
     }
 
 
-    .nav{
+    .nav {
+
       width:min(1180px,92%);
-      min-height:72px;
+
+      min-height:78px;
 
       margin:auto;
 
       display:flex;
+
       align-items:center;
+
       justify-content:space-between;
 
       gap:25px;
+
     }
 
 
-    .logo img{
+    .logo img {
+
       width:190px;
+
+      height:auto;
+
     }
 
 
-    .desktop-nav{
+    .desktop-nav {
+
       display:flex;
+
       align-items:center;
 
-      gap:24px;
+      gap:28px;
 
-      font-size:13px;
-      font-weight:650;
+      font-size:15px;
+
+      font-weight:600;
+
     }
 
 
-    .desktop-nav a:hover{
+    .desktop-nav a {
+
+      transition:.2s ease;
+
+    }
+
+
+    .desktop-nav a:hover {
+
       color:var(--red);
+
     }
 
 
-    .back-home{
-      padding:8px 14px;
+    .back-button {
 
-      border:1px solid var(--pink);
+      padding:9px 17px;
+
+      border:
+        1px solid var(--pink);
+
       border-radius:100px;
 
       color:var(--wine);
+
+      background:transparent;
+
     }
 
 
-    .back-home:hover{
+    .back-button:hover {
+
       background:var(--blush);
+
     }
 
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
-    .hero{
+    .hero {
+
       width:min(1120px,92%);
 
       margin:auto;
 
       display:grid;
-      grid-template-columns:1fr .72fr;
+
+      grid-template-columns:
+        1fr .95fr;
 
       align-items:center;
 
-      gap:34px;
+      gap:48px;
 
-      padding:34px 0 24px;
+      padding:
+        42px 0 30px;
+
     }
 
 
-    .hero-copy{
-      max-width:590px;
-    }
+    .breadcrumb {
 
-
-    .breadcrumb{
-      color:var(--muted);
-
-      font-size:10px;
-
-      margin-bottom:10px;
-    }
-
-
-    .breadcrumb a{
-      color:var(--red);
-      font-weight:700;
-    }
-
-
-    .eyebrow{
-      color:var(--red);
-
-      font-size:10px;
-      font-weight:800;
-
-      letter-spacing:.12em;
-
-      margin-bottom:6px;
-    }
-
-
-    .hero h1{
-      color:var(--wine);
-
-      font-size:48px;
-      line-height:1.03;
-
-      margin-bottom:12px;
-    }
-
-
-    .hero h1 span{
-      display:block;
+      margin-bottom:24px;
 
       color:var(--pink);
+
+      font-size:13px;
+
     }
 
 
-    .hero p{
+    .breadcrumb a {
+
+      color:var(--pink);
+
+    }
+
+
+    .hero h1 {
+
+      margin-bottom:24px;
+
+      color:var(--wine);
+
+      font-size:
+        clamp(46px,5vw,66px);
+
+      line-height:1;
+
+      letter-spacing:-.03em;
+
+    }
+
+
+    .hero h1 span {
+
+      display:block;
+
+      margin-top:8px;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-style:italic;
+
+      font-weight:500;
+
+    }
+
+
+    .hero-copy > p {
+
       max-width:520px;
 
-      color:#51484a;
+      color:#443b3d;
 
-      font-size:14px;
+      font-size:17px;
+
+      line-height:1.7;
+
     }
 
 
-    .hero-image{
-      height:290px;
+
+    /* HERO IMAGE */
+
+    .hero-image {
+
+      height:360px;
 
       overflow:hidden;
 
       border-radius:24px;
 
-      border:1px solid var(--border);
+      background:
+        linear-gradient(
+          135deg,
+          #fbe4e8,
+          #fff5f3
+        );
 
-      box-shadow:var(--shadow);
+      border:
+        1px solid var(--border);
 
-      background:var(--blush);
+      box-shadow:
+        var(--shadow);
+
     }
 
 
-    .hero-image img{
+    .hero-image img {
+
       width:100%;
+
       height:100%;
 
       object-fit:cover;
+
+      object-position:center;
+
     }
 
 
 
-    /* INTRO */
+    /* =====================================================
+       INTRO
+    ===================================================== */
 
-    .intro{
-      width:min(850px,92%);
+    .celebration-intro {
 
-      margin:4px auto 26px;
+      width:min(900px,92%);
+
+      margin:
+        8px auto 24px;
 
       text-align:center;
+
     }
 
 
-    .intro h2{
-      color:var(--wine);
-
-      font-size:25px;
+    .celebration-intro h2 {
 
       margin-bottom:5px;
+
+      color:var(--wine);
+
+      font-size:29px;
+
     }
 
 
-    .intro p{
-      color:var(--muted);
+    .celebration-intro p {
 
-      font-size:11px;
+      color:#51474a;
+
+      font-size:16px;
+
     }
 
 
 
-    /* PRINCIPALES */
+    /* =====================================================
+       TARJETAS PRINCIPALES
+    ===================================================== */
 
-    .main-categories{
+    .choice-wrapper {
+
       width:min(1120px,92%);
 
-      margin:auto;
+      margin:
+        0 auto 30px;
 
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
+      display:flex;
+
+      flex-direction:column;
 
       gap:14px;
 
-      margin-bottom:34px;
-    }
-
-
-    .main-card{
-      min-height:165px;
-
-      padding:22px;
-
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-
-      border:1px solid var(--border);
-      border-radius:20px;
-
-      box-shadow:var(--shadow);
-
-      transition:.22s ease;
-    }
-
-
-    .main-card:hover{
-      transform:translateY(-4px);
-
-      box-shadow:var(--shadow-hover);
-    }
-
-
-    .main-card:nth-child(1){
-      background:
-        linear-gradient(145deg,#fff,#fbe2e6);
-    }
-
-
-    .main-card:nth-child(2){
-      background:
-        linear-gradient(145deg,#fff7f3,#f8dadd);
-    }
-
-
-    .main-card:nth-child(3){
-      background:
-        linear-gradient(145deg,#fff,#f9edf0);
-    }
-
-
-    .main-number{
-      color:var(--pink);
-
-      font-size:11px;
-      font-weight:800;
-
-      margin-bottom:auto;
-    }
-
-
-    .main-card h3{
-      color:var(--wine);
-
-      font-size:19px;
-
-      margin-bottom:4px;
-    }
-
-
-    .main-card p{
-      color:var(--muted);
-
-      font-size:10px;
-
-      margin-bottom:9px;
-    }
-
-
-    .card-link{
-      color:var(--red);
-
-      font-size:10px;
-      font-weight:800;
     }
 
 
 
-    /* SECCIONES */
+    /* TARJETA CLARA */
 
-    .collection{
-      width:min(1120px,92%);
-
-      margin:0 auto 36px;
-    }
-
-
-    .collection-head{
-      margin-bottom:15px;
-    }
-
-
-    .collection-head h2{
-      color:var(--wine);
-
-      font-size:24px;
-
-      margin-bottom:3px;
-    }
-
-
-    .collection-head p{
-      color:var(--muted);
-
-      font-size:10px;
-    }
-
-
-
-    /* SUBCATEGORIAS */
-
-    .occasion-grid{
-      display:grid;
-
-      grid-template-columns:repeat(3,1fr);
-
-      gap:12px;
-    }
-
-
-    .occasion-card{
-      min-height:125px;
+    .choice-card {
 
       position:relative;
 
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
+      min-height:190px;
 
       overflow:hidden;
 
-      padding:16px;
+      display:grid;
 
-      background:white;
+      grid-template-columns:
+        100px 1fr;
 
-      border:1px solid var(--border);
-      border-radius:16px;
+      align-items:center;
 
-      box-shadow:var(--shadow);
+      gap:28px;
 
-      transition:.2s ease;
+      padding:
+        28px 38px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffefe,
+          #fff5f4
+        );
+
+      border:
+        1px solid var(--border);
+
+      border-radius:22px;
+
+      box-shadow:
+        var(--shadow);
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease;
+
     }
 
 
-    .occasion-card:hover{
-      transform:translateY(-3px);
+    .choice-card:hover {
 
-      border-color:#e5b9c1;
+      transform:
+        translateY(-3px);
 
-      box-shadow:var(--shadow-hover);
+      box-shadow:
+        var(--shadow-hover);
+
     }
 
 
-    .occasion-card::before{
+    .choice-card::after {
+
       content:"";
-
-      width:70px;
-      height:70px;
 
       position:absolute;
 
-      top:-24px;
-      right:-15px;
+      width:230px;
+
+      height:230px;
+
+      right:-85px;
+
+      bottom:-95px;
 
       border-radius:50%;
 
-      background:var(--pink-soft);
+      background:
+        rgba(248,223,227,.65);
 
-      opacity:.8;
+      pointer-events:none;
+
     }
 
 
-    .occasion-card h3{
+    .choice-number {
+
+      position:relative;
+
+      z-index:2;
+
+      height:100%;
+
+      display:flex;
+
+      align-items:flex-start;
+
+      justify-content:center;
+
+      padding-top:3px;
+
+      border-right:
+        1px solid #e9b9c1;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:34px;
+
+      font-style:italic;
+
+    }
+
+
+    .choice-content {
+
+      position:relative;
+
+      z-index:2;
+
+    }
+
+
+    .choice-title-row {
+
+      display:flex;
+
+      align-items:center;
+
+      gap:12px;
+
+      margin-bottom:10px;
+
+    }
+
+
+    .choice-card h3 {
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:30px;
+
+      font-weight:500;
+
+    }
+
+
+    .choice-symbol {
+
+      color:var(--pink);
+
+      font-size:28px;
+
+    }
+
+
+    .choice-options {
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:
+        4px 12px;
+
+      max-width:650px;
+
+      margin-bottom:17px;
+
+      color:#393133;
+
+      font-size:17px;
+
+    }
+
+
+    .choice-options span:not(:last-child)::after {
+
+      content:"•";
+
+      margin-left:12px;
+
+      color:var(--pink);
+
+    }
+
+
+    .choice-link {
+
+      display:inline-flex;
+
+      align-items:center;
+
+      gap:7px;
+
+      padding-top:10px;
+
+      border-top:
+        1px solid #edcdd2;
+
       color:var(--wine);
 
       font-size:15px;
 
-      margin-bottom:3px;
-    }
+      font-weight:750;
 
-
-    .occasion-card p{
-      color:var(--muted);
-
-      font-size:9px;
-    }
-
-
-    .soon{
-      display:inline-block;
-
-      margin-top:6px;
-
-      color:var(--red);
-
-      font-size:8px;
-      font-weight:800;
     }
 
 
 
-    /* DIAS ESPECIALES */
+    /* =====================================================
+       PERSONALIZADAS
+    ===================================================== */
 
-    .special-grid{
-      display:grid;
+    .custom-card {
 
-      grid-template-columns:repeat(4,1fr);
+      position:relative;
 
-      gap:10px;
-    }
-
-
-    .special-card{
-      min-height:95px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      text-align:center;
-
-      padding:14px;
-
-      background:white;
-
-      border:1px solid var(--border);
-      border-radius:15px;
-
-      box-shadow:var(--shadow);
-
-      transition:.2s ease;
-    }
-
-
-    .special-card:hover{
-      transform:translateY(-3px);
-
-      background:var(--blush);
-    }
-
-
-    .special-card h3{
-      color:var(--wine);
-
-      font-size:13px;
-    }
-
-
-
-    /* PERSONALIZADAS */
-
-    .custom-box{
-      width:min(1120px,92%);
-
-      margin:0 auto 32px;
-
-      padding:25px;
-
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-
-      gap:22px;
-
-      border:1px solid var(--border);
-      border-radius:20px;
-
-      background:
-        linear-gradient(135deg,#fff,#fbe3e7);
-
-      box-shadow:var(--shadow);
-    }
-
-
-    .custom-copy h2{
-      color:var(--wine);
-
-      font-size:22px;
-
-      margin-bottom:5px;
-    }
-
-
-    .custom-copy p{
-      max-width:620px;
-
-      color:var(--muted);
-
-      font-size:10px;
-    }
-
-
-    .custom-btn{
-      flex-shrink:0;
-
-      padding:10px 16px;
-
-      border-radius:10px;
-
-      background:var(--wine);
-      color:white;
-
-      font-size:10px;
-      font-weight:800;
-    }
-
-
-
-    /* BENEFICIOS */
-
-    .benefits{
-      width:min(950px,92%);
-
-      margin:0 auto 30px;
-
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
+      min-height:190px;
 
       overflow:hidden;
 
-      background:var(--pink-soft);
+      display:grid;
 
-      border:1px solid var(--border);
-      border-radius:17px;
+      grid-template-columns:
+        100px 1fr auto;
+
+      align-items:center;
+
+      gap:28px;
+
+      padding:
+        28px 38px;
+
+      border-radius:22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--wine),
+          #941a2b
+        );
+
+      color:white;
+
+      box-shadow:
+        0 10px 30px
+        rgba(95,15,30,.18);
+
     }
 
 
-    .benefit{
+    .custom-card::before,
+    .custom-card::after {
+
+      content:"";
+
+      position:absolute;
+
+      border:
+        2px solid
+        rgba(255,255,255,.1);
+
+      border-radius:50%;
+
+    }
+
+
+    .custom-card::before {
+
+      width:220px;
+
+      height:220px;
+
+      right:-100px;
+
+      top:-110px;
+
+    }
+
+
+    .custom-card::after {
+
+      width:140px;
+
+      height:140px;
+
+      right:-40px;
+
+      top:-60px;
+
+    }
+
+
+    .custom-card
+    .choice-number {
+
+      border-right:
+        1px solid
+        rgba(255,255,255,.35);
+
+      color:#f3a7b0;
+
+    }
+
+
+    .custom-content {
+
+      position:relative;
+
+      z-index:2;
+
+    }
+
+
+    .custom-content h3 {
+
+      max-width:500px;
+
+      margin-bottom:8px;
+
+      color:white;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:29px;
+
+      line-height:1.15;
+
+      font-weight:500;
+
+    }
+
+
+    .custom-content p {
+
+      max-width:500px;
+
+      color:#fbe6ea;
+
+      font-size:16px;
+
+    }
+
+
+    .custom-btn {
+
+      position:relative;
+
+      z-index:2;
+
+      min-width:205px;
+
+      padding:
+        14px 22px;
+
       text-align:center;
 
-      padding:15px;
+      border-radius:100px;
 
-      border-right:1px solid var(--border);
-    }
-
-
-    .benefit:last-child{
-      border-right:none;
-    }
-
-
-    .benefit strong{
-      display:block;
+      background:
+        #fff8f7;
 
       color:var(--wine);
 
-      font-size:10px;
+      font-size:15px;
+
+      font-weight:800;
+
+      transition:.2s ease;
+
+    }
+
+
+    .custom-btn:hover {
+
+      transform:
+        translateY(-2px);
+
+      background:white;
+
+    }
+
+
+
+    /* =====================================================
+       BENEFICIOS
+    ===================================================== */
+
+    .benefits {
+
+      width:min(1120px,92%);
+
+      margin:
+        0 auto 34px;
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      overflow:hidden;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:18px;
+
+      background:var(--blush);
+
+    }
+
+
+    .benefit {
+
+      display:flex;
+
+      align-items:center;
+
+      gap:14px;
+
+      padding:
+        18px 24px;
+
+      border-right:
+        1px solid var(--border);
+
+    }
+
+
+    .benefit:last-child {
+
+      border-right:none;
+
+    }
+
+
+    .benefit-icon {
+
+      min-width:48px;
+
+      width:48px;
+
+      height:48px;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      border-radius:50%;
+
+      background:white;
+
+      color:var(--red);
+
+      font-size:22px;
+
+    }
+
+
+    .benefit h4 {
 
       margin-bottom:2px;
+
+      color:var(--wine);
+
+      font-size:15px;
+
     }
 
 
-    .benefit span{
+    .benefit p {
+
       color:var(--muted);
 
-      font-size:8px;
+      font-size:13px;
+
+      line-height:1.4;
+
     }
 
 
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
-    footer{
-      background:var(--wine);
+    footer {
+
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
 
       color:white;
+
     }
 
 
-    .footer-inner{
+    .footer-inner {
+
       width:min(1120px,92%);
 
       margin:auto;
 
+      display:grid;
+
+      grid-template-columns:
+        1.4fr .8fr .8fr 1fr;
+
+      gap:40px;
+
+      padding:
+        34px 0 28px;
+
+    }
+
+
+    .footer-logo img {
+
+      width:170px;
+
+    }
+
+
+    .footer-brand p {
+
+      margin-top:10px;
+
+      color:#f9dfe4;
+
+      font-size:13px;
+
+    }
+
+
+    .socials {
+
       display:flex;
+
+      gap:8px;
+
+      margin-top:16px;
+
+    }
+
+
+    .social-circle {
+
+      width:32px;
+
+      height:32px;
+
+      display:flex;
+
       align-items:center;
-      justify-content:space-between;
 
-      gap:25px;
+      justify-content:center;
 
-      padding:20px 0;
+      border-radius:50%;
+
+      background:
+        rgba(255,255,255,.1);
+
+      color:white;
+
+      font-size:12px;
+
     }
 
 
-    .footer-logo img{
-      width:135px;
+    .footer-col h4 {
+
+      margin-bottom:10px;
+
+      font-size:14px;
+
     }
 
 
-    .footer-text{
-      color:#f6dce1;
+    .footer-col a {
 
-      font-size:9px;
+      display:block;
+
+      margin-bottom:7px;
+
+      color:#f8dce1;
+
+      font-size:13px;
+
     }
 
 
-    .footer-links{
-      display:flex;
+    .small-business {
 
-      gap:16px;
+      padding:18px;
 
-      font-size:9px;
+      border:
+        1px solid
+        rgba(255,255,255,.3);
 
-      color:#f6dce1;
+      border-radius:16px;
+
+      color:#fbe7ea;
+
+      font-size:13px;
+
+      line-height:1.6;
+
+    }
+
+
+    .copyright {
+
+      padding:
+        11px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:11px;
+
     }
 
 
 
-    /* MOBILE */
+    /* =====================================================
+       TABLET
+    ===================================================== */
 
-    @media(max-width:700px){
+    @media(max-width:900px) {
+
+      .hero {
+
+        gap:25px;
+
+      }
 
 
-      .topbar{
-        min-height:25px;
+      .footer-inner {
 
-        gap:11px;
+        grid-template-columns:
+          1fr 1fr;
 
-        padding:5px 8px;
+      }
 
-        font-size:8px;
+    }
+
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media(max-width:760px) {
+
+
+      /* TOPBAR */
+
+      .topbar {
+
+        min-height:28px;
+
+        gap:12px;
+
+        padding:
+          6px 8px;
 
         overflow:hidden;
+
+        font-size:10px;
+
       }
 
 
-      .topbar span:nth-child(3){
+      .topbar span:nth-child(3) {
+
         display:none;
+
       }
 
 
 
-      .nav{
+      /* HEADER */
+
+      .nav {
+
         width:94%;
 
-        min-height:58px;
+        min-height:62px;
+
       }
 
 
-      .logo img{
+      .logo img {
+
         width:145px;
+
       }
 
 
-      .desktop-nav{
+      .desktop-nav {
+
         display:none;
+
       }
 
 
 
-      .hero{
+      /* HERO */
+
+      .hero {
+
         width:92%;
 
         grid-template-columns:1fr;
 
-        gap:11px;
+        gap:18px;
 
-        padding:20px 0 15px;
+        padding:
+          25px 0 22px;
+
       }
 
 
-      .hero h1{
-        font-size:31px;
+      .breadcrumb {
+
+        margin-bottom:14px;
+
+        font-size:11px;
+
       }
 
 
-      .hero p{
-        font-size:10px;
+      .hero h1 {
+
+        margin-bottom:16px;
+
+        font-size:39px;
+
       }
 
 
-      .hero-image{
-        height:160px;
+      .hero h1 span {
 
-        border-radius:16px;
+        margin-top:5px;
+
+      }
+
+
+      .hero-copy > p {
+
+        font-size:14px;
+
+        line-height:1.6;
+
+      }
+
+
+      .hero-image {
+
+        height:210px;
+
+        border-radius:18px;
+
       }
 
 
 
-      .intro{
-        margin-bottom:17px;
+      /* INTRO */
+
+      .celebration-intro {
+
+        margin:
+          4px auto 18px;
+
       }
 
 
-      .intro h2{
-        font-size:19px;
+      .celebration-intro h2 {
+
+        font-size:24px;
+
       }
 
 
-      .intro p{
-        font-size:9px;
+      .celebration-intro p {
+
+        font-size:13px;
+
       }
 
 
 
-      .main-categories{
+      /* CARDS */
+
+      .choice-wrapper {
+
+        width:94%;
+
+        gap:10px;
+
+      }
+
+
+      .choice-card {
+
+        min-height:auto;
+
+        grid-template-columns:
+          46px 1fr;
+
+        gap:14px;
+
+        padding:
+          20px 16px;
+
+        border-radius:17px;
+
+      }
+
+
+      .choice-card::after {
+
+        width:140px;
+
+        height:140px;
+
+        right:-70px;
+
+        bottom:-80px;
+
+      }
+
+
+      .choice-number {
+
+        justify-content:flex-start;
+
+        font-size:24px;
+
+      }
+
+
+      .choice-card h3 {
+
+        font-size:21px;
+
+      }
+
+
+      .choice-symbol {
+
+        font-size:20px;
+
+      }
+
+
+      .choice-title-row {
+
+        margin-bottom:8px;
+
+      }
+
+
+      .choice-options {
+
+        gap:
+          3px 8px;
+
+        margin-bottom:12px;
+
+        font-size:13px;
+
+        line-height:1.6;
+
+      }
+
+
+      .choice-options
+      span:not(:last-child)::after {
+
+        margin-left:8px;
+
+      }
+
+
+      .choice-link {
+
+        font-size:12px;
+
+      }
+
+
+
+      /* CUSTOM */
+
+      .custom-card {
+
+        min-height:auto;
+
+        grid-template-columns:
+          46px 1fr;
+
+        gap:14px;
+
+        padding:
+          20px 16px;
+
+        border-radius:17px;
+
+      }
+
+
+      .custom-content h3 {
+
+        font-size:20px;
+
+      }
+
+
+      .custom-content p {
+
+        font-size:13px;
+
+      }
+
+
+      .custom-btn {
+
+        grid-column:
+          2;
+
+        justify-self:start;
+
+        min-width:0;
+
+        margin-top:3px;
+
+        padding:
+          10px 15px;
+
+        font-size:12px;
+
+      }
+
+
+
+      /* BENEFICIOS */
+
+      .benefits {
+
         width:94%;
 
         grid-template-columns:1fr;
-
-        gap:8px;
-
-        margin-bottom:24px;
-      }
-
-
-      .main-card{
-        min-height:100px;
-
-        padding:14px;
-
-        border-radius:14px;
-      }
-
-
-      .main-card h3{
-        font-size:15px;
-      }
-
-
-      .main-card p{
-        font-size:8px;
-      }
-
-
-
-      .collection{
-        width:94%;
-
-        margin-bottom:26px;
-      }
-
-
-      .collection-head{
-        margin-bottom:10px;
-      }
-
-
-      .collection-head h2{
-        font-size:18px;
-      }
-
-
-      .collection-head p{
-        font-size:8px;
-      }
-
-
-
-      .occasion-grid{
-        grid-template-columns:repeat(2,1fr);
-
-        gap:8px;
-      }
-
-
-      .occasion-card{
-        min-height:100px;
-
-        padding:11px;
-
-        border-radius:13px;
-      }
-
-
-      .occasion-card h3{
-        font-size:12px;
-      }
-
-
-      .occasion-card p{
-        font-size:7px;
-      }
-
-
-
-      .special-grid{
-        grid-template-columns:repeat(2,1fr);
-
-        gap:8px;
-      }
-
-
-      .special-card{
-        min-height:72px;
-
-        padding:9px;
-      }
-
-
-      .special-card h3{
-        font-size:10px;
-      }
-
-
-
-      .custom-box{
-        width:94%;
-
-        padding:15px;
-
-        flex-direction:column;
-        align-items:flex-start;
-
-        gap:11px;
 
         margin-bottom:22px;
+
       }
 
 
-      .custom-copy h2{
-        font-size:16px;
+      .benefit {
+
+        padding:
+          14px 16px;
+
+        border-right:none;
+
+        border-bottom:
+          1px solid var(--border);
+
       }
 
 
-      .custom-copy p{
-        font-size:8px;
+      .benefit:last-child {
+
+        border-bottom:none;
+
       }
 
 
-      .custom-btn{
-        padding:8px 12px;
+      .benefit-icon {
 
-        font-size:8px;
+        min-width:40px;
+
+        width:40px;
+
+        height:40px;
+
+        font-size:18px;
+
+      }
+
+
+      .benefit h4 {
+
+        font-size:13px;
+
+      }
+
+
+      .benefit p {
+
+        font-size:11px;
+
       }
 
 
 
-      .benefits{
-        width:94%;
+      /* FOOTER */
 
-        margin-bottom:20px;
-      }
+      .footer-inner {
 
-
-      .benefit{
-        padding:10px 5px;
-      }
-
-
-      .benefit strong{
-        font-size:8px;
-      }
-
-
-      .benefit span{
-        display:none;
-      }
-
-
-
-      .footer-inner{
         width:92%;
 
-        flex-direction:column;
+        grid-template-columns:
+          1fr 1fr;
 
-        align-items:flex-start;
+        gap:24px;
 
-        gap:10px;
+        padding:
+          26px 0 22px;
 
-        padding:16px 0;
       }
 
 
-      .footer-logo img{
-        width:120px;
+      .footer-brand {
+
+        grid-column:
+          1 / -1;
+
       }
 
 
-      .footer-links{
-        flex-wrap:wrap;
+      .small-business {
 
-        gap:10px;
+        grid-column:
+          1 / -1;
+
+      }
+
+
+      .footer-logo img {
+
+        width:145px;
+
+      }
+
+
+      .footer-brand p {
+
+        font-size:11px;
+
+      }
+
+
+      .footer-col h4 {
+
+        font-size:12px;
+
+      }
+
+
+      .footer-col a {
+
+        font-size:11px;
+
+      }
+
+
+      .small-business {
+
+        font-size:11px;
+
       }
 
     }
@@ -996,31 +1544,45 @@
 </head>
 
 
+
 <body>
 
 
-  <!-- TOP BAR -->
+  <!-- =====================================================
+       TOP BAR
+  ====================================================== -->
 
   <div class="topbar">
 
-    <span>⇩ Productos digitales</span>
+    <span>
+      ⇩ Productos digitales
+    </span>
 
-    <span>♡ Pago seguro con PayPal</span>
+    <span>
+      ♡ Pago seguro con PayPal
+    </span>
 
-    <span>ZuzuBayo Digital Goodies</span>
+    <span>
+      ZuzuBayo Digital Goodies
+    </span>
 
   </div>
 
 
 
-  <!-- HEADER -->
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
   <header>
 
     <div class="nav">
 
 
-      <a href="index.html" class="logo">
+      <a
+        href="index.html"
+        class="logo"
+      >
 
         <img
           src="logo.png"
@@ -1033,28 +1595,34 @@
 
       <nav class="desktop-nav">
 
+
         <a href="index.html">
           Inicio
         </a>
+
 
         <a href="#ocasiones">
           Ocasiones
         </a>
 
+
         <a href="#dias">
           Días especiales
         </a>
+
 
         <a href="#personalizadas">
           Personalizadas
         </a>
 
+
         <a
           href="index.html#categorias"
-          class="back-home"
+          class="back-button"
         >
-          ← Todas las categorías
+          ← Volver al inicio
         </a>
+
 
       </nav>
 
@@ -1068,7 +1636,9 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
     <section class="hero">
 
@@ -1082,16 +1652,12 @@
             Inicio
           </a>
 
-          &nbsp; / &nbsp;
+          &nbsp;/&nbsp;
 
           Invitaciones
 
         </div>
 
-
-        <div class="eyebrow">
-          ZUZUBAYO DIGITAL GOODIES
-        </div>
 
 
         <h1>
@@ -1105,11 +1671,12 @@
         </h1>
 
 
+
         <p>
 
-          Encuentra diseños para celebrar momentos
-          especiales, fechas importantes y eventos
-          que merecen algo bonito y único.
+          Encuentra diseños para celebrar
+          momentos especiales, fechas importantes
+          y eventos que merecen algo bonito y único.
 
         </p>
 
@@ -1117,6 +1684,8 @@
       </div>
 
 
+
+      <!-- AQUÍ VA TU IMAGEN -->
 
       <div class="hero-image">
 
@@ -1132,392 +1701,253 @@
 
 
 
-    <!-- INTRO -->
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
 
-    <section class="intro">
+    <section class="celebration-intro">
+
 
       <h2>
         ¿Qué estás celebrando? ♡
       </h2>
 
+
       <p>
-        Explora nuestras colecciones y encuentra
-        el estilo perfecto para tu ocasión.
+        Elige la opción que mejor se adapte a tu momento.
       </p>
 
-    </section>
-
-
-
-    <!-- 3 CATEGORÍAS PRINCIPALES -->
-
-    <section class="main-categories">
-
-
-      <a
-        href="#ocasiones"
-        class="main-card"
-      >
-
-        <span class="main-number">
-          01
-        </span>
-
-        <h3>
-          Ocasiones especiales
-        </h3>
-
-        <p>
-          Cumpleaños, baby shower, bodas, XV años,
-          graduaciones y aniversarios.
-        </p>
-
-        <span class="card-link">
-          Explorar ocasiones →
-        </span>
-
-      </a>
-
-
-
-      <a
-        href="#dias"
-        class="main-card"
-      >
-
-        <span class="main-number">
-          02
-        </span>
-
-        <h3>
-          Días especiales
-        </h3>
-
-        <p>
-          Diseños para celebrar fechas especiales
-          durante todo el año.
-        </p>
-
-        <span class="card-link">
-          Ver días especiales →
-        </span>
-
-      </a>
-
-
-
-      <a
-        href="#personalizadas"
-        class="main-card"
-      >
-
-        <span class="main-number">
-          03
-        </span>
-
-        <h3>
-          Personalizadas
-        </h3>
-
-        <p>
-          Una invitación creada especialmente
-          para tu evento.
-        </p>
-
-        <span class="card-link">
-          Más información →
-        </span>
-
-      </a>
-
 
     </section>
 
 
 
-    <!-- OCASIONES ESPECIALES -->
+    <!-- =====================================================
+         OPCIONES
+    ====================================================== -->
 
-    <section
-      class="collection"
-      id="ocasiones"
-    >
+    <section class="choice-wrapper">
 
 
-      <div class="collection-head">
-
-        <h2>
-          Ocasiones especiales ♡
-        </h2>
-
-        <p>
-          Encuentra invitaciones para los momentos
-          que quieres recordar.
-        </p>
-
-      </div>
-
-
-
-      <div class="occasion-grid">
-
-
-        <a
-          href="#"
-          class="occasion-card"
-        >
-
-          <h3>
-            Cumpleaños
-          </h3>
-
-          <p>
-            Invitaciones para celebrar otro año especial.
-          </p>
-
-          <span class="soon">
-            Ver diseños →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="#"
-          class="occasion-card"
-        >
-
-          <h3>
-            Baby Shower
-          </h3>
-
-          <p>
-            Diseños dulces para dar la bienvenida al bebé.
-          </p>
-
-          <span class="soon">
-            Ver diseños →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="#"
-          class="occasion-card"
-        >
-
-          <h3>
-            Bodas
-          </h3>
-
-          <p>
-            Invitaciones elegantes para celebrar el amor.
-          </p>
-
-          <span class="soon">
-            Ver diseños →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="#"
-          class="occasion-card"
-        >
-
-          <h3>
-            XV años
-          </h3>
-
-          <p>
-            Diseños especiales para una celebración inolvidable.
-          </p>
-
-          <span class="soon">
-            Ver diseños →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="#"
-          class="occasion-card"
-        >
-
-          <h3>
-            Graduación
-          </h3>
-
-          <p>
-            Celebra una nueva etapa y todos tus logros.
-          </p>
-
-          <span class="soon">
-            Ver diseños →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="#"
-          class="occasion-card"
-        >
-
-          <h3>
-            Aniversarios
-          </h3>
-
-          <p>
-            Una manera bonita de celebrar momentos juntos.
-          </p>
-
-          <span class="soon">
-            Ver diseños →
-          </span>
-
-        </a>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- DÍAS ESPECIALES -->
-
-    <section
-      class="collection"
-      id="dias"
-    >
-
-
-      <div class="collection-head">
-
-        <h2>
-          Días especiales ♡
-        </h2>
-
-        <p>
-          Diseños de temporada para compartir
-          momentos durante todo el año.
-        </p>
-
-      </div>
-
-
-
-      <div class="special-grid">
-
-
-        <a href="#" class="special-card">
-          <h3>San Valentín</h3>
-        </a>
-
-
-        <a href="#" class="special-card">
-          <h3>Día de las Madres</h3>
-        </a>
-
-
-        <a href="#" class="special-card">
-          <h3>Navidad</h3>
-        </a>
-
-
-        <a href="#" class="special-card">
-          <h3>Halloween</h3>
-        </a>
-
-
-        <a href="#" class="special-card">
-          <h3>Año Nuevo</h3>
-        </a>
-
-
-        <a href="#" class="special-card">
-          <h3>Thanksgiving</h3>
-        </a>
-
-
-        <a href="#" class="special-card">
-          <h3>Pascua</h3>
-        </a>
-
-
-        <a href="#" class="special-card">
-          <h3>Más temporadas</h3>
-        </a>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- PERSONALIZADAS -->
-
-    <section
-      class="custom-box"
-      id="personalizadas"
-    >
-
-
-      <div class="custom-copy">
-
-        <h2>
-          ¿Buscas algo totalmente tuyo? ♡
-        </h2>
-
-        <p>
-
-          También podrás solicitar una invitación
-          personalizada para tu evento. Tú nos dices
-          la ocasión, estilo y detalles, y creamos
-          algo especial para ti.
-
-        </p>
-
-      </div>
-
+      <!-- OCASIONES -->
 
       <a
         href="#"
-        class="custom-btn"
+        class="choice-card"
+        id="ocasiones"
       >
-        Invitación personalizada →
+
+
+        <div class="choice-number">
+          01
+        </div>
+
+
+        <div class="choice-content">
+
+
+          <div class="choice-title-row">
+
+            <h3>
+              OCASIONES ESPECIALES
+            </h3>
+
+            <span class="choice-symbol">
+              ♡
+            </span>
+
+          </div>
+
+
+
+          <div class="choice-options">
+
+            <span>
+              Cumpleaños
+            </span>
+
+            <span>
+              Baby Shower
+            </span>
+
+            <span>
+              Bodas
+            </span>
+
+            <span>
+              XV años
+            </span>
+
+            <span>
+              Graduación
+            </span>
+
+            <span>
+              Aniversarios
+            </span>
+
+          </div>
+
+
+
+          <div class="choice-link">
+            Explorar ocasiones →
+          </div>
+
+
+        </div>
+
+
       </a>
+
+
+
+      <!-- DÍAS ESPECIALES -->
+
+      <a
+        href="#"
+        class="choice-card"
+        id="dias"
+      >
+
+
+        <div class="choice-number">
+          02
+        </div>
+
+
+        <div class="choice-content">
+
+
+          <div class="choice-title-row">
+
+            <h3>
+              DÍAS ESPECIALES
+            </h3>
+
+            <span class="choice-symbol">
+              ✦
+            </span>
+
+          </div>
+
+
+
+          <div class="choice-options">
+
+            <span>
+              San Valentín
+            </span>
+
+            <span>
+              Día de las Madres
+            </span>
+
+            <span>
+              Navidad
+            </span>
+
+            <span>
+              Halloween
+            </span>
+
+            <span>
+              Más temporadas
+            </span>
+
+          </div>
+
+
+
+          <div class="choice-link">
+            Explorar fechas →
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- PERSONALIZADAS -->
+
+      <div
+        class="custom-card"
+        id="personalizadas"
+      >
+
+
+        <div class="choice-number">
+          03
+        </div>
+
+
+
+        <div class="custom-content">
+
+
+          <h3>
+            ¿TIENES ALGO ESPECIAL
+            EN MENTE? ♡
+          </h3>
+
+
+          <p>
+
+            Invitaciones personalizadas
+            hechas especialmente para tu evento.
+
+          </p>
+
+
+        </div>
+
+
+
+        <a
+          href="#"
+          class="custom-btn"
+        >
+          Crear la mía →
+        </a>
+
+
+      </div>
 
 
     </section>
 
 
 
-    <!-- BENEFICIOS -->
+    <!-- =====================================================
+         BENEFICIOS
+    ====================================================== -->
 
     <section class="benefits">
 
 
       <div class="benefit">
 
-        <strong>
-          100% digital
-        </strong>
 
-        <span>
-          Sin envíos físicos
-        </span>
+        <div class="benefit-icon">
+          ⇩
+        </div>
+
+
+        <div>
+
+          <h4>
+            100% digital
+          </h4>
+
+          <p>
+            Descarga digital
+          </p>
+
+        </div>
+
 
       </div>
 
@@ -1525,13 +1955,24 @@
 
       <div class="benefit">
 
-        <strong>
-          Fácil de compartir
-        </strong>
 
-        <span>
-          Desde tu teléfono
-        </span>
+        <div class="benefit-icon">
+          ⇧
+        </div>
+
+
+        <div>
+
+          <h4>
+            Fácil de compartir
+          </h4>
+
+          <p>
+            Comparte desde tu teléfono
+          </p>
+
+        </div>
+
 
       </div>
 
@@ -1539,13 +1980,24 @@
 
       <div class="benefit">
 
-        <strong>
-          Pago seguro
-        </strong>
 
-        <span>
-          Mediante PayPal
-        </span>
+        <div class="benefit-icon">
+          ♡
+        </div>
+
+
+        <div>
+
+          <h4>
+            Pago seguro
+          </h4>
+
+          <p>
+            Mediante PayPal
+          </p>
+
+        </div>
+
 
       </div>
 
@@ -1557,7 +2009,9 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
   <footer>
 
@@ -1565,7 +2019,8 @@
     <div class="footer-inner">
 
 
-      <div>
+      <div class="footer-brand">
+
 
         <div class="footer-logo">
 
@@ -1576,30 +2031,113 @@
 
         </div>
 
-        <div class="footer-text">
+
+        <p>
           Digital goodies made with love ♡
+        </p>
+
+
+        <div class="socials">
+
+          <a href="#" class="social-circle">
+            IG
+          </a>
+
+          <a href="#" class="social-circle">
+            TT
+          </a>
+
+          <a href="#" class="social-circle">
+            P
+          </a>
+
         </div>
+
 
       </div>
 
 
 
-      <div class="footer-links">
+      <div class="footer-col">
+
+
+        <h4>
+          Explora
+        </h4>
+
 
         <a href="index.html">
           Inicio
         </a>
 
-        <a href="index.html#categorias">
-          Categorías
-        </a>
 
         <a href="#ocasiones">
-          Invitaciones
+          Ocasiones
         </a>
+
+
+        <a href="#dias">
+          Días especiales
+        </a>
+
+
+        <a href="#personalizadas">
+          Personalizadas
+        </a>
+
 
       </div>
 
+
+
+      <div class="footer-col">
+
+
+        <h4>
+          Ayuda
+        </h4>
+
+
+        <a href="index.html#faq">
+          FAQ
+        </a>
+
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+
+      </div>
+
+
+
+      <div class="small-business">
+
+        ♡ Gracias por apoyar
+        pequeños negocios.
+
+        <br><br>
+
+        Cada compra hace
+        la diferencia.
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
 
     </div>
 
