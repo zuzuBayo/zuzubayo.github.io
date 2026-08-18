@@ -169,7 +169,6 @@
     <section id="card-section" class="hidden">
       <div class="section-title">Tarjeta de crédito o débito</div>
 
-      <div id="card-name" class="card-field"></div>
       <div id="card-number" class="card-field"></div>
 
       <div class="card-row">
@@ -457,13 +456,6 @@
         }
       };
 
-      const nameField =
-        cardSession.createCardFieldsComponent({
-          type: "name",
-          placeholder: "Nombre en la tarjeta",
-          style: fieldStyle
-        });
-
       const numberField =
         cardSession.createCardFieldsComponent({
           type: "number",
@@ -485,7 +477,6 @@
           style: fieldStyle
         });
 
-      document.getElementById("card-name").appendChild(nameField);
       document.getElementById("card-number").appendChild(numberField);
       document.getElementById("card-expiry").appendChild(expiryField);
       document.getElementById("card-cvv").appendChild(cvvField);
