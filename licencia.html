@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licencia de Uso | ZuzuBayo</title>
+  <meta name="description" content="Licencia de uso de los productos digitales de ZuzuBayo.">
+
+  <style>
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#d96a75;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf5;
+      --white:#ffffff;
+      --text:#201b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+      --shadow:0 8px 25px rgba(84,30,38,.08);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+
+    .topbar{
+      min-height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:28px;
+      padding:7px 16px;
+      background:var(--wine);
+      color:white;
+      font-size:13px;
+      font-weight:600;
+      text-align:center;
+    }
+
+    .topbar span{white-space:nowrap}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,250,245,.96);
+      border-bottom:1px solid var(--border);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:72px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo img{width:190px;height:auto}
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      font-size:15px;
+      font-weight:650;
+    }
+
+    .desktop-nav a:hover{color:var(--red)}
+
+    .back-button{
+      padding:9px 16px;
+      border:1px solid var(--pink);
+      border-radius:100px;
+      color:var(--wine);
+    }
+
+    .back-button:hover{background:var(--blush)}
+
+    .hero{
+      width:min(900px,92%);
+      margin:auto;
+      padding:52px 0 34px;
+      text-align:center;
+    }
+
+    .breadcrumb{
+      margin-bottom:16px;
+      color:var(--pink);
+      font-size:13px;
+    }
+
+    .hero h1{
+      margin-bottom:12px;
+      color:var(--wine);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(42px,5vw,58px);
+      font-weight:500;
+      line-height:1.08;
+    }
+
+    .hero h1 span{
+      color:var(--pink);
+      font-style:italic;
+    }
+
+    .hero p{
+      max-width:670px;
+      margin:auto;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .legal-wrapper{
+      width:min(1050px,92%);
+      margin:0 auto 45px;
+      display:flex;
+      flex-direction:column;
+      gap:13px;
+    }
+
+    .legal-card{
+      display:grid;
+      grid-template-columns:85px 1fr;
+      gap:25px;
+      padding:27px 30px;
+      background:white;
+      border:1px solid var(--border);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .legal-number{
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      min-height:100%;
+      padding-right:20px;
+      border-right:1px solid #e9b9c1;
+      color:var(--pink);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:31px;
+      font-style:italic;
+    }
+
+    .legal-content h2{
+      margin-bottom:8px;
+      color:var(--wine);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:24px;
+      font-weight:500;
+    }
+
+    .legal-content p{
+      margin-bottom:8px;
+      color:#4f4648;
+      font-size:13px;
+      line-height:1.75;
+    }
+
+    .legal-content p:last-child{margin-bottom:0}
+    .legal-content strong{color:var(--wine)}
+
+    .legal-note{
+      width:min(1050px,92%);
+      margin:0 auto 38px;
+      padding:25px 28px;
+      text-align:center;
+      background:var(--pink-soft);
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+    .legal-note h3{
+      margin-bottom:6px;
+      color:var(--wine);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:21px;
+      font-weight:500;
+    }
+
+    .legal-note p{
+      max-width:700px;
+      margin:auto;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    footer{background:var(--wine);color:white}
+
+    .footer-inner{
+      width:min(1180px,92%);
+      margin:auto;
+      padding:25px 0 20px;
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+      gap:30px;
+    }
+
+    .footer-logo img{width:150px}
+
+    .footer-brand p{
+      margin-top:7px;
+      color:#f7dce1;
+      font-size:12px;
+    }
+
+    .footer-col h4{
+      margin-bottom:8px;
+      font-size:13px;
+    }
+
+    .footer-col a{
+      display:block;
+      margin-bottom:6px;
+      color:#f5dce0;
+      font-size:12px;
+    }
+
+    .footer-col a:hover{color:white}
+
+    .copyright{
+      padding:10px 15px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.15);
+      color:#f1d7dc;
+      font-size:11px;
+    }
+
+    @media(max-width:760px){
+      .topbar{
+        min-height:28px;
+        gap:12px;
+        padding:6px 8px;
+        overflow:hidden;
+        font-size:10px;
+      }
+
+      .topbar span:nth-child(3){display:none}
+      .nav{width:94%;min-height:60px}
+      .logo img{width:145px}
+      .desktop-nav{display:none}
+      .hero{width:92%;padding:32px 0 24px}
+      .breadcrumb{font-size:11px}
+      .hero h1{font-size:38px}
+      .hero p{font-size:13px}
+
+      .legal-wrapper{
+        width:94%;
+        gap:9px;
+        margin-bottom:25px;
+      }
+
+      .legal-card{
+        grid-template-columns:43px 1fr;
+        gap:13px;
+        padding:20px 15px;
+        border-radius:16px;
+      }
+
+      .legal-number{
+        padding-right:10px;
+        font-size:23px;
+      }
+
+      .legal-content h2{font-size:19px}
+      .legal-content p{font-size:11px}
+
+      .legal-note{
+        width:94%;
+        margin-bottom:24px;
+        padding:20px 16px;
+      }
+
+      .legal-note h3{font-size:18px}
+      .legal-note p{font-size:11px}
+
+      .footer-inner{
+        width:92%;
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+      }
+
+      .footer-brand{grid-column:1 / -1}
+      .footer-logo img{width:125px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <span>⇩ Productos digitales</span>
+    <span>♡ ZuzuBayo Digital Goodies</span>
+    <span>Diseñado con amor</span>
+  </div>
+
+  <header>
+    <div class="nav">
+
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="ZuzuBayo">
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#categorias">Categorías</a>
+        <a href="index.html#sobre">Sobre ZuzuBayo</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="index.html" class="back-button">← Volver al inicio</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="breadcrumb">
+        Inicio / Legal / Licencia de uso
+      </div>
+
+      <h1>
+        Licencia de <span>uso ♡</span>
+      </h1>
+
+      <p>
+        Comprar un producto de ZuzuBayo te permite utilizarlo bajo esta
+        licencia. El archivo sigue siendo una creación protegida y no se
+        transfieren los derechos de autor sobre el diseño original.
+      </p>
+    </section>
+
+    <section class="legal-wrapper">
+
+      <article class="legal-card">
+        <div class="legal-number">01</div>
+        <div class="legal-content">
+          <h2>Licencia personal</h2>
+          <p>
+            Salvo que la descripción de un producto indique expresamente una
+            licencia diferente, los productos digitales de ZuzuBayo se venden
+            con una <strong>licencia de uso personal</strong>.
+          </p>
+          <p>
+            La licencia se concede al comprador original y no constituye una
+            venta o transferencia de los derechos de autor del archivo, diseño,
+            ilustración, plantilla o contenido original.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">02</div>
+        <div class="legal-content">
+          <h2>Lo que sí puedes hacer</h2>
+          <p>
+            Puedes descargar y utilizar el producto para tus propios proyectos
+            personales de acuerdo con su finalidad y con las instrucciones
+            incluidas en la descripción del producto.
+          </p>
+          <p>
+            Cuando un producto sea editable, puedes personalizar para tu propio
+            uso los elementos que el archivo permita editar, como texto, nombres,
+            fechas, fotografías o determinados colores.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">03</div>
+        <div class="legal-content">
+          <h2>No está permitida la reventa</h2>
+          <p>
+            No puedes vender, revender, sublicenciar o comercializar el archivo
+            original de ZuzuBayo, ya sea completo o parcialmente.
+          </p>
+          <p>
+            Tampoco está permitido realizar cambios mínimos al producto y
+            <strong>venderlo o presentarlo como una creación propia</strong>.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">04</div>
+        <div class="legal-content">
+          <h2>No compartir ni redistribuir</h2>
+          <p>
+            No puedes compartir, regalar, enviar, publicar, cargar o distribuir
+            los archivos de ZuzuBayo de manera que otra persona pueda obtenerlos
+            sin adquirir su propia licencia cuando corresponda.
+          </p>
+          <p>
+            Esto incluye compartir archivos mediante redes sociales, grupos,
+            almacenamiento público, plataformas de descarga, marketplaces,
+            páginas web u otros medios de distribución.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">05</div>
+        <div class="legal-content">
+          <h2>Productos editables</h2>
+          <p>
+            Que una plantilla permita editar texto, imágenes, colores u otros
+            elementos <strong>no elimina los derechos sobre el diseño base</strong>
+            ni convierte automáticamente el archivo en un producto para reventa.
+          </p>
+          <p>
+            Las condiciones específicas indicadas en la página de cada producto
+            prevalecerán cuando ZuzuBayo ofrezca expresamente permisos adicionales.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">06</div>
+        <div class="legal-content">
+          <h2>Uso comercial</h2>
+          <p>
+            La licencia personal estándar no incluye automáticamente derechos
+            de uso comercial o de reventa.
+          </p>
+          <p>
+            Si en el futuro ZuzuBayo ofrece productos con una licencia comercial,
+            esos productos indicarán claramente qué usos comerciales están
+            permitidos y bajo qué condiciones.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">07</div>
+        <div class="legal-content">
+          <h2>Propiedad intelectual</h2>
+          <p>
+            Los derechos sobre los diseños, textos, ilustraciones, recursos y
+            demás contenido original de ZuzuBayo permanecen con sus respectivos
+            titulares.
+          </p>
+          <p>
+            Ninguna parte de esta licencia debe interpretarse como una cesión de
+            marca, copyright u otros derechos de propiedad intelectual más allá
+            del permiso de uso expresamente concedido.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">08</div>
+        <div class="legal-content">
+          <h2>Contenido de terceros</h2>
+          <p>
+            Algunos productos pueden requerir o incorporar recursos sujetos a
+            términos de terceros, como tipografías, fotografías, aplicaciones,
+            plataformas o elementos externos.
+          </p>
+          <p>
+            Cuando corresponda, el comprador también deberá respetar las
+            condiciones aplicables a esos recursos y servicios de terceros.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">09</div>
+        <div class="legal-content">
+          <h2>Incumplimiento de la licencia</h2>
+          <p>
+            El uso de un producto fuera de los permisos concedidos puede resultar
+            en la terminación del permiso de uso y en las medidas que correspondan
+            para proteger el contenido de ZuzuBayo.
+          </p>
+          <p>
+            Si tienes dudas sobre si un uso específico está permitido, puedes
+            escribirnos antes de utilizar el producto de esa manera.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">10</div>
+        <div class="legal-content">
+          <h2>Contacto y actualizaciones</h2>
+          <p>
+            Para preguntas relacionadas con licencias puedes escribir a
+            <strong>zuzu.bayo.c@gmail.com</strong>.
+          </p>
+          <p>
+            Esta licencia puede actualizarse cuando cambien los productos o las
+            modalidades de uso ofrecidas por ZuzuBayo. La versión publicada en
+            este sitio será la versión vigente.
+            <strong>Última actualización: agosto de 2026.</strong>
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="legal-note">
+      <h3>Creado para disfrutar, no para redistribuir ♡</h3>
+      <p>
+        Tu compra apoya el trabajo creativo detrás de ZuzuBayo.
+        Gracias por respetar los archivos, diseños y condiciones de uso.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <a href="index.html">
+            <img src="logo.png" alt="ZuzuBayo">
+          </a>
+        </div>
+        <p>Digital goodies made with love ♡</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>ZuzuBayo</h4>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#categorias">Tienda</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="terminos.html">Términos y condiciones</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="reembolsos.html">Política de reembolsos</a>
+        <a href="licencia.html">Licencia de uso</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 ZuzuBayo · Todos los derechos reservados
+    </div>
+  </footer>
+
+</body>
+</html>
