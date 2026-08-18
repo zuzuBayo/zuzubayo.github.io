@@ -4,71 +4,189 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Prueba PayPal | ZuzuBayo</title>
+  <title>Checkout de prueba | ZuzuBayo</title>
 
   <style>
+    *{
+      box-sizing:border-box;
+    }
+
     body{
+      margin:0;
+      min-height:100vh;
       font-family:Arial,sans-serif;
       background:#fffaf5;
       color:#201b1c;
       display:flex;
       justify-content:center;
-      padding:50px 20px;
+      padding:45px 20px;
     }
 
-    .box{
-      width:min(460px,100%);
+    .checkout{
+      width:min(500px,100%);
       background:white;
       border:1px solid #efd9dd;
-      border-radius:22px;
+      border-radius:24px;
       padding:32px;
-      text-align:center;
+      box-shadow:0 10px 35px rgba(84,30,38,.08);
     }
 
     h1{
+      margin:0 0 10px;
+      text-align:center;
       color:#7f1020;
     }
 
+    .subtitle{
+      text-align:center;
+      margin-bottom:12px;
+    }
+
     .price{
-      font-size:28px;
-      font-weight:bold;
+      text-align:center;
+      margin:20px 0 28px;
       color:#a81429;
-      margin:20px 0;
+      font-size:30px;
+      font-weight:700;
+    }
+
+    .section-title{
+      margin:20px 0 12px;
+      color:#7f1020;
+      font-weight:700;
+    }
+
+    .card-field{
+      min-height:48px;
+      margin-bottom:12px;
+      border:1px solid #e6ced3;
+      border-radius:10px;
+      overflow:hidden;
+      background:white;
+    }
+
+    .card-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    #pay-card{
+      width:100%;
+      min-height:48px;
+      margin-top:6px;
+      border:0;
+      border-radius:10px;
+      background:#8f1025;
+      color:white;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    #pay-card:disabled{
+      opacity:.55;
+      cursor:not-allowed;
+    }
+
+    .divider{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin:28px 0 20px;
+      color:#8a777b;
+      font-size:13px;
+    }
+
+    .divider::before,
+    .divider::after{
+      content:"";
+      height:1px;
+      background:#efd9dd;
+      flex:1;
     }
 
     #message{
       margin-top:20px;
+      text-align:center;
       font-size:14px;
+      line-height:1.5;
     }
 
-    paypal-button{
-      width:100%;
+    .hidden{
+      display:none;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="box">
+  <main class="checkout">
 
-    <h1>Prueba ZuzuBayo ♡</h1>
+    <h1>ZuzuBayo ♡</h1>
 
-    <p>
-      Compra de prueba usando PayPal Sandbox.
+    <p class="subtitle">
+      Checkout de prueba en PayPal Sandbox
     </p>
 
     <div class="price">
       $1.00 USD
     </div>
 
+
+    <section id="card-section">
+
+      <div class="section-title">
+        Tarjeta de crédito o débito
+      </div>
+
+      <div
+        id="card-name"
+        class="card-field">
+      </div>
+
+      <div
+        id="card-number"
+        class="card-field">
+      </div>
+
+      <div class="card-row">
+
+        <div
+          id="card-expiry"
+          class="card-field">
+        </div>
+
+        <div
+          id="card-cvv"
+          class="card-field">
+        </div>
+
+      </div>
+
+      <button
+        id="pay-card"
+        type="button">
+        Pagar $1.00
+      </button>
+
+    </section>
+
+
+    <div class="divider">
+      o
+    </div>
+
+
     <paypal-button
       id="paypal-button"
       type="pay">
     </paypal-button>
 
+
     <div id="message"></div>
 
-  </div>
+  </main>
 
 
   <script
@@ -102,19 +220,21 @@
       );
 
 
-      const data = await response.json();
+      const data =
+        await response.json();
 
 
       if(!response.ok || !data.orderID){
+
         throw new Error(
-          data.message || "No se pudo crear la orden."
+          data.message ||
+          "No se pudo crear la orden."
         );
+
       }
 
 
-      return {
-        orderId:data.orderID
-      };
+      return data.orderID;
     }
 
 
@@ -137,14 +257,17 @@
       );
 
 
-      const data = await response.json();
+      const data =
+        await response.json();
 
 
       if(!response.ok || !data.ok){
+
         throw new Error(
           data.message ||
           "No se pudo completar el pago."
         );
+
       }
 
 
@@ -153,35 +276,55 @@
 
 
 
+    function showSuccess(result){
+
+      document.getElementById(
+        "message"
+      ).innerHTML =
+        "✅ Pago completado ♡<br>" +
+        "Orden: " +
+        result.orderID;
+
+    }
+
+
+
     async function onPayPalWebSdkLoaded(){
 
       const message =
-        document.getElementById("message");
+        document.getElementById(
+          "message"
+        );
 
 
       try{
 
-        const sdkInstance =
+        const sdk =
           await window.paypal.createInstance({
 
             clientId:
-              "AR7hk80Dl4KirsPdTjgJ4MQQXBHluArZZOaSQEbdCvQkBmPphxL4tF22WPpzZYS52EN13MgYj5vLFRvr",
+              "PEGA_AQUI_TU_CLIENT_ID",
 
             components:[
-              "paypal-payments"
+              "paypal-payments",
+              "card-fields"
             ],
 
             pageType:"checkout"
           });
 
 
+        // ==========================
+        // PAYPAL
+        // ==========================
+
         const paypalSession =
-          sdkInstance.createPayPalOneTimePaymentSession({
+          sdk.createPayPalOneTimePaymentSession({
 
             onApprove:async(data)=>{
 
               message.textContent =
-                "Confirmando tu pago... ♡";
+                "Confirmando pago...";
 
 
               const result =
@@ -190,10 +333,7 @@
                 );
 
 
-              message.innerHTML =
-                "✅ Pago completado.<br>" +
-                "Order ID: " +
-                result.orderID;
+              showSuccess(result);
 
             },
 
@@ -219,13 +359,13 @@
 
 
 
-        const button =
+        const paypalButton =
           document.getElementById(
             "paypal-button"
           );
 
 
-        button.addEventListener(
+        paypalButton.addEventListener(
           "click",
           async()=>{
 
@@ -233,21 +373,253 @@
               "Abriendo PayPal...";
 
 
+            const orderId =
+              await createOrder();
+
+
             await paypalSession.start(
               {
                 presentationMode:"auto",
-                targetElement:button
+                targetElement:paypalButton
               },
-              createOrder()
+
+              Promise.resolve({
+                orderId
+              })
             );
 
           }
         );
 
 
-        if(paypalSession.hasReturned()){
+        if(
+          paypalSession.hasReturned()
+        ){
           await paypalSession.resume();
         }
+
+
+
+        // ==========================
+        // CARD ELIGIBILITY
+        // ==========================
+
+        const paymentMethods =
+          await sdk.findEligibleMethods({
+            currencyCode:"USD"
+          });
+
+
+        if(
+          !paymentMethods.isEligible(
+            "advanced_cards"
+          )
+        ){
+
+          document
+            .getElementById(
+              "card-section"
+            )
+            .classList
+            .add("hidden");
+
+          return;
+
+        }
+
+
+
+        // ==========================
+        // CARD FIELDS SESSION
+        // ==========================
+
+        const cardSession =
+          sdk.createCardFieldsOneTimePaymentSession();
+
+
+
+        const fieldStyle = {
+
+          input:{
+            fontSize:"16px",
+            color:"#201b1c",
+            padding:"13px"
+          },
+
+          ".invalid":{
+            color:"#a81429"
+          },
+
+          ":focus":{
+            color:"#201b1c"
+          }
+
+        };
+
+
+
+        const nameField =
+          cardSession.createCardFieldsComponent({
+
+            type:"name",
+            placeholder:"Nombre en la tarjeta",
+            style:fieldStyle
+
+          });
+
+
+        document
+          .getElementById(
+            "card-name"
+          )
+          .appendChild(
+            nameField
+          );
+
+
+
+        const numberField =
+          cardSession.createCardFieldsComponent({
+
+            type:"number",
+            placeholder:"Número de tarjeta",
+            style:fieldStyle
+
+          });
+
+
+        document
+          .getElementById(
+            "card-number"
+          )
+          .appendChild(
+            numberField
+          );
+
+
+
+        const expiryField =
+          cardSession.createCardFieldsComponent({
+
+            type:"expiry",
+            placeholder:"MM/YY",
+            style:fieldStyle
+
+          });
+
+
+        document
+          .getElementById(
+            "card-expiry"
+          )
+          .appendChild(
+            expiryField
+          );
+
+
+
+        const cvvField =
+          cardSession.createCardFieldsComponent({
+
+            type:"cvv",
+            placeholder:"CVV",
+            style:fieldStyle
+
+          });
+
+
+        document
+          .getElementById(
+            "card-cvv"
+          )
+          .appendChild(
+            cvvField
+          );
+
+
+
+        // ==========================
+        // CARD PAYMENT
+        // ==========================
+
+        document
+          .getElementById(
+            "pay-card"
+          )
+          .addEventListener(
+            "click",
+            async()=>{
+
+              try{
+
+                message.textContent =
+                  "Procesando tarjeta...";
+
+
+                const orderId =
+                  await createOrder();
+
+
+                const result =
+                  await cardSession.submit(
+                    orderId
+                  );
+
+
+                if(
+                  result.state ===
+                  "canceled"
+                ){
+
+                  message.textContent =
+                    "Verificación cancelada.";
+
+                  return;
+
+                }
+
+
+                if(
+                  result.state !==
+                  "succeeded"
+                ){
+
+                  console.error(result);
+
+                  message.textContent =
+                    "No se pudo procesar la tarjeta.";
+
+                  return;
+
+                }
+
+
+                const capture =
+                  await captureOrder(
+                    result.data.orderId
+                  );
+
+
+                showSuccess(
+                  capture
+                );
+
+              }
+              catch(error){
+
+                console.error(
+                  error
+                );
+
+                message.textContent =
+                  error.message ||
+                  "Ocurrió un error.";
+
+              }
+
+            }
+          );
+
 
       }
       catch(error){
@@ -255,7 +627,7 @@
         console.error(error);
 
         message.textContent =
-          "No se pudo iniciar PayPal.";
+          "No se pudo iniciar el checkout.";
 
       }
 
