@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Términos y Condiciones | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Términos y condiciones de uso de los productos digitales de ZuzuBayo."
+  >
+
+  <style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#d96a75;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf5;
+      --white:#ffffff;
+
+      --text:#201b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 25px rgba(84,30,38,.08);
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar{
+      min-height:34px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:28px;
+
+      padding:7px 16px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:13px;
+      font-weight:600;
+
+      text-align:center;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,245,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:72px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:25px;
+    }
+
+
+    .logo img{
+      width:190px;
+      height:auto;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:26px;
+
+      font-size:15px;
+      font-weight:650;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:9px 16px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      width:min(900px,92%);
+
+      margin:auto;
+
+      padding:52px 0 34px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:16px;
+
+      color:var(--pink);
+
+      font-size:13px;
+    }
+
+
+    .hero h1{
+      margin-bottom:12px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:clamp(42px,5vw,58px);
+      font-weight:500;
+
+      line-height:1.08;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:670px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:15px;
+    }
+
+
+
+    /* =========================
+       CONTENIDO LEGAL
+    ========================= */
+
+    .legal-wrapper{
+      width:min(1050px,92%);
+
+      margin:0 auto 45px;
+
+      display:flex;
+      flex-direction:column;
+
+      gap:13px;
+    }
+
+
+    .legal-card{
+      display:grid;
+
+      grid-template-columns:85px 1fr;
+
+      gap:25px;
+
+      padding:27px 30px;
+
+      background:white;
+
+      border:1px solid var(--border);
+      border-radius:20px;
+
+      box-shadow:var(--shadow);
+    }
+
+
+    .legal-number{
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+
+      min-height:100%;
+
+      padding-right:20px;
+
+      border-right:1px solid #e9b9c1;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:31px;
+      font-style:italic;
+    }
+
+
+    .legal-content h2{
+      margin-bottom:8px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:24px;
+      font-weight:500;
+    }
+
+
+    .legal-content p{
+      margin-bottom:8px;
+
+      color:#4f4648;
+
+      font-size:13px;
+      line-height:1.75;
+    }
+
+
+    .legal-content p:last-child{
+      margin-bottom:0;
+    }
+
+
+    .legal-content strong{
+      color:var(--wine);
+    }
+
+
+
+    /* =========================
+       MENSAJE FINAL
+    ========================= */
+
+    .legal-note{
+      width:min(1050px,92%);
+
+      margin:0 auto 38px;
+
+      padding:25px 28px;
+
+      text-align:center;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+
+    .legal-note h3{
+      margin-bottom:6px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:21px;
+      font-weight:500;
+    }
+
+
+    .legal-note p{
+      max-width:700px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:12px;
+      line-height:1.7;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      background:var(--wine);
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1180px,92%);
+
+      margin:auto;
+
+      padding:25px 0 20px;
+
+      display:grid;
+
+      grid-template-columns:
+        1.3fr .8fr .8fr;
+
+      gap:30px;
+    }
+
+
+    .footer-logo img{
+      width:150px;
+    }
+
+
+    .footer-brand p{
+      margin-top:7px;
+
+      color:#f7dce1;
+
+      font-size:12px;
+    }
+
+
+    .footer-col h4{
+      margin-bottom:8px;
+
+      font-size:13px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#f5dce0;
+
+      font-size:12px;
+    }
+
+
+    .footer-col a:hover{
+      color:white;
+    }
+
+
+    .copyright{
+      padding:10px 15px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f1d7dc;
+
+      font-size:11px;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:760px){
+
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+        min-height:60px;
+      }
+
+
+      .logo img{
+        width:145px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:32px 0 24px;
+      }
+
+
+      .breadcrumb{
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:38px;
+      }
+
+
+      .hero p{
+        font-size:13px;
+      }
+
+
+      .legal-wrapper{
+        width:94%;
+
+        gap:9px;
+
+        margin-bottom:25px;
+      }
+
+
+      .legal-card{
+        grid-template-columns:43px 1fr;
+
+        gap:13px;
+
+        padding:20px 15px;
+
+        border-radius:16px;
+      }
+
+
+      .legal-number{
+        padding-right:10px;
+
+        font-size:23px;
+      }
+
+
+      .legal-content h2{
+        font-size:19px;
+      }
+
+
+      .legal-content p{
+        font-size:11px;
+      }
+
+
+      .legal-note{
+        width:94%;
+
+        margin-bottom:24px;
+
+        padding:20px 16px;
+      }
+
+
+      .legal-note h3{
+        font-size:18px;
+      }
+
+
+      .legal-note p{
+        font-size:11px;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+      }
+
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+
+      .footer-logo img{
+        width:125px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <span>
+      ⇩ Productos digitales
+    </span>
+
+    <span>
+      ♡ ZuzuBayo Digital Goodies
+    </span>
+
+    <span>
+      Diseñado con amor
+    </span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <img
+          src="logo.png"
+          alt="ZuzuBayo"
+        >
+
+      </a>
+
+
+
+      <nav class="desktop-nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="index.html#categorias">
+          Categorías
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+        <a
+          href="index.html"
+          class="back-button"
+        >
+          ← Volver al inicio
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <div class="breadcrumb">
+        Inicio / Legal / Términos y condiciones
+      </div>
+
+
+      <h1>
+        Términos y <span>condiciones ♡</span>
+      </h1>
+
+
+      <p>
+        Aquí encontrarás información importante
+        sobre la compra, descarga y uso de los
+        productos digitales de ZuzuBayo.
+      </p>
+
+
+    </section>
+
+
+
+    <!-- CONTENIDO -->
+
+    <section class="legal-wrapper">
+
+
+      <!-- 01 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          01
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Uso personal
+          </h2>
+
+          <p>
+            Salvo que se indique expresamente lo contrario
+            en la descripción de un producto, los productos
+            digitales adquiridos en ZuzuBayo están destinados
+            únicamente al <strong>uso personal del comprador</strong>.
+          </p>
+
+          <p>
+            La compra de un producto no otorga derechos de
+            propiedad sobre el diseño, contenido o archivo original.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 02 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          02
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Derechos de autor
+          </h2>
+
+          <p>
+            Los diseños, plantillas, ilustraciones, guías,
+            textos, recursos y demás contenido original
+            creado por ZuzuBayo están protegidos por los
+            derechos de propiedad intelectual que correspondan.
+          </p>
+
+          <p>
+            La compra de un archivo digital constituye una
+            licencia de uso bajo estas condiciones y
+            <strong>no representa una transferencia de los
+            derechos de autor</strong>.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 03 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          03
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Reventa y redistribución
+          </h2>
+
+          <p>
+            No está permitido revender, redistribuir,
+            compartir, sublicenciar o regalar los archivos
+            digitales adquiridos en ZuzuBayo.
+          </p>
+
+          <p>
+            Tampoco se permite publicar los archivos para
+            descarga de terceros, vender copias modificadas
+            como productos propios o utilizar el contenido
+            de una manera que permita a otras personas
+            acceder al archivo original.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 04 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          04
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Productos digitales
+          </h2>
+
+          <p>
+            Los productos ofrecidos por ZuzuBayo son
+            principalmente digitales. Salvo que se indique
+            expresamente lo contrario, <strong>no se enviará
+            ningún producto físico</strong>.
+          </p>
+
+          <p>
+            Cada producto indicará su formato, contenido,
+            características y requisitos de uso antes
+            de realizar la compra.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 05 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          05
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Compras y descargas
+          </h2>
+
+          <p>
+            El comprador es responsable de proporcionar
+            información correcta durante el proceso de compra,
+            especialmente su dirección de correo electrónico
+            cuando sea necesaria para entregar el producto.
+          </p>
+
+          <p>
+            Una vez confirmado el pago, el producto podrá
+            entregarse mediante descarga digital, enlace de
+            acceso o correo electrónico, según se indique
+            en la página correspondiente.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 06 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          06
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Condiciones generales
+          </h2>
+
+          <p>
+            Al realizar una compra o utilizar los productos
+            de ZuzuBayo, aceptas cumplir estos términos,
+            así como las políticas adicionales aplicables
+            a privacidad, reembolsos y licencia de uso.
+          </p>
+
+          <p>
+            ZuzuBayo podrá actualizar estas condiciones
+            cuando sea necesario. La versión publicada
+            en este sitio será la versión vigente.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </section>
+
+
+
+    <!-- NOTA -->
+
+    <section class="legal-note">
+
+      <h3>
+        Gracias por apoyar ZuzuBayo ♡
+      </h3>
+
+      <p>
+        Estas reglas ayudan a proteger el trabajo creativo
+        detrás de cada producto y permiten que ZuzuBayo
+        continúe creando nuevos digital goodies para ti.
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+
+          <a href="index.html">
+
+            <img
+              src="logo.png"
+              alt="ZuzuBayo"
+            >
+
+          </a>
+
+        </div>
+
+        <p>
+          Digital goodies made with love ♡
+        </p>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          ZuzuBayo
+        </h4>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="index.html#categorias">
+          Tienda
+        </a>
+
+        <a href="index.html#contacto">
+          Contacto
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h4>
+          Legal
+        </h4>
+
+        <a href="terminos.html">
+          Términos y condiciones
+        </a>
+
+        <!--
+          LOS SIGUIENTES ENLACES
+          LOS ACTIVAREMOS CUANDO CREAMOS
+          ESAS PÁGINAS.
+        -->
+
+        <span>
+          Privacidad · próximamente
+        </span>
+
+        <br>
+
+        <span>
+          Reembolsos · próximamente
+        </span>
+
+        <br>
+
+        <span>
+          Licencia de uso · próximamente
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+      © 2026 ZuzuBayo · Todos los derechos reservados
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
