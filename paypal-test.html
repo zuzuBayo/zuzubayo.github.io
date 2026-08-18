@@ -186,14 +186,27 @@
           placeholder="Código postal"
         >
 
-        <input
+        <select
           id="country-code"
           class="billing-input"
-          type="text"
-          maxlength="2"
-          placeholder="País"
-          value="US"
+          aria-label="País"
         >
+          <option value="US" selected>USA</option>
+          <option value="MX">México</option>
+          <option value="CA">Canadá</option>
+          <option value="GB">Reino Unido</option>
+          <option value="ES">España</option>
+          <option value="FR">Francia</option>
+          <option value="DE">Alemania</option>
+          <option value="IT">Italia</option>
+          <option value="BR">Brasil</option>
+          <option value="AR">Argentina</option>
+          <option value="CO">Colombia</option>
+          <option value="CL">Chile</option>
+          <option value="PE">Perú</option>
+          <option value="AU">Australia</option>
+          <option value="JP">Japón</option>
+        </select>
       </div>
 
       <button id="pay-card" type="button">Pagar</button>
