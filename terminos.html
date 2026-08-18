@@ -10,22 +10,16 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>ZuzuBayo | Digital Goodies</title>
+  <title>Términos y Condiciones | ZuzuBayo</title>
 
   <meta
     name="description"
-    content="Invitaciones, plantillas, stickers, journals, guías y recursos digitales de ZuzuBayo."
+    content="Términos y condiciones de uso de los productos digitales de ZuzuBayo."
   >
-
 
   <style>
 
-    /* =====================================================
-       COLORES ZUZUBAYO
-    ===================================================== */
-
-    :root {
-
+    :root{
       --wine:#7f1020;
       --red:#a81429;
       --pink:#d96a75;
@@ -38,36 +32,23 @@
       --muted:#75696b;
       --border:#efd9dd;
 
-      --shadow:
-        0 8px 25px rgba(84,30,38,.08);
-
-      --shadow-hover:
-        0 14px 35px rgba(84,30,38,.14);
-
-      --radius:18px;
-
+      --shadow:0 8px 25px rgba(84,30,38,.08);
     }
 
 
-
-    /* =====================================================
-       RESET
-    ===================================================== */
-
-    * {
+    *{
       box-sizing:border-box;
       margin:0;
       padding:0;
     }
 
 
-    html {
+    html{
       scroll-behavior:smooth;
     }
 
 
-    body {
-
+    body{
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -76,39 +57,33 @@
         sans-serif;
 
       background:var(--cream);
-
       color:var(--text);
-
-      line-height:1.55;
-
+      line-height:1.65;
     }
 
 
-    img {
+    img{
       display:block;
       max-width:100%;
     }
 
 
-    a {
-      text-decoration:none;
+    a{
       color:inherit;
+      text-decoration:none;
     }
 
 
 
-    /* =====================================================
+    /* =========================
        TOP BAR
-    ===================================================== */
+    ========================= */
 
-    .topbar {
-
+    .topbar{
       min-height:34px;
 
       display:flex;
-
       align-items:center;
-
       justify-content:center;
 
       gap:28px;
@@ -116,1080 +91,338 @@
       padding:7px 16px;
 
       background:var(--wine);
-
       color:white;
 
       font-size:13px;
-
       font-weight:600;
 
       text-align:center;
-
     }
 
 
-    .topbar span {
+    .topbar span{
       white-space:nowrap;
     }
 
 
 
-    /* =====================================================
+    /* =========================
        HEADER
-    ===================================================== */
+    ========================= */
 
-    header {
-
+    header{
       position:sticky;
-
       top:0;
-
       z-index:1000;
 
-      background:
-        rgba(255,250,245,.96);
+      background:rgba(255,250,245,.96);
 
-      border-bottom:
-        1px solid var(--border);
+      border-bottom:1px solid var(--border);
 
-      backdrop-filter:
-        blur(10px);
-
+      backdrop-filter:blur(10px);
     }
 
 
-    .nav {
-
+    .nav{
       width:min(1180px,92%);
-
       min-height:72px;
 
       margin:auto;
 
       display:flex;
-
       align-items:center;
-
       justify-content:space-between;
 
       gap:25px;
-
     }
 
 
-    .logo img {
-
+    .logo img{
       width:190px;
-
       height:auto;
-
     }
 
 
-    .desktop-nav {
-
+    .desktop-nav{
       display:flex;
-
       align-items:center;
 
       gap:26px;
 
       font-size:15px;
-
       font-weight:650;
-
     }
 
 
-    .desktop-nav a {
-      transition:.2s ease;
-    }
-
-
-    .desktop-nav a:hover {
+    .desktop-nav a:hover{
       color:var(--red);
     }
 
 
-    .shop-pill {
-
+    .back-button{
       padding:9px 16px;
 
+      border:1px solid var(--pink);
       border-radius:100px;
 
-      background:var(--wine);
-
-      color:white !important;
-
+      color:var(--wine);
     }
 
 
-    .shop-pill:hover {
-      background:var(--red);
+    .back-button:hover{
+      background:var(--blush);
     }
 
 
 
-    /* =====================================================
+    /* =========================
        HERO
-    ===================================================== */
+    ========================= */
 
-    .hero {
-
-      width:min(1180px,92%);
+    .hero{
+      width:min(900px,92%);
 
       margin:auto;
 
-      display:grid;
+      padding:52px 0 34px;
 
-      grid-template-columns:
-        1.1fr .75fr;
-
-      align-items:center;
-
-      gap:38px;
-
-      padding:34px 0 24px;
-
+      text-align:center;
     }
 
 
-    .hero-copy {
-      max-width:590px;
-    }
-
-
-    .eyebrow {
-
-      display:inline-flex;
-
-      align-items:center;
-
-      margin-bottom:8px;
-
-      color:var(--red);
-
-      font-size:13px;
-
-      font-weight:800;
-
-      letter-spacing:.12em;
-
-      text-transform:uppercase;
-
-    }
-
-
-    .hero h1 {
-
-      margin-bottom:14px;
-
-      font-size:
-        clamp(38px,5vw,54px);
-
-      line-height:1.02;
-
-      letter-spacing:-.035em;
-
-    }
-
-
-    .hero h1 span {
-
-      display:block;
+    .breadcrumb{
+      margin-bottom:16px;
 
       color:var(--pink);
 
+      font-size:13px;
     }
 
 
-    .hero-copy > p {
-
-      max-width:540px;
-
-      margin-bottom:20px;
-
-      color:#484042;
-
-      font-size:17px;
-
-      line-height:1.6;
-
-    }
-
-
-    .hero-buttons {
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:10px;
-
-    }
-
-
-    .btn {
-
-      min-height:44px;
-
-      display:inline-flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      padding:10px 19px;
-
-      border-radius:10px;
-
-      font-size:14px;
-
-      font-weight:750;
-
-      transition:.2s ease;
-
-    }
-
-
-    .btn-primary {
-
-      background:var(--wine);
-
-      color:white;
-
-      border:
-        1px solid var(--wine);
-
-    }
-
-
-    .btn-primary:hover {
-
-      background:var(--red);
-
-      transform:
-        translateY(-1px);
-
-    }
-
-
-    .btn-secondary {
-
-      border:
-        1px solid var(--pink);
-
-      background:transparent;
+    .hero h1{
+      margin-bottom:12px;
 
       color:var(--wine);
 
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:clamp(42px,5vw,58px);
+      font-weight:500;
+
+      line-height:1.08;
     }
 
 
-    .btn-secondary:hover {
-      background:var(--blush);
+    .hero h1 span{
+      color:var(--pink);
+      font-style:italic;
     }
 
 
-    .hero-mini-info {
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:14px;
-
-      margin-top:15px;
-
-      color:var(--muted);
-
-      font-size:12px;
-
-    }
-
-
-
-    /* HERO IMAGE */
-
-    .hero-art {
-
-      height:330px;
-
-      display:flex;
-
-      align-items:flex-end;
-
-      justify-content:center;
-
-      overflow:hidden;
-
-      border-radius:26px;
-
-      background:
-        radial-gradient(
-          circle at 50% 65%,
-          #f7d8dd 0%,
-          #fff6f2 65%,
-          transparent 100%
-        );
-
-    }
-
-
-    .hero-art .mascota {
-
-      width:100%;
-
-      height:100%;
-
-      object-fit:contain;
-
-      object-position:
-        center bottom;
-
-    }
-
-
-
-    /* =====================================================
-       CATEGORÍAS
-    ===================================================== */
-
-    .shop-section {
-
-      width:min(1180px,92%);
+    .hero p{
+      max-width:670px;
 
       margin:auto;
 
-      padding:22px 0 32px;
-
-    }
-
-
-    .section-head {
-
-      margin-bottom:20px;
-
-      text-align:center;
-
-    }
-
-
-    .section-head h2 {
-
-      margin-bottom:6px;
-
-      color:var(--wine);
-
-      font-size:30px;
-
-    }
-
-
-    .section-head p {
-
       color:var(--muted);
-
-      font-size:14px;
-
-    }
-
-
-    .categories {
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap:14px;
-
-    }
-
-
-
-    /* TODA LA TARJETA ES CLICKEABLE */
-
-    .category-card {
-
-      position:relative;
-
-      display:block;
-
-      overflow:hidden;
-
-      background:var(--white);
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius);
-
-      box-shadow:
-        var(--shadow);
-
-      cursor:pointer;
-
-      transition:
-        transform .22s ease,
-        box-shadow .22s ease,
-        border-color .22s ease;
-
-    }
-
-
-    .category-card:hover {
-
-      transform:
-        translateY(-4px);
-
-      box-shadow:
-        var(--shadow-hover);
-
-      border-color:#e8bdc5;
-
-    }
-
-
-    .category-card:active {
-      transform:scale(.99);
-    }
-
-
-    .category-image {
-
-      height:175px;
-
-      overflow:hidden;
-
-      background:var(--blush);
-
-    }
-
-
-    .category-image img {
-
-      width:100%;
-
-      height:100%;
-
-      object-fit:cover;
-
-      transition:
-        transform .3s ease;
-
-    }
-
-
-    .category-card:hover
-    .category-image img {
-
-      transform:
-        scale(1.025);
-
-    }
-
-
-    .category-body {
-      padding:14px;
-    }
-
-
-    .category-body h3 {
-
-      margin-bottom:5px;
-
-      font-size:18px;
-
-    }
-
-
-    .category-body p {
-
-      min-height:42px;
-
-      margin-bottom:10px;
-
-      color:var(--muted);
-
-      font-size:13px;
-
-      line-height:1.5;
-
-    }
-
-
-    .category-btn {
-
-      color:var(--red);
-
-      font-size:12px;
-
-      font-weight:800;
-
-    }
-
-
-    .category-card:hover
-    .category-btn {
-
-      color:var(--wine);
-
-    }
-
-
-
-    /* PLANNERS */
-
-    .category-card-coming {
-      cursor:default;
-    }
-
-
-    .category-card-coming:hover {
-
-      transform:none;
-
-      box-shadow:
-        var(--shadow);
-
-      border-color:
-        var(--border);
-
-    }
-
-
-    .category-card-coming:hover
-    .category-image img {
-
-      transform:none;
-
-    }
-
-
-    .coming-badge {
-
-      position:absolute;
-
-      top:9px;
-
-      right:9px;
-
-      z-index:2;
-
-      padding:6px 9px;
-
-      border-radius:100px;
-
-      background:var(--wine);
-
-      color:white;
-
-      font-size:10px;
-
-      font-weight:800;
-
-    }
-
-
-
-    /* =====================================================
-       BENEFICIOS
-    ===================================================== */
-
-    .benefits {
-
-      width:min(1050px,92%);
-
-      margin:14px auto 28px;
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      overflow:hidden;
-
-      background:
-        var(--pink-soft);
-
-      border:
-        1px solid var(--border);
-
-      border-radius:18px;
-
-    }
-
-
-    .benefit {
-
-      display:flex;
-
-      align-items:center;
-
-      gap:11px;
-
-      padding:16px 14px;
-
-      border-right:
-        1px solid var(--border);
-
-    }
-
-
-    .benefit:last-child {
-      border-right:none;
-    }
-
-
-    .benefit-icon {
-
-      min-width:36px;
-
-      width:36px;
-
-      height:36px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      border-radius:50%;
-
-      background:white;
-
-      color:var(--red);
-
-      font-size:18px;
-
-    }
-
-
-    .benefit h3 {
-
-      margin-bottom:2px;
-
-      font-size:13px;
-
-    }
-
-
-    .benefit p {
-
-      color:var(--muted);
-
-      font-size:11px;
-
-    }
-
-
-
-    /* =====================================================
-       PAYPAL
-    ===================================================== */
-
-    .payment {
-
-      width:min(930px,92%);
-
-      margin:
-        0 auto 30px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:
-        space-between;
-
-      gap:20px;
-
-      padding:20px 22px;
-
-      background:var(--white);
-
-      border:
-        1px solid var(--border);
-
-      border-radius:18px;
-
-      box-shadow:
-        var(--shadow);
-
-    }
-
-
-    .payment-copy h2 {
-
-      margin-bottom:5px;
-
-      color:var(--wine);
-
-      font-size:21px;
-
-    }
-
-
-    .payment-copy p {
-
-      max-width:580px;
-
-      color:var(--muted);
-
-      font-size:13px;
-
-      line-height:1.55;
-
-    }
-
-
-    .paypal-badge {
-
-      flex-shrink:0;
-
-      padding:
-        10px 15px;
-
-      border-radius:10px;
-
-      background:#f7f8fb;
-
-      border:
-        1px solid #e4e6ea;
 
       font-size:15px;
-
-      font-weight:800;
-
     }
 
 
 
-    /* =====================================================
-       SOBRE ZUZUBAYO
-    ===================================================== */
+    /* =========================
+       CONTENIDO LEGAL
+    ========================= */
 
-    .about {
+    .legal-wrapper{
+      width:min(1050px,92%);
 
-      background:var(--blush);
-
-      border-top:
-        1px solid var(--border);
-
-      border-bottom:
-        1px solid var(--border);
-
-    }
-
-
-    .about-inner {
-
-      width:min(950px,92%);
-
-      margin:auto;
-
-      padding:28px 0;
-
-      display:grid;
-
-      grid-template-columns:
-        95px 1fr;
-
-      align-items:center;
-
-      gap:22px;
-
-    }
-
-
-    .about-image {
-
-      width:90px;
-
-      height:90px;
-
-      overflow:hidden;
-
-      border-radius:50%;
-
-      background:white;
-
-    }
-
-
-    .about-image img {
-
-      width:100%;
-
-      height:100%;
-
-      object-fit:cover;
-
-      object-position:
-        center top;
-
-    }
-
-
-    .about-copy h2 {
-
-      margin-bottom:6px;
-
-      color:var(--wine);
-
-      font-size:22px;
-
-    }
-
-
-    .about-copy p {
-
-      max-width:700px;
-
-      color:#594f51;
-
-      font-size:14px;
-
-      line-height:1.6;
-
-    }
-
-
-
-    /* =====================================================
-       FAQ
-    ===================================================== */
-
-    .faq {
-
-      width:min(850px,92%);
-
-      margin:auto;
-
-      padding:30px 0;
-
-    }
-
-
-    .faq h2 {
-
-      margin-bottom:16px;
-
-      text-align:center;
-
-      color:var(--wine);
-
-      font-size:26px;
-
-    }
-
-
-    details {
-
-      margin-bottom:8px;
-
-      padding:14px 16px;
-
-      background:white;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:12px;
-
-    }
-
-
-    summary {
-
-      cursor:pointer;
-
-      font-size:14px;
-
-      font-weight:750;
-
-    }
-
-
-    details p {
-
-      padding-top:8px;
-
-      color:var(--muted);
-
-      font-size:13px;
-
-      line-height:1.6;
-
-    }
-
-
-
-    /* =====================================================
-       CONTACTO
-    ===================================================== */
-
-    .contact {
-
-      width:min(850px,92%);
-
-      margin:
-        0 auto 32px;
-
-      padding:24px;
-
-      text-align:center;
-
-      background:white;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:18px;
-
-      box-shadow:
-        var(--shadow);
-
-    }
-
-
-    .contact h2 {
-
-      margin-bottom:6px;
-
-      color:var(--wine);
-
-      font-size:24px;
-
-    }
-
-
-    .contact p {
-
-      max-width:560px;
-
-      margin:
-        0 auto 15px;
-
-      color:var(--muted);
-
-      font-size:13px;
-
-      line-height:1.6;
-
-    }
-
-
-    .contact-buttons {
+      margin:0 auto 45px;
 
       display:flex;
+      flex-direction:column;
 
-      justify-content:center;
-
-      flex-wrap:wrap;
-
-      gap:8px;
-
+      gap:13px;
     }
 
 
-    .contact-link {
+    .legal-card{
+      display:grid;
 
-      display:inline-flex;
+      grid-template-columns:85px 1fr;
 
-      align-items:center;
+      gap:25px;
 
+      padding:27px 30px;
+
+      background:white;
+
+      border:1px solid var(--border);
+      border-radius:20px;
+
+      box-shadow:var(--shadow);
+    }
+
+
+    .legal-number{
+      display:flex;
+      align-items:flex-start;
       justify-content:center;
 
-      padding:
-        9px 14px;
+      min-height:100%;
 
-      border:
-        1px solid var(--pink);
+      padding-right:20px;
 
-      border-radius:9px;
+      border-right:1px solid #e9b9c1;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:31px;
+      font-style:italic;
+    }
+
+
+    .legal-content h2{
+      margin-bottom:8px;
 
       color:var(--wine);
 
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:24px;
+      font-weight:500;
+    }
+
+
+    .legal-content p{
+      margin-bottom:8px;
+
+      color:#4f4648;
+
       font-size:13px;
-
-      font-weight:750;
-
+      line-height:1.75;
     }
 
 
-    .contact-link:hover {
-      background:var(--blush);
+    .legal-content p:last-child{
+      margin-bottom:0;
+    }
+
+
+    .legal-content strong{
+      color:var(--wine);
     }
 
 
 
-    /* =====================================================
+    /* =========================
+       MENSAJE FINAL
+    ========================= */
+
+    .legal-note{
+      width:min(1050px,92%);
+
+      margin:0 auto 38px;
+
+      padding:25px 28px;
+
+      text-align:center;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+
+    .legal-note h3{
+      margin-bottom:6px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:21px;
+      font-weight:500;
+    }
+
+
+    .legal-note p{
+      max-width:700px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:12px;
+      line-height:1.7;
+    }
+
+
+
+    /* =========================
        FOOTER
-    ===================================================== */
+    ========================= */
 
-    footer {
-
+    footer{
       background:var(--wine);
-
       color:white;
-
     }
 
 
-    .footer-inner {
-
+    .footer-inner{
       width:min(1180px,92%);
 
       margin:auto;
 
-      padding:
-        24px 0 19px;
+      padding:25px 0 20px;
 
       display:grid;
 
       grid-template-columns:
-        1.35fr .8fr .8fr .9fr .9fr;
+        1.3fr .8fr .8fr;
 
       gap:30px;
-
     }
 
 
-    .footer-logo img {
-
+    .footer-logo img{
       width:150px;
-
-      height:auto;
-
     }
 
 
-    .footer-brand p {
-
+    .footer-brand p{
       margin-top:7px;
 
       color:#f7dce1;
 
       font-size:12px;
-
     }
 
 
-    .footer-col h4 {
-
+    .footer-col h4{
       margin-bottom:8px;
 
       font-size:13px;
-
     }
 
 
-    .footer-col a {
-
+    .footer-col a{
       display:block;
 
       margin-bottom:6px;
@@ -1197,75 +430,37 @@
       color:#f5dce0;
 
       font-size:12px;
-
     }
 
 
-    .footer-muted {
-
-      display:block;
-
-      margin-bottom:6px;
-
-      color:#e8c7ce;
-
-      font-size:12px;
-
-      opacity:.82;
-
-    }
-
-
-    .footer-col a:hover {
+    .footer-col a:hover{
       color:white;
     }
 
 
-    .copyright {
-
-      padding:
-        10px 15px;
+    .copyright{
+      padding:10px 15px;
 
       text-align:center;
 
       border-top:
-        1px solid
-        rgba(255,255,255,.15);
+        1px solid rgba(255,255,255,.15);
 
       color:#f1d7dc;
 
       font-size:11px;
-
     }
 
 
 
-    /* =====================================================
-       TABLET
-    ===================================================== */
+    /* =========================
+       MOBILE
+    ========================= */
 
-    @media(max-width:950px) {
-
-      .categories {
-
-        grid-template-columns:
-          repeat(3,1fr);
-
-      }
-
-    }
+    @media(max-width:760px){
 
 
-
-    /* =====================================================
-       TELÉFONO
-    ===================================================== */
-
-    @media(max-width:760px) {
-
-
-      .topbar {
-
+      .topbar{
         min-height:28px;
 
         gap:12px;
@@ -1275,468 +470,124 @@
         overflow:hidden;
 
         font-size:10px;
-
       }
 
 
-      .topbar span:nth-child(3) {
+      .topbar span:nth-child(3){
         display:none;
       }
 
 
-      .nav {
-
+      .nav{
         width:94%;
-
         min-height:60px;
-
       }
 
 
-      .logo img {
+      .logo img{
         width:145px;
       }
 
 
-      .desktop-nav {
+      .desktop-nav{
         display:none;
       }
 
 
-      .hero {
-
+      .hero{
         width:92%;
 
-        grid-template-columns:1fr;
+        padding:32px 0 24px;
+      }
+
+
+      .breadcrumb{
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:38px;
+      }
+
+
+      .hero p{
+        font-size:13px;
+      }
+
+
+      .legal-wrapper{
+        width:94%;
 
         gap:9px;
 
-        padding:
-          22px 0 12px;
-
+        margin-bottom:25px;
       }
 
 
-      .hero h1 {
-
-        margin-bottom:10px;
-
-        font-size:34px;
-
-      }
-
-
-      .hero-copy > p {
-
-        margin-bottom:14px;
-
-        font-size:14px;
-
-        line-height:1.55;
-
-      }
-
-
-      .eyebrow {
-
-        margin-bottom:6px;
-
-        font-size:10px;
-
-      }
-
-
-      .btn {
-
-        min-height:38px;
-
-        padding:
-          9px 14px;
-
-        font-size:12px;
-
-      }
-
-
-      .hero-mini-info {
-        display:none;
-      }
-
-
-      .hero-art {
-
-        height:185px;
-
-        border-radius:17px;
-
-      }
-
-
-
-      /* CATEGORÍAS */
-
-      .shop-section {
-
-        width:94%;
-
-        padding:
-          14px 0 20px;
-
-      }
-
-
-      .section-head {
-        margin-bottom:13px;
-      }
-
-
-      .section-head h2 {
-
-        margin-bottom:5px;
-
-        font-size:23px;
-
-      }
-
-
-      .section-head p {
-
-        font-size:12px;
-
-        line-height:1.5;
-
-      }
-
-
-      .categories {
-
-        grid-template-columns:
-          repeat(2,1fr);
-
-        gap:9px;
-
-      }
-
-
-      .category-card {
-        border-radius:13px;
-      }
-
-
-      .category-image {
-        height:110px;
-      }
-
-
-      .category-body {
-        padding:10px;
-      }
-
-
-      .category-body h3 {
-
-        margin-bottom:6px;
-
-        font-size:15px;
-
-      }
-
-
-      .category-body p {
-        display:none;
-      }
-
-
-      .category-btn {
-        font-size:11px;
-      }
-
-
-      .coming-badge {
-
-        top:6px;
-
-        right:6px;
-
-        padding:
-          5px 7px;
-
-        font-size:8px;
-
-      }
-
-
-
-      /* BENEFICIOS */
-
-      .benefits {
-
-        width:94%;
-
-        grid-template-columns:
-          repeat(2,1fr);
-
-        margin:
-          20px auto;
-
-        border-radius:14px;
-
-      }
-
-
-      .benefit {
-
-        padding:
-          12px 9px;
-
-        gap:8px;
-
-      }
-
-
-      .benefit:nth-child(2) {
-        border-right:none;
-      }
-
-
-      .benefit:nth-child(-n+2) {
-
-        border-bottom:
-          1px solid var(--border);
-
-      }
-
-
-      .benefit-icon {
-
-        min-width:30px;
-
-        width:30px;
-
-        height:30px;
-
-        font-size:14px;
-
-      }
-
-
-      .benefit h3 {
-        font-size:11px;
-      }
-
-
-      .benefit p {
-        display:none;
-      }
-
-
-
-      /* PAYPAL */
-
-      .payment {
-
-        width:94%;
-
-        margin-bottom:20px;
-
-        padding:15px;
-
-        gap:10px;
-
-      }
-
-
-      .payment-copy h2 {
-        font-size:17px;
-      }
-
-
-      .payment-copy p {
-
-        font-size:11px;
-
-        line-height:1.5;
-
-      }
-
-
-      .paypal-badge {
-
-        padding:
-          8px 10px;
-
-        font-size:11px;
-
-      }
-
-
-
-      /* ABOUT */
-
-      .about-inner {
-
-        width:92%;
-
-        padding:20px 0;
-
-        grid-template-columns:
-          68px 1fr;
+      .legal-card{
+        grid-template-columns:43px 1fr;
 
         gap:13px;
 
+        padding:20px 15px;
+
+        border-radius:16px;
       }
 
 
-      .about-image {
+      .legal-number{
+        padding-right:10px;
 
-        width:66px;
-
-        height:66px;
-
+        font-size:23px;
       }
 
 
-      .about-copy h2 {
-        font-size:18px;
-      }
-
-
-      .about-copy p {
-
-        font-size:11px;
-
-        line-height:1.55;
-
-      }
-
-
-
-      /* FAQ */
-
-      .faq {
-        padding:22px 0;
-      }
-
-
-      .faq h2 {
-        font-size:21px;
-      }
-
-
-      details {
-
-        padding:
-          12px 13px;
-
-      }
-
-
-      summary {
-        font-size:12px;
-      }
-
-
-      details p {
-
-        font-size:11px;
-
-        line-height:1.55;
-
-      }
-
-
-
-      /* CONTACTO */
-
-      .contact {
-
-        width:92%;
-
-        margin-bottom:22px;
-
-        padding:
-          20px 14px;
-
-      }
-
-
-      .contact h2 {
+      .legal-content h2{
         font-size:19px;
       }
 
 
-      .contact p {
-
+      .legal-content p{
         font-size:11px;
-
-        line-height:1.55;
-
       }
 
 
-      .contact-link {
+      .legal-note{
+        width:94%;
 
-        padding:
-          8px 11px;
+        margin-bottom:24px;
 
-        font-size:11px;
-
+        padding:20px 16px;
       }
 
 
+      .legal-note h3{
+        font-size:18px;
+      }
 
-      /* FOOTER */
 
-      .footer-inner {
+      .legal-note p{
+        font-size:11px;
+      }
 
+
+      .footer-inner{
         width:92%;
 
-        padding:
-          20px 0 15px;
+        grid-template-columns:1fr 1fr;
 
-        grid-template-columns:
-          1fr 1fr;
-
-        gap:18px;
-
+        gap:20px;
       }
 
 
-      .footer-brand {
-
-        grid-column:
-          1 / -1;
-
+      .footer-brand{
+        grid-column:1 / -1;
       }
 
 
-      .footer-logo img {
+      .footer-logo img{
         width:125px;
-      }
-
-
-      .footer-brand p {
-        font-size:11px;
-      }
-
-
-      .footer-col h4 {
-        font-size:12px;
-      }
-
-
-      .footer-col a {
-        font-size:11px;
-      }
-
-
-      .footer-muted {
-        font-size:11px;
-      }
-
-
-      .copyright {
-        font-size:10px;
       }
 
     }
@@ -1750,31 +601,27 @@
 <body>
 
 
-  <!-- =====================================================
-       TOP BAR
-  ====================================================== -->
+  <!-- TOP BAR -->
 
   <div class="topbar">
 
     <span>
-      ⇩ Descarga digital
+      ⇩ Productos digitales
     </span>
 
     <span>
-      ♡ Pago seguro con PayPal
+      ♡ ZuzuBayo Digital Goodies
     </span>
 
     <span>
-      Productos digitales hechos para ti
+      Diseñado con amor
     </span>
 
   </div>
 
 
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
+  <!-- HEADER -->
 
   <header>
 
@@ -1782,7 +629,7 @@
 
 
       <a
-        href="#inicio"
+        href="index.html"
         class="logo"
       >
 
@@ -1797,39 +644,28 @@
 
       <nav class="desktop-nav">
 
-
-        <a href="#inicio">
+        <a href="index.html">
           Inicio
         </a>
 
-
-        <a href="#categorias">
+        <a href="index.html#categorias">
           Categorías
         </a>
 
-
-        <a href="#sobre">
+        <a href="index.html#sobre">
           Sobre ZuzuBayo
         </a>
 
-
-        <a href="#faq">
-          FAQ
-        </a>
-
-
-        <a href="#contacto">
+        <a href="index.html#contacto">
           Contacto
         </a>
 
-
         <a
-          href="#categorias"
-          class="shop-pill"
+          href="index.html"
+          class="back-button"
         >
-          Tienda ♡
+          ← Volver al inicio
         </a>
-
 
       </nav>
 
@@ -1843,830 +679,259 @@
   <main>
 
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
+    <!-- HERO -->
 
-    <section
-      class="hero"
-      id="inicio"
-    >
+    <section class="hero">
 
 
-      <div class="hero-copy">
-
-
-        <div class="eyebrow">
-          DIGITAL GOODIES
-        </div>
-
-
-        <h1>
-
-          Productos digitales
-
-          <span>
-            hechos para ti ♡
-          </span>
-
-        </h1>
-
-
-        <p>
-
-          Invitaciones, plantillas, stickers,
-          journals, guías y recursos digitales
-          creados para hacer tu vida más fácil,
-          bonita y organizada.
-
-        </p>
-
-
-
-        <div class="hero-buttons">
-
-
-          <a
-            href="#categorias"
-            class="btn btn-primary"
-          >
-            Explorar productos
-          </a>
-
-
-          <a
-            href="#categorias"
-            class="btn btn-secondary"
-          >
-            Ver categorías ♡
-          </a>
-
-
-        </div>
-
-
-
-        <div class="hero-mini-info">
-
-          <span>
-            ♡ 100% digital
-          </span>
-
-          <span>
-            ✧ Creado con amor
-          </span>
-
-          <span>
-            ⇩ Fácil de descargar
-          </span>
-
-        </div>
-
-
+      <div class="breadcrumb">
+        Inicio / Legal / Términos y condiciones
       </div>
 
 
-
-      <div class="hero-art">
-
-        <img
-          src="mascota.png"
-          alt="Mascota de ZuzuBayo"
-          class="mascota"
-        >
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CATEGORÍAS
-    ====================================================== -->
-
-    <section
-      class="shop-section"
-      id="categorias"
-    >
-
-
-      <div class="section-head">
-
-        <h2>
-          Shop the goodies ♡
-        </h2>
-
-        <p>
-          Encuentra lo que necesitas y descubre
-          nuevas formas de crear, organizar y disfrutar.
-        </p>
-
-      </div>
-
-
-
-      <div class="categories">
-
-
-        <!-- INVITACIONES -->
-
-        <a
-          href="invitaciones.html"
-          class="category-card"
-        >
-
-
-          <div class="category-image">
-
-            <img
-              src="invitaciones.png"
-              alt="Invitaciones digitales"
-            >
-
-          </div>
-
-
-          <div class="category-body">
-
-            <h3>
-              Invitaciones
-            </h3>
-
-            <p>
-              Ocasiones especiales,
-              días especiales e invitaciones
-              personalizadas.
-            </p>
-
-            <span class="category-btn">
-              Ver invitaciones →
-            </span>
-
-          </div>
-
-
-        </a>
-
-
-
-        <!-- PLANTILLAS -->
-
-        <a
-          href="plantillas.html"
-          class="category-card"
-        >
-
-
-          <div class="category-image">
-
-            <img
-              src="plantillas.png"
-              alt="Plantillas digitales"
-            >
-
-          </div>
-
-
-          <div class="category-body">
-
-            <h3>
-              Plantillas
-            </h3>
-
-            <p>
-              Redes sociales, negocios,
-              eventos, organización
-              y estudio.
-            </p>
-
-            <span class="category-btn">
-              Ver plantillas →
-            </span>
-
-          </div>
-
-
-        </a>
-
-
-
-        <!-- STICKERS -->
-
-        <a
-          href="stickers.html"
-          class="category-card"
-        >
-
-
-          <div class="category-image">
-
-            <img
-              src="stikers.png"
-              alt="Stickers digitales"
-            >
-
-          </div>
-
-
-          <div class="category-body">
-
-            <h3>
-              Stickers
-            </h3>
-
-            <p>
-              Cute & aesthetic,
-              self-care, productivity,
-              temporadas y packs ZuzuBayo.
-            </p>
-
-            <span class="category-btn">
-              Ver stickers →
-            </span>
-
-          </div>
-
-
-        </a>
-
-
-
-        <!-- JOURNALS -->
-
-        <a
-          href="journals.html"
-          class="category-card"
-        >
-
-
-          <div class="category-image">
-
-            <img
-              src="journals.png"
-              alt="Journals y listas digitales"
-            >
-
-          </div>
-
-
-          <div class="category-body">
-
-            <h3>
-              Journals & Listas
-            </h3>
-
-            <p>
-              Self-care, gratitud,
-              hábitos, checklists,
-              hogar y estudio.
-            </p>
-
-            <span class="category-btn">
-              Ver journals →
-            </span>
-
-          </div>
-
-
-        </a>
-
-
-
-        <!-- GUIAS -->
-
-        <a
-          href="guias.html"
-          class="category-card"
-        >
-
-
-          <div class="category-image">
-
-            <img
-              src="guias.png"
-              alt="Guías digitales"
-            >
-
-          </div>
-
-
-          <div class="category-body">
-
-            <h3>
-              Guías
-            </h3>
-
-            <p>
-              Productividad, marketing,
-              organización, emprendimiento,
-              Canva y más.
-            </p>
-
-            <span class="category-btn">
-              Ver guías →
-            </span>
-
-          </div>
-
-
-        </a>
-
-
-
-        <!-- =================================================
-             NEXTFLIGHT - ACTUALIZADO
-        ================================================== -->
-
-        <a
-          href="nextflight.html"
-          class="category-card"
-        >
-
-
-          <div class="category-image">
-
-            <img
-              src="nextflight.png"
-              alt="NextFlight"
-            >
-
-          </div>
-
-
-          <div class="category-body">
-
-            <h3>
-              NextFlight
-            </h3>
-
-            <p>
-              Guía, recursos y acompañamiento
-              para ayudarte a comenzar
-              paso a paso.
-            </p>
-
-            <span class="category-btn">
-              Explorar NextFlight →
-            </span>
-
-          </div>
-
-
-        </a>
-
-
-
-        <!-- =================================================
-             THE GOODIE BOX - PREPARADO PARA EL FUTURO
-             OCULTO HASTA EL LANZAMIENTO
-        ================================================== -->
-
-        <a
-          href="goodie-box.html"
-          class="category-card goodie-box-card"
-          hidden
-        >
-
-          <div class="category-image">
-
-            <img
-              src="goodie-box.png"
-              alt="The Goodie Box by ZuzuBayo"
-            >
-
-          </div>
-
-          <div class="category-body">
-
-            <h3>
-              The Goodie Box ♡
-            </h3>
-
-            <p>
-              Una futura experiencia de membresía
-              con digital goodies exclusivos.
-            </p>
-
-            <span class="category-btn">
-              Próximamente ♡
-            </span>
-
-          </div>
-
-        </a>
-
-
-
-        <!-- PLANNERS -->
-
-        <article
-          class="
-            category-card
-            category-card-coming
-          "
-        >
-
-
-          <span class="coming-badge">
-            COMING SOON
-          </span>
-
-
-          <div class="category-image">
-
-            <img
-              src="planners.png"
-              alt="Planners digitales próximamente"
-            >
-
-          </div>
-
-
-          <div class="category-body">
-
-            <h3>
-              Planners
-            </h3>
-
-            <p>
-              Daily, Weekly, Monthly,
-              Student, Self-Care
-              y Budget.
-            </p>
-
-            <span class="category-btn">
-              Próximamente ♡
-            </span>
-
-          </div>
-
-
-        </article>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         BENEFICIOS
-    ====================================================== -->
-
-    <section class="benefits">
-
-
-      <div class="benefit">
-
-        <div class="benefit-icon">
-          ⇩
-        </div>
-
-        <div>
-
-          <h3>
-            Descarga digital
-          </h3>
-
-          <p>
-            Acceso a tus archivos.
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="benefit">
-
-        <div class="benefit-icon">
-          ♡
-        </div>
-
-        <div>
-
-          <h3>
-            Pago seguro
-          </h3>
-
-          <p>
-            Compra con confianza.
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="benefit">
-
-        <div class="benefit-icon">
-          ♥
-        </div>
-
-        <div>
-
-          <h3>
-            Hecho con amor
-          </h3>
-
-          <p>
-            Diseñado pensando en ti.
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="benefit">
-
-        <div class="benefit-icon">
-          ▣
-        </div>
-
-        <div>
-
-          <h3>
-            100% digital
-          </h3>
-
-          <p>
-            Úsalo desde tus dispositivos.
-          </p>
-
-        </div>
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         PAYPAL
-    ====================================================== -->
-
-    <section class="payment">
-
-
-      <div class="payment-copy">
-
-        <h2>
-          Pago seguro con PayPal ♡
-        </h2>
-
-        <p>
-
-          PayPal será nuestro método de pago seguro.
-          El botón para comprar aparecerá únicamente
-          cuando selecciones un producto específico.
-
-        </p>
-
-      </div>
-
-
-      <div class="paypal-badge">
-        PayPal
-      </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         SOBRE ZUZUBAYO
-    ====================================================== -->
-
-    <section
-      class="about"
-      id="sobre"
-    >
-
-
-      <div class="about-inner">
-
-
-        <div class="about-image">
-
-          <img
-            src="mascota.png"
-            alt="Mascota ZuzuBayo"
-          >
-
-        </div>
-
-
-
-        <div class="about-copy">
-
-          <h2>
-            Sobre ZuzuBayo ♡
-          </h2>
-
-          <p>
-
-            ZuzuBayo es un espacio creativo
-            de productos digitales pensado
-            para hacer las cosas un poco más
-            bonitas, prácticas y especiales.
-
-            Aquí encontrarás recursos para
-            organizarte, crear, aprender,
-            celebrar y acompañar tus metas.
-
-          </p>
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FAQ
-    ====================================================== -->
-
-    <section
-      class="faq"
-      id="faq"
-    >
-
-
-      <h2>
-        Preguntas frecuentes
-      </h2>
-
-
-
-      <details>
-
-        <summary>
-          ¿Los productos son físicos?
-        </summary>
-
-        <p>
-          No. Los productos de ZuzuBayo
-          son digitales. No recibirás
-          un producto físico por correo.
-        </p>
-
-      </details>
-
-
-
-      <details>
-
-        <summary>
-          ¿Cómo recibiré mi compra?
-        </summary>
-
-        <p>
-          Cada producto indicará cómo
-          recibirás o descargarás tus archivos
-          después de completar el pago.
-        </p>
-
-      </details>
-
-
-
-      <details>
-
-        <summary>
-          ¿Cómo podré pagar?
-        </summary>
-
-        <p>
-          Los productos disponibles podrán
-          comprarse mediante PayPal.
-          El botón de pago aparecerá dentro
-          del producto correspondiente.
-        </p>
-
-      </details>
-
-
-
-      <details>
-
-        <summary>
-          ¿Puedo utilizar los productos
-          en mi celular?
-        </summary>
-
-        <p>
-          Dependerá del producto, pero muchos
-          recursos podrán utilizarse desde
-          celular, tablet o computadora.
-        </p>
-
-      </details>
-
-
-
-      <details>
-
-        <summary>
-          ¿Cuándo estarán disponibles
-          los planners?
-        </summary>
-
-        <p>
-          Los planners forman parte de
-          una colección futura de ZuzuBayo
-          y actualmente están marcados
-          como Coming Soon.
-        </p>
-
-      </details>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CONTACTO
-    ====================================================== -->
-
-    <section
-      class="contact"
-      id="contacto"
-    >
-
-
-      <h2>
-        ¿Necesitas ayuda? ♡
-      </h2>
+      <h1>
+        Términos y <span>condiciones ♡</span>
+      </h1>
 
 
       <p>
-
-        Si tienes alguna pregunta sobre
-        un producto, una descarga o una compra,
-        puedes comunicarte con ZuzuBayo.
-
+        Aquí encontrarás información importante
+        sobre la compra, descarga y uso de los
+        productos digitales de ZuzuBayo.
       </p>
 
 
-
-<div class="contact-buttons">
-
-  <!-- WHATSAPP -->
-  <a
-    href="https://wa.me/16309351804?text=Hola%2C%20vi%20ZuzuBayo%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n."
-    target="_blank"
-    rel="noopener noreferrer"
-    class="contact-link"
-  >
-    WhatsApp
-  </a>
+    </section>
 
 
-  <!-- INSTAGRAM -->
-  <a
-    href="https://www.instagram.com/zuzu.bayo?igsh=MWZrMWRmODFpNmlpOA=="
-    target="_blank"
-    rel="noopener noreferrer"
-    class="contact-link"
-  >
-    Instagram
-  </a>
+
+    <!-- CONTENIDO -->
+
+    <section class="legal-wrapper">
 
 
-  <!-- EMAIL -->
-  <a
-    href="mailto:zuzu.bayo.c@gmail.com"
-    class="contact-link"
-  >
-    Email
-  </a>
+      <!-- 01 -->
 
-</div>
- 
+      <article class="legal-card">
 
-</div>
-
-     
+        <div class="legal-number">
+          01
+        </div>
 
 
-      </div>
+        <div class="legal-content">
 
+          <h2>
+            Uso personal
+          </h2>
+
+          <p>
+            Salvo que se indique expresamente lo contrario
+            en la descripción de un producto, los productos
+            digitales adquiridos en ZuzuBayo están destinados
+            únicamente al <strong>uso personal del comprador</strong>.
+          </p>
+
+          <p>
+            La compra de un producto no otorga derechos de
+            propiedad sobre el diseño, contenido o archivo original.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 02 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          02
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Derechos de autor
+          </h2>
+
+          <p>
+            Los diseños, plantillas, ilustraciones, guías,
+            textos, recursos y demás contenido original
+            creado por ZuzuBayo están protegidos por los
+            derechos de propiedad intelectual que correspondan.
+          </p>
+
+          <p>
+            La compra de un archivo digital constituye una
+            licencia de uso bajo estas condiciones y
+            <strong>no representa una transferencia de los
+            derechos de autor</strong>.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 03 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          03
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Reventa y redistribución
+          </h2>
+
+          <p>
+            No está permitido revender, redistribuir,
+            compartir, sublicenciar o regalar los archivos
+            digitales adquiridos en ZuzuBayo.
+          </p>
+
+          <p>
+            Tampoco se permite publicar los archivos para
+            descarga de terceros, vender copias modificadas
+            como productos propios o utilizar el contenido
+            de una manera que permita a otras personas
+            acceder al archivo original.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 04 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          04
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Productos digitales
+          </h2>
+
+          <p>
+            Los productos ofrecidos por ZuzuBayo son
+            principalmente digitales. Salvo que se indique
+            expresamente lo contrario, <strong>no se enviará
+            ningún producto físico</strong>.
+          </p>
+
+          <p>
+            Cada producto indicará su formato, contenido,
+            características y requisitos de uso antes
+            de realizar la compra.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 05 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          05
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Compras y descargas
+          </h2>
+
+          <p>
+            El comprador es responsable de proporcionar
+            información correcta durante el proceso de compra,
+            especialmente su dirección de correo electrónico
+            cuando sea necesaria para entregar el producto.
+          </p>
+
+          <p>
+            Una vez confirmado el pago, el producto podrá
+            entregarse mediante descarga digital, enlace de
+            acceso o correo electrónico, según se indique
+            en la página correspondiente.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- 06 -->
+
+      <article class="legal-card">
+
+        <div class="legal-number">
+          06
+        </div>
+
+
+        <div class="legal-content">
+
+          <h2>
+            Condiciones generales
+          </h2>
+
+          <p>
+            Al realizar una compra o utilizar los productos
+            de ZuzuBayo, aceptas cumplir estos términos,
+            así como las políticas adicionales aplicables
+            a privacidad, reembolsos y licencia de uso.
+          </p>
+
+          <p>
+            ZuzuBayo podrá actualizar estas condiciones
+            cuando sea necesario. La versión publicada
+            en este sitio será la versión vigente.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </section>
+
+
+
+    <!-- NOTA -->
+
+    <section class="legal-note">
+
+      <h3>
+        Gracias por apoyar ZuzuBayo ♡
+      </h3>
+
+      <p>
+        Estas reglas ayudan a proteger el trabajo creativo
+        detrás de cada producto y permiten que ZuzuBayo
+        continúe creando nuevos digital goodies para ti.
+      </p>
 
     </section>
 
@@ -2675,9 +940,7 @@
 
 
 
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -2687,22 +950,23 @@
 
       <div class="footer-brand">
 
-
         <div class="footer-logo">
 
-          <img
-            src="logo.png"
-            alt="ZuzuBayo"
-          >
+          <a href="index.html">
+
+            <img
+              src="logo.png"
+              alt="ZuzuBayo"
+            >
+
+          </a>
 
         </div>
-
 
         <p>
           Digital goodies made with love ♡
         </p>
 
-
       </div>
 
 
@@ -2710,49 +974,19 @@
       <div class="footer-col">
 
         <h4>
-          Explora
+          ZuzuBayo
         </h4>
 
-        <a href="#categorias">
-          Categorías
+        <a href="index.html">
+          Inicio
         </a>
 
-        <a href="invitaciones.html">
-          Invitaciones
+        <a href="index.html#categorias">
+          Tienda
         </a>
 
-        <a href="plantillas.html">
-          Plantillas
-        </a>
-
-        <a href="guias.html">
-          Guías
-        </a>
-
-        <a href="nextflight.html">
-          NextFlight
-        </a>
-
-      </div>
-
-
-
-      <div class="footer-col">
-
-        <h4>
-          Ayuda
-        </h4>
-
-        <a href="#faq">
-          Preguntas frecuentes
-        </a>
-
-        <a href="#contacto">
+        <a href="index.html#contacto">
           Contacto
-        </a>
-
-        <a href="#sobre">
-          Sobre ZuzuBayo
         </a>
 
       </div>
@@ -2784,50 +1018,12 @@
       </div>
 
 
-
-      <div class="footer-col">
-
-        <h4>
-          Síguenos ♡
-        </h4>
-
-        <a
-          href="https://www.instagram.com/zuzu.bayo?igsh=MWZrMWRmODFpNmlpOA=="
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-
-        <!--
-          Cuando tengas las URLs oficiales de estas cuentas
-          cambiaremos cada texto por un enlace real.
-        -->
-
-        <span class="footer-muted">
-          Facebook · próximamente
-        </span>
-
-        <span class="footer-muted">
-          Pinterest · próximamente
-        </span>
-
-        <span class="footer-muted">
-          TikTok · próximamente
-        </span>
-
-      </div>
-
-
     </div>
 
 
 
     <div class="copyright">
-
-      © 2026 ZuzuBayo ·
-      Todos los derechos reservados
-
+      © 2026 ZuzuBayo · Todos los derechos reservados
     </div>
 
 
