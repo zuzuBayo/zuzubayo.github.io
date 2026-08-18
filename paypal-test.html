@@ -620,6 +620,59 @@
 
 
     // =====================================
+    // BROWSER-SAFE CLIENT TOKEN
+    // =====================================
+
+    async function getBrowserSafeClientToken(){
+
+      const response =
+        await fetch(
+          `${API_BASE}/browser-safe-client-token`,
+          {
+            method:"GET",
+            headers:{
+              "Content-Type":
+                "application/json"
+            }
+          }
+        );
+
+      const data =
+        await response.json();
+
+      if(!response.ok){
+
+        console.error(
+          "Client token:",
+          data
+        );
+
+        throw new Error(
+          data.message ||
+          "No se pudo obtener el token de PayPal."
+        );
+
+      }
+
+      const clientToken =
+        data.clientToken ||
+        data.accessToken;
+
+      if(!clientToken){
+
+        throw new Error(
+          "El servidor no devolvió un client token."
+        );
+
+      }
+
+      return clientToken;
+
+    }
+
+
+
+    // =====================================
     // PAYPAL SDK
     // =====================================
 
@@ -629,11 +682,15 @@
       try{
 
 
+        const clientToken =
+          await getBrowserSafeClientToken();
+
+
         const sdk =
           await window.paypal.createInstance({
 
-            clientId:
-              "AR7hk80Dl4KirsPdTjgJ4MQQXBHluArZZOaSQEbdCvQkBmPphxL4tF22WPpzZYS52EN13MgYj5vLFRvr",
+            clientToken:
+              clientToken,
 
             components:[
 
@@ -658,7 +715,10 @@
           await sdk.findEligibleMethods({
 
             currencyCode:
-              "USD"
+              "USD",
+
+            amount:
+              "1.00"
 
           });
 
