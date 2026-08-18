@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Política de Privacidad | ZuzuBayo</title>
+
+  <meta
+    name="description"
+    content="Política de privacidad de ZuzuBayo y explicación sobre cómo se recopila y utiliza la información de clientes y visitantes."
+  >
+
+  <style>
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#d96a75;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf5;
+      --white:#ffffff;
+      --text:#201b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+      --shadow:0 8px 25px rgba(84,30,38,.08);
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    /* TOP BAR */
+    .topbar{
+      min-height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:28px;
+      padding:7px 16px;
+      background:var(--wine);
+      color:white;
+      font-size:13px;
+      font-weight:600;
+      text-align:center;
+    }
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+    /* HEADER */
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,250,245,.96);
+      border-bottom:1px solid var(--border);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:72px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo img{
+      width:190px;
+      height:auto;
+    }
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      font-size:15px;
+      font-weight:650;
+    }
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+    .back-button{
+      padding:9px 16px;
+      border:1px solid var(--pink);
+      border-radius:100px;
+      color:var(--wine);
+    }
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+    /* HERO */
+    .hero{
+      width:min(900px,92%);
+      margin:auto;
+      padding:52px 0 34px;
+      text-align:center;
+    }
+
+    .breadcrumb{
+      margin-bottom:16px;
+      color:var(--pink);
+      font-size:13px;
+    }
+
+    .hero h1{
+      margin-bottom:12px;
+      color:var(--wine);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(42px,5vw,58px);
+      font-weight:500;
+      line-height:1.08;
+    }
+
+    .hero h1 span{
+      color:var(--pink);
+      font-style:italic;
+    }
+
+    .hero p{
+      max-width:670px;
+      margin:auto;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* CONTENT */
+    .legal-wrapper{
+      width:min(1050px,92%);
+      margin:0 auto 45px;
+      display:flex;
+      flex-direction:column;
+      gap:13px;
+    }
+
+    .legal-card{
+      display:grid;
+      grid-template-columns:85px 1fr;
+      gap:25px;
+      padding:27px 30px;
+      background:white;
+      border:1px solid var(--border);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .legal-number{
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      min-height:100%;
+      padding-right:20px;
+      border-right:1px solid #e9b9c1;
+      color:var(--pink);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:31px;
+      font-style:italic;
+    }
+
+    .legal-content h2{
+      margin-bottom:8px;
+      color:var(--wine);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:24px;
+      font-weight:500;
+    }
+
+    .legal-content p{
+      margin-bottom:8px;
+      color:#4f4648;
+      font-size:13px;
+      line-height:1.75;
+    }
+
+    .legal-content p:last-child{
+      margin-bottom:0;
+    }
+
+    .legal-content strong{
+      color:var(--wine);
+    }
+
+    /* NOTE */
+    .legal-note{
+      width:min(1050px,92%);
+      margin:0 auto 38px;
+      padding:25px 28px;
+      text-align:center;
+      background:var(--pink-soft);
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+    .legal-note h3{
+      margin-bottom:6px;
+      color:var(--wine);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:21px;
+      font-weight:500;
+    }
+
+    .legal-note p{
+      max-width:700px;
+      margin:auto;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--wine);
+      color:white;
+    }
+
+    .footer-inner{
+      width:min(1180px,92%);
+      margin:auto;
+      padding:25px 0 20px;
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+      gap:30px;
+    }
+
+    .footer-logo img{
+      width:150px;
+    }
+
+    .footer-brand p{
+      margin-top:7px;
+      color:#f7dce1;
+      font-size:12px;
+    }
+
+    .footer-col h4{
+      margin-bottom:8px;
+      font-size:13px;
+    }
+
+    .footer-col a,
+    .footer-col span{
+      display:block;
+      margin-bottom:6px;
+      color:#f5dce0;
+      font-size:12px;
+    }
+
+    .footer-col a:hover{
+      color:white;
+    }
+
+    .copyright{
+      padding:10px 15px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.15);
+      color:#f1d7dc;
+      font-size:11px;
+    }
+
+    /* MOBILE */
+    @media(max-width:760px){
+      .topbar{
+        min-height:28px;
+        gap:12px;
+        padding:6px 8px;
+        overflow:hidden;
+        font-size:10px;
+      }
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+      .nav{
+        width:94%;
+        min-height:60px;
+      }
+
+      .logo img{
+        width:145px;
+      }
+
+      .desktop-nav{
+        display:none;
+      }
+
+      .hero{
+        width:92%;
+        padding:32px 0 24px;
+      }
+
+      .breadcrumb{
+        font-size:11px;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .hero p{
+        font-size:13px;
+      }
+
+      .legal-wrapper{
+        width:94%;
+        gap:9px;
+        margin-bottom:25px;
+      }
+
+      .legal-card{
+        grid-template-columns:43px 1fr;
+        gap:13px;
+        padding:20px 15px;
+        border-radius:16px;
+      }
+
+      .legal-number{
+        padding-right:10px;
+        font-size:23px;
+      }
+
+      .legal-content h2{
+        font-size:19px;
+      }
+
+      .legal-content p{
+        font-size:11px;
+      }
+
+      .legal-note{
+        width:94%;
+        margin-bottom:24px;
+        padding:20px 16px;
+      }
+
+      .legal-note h3{
+        font-size:18px;
+      }
+
+      .legal-note p{
+        font-size:11px;
+      }
+
+      .footer-inner{
+        width:92%;
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+      }
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+      .footer-logo img{
+        width:125px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <span>⇩ Productos digitales</span>
+    <span>♡ ZuzuBayo Digital Goodies</span>
+    <span>Diseñado con amor</span>
+  </div>
+
+  <header>
+    <div class="nav">
+
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="ZuzuBayo">
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#categorias">Categorías</a>
+        <a href="index.html#sobre">Sobre ZuzuBayo</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="index.html" class="back-button">← Volver al inicio</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="breadcrumb">
+        Inicio / Legal / Política de privacidad
+      </div>
+
+      <h1>
+        Política de <span>privacidad ♡</span>
+      </h1>
+
+      <p>
+        Tu privacidad es importante. Aquí te explicamos qué información
+        puede recopilar ZuzuBayo, para qué se utiliza y qué opciones tienes
+        cuando visitas la tienda, descargas un recurso o realizas una compra.
+      </p>
+    </section>
+
+    <section class="legal-wrapper">
+
+      <article class="legal-card">
+        <div class="legal-number">01</div>
+        <div class="legal-content">
+          <h2>Información que recopilamos</h2>
+          <p>
+            ZuzuBayo puede recopilar información que proporcionas voluntariamente,
+            como tu <strong>nombre, dirección de correo electrónico</strong> y los
+            datos necesarios para gestionar una compra, una descarga gratuita,
+            una consulta o una suscripción a comunicaciones de la marca.
+          </p>
+          <p>
+            También pueden generarse datos técnicos básicos relacionados con el
+            uso del sitio, dependiendo de los servicios y herramientas que se
+            integren en la página.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">02</div>
+        <div class="legal-content">
+          <h2>Cómo utilizamos tu información</h2>
+          <p>
+            La información puede utilizarse para procesar pedidos, entregar
+            productos digitales, responder consultas, brindar soporte y mantener
+            un registro relacionado con las compras.
+          </p>
+          <p>
+            Cuando corresponda y hayas otorgado el consentimiento necesario,
+            también podremos utilizar tu correo electrónico para enviarte
+            novedades, nuevos productos, freebies, promociones y contenido de
+            ZuzuBayo.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">03</div>
+        <div class="legal-content">
+          <h2>Pagos</h2>
+          <p>
+            Los pagos de ZuzuBayo pueden procesarse mediante proveedores externos,
+            como <strong>PayPal</strong>. La información financiera necesaria para
+            completar el pago es procesada por el proveedor correspondiente de
+            acuerdo con sus propias políticas y medidas de seguridad.
+          </p>
+          <p>
+            ZuzuBayo no necesita almacenar directamente los datos completos de tu
+            tarjeta o cuenta utilizados por el proveedor para autorizar el pago.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">04</div>
+        <div class="legal-content">
+          <h2>Correos y marketing</h2>
+          <p>
+            Cuando te registres específicamente para recibir novedades o aceptes
+            recibir comunicaciones promocionales, podremos enviarte correos sobre
+            productos, lanzamientos, recursos gratuitos y otras novedades de
+            ZuzuBayo.
+          </p>
+          <p>
+            Podrás <strong>cancelar tu suscripción</strong> a los correos de
+            marketing utilizando la opción correspondiente incluida en esas
+            comunicaciones. Los mensajes necesarios para gestionar una compra o
+            entregar un producto pueden tratarse de manera separada de los correos
+            promocionales.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">05</div>
+        <div class="legal-content">
+          <h2>Servicios de terceros</h2>
+          <p>
+            Para operar la tienda podemos utilizar proveedores externos para
+            funciones como pagos, entrega de correos, formularios, alojamiento,
+            analítica o distribución de archivos digitales.
+          </p>
+          <p>
+            Estos proveedores pueden procesar únicamente la información necesaria
+            para prestar sus servicios y cuentan con sus propias políticas de
+            privacidad y condiciones.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">06</div>
+        <div class="legal-content">
+          <h2>Cookies y tecnologías similares</h2>
+          <p>
+            El sitio puede utilizar cookies u otras tecnologías similares cuando
+            sean necesarias para el funcionamiento de la página o cuando se
+            incorporen herramientas de medición, preferencias o servicios de
+            terceros.
+          </p>
+          <p>
+            Si posteriormente incorporamos herramientas que requieran opciones o
+            consentimiento adicional para determinadas cookies, ZuzuBayo podrá
+            mostrar los avisos correspondientes.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">07</div>
+        <div class="legal-content">
+          <h2>Protección y conservación</h2>
+          <p>
+            Procuramos utilizar medidas razonables para proteger la información
+            que gestionamos. La información se conservará durante el tiempo
+            razonablemente necesario para las finalidades para las que fue
+            recopilada y para cumplir obligaciones aplicables.
+          </p>
+          <p>
+            Ningún sistema conectado a Internet puede garantizar seguridad
+            absoluta, por lo que continuaremos revisando las herramientas que
+            utilice la tienda a medida que ZuzuBayo crezca.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">08</div>
+        <div class="legal-content">
+          <h2>Tus opciones y contacto</h2>
+          <p>
+            Puedes contactarnos si tienes preguntas relacionadas con esta política
+            o con la información que hayas proporcionado a ZuzuBayo. Cuando
+            corresponda, también puedes solicitar acceso, corrección o eliminación
+            de determinada información.
+          </p>
+          <p>
+            Para consultas de privacidad puedes escribir a
+            <strong>zuzu.bayo.c@gmail.com</strong>.
+          </p>
+        </div>
+      </article>
+
+      <article class="legal-card">
+        <div class="legal-number">09</div>
+        <div class="legal-content">
+          <h2>Cambios a esta política</h2>
+          <p>
+            Esta política puede actualizarse cuando cambien las funciones de la
+            tienda, los proveedores utilizados o las prácticas de ZuzuBayo.
+          </p>
+          <p>
+            La versión publicada en este sitio será la versión vigente.
+            <strong>Última actualización: agosto de 2026.</strong>
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="legal-note">
+      <h3>Tu información también merece cuidado ♡</h3>
+      <p>
+        Queremos que puedas disfrutar de ZuzuBayo sabiendo de forma clara
+        por qué solicitamos cierta información y cómo la utilizamos.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <a href="index.html">
+            <img src="logo.png" alt="ZuzuBayo">
+          </a>
+        </div>
+        <p>Digital goodies made with love ♡</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>ZuzuBayo</h4>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#categorias">Tienda</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="terminos.html">Términos y condiciones</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <span>Reembolsos · próximamente</span>
+        <span>Licencia de uso · próximamente</span>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 ZuzuBayo · Todos los derechos reservados
+    </div>
+  </footer>
+
+</body>
+</html>
