@@ -2,24 +2,273 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width,initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute &amp; Aesthetic Pack 01 | ZuzuBayo</title>
+  <meta name="description" content="Pack de 32 stickers PNG transparentes Cute &amp; Aesthetic de ZuzuBayo.">
 
-  <title>Cute &amp; Aesthetic Stickers | ZuzuBayo</title>
+  <style>
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+      --shadow:0 8px 28px rgba(84,30,38,.08);
+    }
 
-  <link
-    rel="stylesheet"
-    href="stickers-category.css"
-  >
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+
+    body{
+      background:var(--cream);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      line-height:1.6;
+    }
+
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+
+    .topbar{
+      min-height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:45px;
+      padding:7px 16px;
+      background:var(--wine);
+      color:white;
+      font-size:13px;
+      font-weight:600;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,250,246,.96);
+      border-bottom:1px solid var(--border);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:78px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo img{width:190px}
+
+    .back-button{
+      padding:9px 17px;
+      border:1px solid var(--pink);
+      border-radius:100px;
+      color:var(--wine);
+      font-size:14px;
+      font-weight:650;
+    }
+
+    .back-button:hover{background:var(--blush)}
+
+    .breadcrumb{
+      width:min(1120px,92%);
+      margin:25px auto 12px;
+      color:var(--pink);
+      font-size:13px;
+    }
+
+    .product{
+      width:min(1120px,92%);
+      margin:0 auto 35px;
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+      gap:40px;
+      align-items:start;
+    }
+
+    .product-image{
+      overflow:hidden;
+      padding:12px;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .product-image img{
+      width:100%;
+      border-radius:15px;
+    }
+
+    .product-info{
+      padding:20px 0;
+    }
+
+    .label{
+      display:inline-block;
+      margin-bottom:13px;
+      padding:6px 10px;
+      background:var(--pink-soft);
+      color:var(--wine);
+      border-radius:100px;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.05em;
+    }
+
+    h1{
+      margin-bottom:14px;
+      color:var(--wine);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(38px,5vw,54px);
+      font-weight:500;
+      line-height:1.08;
+    }
+
+    .description{
+      margin-bottom:22px;
+      color:#51474a;
+      font-size:16px;
+    }
+
+    .included{
+      margin-bottom:22px;
+      padding:20px;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+    .included h2{
+      margin-bottom:12px;
+      color:var(--wine);
+      font-size:17px;
+    }
+
+    .included ul{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px 14px;
+      list-style:none;
+      color:#443b3d;
+      font-size:13px;
+    }
+
+    .included li::before{
+      content:"✓";
+      margin-right:7px;
+      color:var(--red);
+      font-weight:800;
+    }
+
+    .notice{
+      margin-bottom:14px;
+      padding:13px 15px;
+      background:var(--blush);
+      border:1px solid var(--border);
+      border-radius:13px;
+      color:var(--wine);
+      font-size:13px;
+      font-weight:750;
+      text-align:center;
+    }
+
+    .small-note{
+      color:var(--muted);
+      font-size:11px;
+      text-align:center;
+    }
+
+    .details{
+      width:min(920px,92%);
+      margin:0 auto 40px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      overflow:hidden;
+      background:var(--blush);
+      border:1px solid var(--border);
+      border-radius:17px;
+    }
+
+    .detail{
+      padding:18px;
+      border-right:1px solid var(--border);
+      text-align:center;
+    }
+
+    .detail:last-child{border-right:none}
+    .detail strong{display:block;color:var(--wine);font-size:14px}
+    .detail span{color:var(--muted);font-size:11px}
+
+    footer{
+      background:linear-gradient(135deg,#76101f,#8e1727);
+      color:white;
+    }
+
+    .footer-inner{
+      width:min(1120px,92%);
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+      padding:27px 0;
+    }
+
+    .footer-logo img{width:155px}
+
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      color:#f8dde2;
+      font-size:12px;
+    }
+
+    .copyright{
+      padding:10px 15px;
+      border-top:1px solid rgba(255,255,255,.15);
+      color:#f6dbe0;
+      font-size:11px;
+      text-align:center;
+    }
+
+    @media(max-width:760px){
+      .topbar{gap:12px;padding:6px 8px;font-size:10px}
+      .topbar span:last-child{display:none}
+      .nav{width:94%;min-height:62px}
+      .logo img{width:145px}
+      .back-button{padding:8px 12px;font-size:11px}
+      .breadcrumb{width:92%;margin-top:18px;font-size:11px}
+      .product{width:92%;grid-template-columns:1fr;gap:18px}
+      .product-info{padding:0}
+      h1{font-size:39px}
+      .description{font-size:14px}
+      .included ul{grid-template-columns:1fr}
+      .details{width:92%;margin-bottom:25px}
+      .detail{padding:12px 5px}
+      .detail strong{font-size:11px}
+      .detail span{display:none}
+      .footer-inner{width:92%;display:block}
+      .footer-links{margin-top:15px;gap:12px}
+    }
+  </style>
 </head>
 
 <body>
   <div class="topbar">
-    <span>⇩ Stickers digitales</span>
-    <span>♡ Colecciones ZuzuBayo</span>
-    <span>Digital Goodies</span>
+    <span>⇩ Producto digital</span>
+    <span>♡ Pago seguro con PayPal</span>
+    <span>ZuzuBayo Digital Goodies</span>
   </div>
 
   <header>
@@ -27,58 +276,68 @@
       <a href="index.html" class="logo">
         <img src="logo.png" alt="ZuzuBayo">
       </a>
-
-      <a href="stickers.html" class="back-button">
-        ← Volver a stickers
-      </a>
+      <a href="stickers.html" class="back-button">← Volver a stickers</a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="breadcrumb">
-        <a href="index.html">Inicio</a>
-        &nbsp;/&nbsp;
-        <a href="stickers.html">Stickers</a>
-        &nbsp;/&nbsp;
-        Cute &amp; Aesthetic
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> &nbsp;/&nbsp;
+      <a href="stickers.html">Stickers</a> &nbsp;/&nbsp;
+      Cute &amp; Aesthetic Pack 01
+    </div>
+
+    <section class="product">
+      <div class="product-image">
+        <img
+          src="cute-aesthetic-pack-01-preview.png"
+          alt="Vista previa de los 32 stickers Cute and Aesthetic Pack 01"
+        >
       </div>
 
-      <h1>Cute &amp; Aesthetic</h1>
+      <div class="product-info">
+        <span class="label">PACK 01 ♡</span>
+        <h1>Cute &amp; Aesthetic Pack 01</h1>
+        <p class="description">
+          Una colección femenina y delicada para decorar tus notas,
+          journals, planners y proyectos digitales.
+        </p>
 
-      <p>
-        Stickers delicados, femeninos y decorativos para
-        darle un toque bonito a tus proyectos.
-      </p>
+        <div class="included">
+          <h2>Qué incluye tu pack</h2>
+          <ul>
+            <li>32 stickers individuales</li>
+            <li>Archivos PNG transparentes</li>
+            <li>READ ME incluido</li>
+            <li>Licencia de uso personal</li>
+            <li>Descarga en archivo ZIP</li>
+            <li>Producto 100% digital</li>
+          </ul>
+        </div>
+
+        <div class="notice">
+          Precio y botón de compra en preparación
+        </div>
+
+        <p class="small-note">
+          No se envía ningún artículo físico.
+        </p>
+      </div>
     </section>
 
-    <section class="products">
-      <a
-        href="producto-cute-aesthetic-pack-01.html"
-        class="product-card"
-      >
-        <div class="product-image">
-          <img
-            src="cute-aesthetic-pack-01-preview.png"
-            alt="Vista previa de Cute and Aesthetic Pack 01"
-          >
-        </div>
-
-        <div class="product-copy">
-          <span class="label">32 STICKERS PNG ♡</span>
-
-          <h2>Cute &amp; Aesthetic Pack 01</h2>
-
-          <p>
-            Una colección femenina y delicada para notas,
-            journals, planners y proyectos digitales.
-          </p>
-
-          <span class="product-link">
-            Ver producto →
-          </span>
-        </div>
-      </a>
+    <section class="details">
+      <div class="detail">
+        <strong>32 PNG</strong>
+        <span>Stickers individuales</span>
+      </div>
+      <div class="detail">
+        <strong>Fondo transparente</strong>
+        <span>Listos para importar</span>
+      </div>
+      <div class="detail">
+        <strong>Uso personal</strong>
+        <span>Licencia incluida</span>
+      </div>
     </section>
   </main>
 
@@ -87,7 +346,6 @@
       <div class="footer-logo">
         <img src="logo.png" alt="ZuzuBayo">
       </div>
-
       <div class="footer-links">
         <a href="index.html">Inicio</a>
         <a href="stickers.html">Stickers</a>
@@ -95,10 +353,7 @@
         <a href="index.html#contacto">Contacto</a>
       </div>
     </div>
-
-    <div class="copyright">
-      © 2026 ZuzuBayo · Todos los derechos reservados
-    </div>
+    <div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div>
   </footer>
 </body>
 </html>
