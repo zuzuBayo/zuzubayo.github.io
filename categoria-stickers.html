@@ -2,420 +2,90 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colección de Stickers | ZuzuBayo</title>
-  <meta name="description" content="Colecciones de stickers digitales ZuzuBayo.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Stickers Digitales | ZuzuBayo</title>
+
+  <meta
+    http-equiv="refresh"
+    content="0; url=stickers.html"
+  >
+
+  <link
+    rel="canonical"
+    href="stickers.html"
+  >
 
   <style>
-    :root{
-      --wine:#7f1020;
-      --red:#a81429;
-      --pink:#e36f7c;
-      --pink-soft:#f8dfe3;
-      --blush:#fdf0f2;
-      --cream:#fffaf6;
-      --white:#ffffff;
-      --text:#211b1c;
-      --muted:#75696b;
-      --border:#efd9dd;
-      --shadow:0 8px 28px rgba(84,30,38,.08);
-      --shadow-hover:0 13px 35px rgba(84,30,38,.13);
-    }
-
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-
-    body{
+    body {
       min-height:100vh;
-      background:var(--cream);
-      color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      line-height:1.6;
-    }
-
-    img{display:block;max-width:100%}
-    a{color:inherit;text-decoration:none}
-
-    .topbar{
-      min-height:34px;
+      margin:0;
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:45px;
-      padding:7px 16px;
-      background:var(--wine);
-      color:white;
-      font-size:13px;
-      font-weight:600;
-    }
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,250,246,.96);
-      border-bottom:1px solid var(--border);
-      backdrop-filter:blur(10px);
-    }
-
-    .nav{
-      width:min(1180px,92%);
-      min-height:78px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:25px;
-    }
-
-    .logo img{width:190px}
-
-    .back-button{
-      padding:9px 17px;
-      border:1px solid var(--pink);
-      border-radius:100px;
-      color:var(--wine);
-      font-size:14px;
-      font-weight:650;
-    }
-
-    .back-button:hover{background:var(--blush)}
-
-    .hero{
-      width:min(900px,92%);
-      margin:auto;
-      padding:48px 0 28px;
+      background:#fffaf6;
+      color:#7f1020;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
       text-align:center;
     }
 
-    .breadcrumb{
-      margin-bottom:15px;
-      color:var(--pink);
-      font-size:13px;
+    .redirect-box {
+      width:min(430px,88%);
+      padding:35px 25px;
+      background:#ffffff;
+      border:1px solid #efd9dd;
+      border-radius:20px;
+      box-shadow:0 8px 28px rgba(84,30,38,.08);
     }
 
-    .hero h1{
-      margin-bottom:14px;
-      color:var(--wine);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(40px,6vw,58px);
+    h1 {
+      margin:0 0 10px;
+      font-family:Georgia, "Times New Roman", serif;
       font-weight:500;
-      line-height:1.08;
     }
 
-    .hero p{
-      max-width:700px;
-      margin:auto;
-      color:#51474a;
-      font-size:16px;
+    p {
+      margin:0 0 18px;
+      color:#75696b;
     }
 
-    .products{
-      width:min(1050px,92%);
-      margin:0 auto 42px;
-    }
-
-    .product-card{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(280px,.75fr);
-      gap:30px;
-      align-items:center;
-      padding:24px;
-      background:var(--white);
-      border:1px solid var(--border);
-      border-radius:22px;
-      box-shadow:var(--shadow);
-      transition:transform .2s ease,box-shadow .2s ease;
-    }
-
-    .product-card:hover{
-      transform:translateY(-3px);
-      box-shadow:var(--shadow-hover);
-    }
-
-    .product-image{
-      overflow:hidden;
-      background:var(--blush);
-      border:1px solid var(--border);
-      border-radius:17px;
-    }
-
-    .product-image img{
-      width:100%;
-      aspect-ratio:12 / 7;
-      object-fit:contain;
-    }
-
-    .product-copy .label{
+    a {
       display:inline-block;
-      margin-bottom:10px;
-      padding:6px 9px;
-      background:var(--pink-soft);
-      color:var(--wine);
+      padding:10px 18px;
       border-radius:100px;
-      font-size:10px;
-      font-weight:800;
-    }
-
-    .product-copy h2{
-      margin-bottom:9px;
-      color:var(--wine);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:32px;
-      font-weight:500;
-      line-height:1.12;
-    }
-
-    .product-copy p{
-      margin-bottom:15px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .product-link{
-      color:var(--red);
+      background:#7f1020;
+      color:white;
       font-size:13px;
-      font-weight:800;
-    }
-
-    .coming-state{
-      width:min(760px,92%);
-      margin:0 auto 70px;
-      padding:52px 30px;
-      background:var(--white);
-      border:1px solid var(--border);
-      border-radius:22px;
-      box-shadow:var(--shadow);
-      text-align:center;
-    }
-
-    .coming-symbol{
-      margin-bottom:10px;
-      color:var(--pink);
-      font-size:34px;
-    }
-
-    .coming-state h2{
-      margin-bottom:8px;
-      color:var(--wine);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:30px;
-      font-weight:500;
-    }
-
-    .coming-state p{
-      max-width:520px;
-      margin:0 auto 20px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .coming-state a{
-      display:inline-block;
-      padding:10px 17px;
-      background:var(--wine);
-      color:white;
-      border-radius:100px;
-      font-size:12px;
-      font-weight:800;
-    }
-
-    .unknown-state{
-      width:min(760px,92%);
-      margin:40px auto 70px;
-      padding:45px 25px;
-      background:var(--white);
-      border:1px solid var(--border);
-      border-radius:22px;
-      text-align:center;
-    }
-
-    [hidden]{display:none!important}
-
-    footer{
-      background:linear-gradient(135deg,#76101f,#8e1727);
-      color:white;
-    }
-
-    .footer-inner{
-      width:min(1120px,92%);
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:25px;
-      padding:27px 0;
-    }
-
-    .footer-logo img{width:155px}
-
-    .footer-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:18px;
-      color:#f8dde2;
-      font-size:12px;
-    }
-
-    .copyright{
-      padding:10px 15px;
-      border-top:1px solid rgba(255,255,255,.15);
-      color:#f6dbe0;
-      font-size:11px;
-      text-align:center;
-    }
-
-    @media(max-width:760px){
-      .topbar{gap:12px;padding:6px 8px;font-size:10px}
-      .topbar span:last-child{display:none}
-      .nav{width:94%;min-height:62px}
-      .logo img{width:145px}
-      .back-button{padding:8px 12px;font-size:11px}
-      .hero{padding:34px 0 22px}
-      .hero h1{font-size:39px}
-      .hero p{font-size:14px}
-      .product-card{grid-template-columns:1fr;padding:15px;gap:18px}
-      .product-copy h2{font-size:27px}
-      .coming-state{padding:38px 20px;margin-bottom:45px}
-      .footer-inner{width:92%;display:block}
-      .footer-links{margin-top:15px;gap:12px}
+      font-weight:700;
+      text-decoration:none;
     }
   </style>
 </head>
 
 <body>
-  <div class="topbar">
-    <span>⇩ Stickers digitales</span>
-    <span>♡ Colecciones ZuzuBayo</span>
-    <span>Digital Goodies</span>
-  </div>
+  <main class="redirect-box">
+    <h1>Stickers digitales ♡</h1>
 
-  <header>
-    <div class="nav">
-      <a href="index.html" class="logo">
-        <img src="logo.png" alt="ZuzuBayo">
-      </a>
-      <a href="stickers.html" class="back-button">← Volver a stickers</a>
-    </div>
-  </header>
+    <p>
+      Te estamos llevando a las colecciones de stickers.
+    </p>
 
-  <main>
-    <section class="hero" id="categoryHero">
-      <div class="breadcrumb">
-        <a href="index.html">Inicio</a> &nbsp;/&nbsp;
-        <a href="stickers.html">Stickers</a> &nbsp;/&nbsp;
-        <span id="breadcrumbName">Colección</span>
-      </div>
-      <h1 id="categoryTitle">Colección de stickers</h1>
-      <p id="categoryDescription">Explora los packs disponibles de esta colección.</p>
-    </section>
-
-    <section class="products" id="availableProducts" hidden>
-      <a href="producto-cute-aesthetic-pack-01.html" class="product-card">
-        <div class="product-image">
-          <img
-            src="cute-aesthetic-pack-01-preview.png"
-            alt="Vista previa de Cute and Aesthetic Pack 01"
-          >
-        </div>
-        <div class="product-copy">
-          <span class="label">32 STICKERS PNG ♡</span>
-          <h2>Cute &amp; Aesthetic Pack 01</h2>
-          <p>
-            Una colección femenina y delicada para notas, journals,
-            planners y proyectos digitales.
-          </p>
-          <span class="product-link">Ver producto →</span>
-        </div>
-      </a>
-    </section>
-
-    <section class="coming-state" id="comingState" hidden>
-      <div class="coming-symbol">♡</div>
-      <h2>Próximamente</h2>
-      <p id="comingMessage">
-        Esta colección todavía está en preparación. Muy pronto encontrarás nuevos stickers aquí.
-      </p>
-      <a href="stickers.html">Ver otras colecciones</a>
-    </section>
-
-    <section class="unknown-state" id="unknownState" hidden>
-      <h2>Colección no encontrada</h2>
-      <p>La dirección no corresponde a una colección disponible.</p>
-      <a href="stickers.html">Volver a stickers</a>
-    </section>
+    <a href="stickers.html">
+      Abrir stickers →
+    </a>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <img src="logo.png" alt="ZuzuBayo">
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Inicio</a>
-        <a href="stickers.html">Stickers</a>
-        <a href="index.html#faq">Preguntas frecuentes</a>
-        <a href="index.html#contacto">Contacto</a>
-      </div>
-    </div>
-    <div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div>
-  </footer>
-
   <script>
-    const collections = {
-      "cute-aesthetic": {
-        title: "Cute & Aesthetic",
-        description: "Stickers delicados, femeninos y decorativos para darle un toque bonito a tus proyectos.",
-        available: true
-      },
-      "self-care": {
-        title: "Self-Care",
-        description: "Stickers de wellness, rutinas, hábitos y motivación.",
-        available: false
-      },
-      "productivity": {
-        title: "Productivity",
-        description: "Stickers para to-do lists, goals, estudio y organización.",
-        available: false
-      },
-      "temporadas": {
-        title: "Celebraciones & Temporadas",
-        description: "Stickers para cumpleaños, Navidad, Halloween y fechas especiales.",
-        available: false
-      },
-      "packs-zuzubayo": {
-        title: "Packs ZuzuBayo",
-        description: "Mini colecciones exclusivas con el estilo de ZuzuBayo.",
-        available: false
-      }
-    };
-
-    const params = new URLSearchParams(window.location.search);
-    const categoryKey = params.get("categoria") || "cute-aesthetic";
-    const category = collections[categoryKey];
-
-    const title = document.getElementById("categoryTitle");
-    const breadcrumb = document.getElementById("breadcrumbName");
-    const description = document.getElementById("categoryDescription");
-    const products = document.getElementById("availableProducts");
-    const coming = document.getElementById("comingState");
-    const unknown = document.getElementById("unknownState");
-
-    if (!category) {
-      document.getElementById("categoryHero").hidden = true;
-      unknown.hidden = false;
-    } else {
-      document.title = `${category.title} Stickers | ZuzuBayo`;
-      title.textContent = category.title;
-      breadcrumb.textContent = category.title;
-      description.textContent = category.description;
-
-      if (category.available) {
-        products.hidden = false;
-      } else {
-        coming.hidden = false;
-      }
-    }
+    window.location.replace("stickers.html");
   </script>
 </body>
 </html>
