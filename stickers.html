@@ -2,25 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Stickers Digitales | ZuzuBayo</title>
-  <meta name="description" content="Stickers digitales cute y aesthetic de ZuzuBayo para notas, journals, planners y proyectos digitales.">
+
+  <meta
+    name="description"
+    content="Stickers digitales cute, aesthetic, self-care, productivity, celebraciones y packs ZuzuBayo."
+  >
 
   <style>
     :root {
       --wine:#7f1020;
       --red:#a81429;
-      --pink:#d96a75;
+      --pink:#e36f7c;
       --pink-soft:#f8dfe3;
       --blush:#fdf0f2;
-      --cream:#fffaf5;
+      --cream:#fffaf6;
       --white:#ffffff;
-      --text:#201b1c;
+      --text:#211b1c;
       --muted:#75696b;
       --border:#efd9dd;
-      --shadow:0 8px 25px rgba(84,30,38,.08);
-      --shadow-hover:0 14px 35px rgba(84,30,38,.14);
-      --radius:20px;
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
     }
 
     * {
@@ -34,10 +42,15 @@
     }
 
     body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
       background:var(--cream);
       color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      line-height:1.55;
+      line-height:1.6;
     }
 
     img {
@@ -50,50 +63,56 @@
       text-decoration:none;
     }
 
+    /* TOP BAR */
+
     .topbar {
       min-height:34px;
+      padding:7px 16px;
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:30px;
-      padding:7px 16px;
+      gap:50px;
       background:var(--wine);
-      color:var(--white);
+      color:white;
       font-size:13px;
-      font-weight:650;
-      text-align:center;
+      font-weight:600;
     }
+
+    .topbar span {
+      white-space:nowrap;
+    }
+
+    /* HEADER */
 
     header {
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(255,250,245,.96);
+      background:rgba(255,250,246,.96);
       border-bottom:1px solid var(--border);
       backdrop-filter:blur(10px);
     }
 
     .nav {
       width:min(1180px,92%);
-      min-height:72px;
+      min-height:78px;
       margin:auto;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:24px;
+      gap:25px;
     }
 
     .logo img {
       width:190px;
-      height:auto;
     }
 
     .desktop-nav {
       display:flex;
       align-items:center;
-      gap:24px;
-      font-size:14px;
-      font-weight:650;
+      gap:28px;
+      font-size:15px;
+      font-weight:600;
     }
 
     .desktop-nav a:hover {
@@ -101,9 +120,9 @@
     }
 
     .back-button {
-      padding:9px 15px;
+      padding:9px 17px;
       border:1px solid var(--pink);
-      border-radius:999px;
+      border-radius:100px;
       color:var(--wine);
     }
 
@@ -111,24 +130,30 @@
       background:var(--blush);
     }
 
+    /* HERO */
+
     .hero {
-      width:min(900px,92%);
-      margin:auto;
-      padding:58px 0 30px;
+      width:min(1000px,92%);
+      margin:0 auto;
+      padding:58px 0 25px;
       text-align:center;
     }
 
     .breadcrumb {
-      margin-bottom:15px;
+      margin-bottom:18px;
       color:var(--pink);
-      font-size:13px;
+      font-size:14px;
+    }
+
+    .breadcrumb a {
+      color:var(--pink);
     }
 
     .hero h1 {
-      margin-bottom:16px;
+      margin-bottom:17px;
       color:var(--wine);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(43px,6vw,64px);
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(46px,5vw,62px);
       font-weight:500;
       line-height:1.08;
     }
@@ -139,198 +164,203 @@
     }
 
     .hero p {
-      max-width:710px;
-      margin:auto;
-      color:#4d4245;
-      font-size:17px;
-    }
-
-    .featured-product {
-      width:min(1120px,92%);
-      margin:10px auto 52px;
-      padding:30px;
-      display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
-      align-items:center;
-      gap:34px;
-      background:var(--white);
-      border:1px solid var(--border);
-      border-radius:24px;
-      box-shadow:var(--shadow);
-    }
-
-    .product-preview {
-      overflow:hidden;
-      background:var(--blush);
-      border:1px solid var(--border);
-      border-radius:18px;
-    }
-
-    .product-preview img {
-      width:100%;
-      aspect-ratio:12 / 7;
-      object-fit:contain;
-    }
-
-    .product-label {
-      display:inline-flex;
-      margin-bottom:12px;
-      padding:6px 10px;
-      background:var(--pink-soft);
-      color:var(--wine);
-      border-radius:999px;
-      font-size:11px;
-      font-weight:850;
-      letter-spacing:.04em;
-    }
-
-    .product-info h2 {
-      margin-bottom:10px;
-      color:var(--wine);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(30px,4vw,43px);
-      font-weight:500;
-      line-height:1.12;
-    }
-
-    .product-description {
-      margin-bottom:18px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .product-details {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:9px 15px;
-      margin-bottom:20px;
+      max-width:760px;
+      margin:0 auto;
       color:#443b3d;
-      font-size:13px;
+      font-size:17px;
+      line-height:1.7;
     }
 
-    .product-details span::before {
-      content:"✓";
-      margin-right:7px;
-      color:var(--red);
-      font-weight:850;
-    }
+    /* INTRO */
 
-    .product-status {
-      padding:13px 15px;
-      background:var(--blush);
-      border:1px solid var(--border);
-      border-radius:13px;
-      color:var(--wine);
-      font-size:13px;
-      font-weight:750;
-      text-align:center;
-    }
-
-    .collections-head {
+    .intro {
       width:min(900px,92%);
-      margin:0 auto 20px;
+      margin:26px auto 25px;
       text-align:center;
     }
 
-    .collections-head h2 {
-      margin-bottom:6px;
+    .intro h2 {
+      margin-bottom:5px;
       color:var(--wine);
-      font-size:30px;
+      font-size:29px;
     }
 
-    .collections-head p {
-      color:var(--muted);
-      font-size:14px;
+    .intro p {
+      color:#51474a;
+      font-size:16px;
     }
 
-    .collections {
+    /* TARJETAS */
+
+    .category-list {
       width:min(1120px,92%);
-      margin:0 auto 38px;
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
+      margin:0 auto 34px;
+      display:flex;
+      flex-direction:column;
       gap:14px;
     }
 
-    .collection-card {
+    .category-card {
       position:relative;
-      min-height:180px;
+      min-height:190px;
       overflow:hidden;
       display:grid;
-      grid-template-columns:62px 1fr;
+      grid-template-columns:100px 1fr;
       align-items:center;
-      gap:20px;
-      padding:27px;
-      background:linear-gradient(135deg,#fff,#fff5f4);
+      gap:28px;
+      padding:28px 38px;
+      background:linear-gradient(135deg,#fffefe,#fff5f4);
       border:1px solid var(--border);
-      border-radius:var(--radius);
+      border-radius:22px;
       box-shadow:var(--shadow);
-      transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
     }
 
-    a.collection-card:hover {
+    .category-card:hover {
       transform:translateY(-3px);
-      border-color:#e5b9c1;
       box-shadow:var(--shadow-hover);
+      border-color:#e5b9c1;
     }
 
-    .collection-number {
-      align-self:stretch;
+    .category-card::after {
+      content:"";
+      position:absolute;
+      width:230px;
+      height:230px;
+      right:-85px;
+      bottom:-95px;
+      border-radius:50%;
+      background:rgba(248,223,227,.65);
+      pointer-events:none;
+    }
+
+    .category-number {
+      position:relative;
+      z-index:2;
+      height:100%;
       display:flex;
+      align-items:flex-start;
       justify-content:center;
-      padding-top:4px;
+      padding-top:3px;
       border-right:1px solid #e9b9c1;
       color:var(--pink);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:28px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:34px;
       font-style:italic;
     }
 
-    .collection-content {
+    .category-content {
       position:relative;
       z-index:2;
     }
 
-    .collection-content h3 {
-      margin-bottom:8px;
+    .category-title {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+    }
+
+    .category-title h2 {
       color:var(--wine);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:25px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:30px;
       font-weight:500;
     }
 
-    .collection-content p {
-      margin-bottom:13px;
-      color:#4c4144;
-      font-size:14px;
+    .category-symbol {
+      color:var(--pink);
+      font-size:28px;
     }
 
-    .collection-link {
-      color:var(--red);
-      font-size:12px;
-      font-weight:850;
+    .category-options {
+      display:flex;
+      flex-wrap:wrap;
+      gap:4px 12px;
+      max-width:760px;
+      margin-bottom:17px;
+      color:#393133;
+      font-size:17px;
     }
 
-    .coming-card {
-      cursor:default;
+    .category-options span:not(:last-child)::after {
+      content:"•";
+      margin-left:12px;
+      color:var(--pink);
+    }
+
+    .category-link {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding-top:10px;
+      border-top:1px solid #edcdd2;
+      color:var(--wine);
+      font-size:15px;
+      font-weight:750;
     }
 
     .coming-badge {
       position:absolute;
-      top:12px;
-      right:12px;
+      top:14px;
+      right:16px;
       z-index:3;
-      padding:6px 9px;
+      padding:6px 10px;
+      border-radius:100px;
       background:var(--wine);
-      color:var(--white);
-      border-radius:999px;
-      font-size:9px;
-      font-weight:850;
+      color:white;
+      font-size:10px;
+      font-weight:800;
       letter-spacing:.05em;
     }
 
+    /* INFORMACIÓN */
+
+    .info-strip {
+      width:min(1120px,92%);
+      margin:0 auto 32px;
+      padding:24px 28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+      background:var(--pink-soft);
+      border:1px solid var(--border);
+      border-radius:18px;
+    }
+
+    .info-strip h3 {
+      margin-bottom:4px;
+      color:var(--wine);
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:21px;
+      font-weight:500;
+    }
+
+    .info-strip p {
+      max-width:680px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .info-strip a {
+      flex-shrink:0;
+      padding:10px 16px;
+      border-radius:100px;
+      background:var(--wine);
+      color:white;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    /* BENEFICIOS */
+
     .benefits {
       width:min(920px,92%);
-      margin:0 auto 38px;
+      margin:0 auto 32px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
       overflow:hidden;
@@ -341,12 +371,12 @@
 
     .benefit {
       padding:18px;
-      border-right:1px solid var(--border);
       text-align:center;
+      border-right:1px solid var(--border);
     }
 
     .benefit:last-child {
-      border-right:0;
+      border-right:none;
     }
 
     .benefit strong {
@@ -361,9 +391,11 @@
       font-size:11px;
     }
 
+    /* FOOTER */
+
     footer {
       background:linear-gradient(135deg,#76101f,#8e1727);
-      color:var(--white);
+      color:white;
     }
 
     .footer-inner {
@@ -379,14 +411,10 @@
       width:160px;
     }
 
-    .footer-brand p,
-    .footer-col a {
-      color:#f8dde2;
-      font-size:12px;
-    }
-
     .footer-brand p {
       margin-top:8px;
+      color:#f8dde2;
+      font-size:12px;
     }
 
     .footer-col h4 {
@@ -397,28 +425,30 @@
     .footer-col a {
       display:block;
       margin-bottom:6px;
-    }
-
-    .footer-col a:hover {
-      color:var(--white);
+      color:#f8dde2;
+      font-size:12px;
     }
 
     .copyright {
-      padding:11px 15px;
+      padding:10px 15px;
+      text-align:center;
       border-top:1px solid rgba(255,255,255,.15);
       color:#f6dbe0;
       font-size:11px;
-      text-align:center;
     }
 
-    @media (max-width:780px) {
+    /* TELÉFONOS */
+
+    @media(max-width:760px) {
       .topbar {
+        min-height:28px;
         gap:12px;
         padding:6px 8px;
+        overflow:hidden;
         font-size:10px;
       }
 
-      .topbar span:last-child {
+      .topbar span:nth-child(3) {
         display:none;
       }
 
@@ -436,59 +466,89 @@
       }
 
       .hero {
-        padding:35px 0 23px;
+        width:92%;
+        padding:34px 0 18px;
+        text-align:center;
+      }
+
+      .breadcrumb {
+        margin-bottom:13px;
+        font-size:11px;
       }
 
       .hero h1 {
-        font-size:41px;
+        margin-bottom:14px;
+        font-size:40px;
+        line-height:1.08;
       }
 
       .hero p {
         font-size:14px;
+        line-height:1.6;
       }
 
-      .featured-product {
+      .intro {
+        margin:20px auto 18px;
+      }
+
+      .intro h2 {
+        font-size:24px;
+      }
+
+      .intro p {
+        font-size:13px;
+      }
+
+      .category-list {
         width:94%;
-        margin-bottom:35px;
-        padding:16px;
-        grid-template-columns:1fr;
-        gap:20px;
-        border-radius:18px;
-      }
-
-      .product-info h2 {
-        font-size:30px;
-      }
-
-      .product-details {
-        grid-template-columns:1fr;
-      }
-
-      .collections {
-        width:94%;
-        grid-template-columns:1fr;
         gap:10px;
+        margin-bottom:24px;
       }
 
-      .collection-card {
-        min-height:155px;
-        grid-template-columns:42px 1fr;
-        gap:13px;
-        padding:20px 15px;
+      .category-card {
+        min-height:auto;
+        grid-template-columns:46px 1fr;
+        gap:14px;
+        padding:20px 16px;
         border-radius:17px;
       }
 
-      .collection-number {
-        justify-content:flex-start;
-        font-size:22px;
+      .category-card::after {
+        width:140px;
+        height:140px;
+        right:-70px;
+        bottom:-80px;
       }
 
-      .collection-content h3 {
-        padding-right:75px;
+      .category-number {
+        justify-content:flex-start;
+        font-size:24px;
+      }
+
+      .category-title {
+        margin-bottom:8px;
+      }
+
+      .category-title h2 {
         font-size:21px;
       }
 
-      .collection-content p {
+      .category-symbol {
+        font-size:20px;
+      }
+
+      .category-options {
+        gap:3px 8px;
+        margin-bottom:12px;
+        font-size:13px;
+        line-height:1.6;
+      }
+
+      .category-options span:not(:last-child)::after {
+        margin-left:8px;
+      }
+
+      .category-link {
         font-size:12px;
       }
 
@@ -499,12 +559,35 @@
         font-size:8px;
       }
 
+      .info-strip {
+        width:94%;
+        margin-bottom:20px;
+        padding:17px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:11px;
+      }
+
+      .info-strip h3 {
+        font-size:17px;
+      }
+
+      .info-strip p {
+        font-size:11px;
+      }
+
+      .info-strip a {
+        padding:8px 12px;
+        font-size:11px;
+      }
+
       .benefits {
         width:94%;
+        margin-bottom:20px;
       }
 
       .benefit {
-        padding:12px 5px;
+        padding:11px 5px;
       }
 
       .benefit strong {
@@ -546,12 +629,18 @@
         <img src="logo.png" alt="ZuzuBayo">
       </a>
 
-      <nav class="desktop-nav" aria-label="Navegación principal">
+      <nav class="desktop-nav">
         <a href="index.html">Inicio</a>
         <a href="plantillas.html">Plantillas</a>
         <a href="journals.html">Journals</a>
         <a href="nextflight.html">NextFlight</a>
-        <a href="index.html#categorias" class="back-button">← Volver a categorías</a>
+
+        <a
+          href="index.html#categorias"
+          class="back-button"
+        >
+          ← Volver a categorías
+        </a>
       </nav>
     </div>
   </header>
@@ -559,101 +648,188 @@
   <main>
     <section class="hero">
       <div class="breadcrumb">
-        <a href="index.html">Inicio</a> &nbsp;/&nbsp; Stickers
+        <a href="index.html">Inicio</a>
+        &nbsp;/&nbsp;
+        Stickers
       </div>
 
-      <h1>Stickers <span>digitales ♡</span></h1>
+      <h1>
+        Stickers
+        <span>digitales ♡</span>
+      </h1>
+
       <p>
-        Packs digitales para darle personalidad, organización y un toque bonito
-        a tus notas, journals, planners y proyectos digitales.
+        Packs digitales para darle personalidad, organización
+        y un toque bonito a tus notas, planners, dispositivos
+        y proyectos digitales.
       </p>
     </section>
 
-    <section class="featured-product" id="producto-pack-01">
-      <div class="product-preview">
-        <img
-          src="cute-aesthetic-pack-01-preview.png"
-          alt="Vista previa de los 32 stickers de Cute and Aesthetic Pack 01"
-        >
-      </div>
+    <section class="intro">
+      <h2>¿Qué estilo buscas? ♡</h2>
 
-      <div class="product-info">
-        <span class="product-label">PRIMER PRODUCTO ♡</span>
-        <h2>Cute &amp; Aesthetic Pack 01</h2>
-        <p class="product-description">
-          Una colección femenina y delicada para decorar tus notas, journals,
-          planners y proyectos digitales.
-        </p>
-
-        <div class="product-details">
-          <span>32 stickers individuales</span>
-          <span>PNG con transparencia</span>
-          <span>READ ME incluido</span>
-          <span>Licencia de uso personal</span>
-          <span>Producto 100% digital</span>
-          <span>Descarga en archivo ZIP</span>
-        </div>
-
-        <div class="product-status">
-          Precio y botón de compra en preparación
-        </div>
-      </div>
+      <p>
+        Elige una colección y descubre los packs disponibles.
+      </p>
     </section>
 
-    <section class="collections-head">
-      <h2>Explora las colecciones ♡</h2>
-      <p>El primer pack ya está preparado. Las demás colecciones llegarán poco a poco.</p>
-    </section>
+    <section class="category-list">
+      <!-- CUTE & AESTHETIC -->
 
-    <section class="collections" aria-label="Colecciones de stickers">
-      <a href="#producto-pack-01" class="collection-card">
-        <div class="collection-number">01</div>
-        <div class="collection-content">
-          <h3>Cute &amp; Aesthetic</h3>
-          <p>Cute, aesthetic, decorativos y packs temáticos.</p>
-          <span class="collection-link">Ver Cute &amp; Aesthetic Pack 01 →</span>
+      <a
+        href="stickers-cute-aesthetic.html"
+        class="category-card"
+      >
+        <div class="category-number">01</div>
+
+        <div class="category-content">
+          <div class="category-title">
+            <h2>CUTE &amp; AESTHETIC</h2>
+            <span class="category-symbol">♡</span>
+          </div>
+
+          <div class="category-options">
+            <span>Cute</span>
+            <span>Aesthetic</span>
+            <span>Decorativos</span>
+            <span>1 pack disponible</span>
+          </div>
+
+          <div class="category-link">
+            Explorar stickers →
+          </div>
         </div>
       </a>
 
-      <article class="collection-card coming-card">
-        <span class="coming-badge">PRÓXIMAMENTE</span>
-        <div class="collection-number">02</div>
-        <div class="collection-content">
-          <h3>Self-Care</h3>
-          <p>Wellness, rutinas, hábitos y motivación.</p>
-          <span class="collection-link">Próximamente ♡</span>
-        </div>
-      </article>
+      <!-- SELF-CARE -->
 
-      <article class="collection-card coming-card">
+      <a
+        href="stickers-self-care.html"
+        class="category-card"
+      >
         <span class="coming-badge">PRÓXIMAMENTE</span>
-        <div class="collection-number">03</div>
-        <div class="collection-content">
-          <h3>Productivity</h3>
-          <p>To-do, goals, estudio y organización.</p>
-          <span class="collection-link">Próximamente ♡</span>
-        </div>
-      </article>
 
-      <article class="collection-card coming-card">
-        <span class="coming-badge">PRÓXIMAMENTE</span>
-        <div class="collection-number">04</div>
-        <div class="collection-content">
-          <h3>Celebraciones &amp; Temporadas</h3>
-          <p>Cumpleaños, Navidad, Halloween y fechas especiales.</p>
-          <span class="collection-link">Próximamente ♡</span>
-        </div>
-      </article>
+        <div class="category-number">02</div>
 
-      <article class="collection-card coming-card">
-        <span class="coming-badge">PRÓXIMAMENTE</span>
-        <div class="collection-number">05</div>
-        <div class="collection-content">
-          <h3>Packs ZuzuBayo</h3>
-          <p>Mini colecciones exclusivas con el estilo de ZuzuBayo.</p>
-          <span class="collection-link">Próximamente ♡</span>
+        <div class="category-content">
+          <div class="category-title">
+            <h2>SELF-CARE</h2>
+            <span class="category-symbol">✦</span>
+          </div>
+
+          <div class="category-options">
+            <span>Wellness</span>
+            <span>Rutinas</span>
+            <span>Hábitos</span>
+            <span>Motivación</span>
+          </div>
+
+          <div class="category-link">
+            Abrir categoría →
+          </div>
         </div>
-      </article>
+      </a>
+
+      <!-- PRODUCTIVITY -->
+
+      <a
+        href="stickers-productivity.html"
+        class="category-card"
+      >
+        <span class="coming-badge">PRÓXIMAMENTE</span>
+
+        <div class="category-number">03</div>
+
+        <div class="category-content">
+          <div class="category-title">
+            <h2>PRODUCTIVITY</h2>
+            <span class="category-symbol">♡</span>
+          </div>
+
+          <div class="category-options">
+            <span>To-do</span>
+            <span>Goals</span>
+            <span>Study</span>
+            <span>Organization</span>
+          </div>
+
+          <div class="category-link">
+            Abrir categoría →
+          </div>
+        </div>
+      </a>
+
+      <!-- CELEBRACIONES Y TEMPORADAS -->
+
+      <a
+        href="stickers-celebraciones-temporadas.html"
+        class="category-card"
+      >
+        <span class="coming-badge">PRÓXIMAMENTE</span>
+
+        <div class="category-number">04</div>
+
+        <div class="category-content">
+          <div class="category-title">
+            <h2>CELEBRACIONES &amp; TEMPORADAS</h2>
+            <span class="category-symbol">✦</span>
+          </div>
+
+          <div class="category-options">
+            <span>Cumpleaños</span>
+            <span>Navidad</span>
+            <span>Halloween</span>
+            <span>Fechas especiales</span>
+          </div>
+
+          <div class="category-link">
+            Abrir categoría →
+          </div>
+        </div>
+      </a>
+
+      <!-- PACKS ZUZUBAYO -->
+
+      <a
+        href="stickers-packs-zuzubayo.html"
+        class="category-card"
+      >
+        <span class="coming-badge">PRÓXIMAMENTE</span>
+
+        <div class="category-number">05</div>
+
+        <div class="category-content">
+          <div class="category-title">
+            <h2>PACKS ZUZUBAYO</h2>
+            <span class="category-symbol">♡</span>
+          </div>
+
+          <div class="category-options">
+            <span>Exclusive packs</span>
+            <span>Mini collections</span>
+            <span>ZuzuBayo style</span>
+          </div>
+
+          <div class="category-link">
+            Abrir categoría →
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <section class="info-strip">
+      <div>
+        <h3>Pequeños packs, muchas posibilidades ♡</h3>
+
+        <p>
+          Nuestro primer Cute &amp; Aesthetic Pack ya está listo.
+          Las demás colecciones se agregarán poco a poco.
+        </p>
+      </div>
+
+      <a href="stickers-cute-aesthetic.html">
+        Ver primer pack →
+      </a>
     </section>
 
     <section class="benefits">
@@ -661,13 +837,15 @@
         <strong>100% digital</strong>
         <span>Sin envíos físicos</span>
       </div>
+
       <div class="benefit">
-        <strong>Archivos transparentes</strong>
-        <span>PNG individuales</span>
+        <strong>Packs variados</strong>
+        <span>Para distintos estilos</span>
       </div>
+
       <div class="benefit">
         <strong>Pago seguro</strong>
-        <span>PayPal y tarjeta próximamente</span>
+        <span>PayPal al elegir producto</span>
       </div>
     </section>
   </main>
@@ -678,21 +856,23 @@
         <div class="footer-logo">
           <img src="logo.png" alt="ZuzuBayo">
         </div>
+
         <p>Digital goodies made with love ♡</p>
       </div>
 
       <div class="footer-col">
         <h4>Explora</h4>
+
         <a href="index.html">Inicio</a>
         <a href="plantillas.html">Plantillas</a>
         <a href="stickers.html">Stickers</a>
         <a href="journals.html">Journals</a>
-        <a href="nextflight.html">NextFlight</a>
       </div>
 
       <div class="footer-col">
         <h4>Ayuda</h4>
-        <a href="index.html#faq">Preguntas frecuentes</a>
+
+        <a href="index.html#faq">FAQ</a>
         <a href="index.html#contacto">Contacto</a>
         <a href="index.html#sobre">Sobre ZuzuBayo</a>
       </div>
