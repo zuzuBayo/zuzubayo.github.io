@@ -220,14 +220,17 @@
     <div id="message">Iniciando checkout...</div>
 
     <div class="test-note">
-      Sandbox: usa únicamente una cuenta o tarjeta de prueba de PayPal.
-      No introduzcas una tarjeta real.
+      Pago real y seguro procesado por PayPal.
+      Puedes pagar con PayPal o con una tarjeta elegible.
     </div>
   </main>
 
   <script>
     const API_BASE =
       "https://zuzubayo-payments.zuzu-bayo-c.workers.dev";
+
+    const PAYPAL_CLIENT_ID =
+      "BAAPhzTc8CEOWJESwkArnU5G4O03WpmS_V0bIwDmzmXMkQ37NwkzLzRJaqcFBJZatO02ijPWPaUjNlDBXw";
 
     const PRODUCT_ID = "cute-aesthetic-pack-01";
 
@@ -264,38 +267,6 @@
         result.currency +
         "<br><br>Orden:<br>" +
         result.orderID;
-    }
-
-
-    async function getBrowserSafeClientToken() {
-      const response = await fetch(
-        `${API_BASE}/browser-safe-client-token`,
-        {
-          method: "GET",
-          headers: {
-            "Accept": "application/json"
-          }
-        }
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        console.error("Client token response:", data);
-        throw new Error(
-          data.message || "No se pudo obtener el token de PayPal."
-        );
-      }
-
-      const clientToken = data.clientToken || data.accessToken;
-
-      if (!clientToken) {
-        throw new Error(
-          "El Worker respondió, pero no devolvió clientToken."
-        );
-      }
-
-      return clientToken;
     }
 
 
@@ -581,13 +552,9 @@
           );
         }
 
-        showMessage("Conectando con PayPal Sandbox...");
+        showMessage("Conectando con PayPal...");
 
-        const [clientToken, productData] =
-          await Promise.all([
-            getBrowserSafeClientToken(),
-            getProduct()
-          ]);
+        const productData = await getProduct();
 
         product = productData;
 
@@ -599,7 +566,7 @@
 
         const sdk =
           await window.paypal.createInstance({
-            clientToken,
+            clientId: PAYPAL_CLIENT_ID,
             components: [
               "paypal-payments",
               "card-fields"
@@ -636,7 +603,7 @@
 
   <script
     async
-    src="https://www.sandbox.paypal.com/web-sdk/v6/core"
+    src="https://www.paypal.com/web-sdk/v6/core"
     onload="onPayPalWebSdkLoaded()">
   </script>
 </body>
