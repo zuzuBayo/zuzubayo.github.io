@@ -229,9 +229,6 @@
     const API_BASE =
       "https://zuzubayo-payments.zuzu-bayo-c.workers.dev";
 
-    const PAYPAL_CLIENT_ID =
-      "BAAPhzTc8CEOWJESwkArnU5G4O03WpmS_V0bIwDmzmXMkQ37NwkzLzRJaqcFBJZatO02ijPWPaUjNlDBXw";
-
     const PRODUCT_ID = "cute-aesthetic-pack-01";
 
     let product = null;
@@ -267,6 +264,38 @@
         result.currency +
         "<br><br>Orden:<br>" +
         result.orderID;
+    }
+
+
+    async function getBrowserSafeClientToken() {
+      const response = await fetch(
+        `${API_BASE}/browser-safe-client-token`,
+        {
+          method: "GET",
+          headers: {
+            "Accept": "application/json"
+          }
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.error("Client token response:", data);
+        throw new Error(
+          data.message || "No se pudo obtener el token de PayPal."
+        );
+      }
+
+      const clientToken = data.clientToken || data.accessToken;
+
+      if (!clientToken) {
+        throw new Error(
+          "El Worker respondió, pero no devolvió clientToken."
+        );
+      }
+
+      return clientToken;
     }
 
 
@@ -554,7 +583,11 @@
 
         showMessage("Conectando con PayPal...");
 
-        const productData = await getProduct();
+        const [clientToken, productData] =
+          await Promise.all([
+            getBrowserSafeClientToken(),
+            getProduct()
+          ]);
 
         product = productData;
 
@@ -566,7 +599,7 @@
 
         const sdk =
           await window.paypal.createInstance({
-            clientId: PAYPAL_CLIENT_ID,
+            clientToken,
             components: [
               "paypal-payments",
               "card-fields"
