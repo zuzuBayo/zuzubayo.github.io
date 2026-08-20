@@ -27,8 +27,22 @@
 
     .breadcrumb{width:min(1120px,92%);margin:21px auto 10px;color:var(--pink);font-size:11px}
     .product{width:min(1120px,92%);margin:0 auto 30px;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:34px;align-items:start}
-    .product-image{overflow:hidden;padding:10px;background:var(--white);border:1px solid var(--border);border-radius:19px;box-shadow:var(--shadow)}
-    .product-image img{width:100%;border-radius:13px}
+    .product-image{padding:10px;background:var(--white);border:1px solid var(--border);border-radius:19px;box-shadow:var(--shadow)}
+    .image-stage{overflow:hidden;aspect-ratio:1/1;background:var(--blush);border:1px solid var(--border);border-radius:13px;cursor:zoom-in}
+    .image-stage img{width:100%;height:100%;object-fit:contain;transition:transform .28s ease;transform-origin:center}
+    .image-stage[data-view="top-left"] img{transform:scale(2);transform-origin:left top}
+    .image-stage[data-view="top-right"] img{transform:scale(2);transform-origin:right top}
+    .image-stage[data-view="bottom-left"] img{transform:scale(2);transform-origin:left bottom}
+    .image-stage[data-view="bottom-right"] img{transform:scale(2);transform-origin:right bottom}
+    .preview-thumbnails{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:9px}
+    .preview-button{overflow:hidden;aspect-ratio:1/1;padding:0;background-color:var(--blush);background-image:url("portada pegatina zuzubayo paquete 1.png");background-repeat:no-repeat;border:1px solid var(--border);border-radius:8px;cursor:pointer}
+    .preview-button[data-view="full"]{background-size:contain;background-position:center}
+    .preview-button[data-view="top-left"]{background-size:200%;background-position:left top}
+    .preview-button[data-view="top-right"]{background-size:200%;background-position:right top}
+    .preview-button[data-view="bottom-left"]{background-size:200%;background-position:left bottom}
+    .preview-button[data-view="bottom-right"]{background-size:200%;background-position:right bottom}
+    .preview-button.active{border:2px solid var(--wine)}
+    .preview-help{margin-top:7px;color:var(--muted);font-size:9.5px;text-align:center}
     .product-info{padding:17px 0}
     .label{display:inline-block;margin-bottom:11px;padding:5px 8px;background:var(--pink-soft);color:var(--wine);border-radius:100px;font-size:8.5px;font-weight:800;letter-spacing:.05em}
     h1{margin-bottom:12px;color:var(--wine);font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,4.25vw,46px);font-weight:500;line-height:1.08}
@@ -90,7 +104,19 @@
 
     <section class="product">
       <div class="product-image">
-        <img src="portada pegatina zuzubayo paquete 1.png" alt="Vista previa de los 32 stickers Cute and Aesthetic Pack 01">
+        <div class="image-stage" id="imageStage" data-view="full">
+          <img src="portada pegatina zuzubayo paquete 1.png" alt="Vista previa de los 32 stickers Cute and Aesthetic Pack 01">
+        </div>
+
+        <div class="preview-thumbnails" aria-label="Acercamientos del paquete">
+          <button type="button" class="preview-button active" data-view="full" aria-label="Ver portada completa"></button>
+          <button type="button" class="preview-button" data-view="top-left" aria-label="Ver acercamiento superior izquierdo"></button>
+          <button type="button" class="preview-button" data-view="top-right" aria-label="Ver acercamiento superior derecho"></button>
+          <button type="button" class="preview-button" data-view="bottom-left" aria-label="Ver acercamiento inferior izquierdo"></button>
+          <button type="button" class="preview-button" data-view="bottom-right" aria-label="Ver acercamiento inferior derecho"></button>
+        </div>
+
+        <p class="preview-help">Toca una imagen para ver los stickers de cerca.</p>
       </div>
 
       <div class="product-info">
@@ -135,5 +161,30 @@
     </div>
     <div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div>
   </footer>
+
+  <script>
+    const imageStage = document.getElementById("imageStage");
+    const previewButtons = document.querySelectorAll(".preview-button");
+
+    previewButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        imageStage.dataset.view = button.dataset.view;
+
+        previewButtons.forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+      });
+    });
+
+    imageStage.addEventListener("click", () => {
+      imageStage.dataset.view = "full";
+
+      previewButtons.forEach((item) => {
+        item.classList.toggle("active", item.dataset.view === "full");
+      });
+    });
+  </script>
 </body>
 </html>
