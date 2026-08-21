@@ -148,6 +148,39 @@
     .error { color: #b42318; }
     .hidden { display: none !important; }
 
+    .email-section {
+      margin-bottom: 18px;
+    }
+
+    .email-input {
+      width: 100%;
+      height: 48px;
+      padding: 0 14px;
+      border: 1px solid #e4c8cd;
+      border-radius: 8px;
+      background: #fff;
+      color: #211b1c;
+      font: inherit;
+      font-size: 12px;
+    }
+
+    .email-help {
+      margin-top: 6px;
+      color: #75696b;
+      font-size: 9.5px;
+    }
+
+    .download-button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 11px 17px;
+      border-radius: 8px;
+      background: #7f1020;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
     .test-note {
       margin-top: 15px;
       padding: 10px 12px;
@@ -167,6 +200,22 @@
     <p class="subtitle">Cute &amp; Aesthetic Pack 01</p>
 
     <div class="price" id="price">Cargando...</div>
+
+    <section class="email-section">
+      <div class="section-title">Correo para recibir tu compra</div>
+      <input
+        id="buyer-email"
+        class="email-input"
+        type="email"
+        autocomplete="email"
+        inputmode="email"
+        placeholder="tu@correo.com"
+        required
+      >
+      <p class="email-help">
+        Enviaremos aquí tu enlace de descarga después del pago.
+      </p>
+    </section>
 
     <section id="card-section" class="hidden">
       <div class="section-title">Tarjeta de crédito o débito</div>
@@ -262,8 +311,36 @@
         result.amount +
         " " +
         result.currency +
+        "<br><br>También enviamos el enlace a:<br>" +
+        result.deliveryEmail +
+        "<br>" +
+        '<a class="download-button" href="' +
+        result.downloadURL +
+        '">Descargar mi producto</a>' +
+        "<br><br><small>El enlace vence en 24 horas.</small>" +
         "<br><br>Orden:<br>" +
-        result.orderID;
+        result.orderID +
+        (result.emailWarning
+          ? "<br><br>⚠️ " + result.emailWarning
+          : "");
+    }
+
+
+    function getBuyerEmail() {
+      const input =
+        document.getElementById("buyer-email");
+
+      const email =
+        input.value.trim().toLowerCase();
+
+      if (!input.checkValidity() || !email) {
+        input.reportValidity();
+        throw new Error(
+          "Escribe un correo electrónico válido para recibir tu compra."
+        );
+      }
+
+      return email;
     }
 
 
@@ -322,6 +399,8 @@
 
 
     async function createOrder() {
+      getBuyerEmail();
+
       const response = await fetch(
         `${API_BASE}/create-order`,
         {
@@ -351,6 +430,8 @@
 
 
     async function captureOrder(orderId) {
+      const email = getBuyerEmail();
+
       const response = await fetch(
         `${API_BASE}/capture-order`,
         {
@@ -359,7 +440,8 @@
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            orderID: orderId
+            orderID: orderId,
+            email
           })
         }
       );
