@@ -65,7 +65,14 @@
       .benefits{width:94%;margin-bottom:28px}.benefit{padding:11px 5px}.benefit span{display:none}
       .footer-inner{width:92%;grid-template-columns:1fr 1fr;gap:18px}.footer-brand{grid-column:1/-1}
     }
-  </style>
+  
+.num-list{width:min(980px,92%);margin:0 auto 38px;display:flex;flex-direction:column;gap:12px}
+.num-row{display:grid;grid-template-columns:92px 1fr 44px;align-items:center;min-height:138px;padding:18px 22px 18px 0;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:var(--shadow);transition:.2s}
+.num-row:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.num{height:100%;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--border);color:#d88a95;font-family:Georgia,serif;font-size:30px}
+.num-copy{padding:3px 28px}.num-copy h2{margin:0 0 8px;color:var(--wine);font-family:Georgia,serif;font-size:24px;font-weight:500}.num-copy p{color:var(--muted);font-size:10.5px}.num-arrow{color:var(--red);font-size:20px;font-weight:700}
+@media(max-width:700px){.num-list{width:94%;gap:9px}.num-row{grid-template-columns:54px 1fr 28px;min-height:112px;padding:12px 8px 12px 0}.num{font-size:21px}.num-copy{padding:2px 14px}.num-copy h2{font-size:18px}.num-copy p{font-size:8.8px}.num-arrow{font-size:15px}}
+</style>
 </head>
 <body>
   <div class="topbar">
@@ -99,36 +106,12 @@
       <p>Explora las colecciones de ZuzuBayo y descubre los packs disponibles en cada una.</p>
     </section>
 
-    <section class="category-grid">
-      <a href="categoria-stickers.html?categoria=cute-aesthetic" class="category-card">
-        <span class="available-pill">PACK DISPONIBLE ♡</span>
-        <div class="category-kicker">Colección 01</div>
-        <h2>Cute &amp; Aesthetic ♡</h2>
-        <p>Stickers delicados, femeninos y decorativos para darle un toque bonito a tus proyectos digitales.</p>
-        <div class="category-link">Explorar colección →</div>
-      </a>
-
-      <a href="categoria-stickers.html?categoria=self-care" class="category-card">
-        <div class="category-kicker">Colección 02</div>
-        <h2>Self-Care ♡</h2>
-        <p>Autocuidado, pequeñas pausas, bienestar y recordatorios bonitos para acompañar tu día.</p>
-        <div class="category-link">Explorar colección →</div>
-      </a>
-
-      <a href="categoria-stickers.html?categoria=productivity" class="category-card">
-        <div class="category-kicker">Colección 03</div>
-        <h2>Productivity ♡</h2>
-        <p>Tareas, prioridades, estudio, hábitos y organización en un formato visual y fácil de usar.</p>
-        <div class="category-link">Explorar colección →</div>
-      </a>
-
-      <a href="categoria-stickers.html?categoria=anime" class="category-card">
-        <div class="category-kicker">Colección 04</div>
-        <h2>Anime ♡</h2>
-        <p>Personajes originales estilo anime de ZuzuBayo para decorar journals, notas y proyectos digitales.</p>
-        <div class="category-link">Explorar colección →</div>
-      </a>
-    </section>
+    <section class="num-list">
+<a class="num-row" href="categoria-stickers.html?categoria=cute-aesthetic"><div class="num">01</div><div class="num-copy"><h2>Cute & Aesthetic ♡</h2><p>Cute · Aesthetic · Decoración · Journals</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="categoria-stickers.html?categoria=self-care"><div class="num">02</div><div class="num-copy"><h2>Self-Care ♡</h2><p>Autocuidado · Pausas · Bienestar · Recordatorios</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="categoria-stickers.html?categoria=productivity"><div class="num">03</div><div class="num-copy"><h2>Productivity ♡</h2><p>Tareas · Prioridades · Estudio · Hábitos</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="categoria-stickers.html?categoria=anime"><div class="num">04</div><div class="num-copy"><h2>Anime ♡</h2><p>Personajes · Anime · Digital · ZuzuBayo</p></div><div class="num-arrow">→</div></a>
+</section>
 
     <section class="info-strip">
       <div>
