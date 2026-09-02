@@ -4,272 +4,386 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colección de Stickers | ZuzuBayo</title>
-  <meta name="description" content="Colecciones de stickers digitales ZuzuBayo.">
-
+  <meta name="description" content="Explora las colecciones de stickers digitales ZuzuBayo: Cute & Aesthetic, Self-Care, Productivity y Anime.">
   <style>
     :root{
       --wine:#7f1020;
+      --wine-dark:#68101c;
       --red:#a81429;
-      --pink:#e36f7c;
+      --pink:#d96a75;
       --pink-soft:#f8dfe3;
       --blush:#fdf0f2;
-      --cream:#fffaf6;
+      --cream:#fffaf5;
       --white:#ffffff;
-      --text:#211b1c;
+      --text:#201b1c;
       --muted:#75696b;
       --border:#efd9dd;
-      --shadow:0 8px 28px rgba(84,30,38,.08);
-      --shadow-hover:0 13px 35px rgba(84,30,38,.13);
+      --shadow:0 8px 25px rgba(84,30,38,.08);
+      --shadow-hover:0 14px 35px rgba(84,30,38,.14);
+      --radius:18px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-
     body{
-      min-height:100vh;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       background:var(--cream);
       color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       line-height:1.6;
     }
-
     img{display:block;max-width:100%}
-    a{color:inherit;text-decoration:none}
+    a{text-decoration:none;color:inherit}
+    button,select,input{font:inherit}
+    [hidden]{display:none!important}
 
     .topbar{
-      min-height:29px;
+      min-height:30px;
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:38px;
+      gap:34px;
       padding:6px 14px;
       background:var(--wine);
-      color:white;
+      color:#fff;
       font-size:11px;
-      font-weight:600;
+      font-weight:650;
+      text-align:center;
     }
 
     header{
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(255,250,246,.96);
+      background:rgba(255,250,245,.96);
       border-bottom:1px solid var(--border);
       backdrop-filter:blur(10px);
     }
 
     .nav{
       width:min(1180px,92%);
-      min-height:58px;
+      min-height:64px;
       margin:auto;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:21px;
+      gap:22px;
     }
 
-    .logo img{width:140px}
-
+    .logo img{width:162px}
     .back-button{
       padding:8px 14px;
       border:1px solid var(--pink);
-      border-radius:100px;
+      border-radius:999px;
       color:var(--wine);
       font-size:12px;
-      font-weight:650;
+      font-weight:700;
+      transition:.2s ease;
     }
-
     .back-button:hover{background:var(--blush)}
 
     .hero{
-      width:min(900px,92%);
+      width:min(1120px,92%);
       margin:auto;
-      padding:33px 0 19px;
+      padding:38px 0 24px;
       text-align:center;
     }
 
     .breadcrumb{
-      margin-bottom:15px;
+      margin-bottom:14px;
       color:var(--pink);
       font-size:11px;
     }
 
-    .hero h1{
-      margin-bottom:14px;
-      color:var(--wine);
+    .breadcrumb a:hover{text-decoration:underline}
+
+    .eyebrow{
+      margin-bottom:8px;
+      color:var(--red);
+      font-size:10px;
+      font-weight:850;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    h1,h2,h3{
       font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(30px,4.25vw,42px);
       font-weight:500;
-      line-height:1.08;
+    }
+
+    h1{
+      margin-bottom:12px;
+      color:var(--wine);
+      font-size:clamp(38px,5vw,56px);
+      line-height:1.04;
     }
 
     .hero p{
-      max-width:700px;
+      max-width:680px;
       margin:auto;
-      color:#51474a;
-      font-size:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
     }
 
-    .products{
-      width:min(980px,92%);
-      margin:0 auto 29px;
+    .toolbar{
+      width:min(1120px,92%);
+      margin:0 auto 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 16px;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:14px;
+    }
+
+    .results{
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .sort{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:var(--muted);
+      font-size:10px;
+    }
+
+    .sort select{
+      min-height:35px;
+      padding:0 30px 0 10px;
+      border:1px solid var(--border);
+      border-radius:9px;
+      background:#fff;
+      color:var(--wine);
+      outline:none;
+    }
+
+    .products-wrap{
+      width:min(1120px,92%);
+      margin:0 auto 50px;
+    }
+
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
     }
 
     .product-card{
-      display:grid;
-      grid-template-columns:87px 1fr;
-      gap:19px;
-      align-items:center;
-      padding:19px 26px;
       overflow:hidden;
-      position:relative;
-      background:linear-gradient(135deg,#fffefe,#fff5f4);
+      background:var(--white);
       border:1px solid var(--border);
-      border-radius:19px;
+      border-radius:20px;
       box-shadow:var(--shadow);
-      transition:transform .2s ease,box-shadow .2s ease;
-    }
-
-    .product-card::after{
-      content:"";
-      position:absolute;
-      width:196px;
-      height:196px;
-      right:-72px;
-      bottom:-81px;
-      border-radius:50%;
-      background:rgba(248,223,227,.65);
-      pointer-events:none;
+      transition:.22s ease;
     }
 
     .product-card:hover{
-      transform:translateY(-3px);
+      transform:translateY(-4px);
       box-shadow:var(--shadow-hover);
     }
 
-    .product-number{
-      position:relative;
-      z-index:2;
-      align-self:stretch;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:flex-start;
-      gap:10px;
-      padding:3px 17px 3px 0;
-      border-right:1px solid #e9b9c1;
-      color:var(--pink);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:25px;
-      font-style:italic;
-    }
-
-    .product-thumbnail{
-      width:51px;
-      height:51px;
+    .product-image{
+      aspect-ratio:1/1;
       overflow:hidden;
       background:var(--blush);
-      border:1px solid var(--border);
-      border-radius:10px;
+      border-bottom:1px solid var(--border);
     }
 
-    .product-thumbnail img{
+    .product-image img{
       width:100%;
       height:100%;
-      object-fit:contain;
+      object-fit:cover;
+      transition:transform .28s ease;
     }
 
-    .product-copy{position:relative;z-index:2}
+    .product-card:hover .product-image img{
+      transform:scale(1.025);
+    }
 
-    .product-copy .label{
+    .product-body{padding:17px}
+
+    .product-tag{
       display:inline-block;
       margin-bottom:8px;
       padding:5px 8px;
+      border-radius:999px;
       background:var(--pink-soft);
       color:var(--wine);
-      border-radius:100px;
-      font-size:8.5px;
-      font-weight:800;
+      font-size:8px;
+      font-weight:850;
+      letter-spacing:.05em;
     }
 
-    .product-copy h2{
-      margin-bottom:9px;
+    .product-body h3{
+      margin-bottom:7px;
       color:var(--wine);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:23px;
-      font-weight:500;
-      line-height:1.12;
+      font-size:22px;
+      line-height:1.15;
     }
 
-    .product-copy p{
+    .product-body p{
+      min-height:52px;
       margin-bottom:13px;
       color:var(--muted);
       font-size:10.5px;
+      line-height:1.55;
+    }
+
+    .product-bottom{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .price{
+      color:var(--wine);
+      font-size:13px;
+      font-weight:850;
     }
 
     .product-link{
-      color:var(--red);
-      font-size:10px;
-      font-weight:800;
-    }
-
-    .coming-state{
-      width:min(680px,92%);
-      margin:0 auto 47px;
-      padding:37px 21px;
-      background:var(--white);
-      border:1px solid var(--border);
-      border-radius:19px;
-      box-shadow:var(--shadow);
-      text-align:center;
-    }
-
-    .coming-symbol{
-      margin-bottom:10px;
-      color:var(--pink);
-      font-size:25px;
-    }
-
-    .coming-state h2{
-      margin-bottom:8px;
-      color:var(--wine);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:22px;
-      font-weight:500;
-    }
-
-    .coming-state p{
-      max-width:520px;
-      margin:0 auto 17px;
-      color:var(--muted);
-      font-size:10.5px;
-    }
-
-    .coming-state a{
-      display:inline-block;
-      padding:8px 14px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 11px;
+      border-radius:9px;
       background:var(--wine);
       color:white;
-      border-radius:100px;
+      font-size:9.5px;
+      font-weight:800;
+    }
+
+    .product-link:hover{background:var(--red)}
+
+    .empty-state{
+      padding:54px 24px;
+      text-align:center;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .empty-symbol{
+      margin-bottom:8px;
+      color:var(--pink);
+      font-family:Georgia,serif;
+      font-size:42px;
+    }
+
+    .empty-state h2{
+      margin-bottom:9px;
+      color:var(--wine);
+      font-size:27px;
+    }
+
+    .empty-state p{
+      max-width:560px;
+      margin:0 auto 16px;
+      color:var(--muted);
+      font-size:11.5px;
+    }
+
+    .mini-btn{
+      display:inline-flex;
+      padding:9px 14px;
+      border:1px solid var(--pink);
+      border-radius:999px;
+      color:var(--wine);
       font-size:10px;
       font-weight:800;
     }
 
-    .unknown-state{
-      width:min(760px,92%);
-      margin:34px auto 60px;
-      padding:38px 21px;
+    .mini-btn:hover{background:var(--blush)}
+
+    .other-collections{
       background:var(--white);
-      border:1px solid var(--border);
-      border-radius:19px;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+
+    .other-inner{
+      width:min(980px,92%);
+      margin:auto;
+      padding:40px 0;
       text-align:center;
     }
 
-    [hidden]{display:none!important}
+    .other-inner h2{
+      margin-bottom:8px;
+      color:var(--wine);
+      font-size:30px;
+    }
+
+    .other-inner>p{
+      margin-bottom:18px;
+      color:var(--muted);
+      font-size:11.5px;
+    }
+
+    .collection-links{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+    }
+
+    .collection-link{
+      padding:14px 10px;
+      border:1px solid var(--border);
+      border-radius:13px;
+      background:var(--cream);
+      color:var(--wine);
+      font-size:11px;
+      font-weight:800;
+      transition:.2s ease;
+    }
+
+    .collection-link:hover{
+      background:var(--blush);
+      transform:translateY(-2px);
+    }
+
+    .freebie{
+      width:min(820px,92%);
+      margin:44px auto;
+      padding:32px 25px;
+      text-align:center;
+      border:1px solid var(--border);
+      border-radius:20px;
+      background:linear-gradient(135deg,#fff,#fdf0f2);
+      box-shadow:var(--shadow);
+    }
+
+    .freebie h2{
+      margin-bottom:8px;
+      color:var(--wine);
+      font-size:29px;
+    }
+
+    .freebie p{
+      margin-bottom:15px;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .freebie a{
+      display:inline-flex;
+      padding:9px 15px;
+      border-radius:999px;
+      background:var(--wine);
+      color:#fff;
+      font-size:10px;
+      font-weight:800;
+    }
 
     footer{
       background:linear-gradient(135deg,#76101f,#8e1727);
-      color:white;
+      color:#fff;
     }
 
     .footer-inner{
@@ -278,12 +392,11 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:21px;
+      gap:20px;
       padding:23px 0;
     }
 
     .footer-logo img{width:132px}
-
     .footer-links{
       display:flex;
       flex-wrap:wrap;
@@ -291,6 +404,8 @@
       color:#f8dde2;
       font-size:10px;
     }
+
+    .footer-links a:hover{color:#fff}
 
     .copyright{
       padding:8px 13px;
@@ -300,32 +415,38 @@
       text-align:center;
     }
 
+    @media(max-width:900px){
+      .products-grid{grid-template-columns:repeat(2,1fr)}
+      .collection-links{grid-template-columns:repeat(2,1fr)}
+    }
+
     @media(max-width:760px){
-      .topbar{gap:12px;padding:6px 8px;font-size:10px}
+      .topbar{gap:10px;padding:5px 7px;font-size:8.5px}
       .topbar span:last-child{display:none}
-      .nav{width:94%;min-height:48px}
-      .logo img{width:109px}
+      .nav{width:94%;min-height:54px}
+      .logo img{width:124px}
       .back-button{padding:7px 10px;font-size:9.5px}
-      .hero{padding:24px 0 15px}
-      .hero h1{font-size:29px}
-      .hero p{font-size:10.5px}
-      .product-card{grid-template-columns:46px 1fr;padding:14px 11px;gap:10px}
-      .product-card::after{width:140px;height:140px;right:-70px;bottom:-80px}
-      .product-number{gap:7px;padding-right:8px;font-size:18px}
-      .product-thumbnail{width:31px;height:31px;border-radius:6px}
-      .product-copy h2{font-size:17px}
-      .coming-state{padding:27px 14px;margin-bottom:32px}
-      .footer-inner{width:92%;display:block}
-      .footer-links{margin-top:13px;gap:10px}
+      .hero{width:92%;padding:27px 0 18px}
+      h1{font-size:35px}
+      .hero p{font-size:11.5px}
+      .toolbar{width:92%;padding:10px 11px}
+      .sort label{display:none}
+      .products-wrap{width:92%;margin-bottom:35px}
+      .products-grid{grid-template-columns:1fr}
+      .product-body p{min-height:auto}
+      .other-inner{width:92%;padding:30px 0}
+      .collection-links{grid-template-columns:repeat(2,1fr)}
+      .footer-inner{width:92%;flex-direction:column;text-align:center}
+      .footer-links{justify-content:center}
     }
   </style>
 </head>
 
 <body>
   <div class="topbar">
-    <span>⇩ Stickers digitales</span>
-    <span>♡ Colecciones ZuzuBayo</span>
-    <span>Digital Goodies</span>
+    <span>⇩ Productos digitales</span>
+    <span>♡ Pago seguro con PayPal</span>
+    <span>ZuzuBayo Digital Goodies</span>
   </div>
 
   <header>
@@ -333,66 +454,86 @@
       <a href="index.html" class="logo">
         <img src="logo.png" alt="ZuzuBayo">
       </a>
-      <a href="stickers.html" class="back-button">← Volver a stickers</a>
+
+      <a href="stickers.html" class="back-button">
+        ← Volver a Stickers
+      </a>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="categoryHero">
+    <section class="hero">
       <div class="breadcrumb">
-        <a href="index.html">Inicio</a> &nbsp;/&nbsp;
-        <a href="stickers.html">Stickers</a> &nbsp;/&nbsp;
-        <span id="breadcrumbName">Colección</span>
+        <a href="index.html">Inicio</a>
+        &nbsp;/&nbsp;
+        <a href="stickers.html">Stickers</a>
+        &nbsp;/&nbsp;
+        <span id="breadcrumbCollection">Colección</span>
       </div>
-      <h1 id="categoryTitle">Colección de stickers</h1>
-      <p id="categoryDescription">Explora los packs disponibles de esta colección.</p>
-    </section>
 
-    <section class="products" id="availableProducts" hidden>
-      <a href="producto-cute-aesthetic-pack-01.html" class="product-card">
-        <div class="product-number">
-          <span>01</span>
-          <div class="product-thumbnail">
-            <img
-              src="portada pegatina zuzubayo paquete 1.png"
-              alt="Miniatura de Cute and Aesthetic Pack 01"
-            >
-          </div>
-        </div>
-        <div class="product-copy">
-          <span class="label">32 STICKERS PNG ♡</span>
-          <h2>Cute &amp; Aesthetic Pack 01</h2>
-          <p>
-            Incluye 32 stickers PNG individuales con fondo transparente,
-            archivo READ ME, licencia de uso personal y descarga en ZIP.
-          </p>
-          <p><strong>$3.99 USD</strong></p>
-          <span class="product-link">Ver detalles y comprar →</span>
-        </div>
-      </a>
-    </section>
+      <div class="eyebrow">Colección de stickers</div>
 
-    <section class="coming-state" id="comingState" hidden>
-      <div class="coming-symbol">♡</div>
-      <h2>Próximamente</h2>
-      <p id="comingMessage">
-        Esta colección todavía está en preparación. Muy pronto encontrarás nuevos stickers aquí.
+      <h1 id="collectionTitle">Cute &amp; Aesthetic ♡</h1>
+
+      <p id="collectionDescription">
+        Stickers delicados, femeninos y decorativos para darle un toque bonito a tus notas, journals, planners y proyectos digitales.
       </p>
-      <a href="stickers.html">Ver otras colecciones</a>
     </section>
 
-    <section class="unknown-state" id="unknownState" hidden>
-      <h2>Colección no encontrada</h2>
-      <p>La dirección no corresponde a una colección disponible.</p>
-      <a href="stickers.html">Volver a stickers</a>
+    <section class="toolbar" id="toolbar">
+      <div class="results" id="resultsText">Mostrando productos</div>
+
+      <div class="sort">
+        <label for="sortSelect">Ordenar por</label>
+        <select id="sortSelect">
+          <option value="featured">Destacados</option>
+          <option value="price-low">Precio: menor a mayor</option>
+          <option value="price-high">Precio: mayor a menor</option>
+          <option value="name">Nombre</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="products-wrap">
+      <div class="products-grid" id="productsGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-symbol">♡</div>
+        <h2>Esta colección está creciendo</h2>
+        <p id="emptyText">
+          Estamos preparando los primeros productos de esta colección. Mientras tanto puedes explorar los stickers disponibles.
+        </p>
+        <a href="stickers.html" class="mini-btn">Ver todas las colecciones ♡</a>
+      </div>
+    </section>
+
+    <section class="other-collections">
+      <div class="other-inner">
+        <h2>Explora otras colecciones ♡</h2>
+        <p>Encuentra el estilo que mejor combine contigo y con tus proyectos.</p>
+
+        <div class="collection-links">
+          <a class="collection-link" href="categoria-stickers.html?categoria=cute-aesthetic">Cute &amp; Aesthetic</a>
+          <a class="collection-link" href="categoria-stickers.html?categoria=self-care">Self-Care</a>
+          <a class="collection-link" href="categoria-stickers.html?categoria=productivity">Productivity</a>
+          <a class="collection-link" href="categoria-stickers.html?categoria=anime">Anime</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="freebie">
+      <h2>Un detallito para ti ♡</h2>
+      <p>Descubre más recursos digitales y novedades desde la tienda principal de ZuzuBayo.</p>
+      <a href="index.html#nuevos">Ver novedades ♡</a>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-logo">
+      <a href="index.html" class="footer-logo">
         <img src="logo.png" alt="ZuzuBayo">
-      </div>
+      </a>
+
       <div class="footer-links">
         <a href="index.html">Inicio</a>
         <a href="stickers.html">Stickers</a>
@@ -400,64 +541,150 @@
         <a href="index.html#contacto">Contacto</a>
       </div>
     </div>
-    <div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div>
+
+    <div class="copyright">
+      © 2026 ZuzuBayo · Todos los derechos reservados
+    </div>
   </footer>
 
   <script>
     const collections = {
       "cute-aesthetic": {
-        title: "Cute & Aesthetic",
-        description: "Stickers delicados, femeninos y decorativos para darle un toque bonito a tus proyectos.",
-        available: true
+        title: "Cute & Aesthetic ♡",
+        breadcrumb: "Cute & Aesthetic",
+        description: "Stickers delicados, femeninos y decorativos para darle un toque bonito a tus notas, journals, planners y proyectos digitales."
       },
       "self-care": {
-        title: "Self-Care",
-        description: "Stickers de wellness, rutinas, hábitos y motivación.",
-        available: false
+        title: "Self-Care ♡",
+        breadcrumb: "Self-Care",
+        description: "Stickers inspirados en autocuidado, pausas bonitas y pequeños recordatorios para acompañar tu día."
       },
       "productivity": {
-        title: "Productivity",
-        description: "Stickers para to-do lists, goals, estudio y organización.",
-        available: false
-      },
-      "celebraciones-temporadas": {
-        title: "Celebraciones & Temporadas",
-        description: "Stickers para cumpleaños, Navidad, Halloween y fechas especiales.",
-        available: false
+        title: "Productivity ♡",
+        breadcrumb: "Productivity",
+        description: "Stickers pensados para organizar tareas, prioridades, estudio, hábitos y proyectos de una forma más visual."
       },
       "anime": {
-        title: "Anime",
-        description: "Stickers de personajes originales, expresiones, aventuras y estilo anime.",
-        available: false
+        title: "Anime ♡",
+        breadcrumb: "Anime",
+        description: "Una colección de personajes originales estilo anime de ZuzuBayo para decorar tus proyectos digitales."
       }
     };
 
-    const params = new URLSearchParams(window.location.search);
-    const categoryKey = params.get("categoria") || "cute-aesthetic";
-    const category = collections[categoryKey];
-
-    const title = document.getElementById("categoryTitle");
-    const breadcrumb = document.getElementById("breadcrumbName");
-    const description = document.getElementById("categoryDescription");
-    const products = document.getElementById("availableProducts");
-    const coming = document.getElementById("comingState");
-    const unknown = document.getElementById("unknownState");
-
-    if (!category) {
-      document.getElementById("categoryHero").hidden = true;
-      unknown.hidden = false;
-    } else {
-      document.title = `${category.title} Stickers | ZuzuBayo`;
-      title.textContent = category.title;
-      breadcrumb.textContent = category.title;
-      description.textContent = category.description;
-
-      if (category.available) {
-        products.hidden = false;
-      } else {
-        coming.hidden = false;
+    const products = [
+      {
+        id: "cute-aesthetic-pack-01",
+        collection: "cute-aesthetic",
+        name: "Cute & Aesthetic Pack 01",
+        tag: "32 STICKERS PNG ♡",
+        description: "Incluye 32 stickers PNG individuales con fondo transparente, READ ME y licencia de uso personal.",
+        price: 3.99,
+        currency: "USD",
+        image: "portada pegatina zuzubayo paquete 1.png",
+        url: "producto-cute-aesthetic-pack-01.html",
+        featured: 1,
+        visible: true
       }
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const collectionId = params.get("categoria") || "cute-aesthetic";
+    const collection = collections[collectionId];
+
+    const titleEl = document.getElementById("collectionTitle");
+    const descriptionEl = document.getElementById("collectionDescription");
+    const breadcrumbEl = document.getElementById("breadcrumbCollection");
+    const gridEl = document.getElementById("productsGrid");
+    const emptyEl = document.getElementById("emptyState");
+    const emptyTextEl = document.getElementById("emptyText");
+    const toolbarEl = document.getElementById("toolbar");
+    const resultsEl = document.getElementById("resultsText");
+    const sortSelect = document.getElementById("sortSelect");
+
+    if (!collection) {
+      document.title = "Colección no encontrada | ZuzuBayo";
+      titleEl.textContent = "Colección no encontrada ♡";
+      descriptionEl.textContent = "La colección que buscas no está disponible.";
+      breadcrumbEl.textContent = "No encontrada";
+      toolbarEl.hidden = true;
+      emptyEl.hidden = false;
+      emptyTextEl.textContent = "Vuelve a Stickers para explorar las colecciones disponibles.";
+    } else {
+      document.title = `${collection.breadcrumb} Stickers | ZuzuBayo`;
+      titleEl.textContent = collection.title;
+      descriptionEl.textContent = collection.description;
+      breadcrumbEl.textContent = collection.breadcrumb;
+      renderProducts();
     }
+
+    function getCollectionProducts() {
+      return products.filter(product =>
+        product.visible &&
+        product.collection === collectionId
+      );
+    }
+
+    function renderProducts() {
+      if (!collection) return;
+
+      let list = getCollectionProducts();
+
+      const sort = sortSelect.value;
+
+      if (sort === "price-low") {
+        list.sort((a,b) => a.price - b.price);
+      } else if (sort === "price-high") {
+        list.sort((a,b) => b.price - a.price);
+      } else if (sort === "name") {
+        list.sort((a,b) => a.name.localeCompare(b.name));
+      } else {
+        list.sort((a,b) => a.featured - b.featured);
+      }
+
+      gridEl.innerHTML = "";
+
+      if (!list.length) {
+        toolbarEl.hidden = true;
+        emptyEl.hidden = false;
+        return;
+      }
+
+      toolbarEl.hidden = false;
+      emptyEl.hidden = true;
+
+      resultsEl.textContent =
+        list.length === 1
+          ? "Mostrando 1 producto"
+          : `Mostrando ${list.length} productos`;
+
+      list.forEach(product => {
+        const card = document.createElement("article");
+        card.className = "product-card";
+
+        card.innerHTML = `
+          <a href="${product.url}" class="product-image" aria-label="Ver ${product.name}">
+            <img src="${product.image}" alt="${product.name}">
+          </a>
+
+          <div class="product-body">
+            <span class="product-tag">${product.tag}</span>
+
+            <h3>${product.name}</h3>
+
+            <p>${product.description}</p>
+
+            <div class="product-bottom">
+              <span class="price">$${product.price.toFixed(2)} ${product.currency}</span>
+              <a class="product-link" href="${product.url}">Ver producto ♡</a>
+            </div>
+          </div>
+        `;
+
+        gridEl.appendChild(card);
+      });
+    }
+
+    sortSelect.addEventListener("change", renderProducts);
   </script>
 </body>
 </html>
