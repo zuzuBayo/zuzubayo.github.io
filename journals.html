@@ -19,6 +19,13 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,250,246,.96);borde
 footer{background:linear-gradient(135deg,#76101f,#8e1727);color:#fff}.footer-inner{width:min(1050px,92%);margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px;padding:27px 0 22px}.footer-logo img{width:125px}.footer-brand p{margin-top:6px;color:#f4d9de;font-size:10.5px}.footer-col h4{margin-bottom:8px;font-size:11px}.footer-col a{display:block;margin-bottom:6px;color:#f2d6db;font-size:10px}.footer-col a:hover{color:#fff}.copyright{padding:8px;border-top:1px solid rgba(255,255,255,.15);text-align:center;color:#f2d6db;font-size:9px}
 @media(max-width:850px){.grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.topbar{gap:10px;padding:5px 7px;font-size:8.5px}.topbar span:last-child{display:none}.nav{width:94%;min-height:54px}.logo img{width:122px}.desktop-nav a:not(.back-button){display:none}.back-button{font-size:9.5px;padding:7px 10px}.hero{padding:29px 0 16px}.hero h1{font-size:36px}.hero p{font-size:11.5px}.intro{margin:13px auto 17px}.intro h2{font-size:22px}.grid{width:94%;grid-template-columns:1fr;gap:11px}.card{min-height:190px;padding:20px}.card h2{font-size:25px}.featured{width:94%;flex-direction:column;align-items:flex-start;padding:17px}.benefits{width:94%;margin-bottom:28px}.benefit{padding:11px 5px}.benefit span{display:none}.footer-inner{width:92%;grid-template-columns:1fr 1fr;gap:18px}.footer-brand{grid-column:1/-1}}
+
+.num-list{width:min(980px,92%);margin:0 auto 38px;display:flex;flex-direction:column;gap:12px}
+.num-row{display:grid;grid-template-columns:92px 1fr 44px;align-items:center;min-height:138px;padding:18px 22px 18px 0;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:var(--shadow);transition:.2s}
+.num-row:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.num{height:100%;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--border);color:#d88a95;font-family:Georgia,serif;font-size:30px}
+.num-copy{padding:3px 28px}.num-copy h2{margin:0 0 8px;color:var(--wine);font-family:Georgia,serif;font-size:24px;font-weight:500}.num-copy p{color:var(--muted);font-size:10.5px}.num-arrow{color:var(--red);font-size:20px;font-weight:700}
+@media(max-width:700px){.num-list{width:94%;gap:9px}.num-row{grid-template-columns:54px 1fr 28px;min-height:112px;padding:12px 8px 12px 0}.num{font-size:21px}.num-copy{padding:2px 14px}.num-copy h2{font-size:18px}.num-copy p{font-size:8.8px}.num-arrow{font-size:15px}}
 </style>
 </head>
 <body>
@@ -27,10 +34,10 @@ footer{background:linear-gradient(135deg,#76101f,#8e1727);color:#fff}.footer-inn
 <main>
 <section class="hero"><div class="breadcrumb"><a href="index.html">Inicio</a> &nbsp;/&nbsp; Journals &amp; Listas</div><h1>Journals &amp; Listas ♡</h1><p>Recursos digitales para ayudarte a reflexionar, organizar lo que tienes en mente y llevar un poco más de claridad a tu día a día.</p></section>
 <section class="intro"><h2>Elige lo que necesitas hoy ♡</h2><p>Menos categorías, más claridad. Empieza por el área que quieres trabajar.</p></section>
-<section class="grid">
-<a href="productos.html?categoria=journal-self-care" class="card"><div class="kicker">Bienestar personal</div><h2>Autocuidado &amp; Bienestar ♡</h2><p>Journals y páginas guiadas para reflexionar, descargar pensamientos, practicar gratitud y crear pequeños momentos para ti.</p><div class="link">Explorar autocuidado →</div></a>
-<a href="productos.html?categoria=journal-organizacion" class="card"><div class="kicker">Tu día más claro</div><h2>Organización ♡</h2><p>Listas, prioridades, rutinas y recursos para sacar pendientes de tu cabeza y convertirlos en pasos más manejables.</p><div class="link">Explorar organización →</div></a>
-<a href="productos.html?categoria=journal-estudio" class="card"><div class="kicker">Para aprender y avanzar</div><h2>Estudio ♡</h2><p>Recursos para tareas, sesiones de estudio, exámenes, objetivos y organización académica sin complicarlo de más.</p><div class="link">Explorar estudio →</div></a>
+<section class="num-list">
+<a class="num-row" href="productos.html?categoria=journal-self-care"><div class="num">01</div><div class="num-copy"><h2>Autocuidado & Bienestar ♡</h2><p>Autocuidado · Reflexión · Bienestar · Journaling</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=journal-organizacion"><div class="num">02</div><div class="num-copy"><h2>Organización ♡</h2><p>Prioridades · Rutinas · Listas · Planificación</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=journal-estudio"><div class="num">03</div><div class="num-copy"><h2>Estudio ♡</h2><p>Tareas · Materias · Estudio · Objetivos</p></div><div class="num-arrow">→</div></a>
 </section>
 <section class="featured"><div><h3>Los primeros journals de ZuzuBayo están en desarrollo ♡</h3><p>Vuelve a Ti, Mi Semana en Orden y Reset de 7 Días formarán parte de esta sección cuando sus archivos y páginas de producto estén terminados. Así evitamos mostrar como disponible algo que todavía estamos creando.</p></div><span>Nuevos productos pronto ♡</span></section>
 <section class="benefits"><div class="benefit"><strong>100% digital</strong><span>Sin envíos físicos</span></div><div class="benefit"><strong>Uso práctico</strong><span>Para tu día a día</span></div><div class="benefit"><strong>Creado con intención</strong><span>Diseño ZuzuBayo</span></div></section>
