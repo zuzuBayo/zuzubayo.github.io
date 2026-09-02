@@ -178,7 +178,36 @@
       .contact{width:94%;margin-bottom:30px;padding:20px 14px}
       .footer-inner{width:92%;grid-template-columns:1fr 1fr;gap:18px}.footer-brand{grid-column:1/-1}.footer-logo img{width:125px}
     }
-  </style>
+  
+    /* Producto destacado compacto */
+    #destacados{padding-top:34px;padding-bottom:42px}
+    #destacados .section-head{margin-bottom:18px}
+    #destacados .new-grid{display:block!important;max-width:860px;margin:0 auto}
+    #destacados .product-card{
+      display:grid;grid-template-columns:210px 1fr;align-items:stretch;
+      min-height:210px;overflow:hidden;border-radius:20px
+    }
+    #destacados .product-image{
+      height:210px;padding:10px;border-bottom:0;border-right:1px solid var(--border)
+    }
+    #destacados .product-body{
+      display:flex;flex-direction:column;justify-content:center;padding:24px 28px
+    }
+    #destacados .product-body h3{font-size:24px}
+    @media(max-width:650px){
+      #destacados .new-grid{max-width:94%}
+      #destacados .product-card{grid-template-columns:105px 1fr;min-height:145px}
+      #destacados .product-image{height:145px;padding:6px}
+      #destacados .product-body{padding:14px}
+      #destacados .product-label{font-size:7px;margin-bottom:5px}
+      #destacados .product-body h3{font-size:17px;margin-bottom:5px}
+      #destacados .product-body p{font-size:9px;margin-bottom:9px}
+      #destacados .product-bottom{align-items:flex-start;flex-direction:column;gap:4px}
+      #destacados .price{font-size:11px}
+      #destacados .product-link{font-size:9px}
+    }
+
+</style>
 </head>
 <body>
 <div class="topbar">
@@ -221,12 +250,17 @@
 <p>Journals, plantillas, stickers y recursos digitales creados para hacer tus días un poquito más fáciles, bonitos y organizados.</p>
 <div class="hero-buttons">
 <a class="btn btn-primary" href="#categorias">Explorar productos</a>
-<a class="btn btn-secondary" href="#destacados">Ver producto disponible ♡</a>
+<a class="btn btn-secondary" href="nextflight.html">Conocer NextFlight ♡</a>
 </div>
 <div class="hero-mini-info"><span>♡ 100% digital</span><span>✧ Creado con amor</span><span>⇩ Fácil de descargar</span></div>
 </div>
 <div class="hero-art"><img alt="Mascota de ZuzuBayo" src="mascota.png"/></div>
-</section><div class="category-wrap">
+</section>
+<section class="nextflight">
+<div class="nextflight-image"><img alt="NextFlight by ZuzuBayo" src="nextflight.png"/></div>
+<div class="nextflight-copy"><div class="section-kicker">Para comenzar</div><h2>NextFlight ♡</h2><p>¿Buscas NextFlight? Entra aquí directamente para conocer cómo funciona y cómo comenzar.</p><a class="btn btn-secondary" href="nextflight.html">Explorar NextFlight →</a></div>
+</section>
+<div class="category-wrap">
 <section class="section" id="categorias">
 <div class="section-head">
 <div class="section-kicker">Encuentra lo que necesitas</div>
@@ -247,10 +281,7 @@
 <a class="product-image" href="producto-cute-aesthetic-pack-01.html"><img alt="Cute &amp; Aesthetic Pack 01" src="portada pegatina zuzubayo paquete 1.png"/></a>
 <div class="product-body"><span class="product-label">STICKERS DIGITALES</span><h3>Cute &amp; Aesthetic Pack 01</h3><p>32 stickers PNG individuales con fondo transparente para journals, notas y proyectos.</p><div class="product-bottom"><strong class="price">$3.99 USD</strong><a class="product-link" href="producto-cute-aesthetic-pack-01.html">Ver producto →</a></div></div>
 </article>
-</div></section><section class="nextflight">
-<div class="nextflight-image"><img alt="NextFlight by ZuzuBayo" src="nextflight.png"/></div>
-<div class="nextflight-copy"><div class="section-kicker">Para comenzar</div><h2>NextFlight ♡</h2><p>¿Buscas NextFlight? Entra aquí directamente para conocer cómo funciona y cómo comenzar.</p><a class="btn btn-secondary" href="nextflight.html">Explorar NextFlight →</a></div>
-</section><section class="benefits">
+</div></section><section class="benefits">
 <div class="benefit"><div class="benefit-icon">⇩</div><div><h3>Descarga digital</h3><p>Acceso después de tu compra.</p></div></div>
 <div class="benefit"><div class="benefit-icon">♡</div><div><h3>Pago seguro</h3><p>PayPal o tarjeta elegible.</p></div></div>
 <div class="benefit"><div class="benefit-icon">♥</div><div><h3>Hecho con amor</h3><p>Diseñado pensando en ti.</p></div></div>
