@@ -18,6 +18,13 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,250,246,.96);borde
 .benefits{width:min(900px,92%);margin:0 auto 40px;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border:1px solid var(--border);border-radius:15px;background:#fff}.benefit{padding:15px;text-align:center;border-right:1px solid var(--border)}.benefit:last-child{border-right:none}.benefit strong{display:block;color:var(--wine);font-size:11px}.benefit span{color:var(--muted);font-size:9.5px}
 footer{background:linear-gradient(135deg,#76101f,#8e1727);color:#fff}.footer-inner{width:min(1050px,92%);margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px;padding:27px 0 22px}.footer-logo img{width:125px}.footer-brand p{margin-top:6px;color:#f4d9de;font-size:10.5px}.footer-col h4{margin-bottom:8px;font-size:11px}.footer-col a{display:block;margin-bottom:6px;color:#f2d6db;font-size:10px}.footer-col a:hover{color:#fff}.copyright{padding:8px;border-top:1px solid rgba(255,255,255,.15);text-align:center;color:#f2d6db;font-size:9px}
 @media(max-width:760px){.topbar{gap:10px;padding:5px 7px;font-size:8.5px}.topbar span:last-child{display:none}.nav{width:94%;min-height:54px}.logo img{width:122px}.desktop-nav a:not(.back-button){display:none}.back-button{font-size:9.5px;padding:7px 10px}.hero{padding:29px 0 16px}.hero h1{font-size:36px}.hero p{font-size:11.5px}.intro{margin:13px auto 17px}.intro h2{font-size:22px}.grid{width:94%;grid-template-columns:1fr;gap:11px}.card{min-height:200px;padding:20px}.card h2{font-size:25px}.info{width:94%;padding:17px}.benefits{width:94%;margin-bottom:28px}.benefit{padding:11px 5px}.benefit span{display:none}.footer-inner{width:92%;grid-template-columns:1fr 1fr;gap:18px}.footer-brand{grid-column:1/-1}}
+
+.num-list{width:min(980px,92%);margin:0 auto 38px;display:flex;flex-direction:column;gap:12px}
+.num-row{display:grid;grid-template-columns:92px 1fr 44px;align-items:center;min-height:138px;padding:18px 22px 18px 0;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:var(--shadow);transition:.2s}
+.num-row:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.num{height:100%;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--border);color:#d88a95;font-family:Georgia,serif;font-size:30px}
+.num-copy{padding:3px 28px}.num-copy h2{margin:0 0 8px;color:var(--wine);font-family:Georgia,serif;font-size:24px;font-weight:500}.num-copy p{color:var(--muted);font-size:10.5px}.num-arrow{color:var(--red);font-size:20px;font-weight:700}
+@media(max-width:700px){.num-list{width:94%;gap:9px}.num-row{grid-template-columns:54px 1fr 28px;min-height:112px;padding:12px 8px 12px 0}.num{font-size:21px}.num-copy{padding:2px 14px}.num-copy h2{font-size:18px}.num-copy p{font-size:8.8px}.num-arrow{font-size:15px}}
 </style>
 </head>
 <body>
@@ -29,16 +36,12 @@ footer{background:linear-gradient(135deg,#76101f,#8e1727);color:#fff}.footer-inn
 
 <section class="intro"><h2>¿En qué quieres avanzar? ♡</h2><p>Explora los temas que formarán parte de la biblioteca de guías ZuzuBayo.</p></section>
 
-<section class="grid">
-<a href="productos.html?categoria=guias-organizacion" class="card"><div class="kicker">Vida más clara</div><h2>Organización ♡</h2><p>Guías para ordenar prioridades, rutinas, pendientes y tiempo de una forma sencilla y realista.</p><div class="chips"><span>Rutinas</span><span>Planificación</span><span>Orden</span><span>Tiempo</span></div><div class="link">Explorar organización →</div></a>
-
-<a href="productos.html?categoria=guias-productividad" class="card"><div class="kicker">Haz espacio para avanzar</div><h2>Productividad ♡</h2><p>Estrategias prácticas para enfocarte, convertir ideas en acciones y trabajar mejor con el tiempo que realmente tienes.</p><div class="chips"><span>Prioridades</span><span>Enfoque</span><span>Metas</span><span>Hábitos</span></div><div class="link">Explorar productividad →</div></a>
-
-<a href="productos.html?categoria=guias-dinero-planificacion" class="card"><div class="kicker">Decisiones más conscientes</div><h2>Dinero &amp; Planificación ♡</h2><p>Recursos sencillos para entender mejor tus gastos, metas, ahorro y planificación personal.</p><div class="chips"><span>Presupuesto</span><span>Ahorro</span><span>Metas</span><span>Planificación</span></div><div class="link">Explorar dinero →</div></a>
-
-<a href="productos.html?categoria=guias-redes-contenido" class="card"><div class="kicker">Crea con intención</div><h2>Redes Sociales &amp; Contenido ♡</h2><p>Guías para organizar ideas, crear contenido y entender mejor la parte práctica de construir una presencia digital.</p><div class="chips"><span>Instagram</span><span>Contenido</span><span>Marketing</span><span>Branding</span></div><div class="link">Explorar contenido →</div></a>
-
-<a href="productos.html?categoria=guias-emprender" class="card"><div class="kicker">Construye paso a paso</div><h2>Emprendimiento ♡</h2><p>Recursos para convertir una idea en algo más claro: primeros pasos, productos digitales y organización de un pequeño proyecto.</p><div class="chips"><span>Ideas</span><span>Primeros pasos</span><span>Negocio digital</span><span>Recursos</span></div><div class="link">Explorar emprendimiento →</div></a>
+<section class="num-list">
+<a class="num-row" href="productos.html?categoria=guias-organizacion"><div class="num">01</div><div class="num-copy"><h2>Organización ♡</h2><p>Rutinas · Planificación · Orden · Tiempo</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-productividad"><div class="num">02</div><div class="num-copy"><h2>Productividad ♡</h2><p>Prioridades · Enfoque · Metas · Hábitos</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-dinero-planificacion"><div class="num">03</div><div class="num-copy"><h2>Dinero & Planificación ♡</h2><p>Presupuesto · Ahorro · Metas · Planificación</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-redes-contenido"><div class="num">04</div><div class="num-copy"><h2>Redes Sociales & Contenido ♡</h2><p>Instagram · Contenido · Marketing · Branding</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-emprender"><div class="num">05</div><div class="num-copy"><h2>Emprendimiento ♡</h2><p>Ideas · Primeros pasos · Negocio digital · Recursos</p></div><div class="num-arrow">→</div></a>
 </section>
 
 <section class="info"><h3>Guías pequeñas que realmente puedas usar ♡</h3><p>La idea no es llenar la tienda por llenar. Las guías se irán activando conforme creemos recursos completos y útiles para cada tema. La sección ya queda visible desde ahora, pero no mostraremos productos falsos ni incompletos.</p></section>
