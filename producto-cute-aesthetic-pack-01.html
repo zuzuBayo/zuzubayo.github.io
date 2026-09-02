@@ -77,7 +77,46 @@
       .details{width:92%;margin-bottom:21px}.detail{padding:10px 4px}.detail strong{font-size:9.5px}.detail span{display:none}
       .footer-inner{width:92%;display:block}.footer-links{margin-top:13px;gap:10px}
     }
-  </style>
+  
+    /* PREMIUM PRODUCT PAGE — customer-first */
+    .trust-line{
+      display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+      margin:0 0 15px;color:var(--muted);font-size:9.5px
+    }
+    .trust-line span{display:inline-flex;align-items:center;gap:5px}
+    .price-block{
+      display:flex;align-items:end;justify-content:space-between;gap:16px;
+      margin:0 0 13px;padding:15px 16px;background:#fff;border:1px solid var(--border);
+      border-radius:14px
+    }
+    .price-copy small{display:block;margin-bottom:2px;color:var(--muted);font-size:9px}
+    .price{color:var(--wine);font-family:Georgia,"Times New Roman",serif;font-size:29px;line-height:1;font-weight:600}
+    .digital-pill{
+      padding:5px 9px;border-radius:999px;background:var(--blush);color:var(--wine);
+      font-size:8.5px;font-weight:800;white-space:nowrap
+    }
+    .why{width:min(920px,92%);margin:0 auto 34px}
+    .why-head{text-align:center;margin-bottom:15px}
+    .why-head span{color:var(--pink);font-size:9px;font-weight:800;letter-spacing:.1em}
+    .why-head h2{margin-top:4px;color:var(--wine);font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:500}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+    .why-card{padding:18px;background:#fff;border:1px solid var(--border);border-radius:14px;text-align:center}
+    .why-card b{display:block;margin-bottom:5px;color:var(--wine);font-size:12px}
+    .why-card p{color:var(--muted);font-size:9.5px}
+    .license-note{
+      width:min(920px,92%);margin:0 auto 34px;padding:16px 19px;
+      display:flex;justify-content:space-between;align-items:center;gap:18px;
+      background:var(--pink-soft);border:1px solid var(--border);border-radius:14px
+    }
+    .license-note strong{display:block;margin-bottom:3px;color:var(--wine);font-family:Georgia,"Times New Roman",serif;font-size:15px}
+    .license-note p{color:var(--muted);font-size:9.5px}
+    .license-note a{flex-shrink:0;color:var(--wine);font-size:9.5px;font-weight:800}
+    @media(max-width:760px){
+      .price{font-size:25px}.why{margin-bottom:22px}.why-grid{grid-template-columns:1fr}
+      .why-card{padding:14px}.license-note{margin-bottom:22px;align-items:flex-start;flex-direction:column}
+    }
+
+</style>
 </head>
 
 <body>
@@ -122,7 +161,7 @@
       <div class="product-info">
         <span class="label">PACK 01 ♡</span>
         <h1>Cute &amp; Aesthetic Pack 01</h1>
-        <p class="description">Una colección femenina y delicada para decorar tus notas, journals, planners y proyectos digitales.</p>
+        <p class="description">Dale un toque cute y delicado a tus journals, notas, planners y proyectos digitales con 32 stickers listos para usar ♡</p>
 
         <div class="included">
           <h2>Qué incluye tu pack</h2>
@@ -136,9 +175,20 @@
           </ul>
         </div>
 
-        <div class="notice">Precio: $3.99 USD</div>
-        <a href="checkout.html?product=cute-aesthetic-pack-01" class="buy-button">Comprar con PayPal o tarjeta</a>
-        <p class="small-note">No se envía ningún artículo físico.</p>
+        <div class="price-block">
+          <div class="price-copy">
+            <small>Precio del pack</small>
+            <div class="price">$3.99 <span style="font-size:11px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">USD</span></div>
+          </div>
+          <span class="digital-pill">100% DIGITAL</span>
+        </div>
+        <a href="checkout.html?product=cute-aesthetic-pack-01" class="buy-button">Comprar ahora ♡</a>
+        <div class="trust-line">
+          <span>♡ Pago seguro</span>
+          <span>✓ PayPal o tarjeta</span>
+          <span>⇩ Descarga digital</span>
+        </div>
+        <p class="small-note">Producto digital. No recibirás ningún artículo físico.</p>
       </div>
     </section>
 
@@ -146,6 +196,35 @@
       <div class="detail"><strong>32 PNG</strong><span>Stickers individuales</span></div>
       <div class="detail"><strong>Fondo transparente</strong><span>Listos para importar</span></div>
       <div class="detail"><strong>Uso personal</strong><span>Licencia incluida</span></div>
+    </section>
+
+    <section class="why">
+      <div class="why-head">
+        <span>CREADO PARA TUS PROYECTOS ♡</span>
+        <h2>Pequeños detalles que hacen la diferencia</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <b>Listos para usar</b>
+          <p>Recibes los stickers individuales en PNG con fondo transparente.</p>
+        </div>
+        <div class="why-card">
+          <b>32 diseños</b>
+          <p>Una colección completa para combinar y decorar diferentes proyectos.</p>
+        </div>
+        <div class="why-card">
+          <b>Todo en un ZIP</b>
+          <p>Los archivos se entregan juntos para que puedas guardarlos y organizarlos fácilmente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="license-note">
+      <div>
+        <strong>Antes de usar tu pack ♡</strong>
+        <p>Incluye licencia de uso personal y un archivo READ ME con la información del producto.</p>
+      </div>
+      <a href="licencia.html">Ver licencia →</a>
     </section>
   </main>
 
@@ -157,6 +236,7 @@
         <a href="stickers.html">Stickers</a>
         <a href="index.html#faq">Preguntas frecuentes</a>
         <a href="index.html#contacto">Contacto</a>
+        <a href="licencia.html">Licencia</a>
       </div>
     </div>
     <div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div>
