@@ -190,19 +190,94 @@
       font-size: 10px;
       line-height: 1.5;
     }
-  </style>
+  
+    :root{
+      --wine:#7f1020;--red:#a81429;--pink:#e36f7c;--pink-soft:#f8dfe3;
+      --blush:#fdf0f2;--cream:#fffaf6;--text:#211b1c;--muted:#75696b;
+      --border:#efd9dd;--shadow:0 12px 38px rgba(84,30,38,.09)
+    }
+    body{
+      background:
+        radial-gradient(circle at 12% 10%,rgba(248,223,227,.55),transparent 28%),
+        radial-gradient(circle at 88% 88%,rgba(253,240,242,.8),transparent 32%),
+        var(--cream);
+      color:var(--text);
+      padding:28px 17px 40px;
+    }
+    .checkout-shell{width:min(470px,100%);margin:auto}
+    .checkout-brand{text-align:center;margin-bottom:16px}
+    .checkout-brand a{display:inline-block;color:var(--wine);text-decoration:none;font-family:Georgia,"Times New Roman",serif;font-size:27px}
+    .checkout-brand p{margin:4px 0 0;color:var(--muted);font-size:10px}
+    .checkout{
+      width:100%;padding:27px 27px 23px;border-radius:22px;box-shadow:var(--shadow)
+    }
+    .secure-row{
+      display:flex;justify-content:center;gap:12px;flex-wrap:wrap;
+      margin:0 0 18px;color:var(--muted);font-size:9px
+    }
+    .order-summary{
+      margin:0 0 20px;padding:14px 15px;background:var(--blush);
+      border:1px solid var(--border);border-radius:13px
+    }
+    .order-label{margin-bottom:7px;color:var(--pink);font-size:8.5px;font-weight:800;letter-spacing:.09em}
+    .order-line{display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+    .order-name{color:var(--wine);font-family:Georgia,"Times New Roman",serif;font-size:16px}
+    .order-price{color:var(--wine);font-size:17px;font-weight:800;white-space:nowrap}
+    .checkout h1{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:500}
+    .subtitle{margin-bottom:17px}
+    .price{display:none}
+    .section-title{font-size:12px}
+    .email-input,.billing-input,.card-field{border-radius:10px}
+    #pay-card{border-radius:10px;background:var(--wine)}
+    .test-note{
+      margin-top:17px;text-align:center;background:transparent;border-top:1px solid var(--border);
+      border-radius:0;padding:13px 4px 0
+    }
+    .legal-mini{
+      margin-top:13px;text-align:center;color:var(--muted);font-size:8.5px;line-height:1.5
+    }
+    .legal-mini a{color:var(--wine)}
+    .back-shop{
+      display:block;margin-top:13px;text-align:center;color:var(--wine);
+      text-decoration:none;font-size:9.5px;font-weight:700
+    }
+    @media(max-width:520px){
+      body{padding:18px 12px 30px}.checkout{padding:22px 17px 20px}
+      .checkout-brand a{font-size:24px}.order-line{align-items:flex-start;flex-direction:column;gap:5px}
+    }
+
+</style>
 </head>
 
 <body>
-  <main class="checkout">
-    <h1>ZuzuBayo ♡</h1>
+  <div class="checkout-shell">
+    <div class="checkout-brand">
+      <a href="index.html">ZuzuBayo ♡</a>
+      <p>Tu compra digital, simple y segura.</p>
+    </div>
 
-    <p class="subtitle" id="product-name">Cargando producto...</p>
+    <main class="checkout">
+      <div class="secure-row">
+        <span>♡ Pago seguro</span>
+        <span>PayPal o tarjeta</span>
+        <span>⇩ Producto digital</span>
+      </div>
 
-    <div class="price" id="price">Cargando...</div>
+      <h1>Finaliza tu compra ♡</h1>
+      <p class="subtitle">Revisa tu producto y elige cómo deseas pagar.</p>
+
+      <section class="order-summary">
+        <div class="order-label">RESUMEN DE TU COMPRA</div>
+        <div class="order-line">
+          <div class="order-name" id="product-name">Cargando producto...</div>
+          <div class="order-price" id="summary-price">Cargando...</div>
+        </div>
+      </section>
+
+      <div class="price" id="price">Cargando...</div>
 
     <section class="email-section">
-      <div class="section-title">Correo para recibir tu compra</div>
+      <div class="section-title">¿A qué correo enviamos tu compra?</div>
       <input
         id="buyer-email"
         class="email-input"
@@ -213,12 +288,12 @@
         required
       >
       <p class="email-help">
-        Enviaremos aquí tu enlace de descarga después del pago.
+        Enviaremos aquí el enlace de descarga cuando tu pago se complete.
       </p>
     </section>
 
     <section id="card-section" class="hidden">
-      <div class="section-title">Tarjeta de crédito o débito</div>
+      <div class="section-title">Pagar con tarjeta</div>
 
       <div id="card-number" class="card-field"></div>
 
@@ -260,10 +335,10 @@
         </select>
       </div>
 
-      <button id="pay-card" type="button">Pagar</button>
+      <button id="pay-card" type="button">Pagar de forma segura</button>
     </section>
 
-    <div id="paypal-divider" class="divider hidden">o paga con</div>
+    <div id="paypal-divider" class="divider hidden">o continúa con PayPal</div>
     <div id="paypal-button-container"></div>
 
     <div id="message">Iniciando checkout...</div>
@@ -272,7 +347,16 @@
       Pago real y seguro procesado por PayPal.
       Puedes pagar con PayPal o con una tarjeta elegible.
     </div>
+
+    <p class="legal-mini">
+      Al completar tu compra aceptas nuestros
+      <a href="terminos.html">Términos</a> y
+      <a href="reembolsos.html">Política de reembolsos</a>.
+    </p>
   </main>
+
+  <a class="back-shop" href="index.html#categorias">← Seguir explorando ZuzuBayo</a>
+  </div>
 
   <script>
     const API_BASE =
@@ -689,6 +773,9 @@
 
         document.getElementById("price").textContent =
           `${product.price} ${product.currency}`;
+
+        document.getElementById("summary-price").textContent =
+          `$${product.price} ${product.currency}`;
 
         document.getElementById("pay-card").textContent =
           `Pagar $${product.price}`;
