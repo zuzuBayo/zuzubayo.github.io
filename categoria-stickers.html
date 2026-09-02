@@ -89,7 +89,7 @@
     }
 
     .breadcrumb{
-      margin-bottom:14px;
+      margin-bottom:9px;
       color:var(--pink);
       font-size:11px;
     }
@@ -167,12 +167,14 @@
     }
 
     .products-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
     }
 
     .product-card{
+      display:grid;
+      grid-template-columns:165px minmax(0,1fr);
       overflow:hidden;
       background:var(--white);
       border:1px solid var(--border);
@@ -182,34 +184,46 @@
     }
 
     .product-card:hover{
-      transform:translateY(-4px);
+      transform:translateY(-2px);
       box-shadow:var(--shadow-hover);
     }
 
     .product-image{
-      aspect-ratio:1/1;
+      min-height:185px;
+      padding:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       overflow:hidden;
       background:var(--blush);
-      border-bottom:1px solid var(--border);
+      border-right:1px solid var(--border);
     }
 
     .product-image img{
       width:100%;
       height:100%;
-      object-fit:cover;
-      transition:transform .28s ease;
+      max-height:185px;
+      object-fit:contain;
     }
 
-    .product-card:hover .product-image img{
-      transform:scale(1.025);
+    .product-body{
+      padding:16px 20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
     }
 
-    .product-body{padding:17px}
+    .product-topline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:9px;
+    }
 
     .product-tag{
       display:inline-block;
-      margin-bottom:8px;
-      padding:5px 8px;
+      padding:5px 9px;
       border-radius:999px;
       background:var(--pink-soft);
       color:var(--wine);
@@ -218,47 +232,107 @@
       letter-spacing:.05em;
     }
 
-    .product-body h3{
-      margin-bottom:7px;
-      color:var(--wine);
-      font-size:22px;
-      line-height:1.15;
+    .available{
+      color:#7c6e70;
+      font-size:9px;
+      font-weight:750;
     }
 
-    .product-body p{
-      min-height:52px;
-      margin-bottom:13px;
+    .product-body h3{
+      margin-bottom:8px;
+      color:var(--wine);
+      font-size:21px;
+      line-height:1.12;
+    }
+
+    .product-body>p{
+      max-width:680px;
+      margin-bottom:9px;
       color:var(--muted);
-      font-size:10.5px;
-      line-height:1.55;
+      font-size:11px;
+      line-height:1.65;
+    }
+
+    .product-details{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:5px 14px;
+      margin:1px 0 11px;
+      padding:9px 0;
+      border-top:1px solid #f2e1e4;
+      border-bottom:1px solid #f2e1e4;
+    }
+
+    .detail{
+      display:flex;
+      align-items:center;
+      gap:7px;
+      color:#54494b;
+      font-size:10px;
+    }
+
+    .detail b{
+      color:var(--wine);
+      font-weight:800;
     }
 
     .product-bottom{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:10px;
+      gap:16px;
+    }
+
+    .price-wrap small{
+      display:block;
+      margin-bottom:1px;
+      color:var(--muted);
+      font-size:8.5px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
     }
 
     .price{
       color:var(--wine);
-      font-size:13px;
+      font-size:16px;
       font-weight:850;
     }
 
-    .product-link{
+    .product-actions{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:8px;
+    }
+
+    .product-link,
+    .buy-link{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:8px 11px;
-      border-radius:9px;
-      background:var(--wine);
-      color:white;
+      min-height:32px;
+      padding:6px 11px;
+      border-radius:999px;
       font-size:9.5px;
       font-weight:800;
+      transition:.2s ease;
     }
 
-    .product-link:hover{background:var(--red)}
+    .product-link{
+      border:1px solid var(--pink);
+      color:var(--wine);
+      background:#fff;
+    }
+
+    .product-link:hover{background:var(--blush)}
+
+    .buy-link{
+      background:var(--wine);
+      color:#fff;
+      border:1px solid var(--wine);
+    }
+
+    .buy-link:hover{background:var(--red);border-color:var(--red)}
 
     .empty-state{
       padding:54px 24px;
@@ -279,7 +353,7 @@
     .empty-state h2{
       margin-bottom:9px;
       color:var(--wine);
-      font-size:27px;
+      font-size:21px;
     }
 
     .empty-state p{
@@ -408,7 +482,7 @@
     .footer-links a:hover{color:#fff}
 
     .copyright{
-      padding:8px 13px;
+      padding:6px 11px;
       border-top:1px solid rgba(255,255,255,.15);
       color:#f6dbe0;
       font-size:9.5px;
@@ -432,8 +506,17 @@
       .toolbar{width:92%;padding:10px 11px}
       .sort label{display:none}
       .products-wrap{width:92%;margin-bottom:35px}
-      .products-grid{grid-template-columns:1fr}
-      .product-body p{min-height:auto}
+      .products-grid{display:flex}
+      .product-card{grid-template-columns:1fr}
+      .product-image{min-height:0;height:175px;border-right:0;border-bottom:1px solid var(--border);padding:10px}
+      .product-image img{max-height:160px}
+      .product-body{padding:18px}
+      .product-body h3{font-size:22px}
+      .product-details{grid-template-columns:1fr;gap:7px}
+      .product-bottom{align-items:flex-start;flex-direction:column}
+      .product-actions{width:100%;justify-content:flex-start}
+      .product-link,.buy-link{flex:1}
+      .price{font-size:17px}
       .other-inner{width:92%;padding:30px 0}
       .collection-links{grid-template-columns:repeat(2,1fr)}
       .footer-inner{width:92%;flex-direction:column;text-align:center}
@@ -524,7 +607,7 @@
     <section class="freebie">
       <h2>Un detallito para ti ♡</h2>
       <p>Descubre más recursos digitales y novedades desde la tienda principal de ZuzuBayo.</p>
-      <a href="index.html#nuevos">Ver novedades ♡</a>
+      <a href="index.html#destacados">Ver novedades ♡</a>
     </section>
   </main>
 
@@ -667,15 +750,32 @@
           </a>
 
           <div class="product-body">
-            <span class="product-tag">${product.tag}</span>
+            <div class="product-topline">
+              <span class="product-tag">${product.tag}</span>
+              <span class="available">Disponible ahora ♡</span>
+            </div>
 
             <h3>${product.name}</h3>
 
-            <p>${product.description}</p>
+            <p>Dale un toque cute y delicado a tus journals, notas, planners y proyectos digitales con un pack listo para descargar y usar.</p>
+
+            <div class="product-details">
+              <div class="detail">♡ <span><b>32 stickers</b> individuales</span></div>
+              <div class="detail">✓ <span><b>PNG</b> fondo transparente</span></div>
+              <div class="detail">⇩ <span><b>Archivo ZIP</b> organizado</span></div>
+              <div class="detail">▣ <span><b>Licencia</b> de uso personal</span></div>
+            </div>
 
             <div class="product-bottom">
-              <span class="price">$${product.price.toFixed(2)} ${product.currency}</span>
-              <a class="product-link" href="${product.url}">Ver producto ♡</a>
+              <div class="price-wrap">
+                <small>Precio del pack</small>
+                <span class="price">$${product.price.toFixed(2)} ${product.currency}</span>
+              </div>
+
+              <div class="product-actions">
+                <a class="product-link" href="${product.url}">Ver todos los detalles</a>
+                <a class="buy-link" href="checkout.html?product=${product.id}">Comprar ahora ♡</a>
+              </div>
             </div>
           </div>
         `;
