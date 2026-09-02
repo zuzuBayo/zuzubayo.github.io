@@ -35,7 +35,7 @@
     .image-stage[data-view="bottom-left"] img{transform:scale(2);transform-origin:left bottom}
     .image-stage[data-view="bottom-right"] img{transform:scale(2);transform-origin:right bottom}
     .preview-thumbnails{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:9px}
-    .preview-button{overflow:hidden;aspect-ratio:1/1;padding:0;background-color:var(--blush);background-image:url("portada pegatina zuzubayo paquete 1.png");background-repeat:no-repeat;border:1px solid var(--border);border-radius:8px;cursor:pointer}
+    .preview-button{overflow:hidden;aspect-ratio:1/1;padding:0;background-color:var(--blush);background-image:url("cute-aesthetic-pack-01-preview.png");background-repeat:no-repeat;border:1px solid var(--border);border-radius:8px;cursor:pointer}
     .preview-button[data-view="full"]{background-size:contain;background-position:center}
     .preview-button[data-view="top-left"]{background-size:200%;background-position:left top}
     .preview-button[data-view="top-right"]{background-size:200%;background-position:right top}
@@ -116,6 +116,35 @@
       .why-card{padding:14px}.license-note{margin-bottom:22px;align-items:flex-start;flex-direction:column}
     }
 
+
+/* ===== PRODUCTO: vista de compra compacta ===== */
+@media (min-width: 900px){
+  .product-layout,
+  .product-grid,
+  .product-main{
+    align-items:start;
+  }
+
+  .gallery,
+  .product-gallery,
+  .gallery-main,
+  .main-image{
+    max-height:590px;
+  }
+
+  .gallery-main img,
+  .main-image img,
+  .product-gallery > img{
+    width:100%;
+    max-height:590px;
+    object-fit:contain;
+  }
+
+  .product-info{
+    padding-top:8px;
+  }
+}
+
 </style>
 </head>
 
@@ -144,7 +173,7 @@
     <section class="product">
       <div class="product-image">
         <div class="image-stage" id="imageStage" data-view="full">
-          <img src="portada pegatina zuzubayo paquete 1.png" alt="Vista previa de los 32 stickers Cute and Aesthetic Pack 01">
+          <img src="cute-aesthetic-pack-01-preview.png" alt="Vista previa de los 32 stickers Cute and Aesthetic Pack 01">
         </div>
 
         <div class="preview-thumbnails" aria-label="Acercamientos del paquete">
