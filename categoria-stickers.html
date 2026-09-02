@@ -654,21 +654,7 @@
       }
     };
 
-    const products = [
-      {
-        id: "cute-aesthetic-pack-01",
-        collection: "cute-aesthetic",
-        name: "Cute & Aesthetic Pack 01",
-        tag: "32 STICKERS PNG ♡",
-        description: "Incluye 32 stickers PNG individuales con fondo transparente, READ ME y licencia de uso personal.",
-        price: 3.99,
-        currency: "USD",
-        image: "cute-aesthetic-pack-01-preview.png",
-        url: "producto-cute-aesthetic-pack-01.html",
-        featured: 1,
-        visible: true
-      }
-    ];
+    const products = [];
 
     const params = new URLSearchParams(window.location.search);
     const collectionId = params.get("categoria") || "cute-aesthetic";
