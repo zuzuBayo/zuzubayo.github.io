@@ -72,6 +72,12 @@
 .num{height:100%;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--border);color:#d88a95;font-family:Georgia,serif;font-size:30px}
 .num-copy{padding:3px 28px}.num-copy h2{margin:0 0 8px;color:var(--wine);font-family:Georgia,serif;font-size:24px;font-weight:500}.num-copy p{color:var(--muted);font-size:10.5px}.num-arrow{color:var(--red);font-size:20px;font-weight:700}
 @media(max-width:700px){.num-list{width:94%;gap:9px}.num-row{grid-template-columns:54px 1fr 28px;min-height:112px;padding:12px 8px 12px 0}.num{font-size:21px}.num-copy{padding:2px 14px}.num-copy h2{font-size:18px}.num-copy p{font-size:8.8px}.num-arrow{font-size:15px}}
+
+.lang-switch{display:flex;gap:6px;align-items:center;margin-left:12px}
+.lang-btn{border:1px solid var(--border);background:#fff;color:var(--wine);border-radius:999px;padding:7px 10px;font:inherit;font-size:11px;font-weight:700;cursor:pointer}
+.lang-btn.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+@media(max-width:700px){.lang-switch{margin-left:6px}.lang-btn{padding:6px 8px;font-size:10px}}
+
 </style>
 </head>
 <body>
@@ -85,18 +91,18 @@
     <div class="nav">
       <a href="index.html" class="logo"><img src="logo.png" alt="ZuzuBayo"></a>
       <nav class="desktop-nav">
-        <a href="index.html">Inicio</a>
+        <a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a>
         <a href="journals.html">Journals &amp; Listas</a>
-        <a href="plantillas.html">Plantillas</a>
-        <a href="guias.html">Guías</a>
+        <a href="plantillas.html"><span data-es="Plantillas" data-en="Templates">Plantillas</span></a>
+        <a href="guias.html"><span data-es="Guías" data-en="Guides">Guías</span></a>
         <a href="index.html#categorias" class="back-button">← Volver a categorías</a>
-      </nav>
+      </nav><div class="lang-switch" aria-label="Language selector"><button class="lang-btn active" id="lang-es" type="button">ES</button><button class="lang-btn" id="lang-en" type="button">EN</button></div>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="breadcrumb"><a href="index.html">Inicio</a> &nbsp;/&nbsp; Stickers</div>
+      <div class="breadcrumb"><a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a> &nbsp;/&nbsp; Stickers</div>
       <h1>Stickers digitales ♡</h1>
       <p>Pequeños detalles digitales para darle personalidad, organización y un toque bonito a tus journals, notas y proyectos.</p>
     </section>
@@ -107,10 +113,10 @@
     </section>
 
     <section class="num-list">
-<a class="num-row" href="categoria-stickers.html?categoria=cute-aesthetic"><div class="num">01</div><div class="num-copy"><h2>Cute & Aesthetic ♡</h2><p>Cute · Aesthetic · Decoración · Journals</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="categoria-stickers.html?categoria=self-care"><div class="num">02</div><div class="num-copy"><h2>Self-Care ♡</h2><p>Autocuidado · Pausas · Bienestar · Recordatorios</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="categoria-stickers.html?categoria=productivity"><div class="num">03</div><div class="num-copy"><h2>Productivity ♡</h2><p>Tareas · Prioridades · Estudio · Hábitos</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="categoria-stickers.html?categoria=anime"><div class="num">04</div><div class="num-copy"><h2>Anime ♡</h2><p>Personajes · Anime · Digital · ZuzuBayo</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="categoria-stickers.html?categoria=cute-aesthetic"><div class="num">01</div><div class="num-copy"><h2><span data-es="Cute & Aesthetic ♡" data-en="Cute & Aesthetic ♡">Cute & Aesthetic ♡</span></h2><p>Cute · Aesthetic · Decoración · Journals</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="categoria-stickers.html?categoria=self-care"><div class="num">02</div><div class="num-copy"><h2><span data-es="Self-Care ♡" data-en="Self-Care ♡">Self-Care ♡</span></h2><p>Autocuidado · Pausas · Bienestar · Recordatorios</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="categoria-stickers.html?categoria=productivity"><div class="num">03</div><div class="num-copy"><h2><span data-es="Productivity ♡" data-en="Productivity ♡">Productivity ♡</span></h2><p>Tareas · Prioridades · Estudio · Hábitos</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="categoria-stickers.html?categoria=anime"><div class="num">04</div><div class="num-copy"><h2><span data-es="Anime ♡" data-en="Anime ♡">Anime ♡</span></h2><p>Personajes · Anime · Digital · ZuzuBayo</p></div><div class="num-arrow">→</div></a>
 </section>
 <section class="benefits">
       <div class="benefit"><strong>100% digital</strong><span>Sin envíos físicos</span></div>
@@ -127,21 +133,40 @@
       </div>
       <div class="footer-col">
         <h4>Explora</h4>
-        <a href="index.html">Inicio</a>
+        <a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a>
         <a href="journals.html">Journals &amp; Listas</a>
-        <a href="stickers.html">Stickers</a>
-        <a href="plantillas.html">Plantillas</a>
-        <a href="guias.html">Guías</a>
+        <a href="stickers.html"><span data-es="Stickers" data-en="Stickers">Stickers</span></a>
+        <a href="plantillas.html"><span data-es="Plantillas" data-en="Templates">Plantillas</span></a>
+        <a href="guias.html"><span data-es="Guías" data-en="Guides">Guías</span></a>
       </div>
       <div class="footer-col">
         <h4>Información</h4>
-        <a href="terminos.html">Términos</a>
-        <a href="privacidad.html">Privacidad</a>
-        <a href="reembolsos.html">Reembolsos</a>
-        <a href="licencia.html">Licencia</a>
+        <a href="terminos.html"><span data-es="Términos" data-en="Terms">Términos</span></a>
+        <a href="privacidad.html"><span data-es="Privacidad" data-en="Privacy">Privacidad</span></a>
+        <a href="reembolsos.html"><span data-es="Reembolsos" data-en="Refunds">Reembolsos</span></a>
+        <a href="licencia.html"><span data-es="Licencia" data-en="License">Licencia</span></a>
       </div>
     </div>
     <div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div>
   </footer>
+
+<script>
+(function(){
+ const KEY='zuzubayo_lang', es=document.getElementById('lang-es'), en=document.getElementById('lang-en');
+ function setLang(lang){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+   el.textContent=lang==='en'?el.dataset.en:el.dataset.es;
+  });
+  if(es) es.classList.toggle('active',lang==='es');
+  if(en) en.classList.toggle('active',lang==='en');
+  localStorage.setItem(KEY,lang);
+ }
+ if(es) es.addEventListener('click',()=>setLang('es'));
+ if(en) en.addEventListener('click',()=>setLang('en'));
+ setLang(localStorage.getItem(KEY)||'es');
+})();
+</script>
+
 </body>
 </html>
