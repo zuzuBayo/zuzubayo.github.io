@@ -26,22 +26,49 @@ footer{background:linear-gradient(135deg,#76101f,#8e1727);color:#fff}.footer-inn
 .num{height:100%;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--border);color:#d88a95;font-family:Georgia,serif;font-size:30px}
 .num-copy{padding:3px 28px}.num-copy h2{margin:0 0 8px;color:var(--wine);font-family:Georgia,serif;font-size:24px;font-weight:500}.num-copy p{color:var(--muted);font-size:10.5px}.num-arrow{color:var(--red);font-size:20px;font-weight:700}
 @media(max-width:700px){.num-list{width:94%;gap:9px}.num-row{grid-template-columns:54px 1fr 28px;min-height:112px;padding:12px 8px 12px 0}.num{font-size:21px}.num-copy{padding:2px 14px}.num-copy h2{font-size:18px}.num-copy p{font-size:8.8px}.num-arrow{font-size:15px}}
+
+.lang-switch{display:flex;gap:6px;align-items:center;margin-left:10px}
+.lang-btn{border:1px solid var(--border);background:#fff;color:var(--wine);border-radius:999px;padding:7px 10px;font:inherit;font-size:11px;font-weight:750;cursor:pointer}
+.lang-btn.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+@media(max-width:760px){.lang-switch{margin-left:auto}.lang-btn{padding:6px 8px;font-size:9.5px}}
+
 </style>
 </head>
 <body>
 <div class="topbar"><span>⇩ Productos digitales</span><span>♡ Pago seguro con PayPal</span><span>ZuzuBayo Digital Goodies</span></div>
-<header><div class="nav"><a href="index.html" class="logo"><img src="logo.png" alt="ZuzuBayo"></a><nav class="desktop-nav"><a href="index.html">Inicio</a><a href="stickers.html">Stickers</a><a href="plantillas.html">Plantillas</a><a href="guias.html">Guías</a><a href="index.html#categorias" class="back-button">← Volver a categorías</a></nav></div></header>
+<header><div class="nav"><a href="index.html" class="logo"><img src="logo.png" alt="ZuzuBayo"></a><nav class="desktop-nav"><a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a><a href="stickers.html">Stickers</a><a href="plantillas.html"><span data-es="Plantillas" data-en="Templates">Plantillas</span></a><a href="guias.html"><span data-es="Guías" data-en="Guides">Guías</span></a><a href="index.html#categorias" class="back-button">← Volver a categorías</a></nav><div class="lang-switch" aria-label="Language selector"><button class="lang-btn active" id="lang-es" type="button">ES</button><button class="lang-btn" id="lang-en" type="button">EN</button></div></div></header>
 <main>
-<section class="hero"><div class="breadcrumb"><a href="index.html">Inicio</a> &nbsp;/&nbsp; Journals &amp; Listas</div><h1>Journals &amp; Listas ♡</h1><p>Recursos digitales para ayudarte a reflexionar, organizar lo que tienes en mente y llevar un poco más de claridad a tu día a día.</p></section>
-<section class="intro"><h2>Elige lo que necesitas hoy ♡</h2><p>Menos categorías, más claridad. Empieza por el área que quieres trabajar.</p></section>
+<section class="hero"><div class="breadcrumb"><a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a> &nbsp;/&nbsp; Journals &amp; Listas</div><h1>Journals &amp; Listas ♡</h1><p><span data-es="Recursos digitales para ayudarte a reflexionar, organizar lo que tienes en mente y llevar un poco más de claridad a tu día a día." data-en="Digital resources to help you reflect, organize what’s on your mind, and bring a little more clarity to your everyday life.">Recursos digitales para ayudarte a reflexionar, organizar lo que tienes en mente y llevar un poco más de claridad a tu día a día.</span></p></section>
+<section class="intro"><h2><span data-es="Elige lo que necesitas hoy ♡" data-en="Choose what you need today ♡">Elige lo que necesitas hoy ♡</span></h2><p><span data-es="Menos categorías, más claridad. Empieza por el área que quieres trabajar." data-en="Fewer categories, more clarity. Start with the area you want to focus on.">Menos categorías, más claridad. Empieza por el área que quieres trabajar.</span></p></section>
 <section class="num-list">
-<a class="num-row" href="productos.html?categoria=journal-self-care"><div class="num">01</div><div class="num-copy"><h2>Autocuidado & Bienestar ♡</h2><p>Autocuidado · Reflexión · Bienestar · Journaling</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="productos.html?categoria=journal-organizacion"><div class="num">02</div><div class="num-copy"><h2>Organización ♡</h2><p>Prioridades · Rutinas · Listas · Planificación</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="productos.html?categoria=journal-estudio"><div class="num">03</div><div class="num-copy"><h2>Estudio ♡</h2><p>Tareas · Materias · Estudio · Objetivos</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=journal-self-care"><div class="num">01</div><div class="num-copy"><h2><span data-es="Autocuidado &amp; Bienestar ♡" data-en="Self-Care &amp; Wellness ♡">Autocuidado & Bienestar ♡</span></h2><p><span data-es="Autocuidado · Reflexión · Bienestar · Journaling" data-en="Self-care · Reflection · Wellness · Journaling">Autocuidado · Reflexión · Bienestar · Journaling</span></p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=journal-organizacion"><div class="num">02</div><div class="num-copy"><h2><span data-es="Organización ♡" data-en="Organization ♡">Organización ♡</span></h2><p><span data-es="Prioridades · Rutinas · Listas · Planificación" data-en="Priorities · Routines · Lists · Planning">Prioridades · Rutinas · Listas · Planificación</span></p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=journal-estudio"><div class="num">03</div><div class="num-copy"><h2><span data-es="Estudio ♡" data-en="Study ♡">Estudio ♡</span></h2><p><span data-es="Tareas · Materias · Estudio · Objetivos" data-en="Assignments · Classes · Study · Goals">Tareas · Materias · Estudio · Objetivos</span></p></div><div class="num-arrow">→</div></a>
 </section>
-<section class="featured"><div><h3>Los primeros journals de ZuzuBayo están en desarrollo ♡</h3><p>Vuelve a Ti, Mi Semana en Orden y Reset de 7 Días formarán parte de esta sección cuando sus archivos y páginas de producto estén terminados. Así evitamos mostrar como disponible algo que todavía estamos creando.</p></div><span>Nuevos productos pronto ♡</span></section>
-<section class="benefits"><div class="benefit"><strong>100% digital</strong><span>Sin envíos físicos</span></div><div class="benefit"><strong>Uso práctico</strong><span>Para tu día a día</span></div><div class="benefit"><strong>Creado con intención</strong><span>Diseño ZuzuBayo</span></div></section>
+<section class="featured"><div><h3><span data-es="Los primeros journals de ZuzuBayo están en desarrollo ♡" data-en="The first ZuzuBayo journals are in development ♡">Los primeros journals de ZuzuBayo están en desarrollo ♡</span></h3><p><span data-es="Vuelve a Ti, Mi Semana en Orden y Reset de 7 Días formarán parte de esta sección cuando sus archivos y páginas de producto estén terminados. Así evitamos mostrar como disponible algo que todavía estamos creando." data-en="Vuelve a Ti, Mi Semana en Orden, and Reset de 7 Días will be added to this section when their files and product pages are finished. This way, we don’t show something as available while it is still being created.">Vuelve a Ti, Mi Semana en Orden y Reset de 7 Días formarán parte de esta sección cuando sus archivos y páginas de producto estén terminados. Así evitamos mostrar como disponible algo que todavía estamos creando.</span></p></div><span><span data-es="Nuevos productos pronto ♡" data-en="New products coming soon ♡">Nuevos productos pronto ♡</span></span></section>
+<section class="benefits"><div class="benefit"><strong>100% digital</strong><span><span data-es="Sin envíos físicos" data-en="No physical shipping">Sin envíos físicos</span></span></div><div class="benefit"><strong><span data-es="Uso práctico" data-en="Practical use">Uso práctico</span></strong><span><span data-es="Para tu día a día" data-en="For everyday life">Para tu día a día</span></span></div><div class="benefit"><strong><span data-es="Creado con intención" data-en="Created with intention">Creado con intención</span></strong><span><span data-es="Diseño ZuzuBayo" data-en="ZuzuBayo design">Diseño ZuzuBayo</span></span></div></section>
 </main>
-<footer><div class="footer-inner"><div class="footer-brand"><div class="footer-logo"><img src="logo.png" alt="ZuzuBayo"></div><p>Detalles digitales hechos con amor ♡</p></div><div class="footer-col"><h4>Explora</h4><a href="index.html">Inicio</a><a href="journals.html">Journals &amp; Listas</a><a href="stickers.html">Stickers</a><a href="plantillas.html">Plantillas</a><a href="guias.html">Guías</a></div><div class="footer-col"><h4>Información</h4><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="reembolsos.html">Reembolsos</a><a href="licencia.html">Licencia</a></div></div><div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div></footer>
+<footer><div class="footer-inner"><div class="footer-brand"><div class="footer-logo"><img src="logo.png" alt="ZuzuBayo"></div><p><span data-es="Detalles digitales hechos con amor ♡" data-en="Digital details made with love ♡">Detalles digitales hechos con amor ♡</span></p></div><div class="footer-col"><h4><span data-es="Explora" data-en="Explore">Explora</span></h4><a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a><a href="journals.html">Journals &amp; Listas</a><a href="stickers.html">Stickers</a><a href="plantillas.html"><span data-es="Plantillas" data-en="Templates">Plantillas</span></a><a href="guias.html"><span data-es="Guías" data-en="Guides">Guías</span></a></div><div class="footer-col"><h4><span data-es="Información" data-en="Information">Información</span></h4><a href="terminos.html"><span data-es="Términos" data-en="Terms">Términos</span></a><a href="privacidad.html"><span data-es="Privacidad" data-en="Privacy">Privacidad</span></a><a href="reembolsos.html"><span data-es="Reembolsos" data-en="Refunds">Reembolsos</span></a><a href="licencia.html"><span data-es="Licencia" data-en="License">Licencia</span></a></div></div><div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div></footer>
+
+<script>
+(function(){
+  const KEY='zuzubayo_lang';
+  const esBtn=document.getElementById('lang-es');
+  const enBtn=document.getElementById('lang-en');
+  function setLang(lang){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      el.textContent=lang==='en' ? el.dataset.en : el.dataset.es;
+    });
+    if(esBtn) esBtn.classList.toggle('active',lang==='es');
+    if(enBtn) enBtn.classList.toggle('active',lang==='en');
+    localStorage.setItem(KEY,lang);
+  }
+  if(esBtn) esBtn.addEventListener('click',function(){setLang('es')});
+  if(enBtn) enBtn.addEventListener('click',function(){setLang('en')});
+  setLang(localStorage.getItem(KEY)||'es');
+})();
+</script>
+
 </body>
 </html>
