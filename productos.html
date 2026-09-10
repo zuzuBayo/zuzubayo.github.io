@@ -912,7 +912,13 @@
 
     }
 
-  </style>
+  
+.lang-switch{display:flex;gap:6px;align-items:center;margin-left:10px}
+.lang-btn{border:1px solid var(--border);background:#fff;color:var(--wine);border-radius:999px;padding:7px 10px;font:inherit;font-size:11px;font-weight:750;cursor:pointer}
+.lang-btn.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+@media(max-width:760px){.lang-switch{margin-left:auto}.lang-btn{padding:6px 8px;font-size:9.5px}}
+
+</style>
 
 </head>
 
@@ -970,7 +976,10 @@
         <a href="guias.html">Guías</a>
         <a href="index.html#categorias" class="back-button" id="backButton">← Volver</a>
       </nav>
-
+<div class="lang-switch" aria-label="Language selector">
+<button class="lang-btn active" id="lang-es" type="button">ES</button>
+<button class="lang-btn" id="lang-en" type="button">EN</button>
+</div>
 
     </div>
 
@@ -1779,6 +1788,292 @@
 
   </script>
 
+
+
+<script>
+(function(){
+  const KEY = 'zuzubayo_lang';
+  const esBtn = document.getElementById('lang-es');
+  const enBtn = document.getElementById('lang-en');
+
+  const EN = {
+    "journal-self-care":{
+      title:'Self-Care & <span>Wellness ♡</span>',
+      description:'Digital resources to pause, reflect, and reconnect with yourself in a simple way.',
+      collection:'Self-Care & Wellness',
+      section:'Journals & Lists'
+    },
+    "journal-organizacion":{
+      title:'Organization <span>Journals ♡</span>',
+      description:'Journals and lists to organize priorities, tasks, routines, and plans without overcomplicating things.',
+      collection:'Organization',
+      section:'Journals & Lists'
+    },
+    "journal-estudio":{
+      title:'Study <span>Journals ♡</span>',
+      description:'Digital resources to organize classes, assignments, study sessions, and academic goals.',
+      collection:'Study',
+      section:'Journals & Lists'
+    },
+    "redes-sociales":{
+      title:'Social Media <span>Templates ♡</span>',
+      description:'Templates to make content creation easier and keep your visual presence more organized.',
+      collection:'Social Media',
+      section:'Templates'
+    },
+    "organizacion-estudio":{
+      title:'Organization & <span>Study ♡</span>',
+      description:'Practical templates to organize schedules, assignments, priorities, and academic resources.',
+      collection:'Organization & Study',
+      section:'Templates'
+    },
+    "guias-organizacion":{
+      title:'Organization <span>Guides ♡</span>',
+      description:'Practical resources to improve routines, planning, organization, and time management.',
+      collection:'Organization',
+      section:'Guides'
+    },
+    "guias-productividad":{
+      title:'Productivity <span>Guides ♡</span>',
+      description:'Practical strategies to focus, turn ideas into action, and make better use of your time.',
+      collection:'Productivity',
+      section:'Guides'
+    },
+    "guias-dinero-planificacion":{
+      title:'Money & <span>Planning ♡</span>',
+      description:'Simple resources to organize expenses, savings, goals, and personal planning.',
+      collection:'Money & Planning',
+      section:'Guides'
+    },
+    "guias-redes-contenido":{
+      title:'Social Media & <span>Content ♡</span>',
+      description:'Guides to organize ideas, create content, and build an intentional digital presence.',
+      collection:'Social Media & Content',
+      section:'Guides'
+    },
+    "guias-emprender":{
+      title:'Entrepreneurship <span>Guides ♡</span>',
+      description:'Resources to turn an idea into something clearer and build a project step by step.',
+      collection:'Entrepreneurship',
+      section:'Guides'
+    }
+  };
+
+  const aliases = {
+    "journal-gratitude":"journal-self-care",
+    "journal-habitos":"journal-organizacion",
+    "journal-listas":"journal-organizacion",
+    "journal-hogar":"journal-organizacion",
+    "journal-presupuesto":"journal-organizacion",
+    "guias-dinero-productividad":"guias-dinero-planificacion",
+    "guias-marketing":"guias-redes-contenido"
+  };
+
+  const params2 = new URLSearchParams(window.location.search);
+  const raw2 = params2.get('categoria');
+  const key2 = aliases[raw2] || raw2;
+
+  function setText(selector, text){
+    const el = document.querySelector(selector);
+    if(el) el.textContent = text;
+  }
+
+  function staticEnglish(){
+    const links = document.querySelectorAll('.desktop-nav a, .footer-col a');
+    links.forEach(function(a){
+      const t = a.textContent.trim();
+      const map = {
+        'Inicio':'Home',
+        'Journals & Listas':'Journals & Lists',
+        'Plantillas':'Templates',
+        'Guías':'Guides',
+        '← Volver':'← Back',
+        'Preguntas frecuentes':'Frequently asked questions',
+        'Contacto':'Contact',
+        'Sobre ZuzuBayo':'About ZuzuBayo'
+      };
+      if(map[t]) a.textContent = map[t];
+    });
+
+    setText('.empty-state h3','This collection is growing ♡');
+
+    const benefits = document.querySelectorAll('.benefit');
+    const b = [
+      ['100% digital','No physical shipping'],
+      ['Easy to use','From your devices'],
+      ['Secure payment','PayPal when choosing a product']
+    ];
+    benefits.forEach(function(el,i){
+      if(!b[i]) return;
+      const strong=el.querySelector('strong'), span=el.querySelector('span');
+      if(strong) strong.textContent=b[i][0];
+      if(span) span.textContent=b[i][1];
+    });
+
+    const footerH = document.querySelectorAll('.footer-col h4');
+    footerH.forEach(function(h){
+      if(h.textContent.trim()==='Explora') h.textContent='Explore';
+      if(h.textContent.trim()==='Ayuda') h.textContent='Help';
+    });
+    const cr = document.querySelector('.copyright');
+    if(cr) cr.textContent='© 2026 ZuzuBayo · All rights reserved';
+  }
+
+  function staticSpanish(){
+    const links = document.querySelectorAll('.desktop-nav a, .footer-col a');
+    links.forEach(function(a){
+      const t = a.textContent.trim();
+      const map = {
+        'Home':'Inicio',
+        'Journals & Lists':'Journals & Listas',
+        'Templates':'Plantillas',
+        'Guides':'Guías',
+        '← Back':'← Volver',
+        'Frequently asked questions':'Preguntas frecuentes',
+        'Contact':'Contacto',
+        'About ZuzuBayo':'Sobre ZuzuBayo'
+      };
+      if(map[t]) a.textContent = map[t];
+    });
+
+    setText('.empty-state h3','Esta colección está creciendo ♡');
+
+    const benefits = document.querySelectorAll('.benefit');
+    const b = [
+      ['100% digital','Sin envíos físicos'],
+      ['Fácil de usar','Desde tus dispositivos'],
+      ['Pago seguro','PayPal al elegir producto']
+    ];
+    benefits.forEach(function(el,i){
+      if(!b[i]) return;
+      const strong=el.querySelector('strong'), span=el.querySelector('span');
+      if(strong) strong.textContent=b[i][0];
+      if(span) span.textContent=b[i][1];
+    });
+
+    const footerH = document.querySelectorAll('.footer-col h4');
+    footerH.forEach(function(h){
+      if(h.textContent.trim()==='Explore') h.textContent='Explora';
+      if(h.textContent.trim()==='Help') h.textContent='Ayuda';
+    });
+    const cr = document.querySelector('.copyright');
+    if(cr) cr.textContent='© 2026 ZuzuBayo · Todos los derechos reservados';
+  }
+
+  function renderEnglish(){
+    staticEnglish();
+    const c = EN[key2];
+
+    if(c){
+      document.getElementById('categoryTitle').innerHTML = c.title;
+      document.getElementById('categoryDescription').textContent = c.description;
+      document.getElementById('collectionTitle').textContent = c.collection;
+
+      let breadcrumb = '<a href="index.html">Home</a> &nbsp;/&nbsp; ' +
+        '<a href="' + (window.categories && categories[key2] ? categories[key2].sectionUrl : '#') + '">' + c.section + '</a>' +
+        ' &nbsp;/&nbsp; ' + c.collection;
+      document.getElementById('breadcrumb').innerHTML = breadcrumb;
+
+      document.getElementById('emptyText').textContent =
+        'The first products in ' + c.collection + ' will appear here as soon as they are ready.';
+
+      document.getElementById('emptyButton').textContent = '← Back to ' + c.section.toLowerCase();
+
+      const type = (typeof category !== 'undefined' && category) ? category.type : '';
+      const extra = {
+        plantillas:['Explore more templates ♡','Discover other digital template categories for your projects.','View templates →'],
+        journals:['Organize your way ♡','Discover more journals, trackers, lists, and organization resources.','View journals →'],
+        guias:['Keep learning ♡','Explore other digital guides and find practical resources for you.','View guides →'],
+        stickers:['Discover more stickers ♡','Explore other ZuzuBayo digital sticker styles and packs.','View stickers →']
+      };
+      if(extra[type]){
+        document.getElementById('extraTitle').textContent=extra[type][0];
+        document.getElementById('extraText').textContent=extra[type][1];
+        document.getElementById('extraButton').textContent=extra[type][2];
+      }
+
+      document.title = c.collection + ' | ZuzuBayo';
+    } else {
+      const unknown = Boolean(raw2);
+      document.getElementById('categoryTitle').innerHTML =
+        unknown ? 'Collection <span>not available ♡</span>' : 'ZuzuBayo <span>Products ♡</span>';
+      document.getElementById('categoryDescription').textContent =
+        unknown ? 'This collection is not currently visible. You can return to the main categories.' :
+                  'Choose a category to explore our digital products.';
+      document.getElementById('collectionTitle').textContent = unknown ? 'Explore ZuzuBayo' : 'Collections';
+      document.getElementById('breadcrumb').innerHTML = '<a href="index.html">Home</a> &nbsp;/&nbsp; Products';
+      document.getElementById('emptyText').textContent =
+        unknown ? 'This category is hidden for now. Choose one of the active sections to continue.' :
+                  'Select a category from our store to get started.';
+      document.getElementById('emptyButton').textContent='Explore categories →';
+      document.getElementById('extraTitle').textContent='Discover ZuzuBayo ♡';
+      document.getElementById('extraText').textContent='Explore journals, stickers, templates, and digital guides.';
+      document.getElementById('extraButton').textContent='View categories →';
+    }
+  }
+
+  function renderSpanish(){
+    staticSpanish();
+    // Re-run the same page logic in Spanish using the existing category data.
+    if(typeof category !== 'undefined' && category){
+      document.getElementById('categoryTitle').innerHTML = category.title;
+      document.getElementById('categoryDescription').textContent = category.description;
+      document.getElementById('collectionTitle').textContent = category.collection;
+
+      document.getElementById('breadcrumb').innerHTML =
+        '<a href="index.html">Inicio</a> &nbsp;/&nbsp; ' +
+        '<a href="' + category.sectionUrl + '">' + category.section + '</a>' +
+        ' &nbsp;/&nbsp; ' + category.collection;
+
+      document.getElementById('emptyText').textContent =
+        'Los primeros productos de ' + category.collection + '. Agregaremos los productos conforme estén listos.';
+      document.getElementById('emptyButton').textContent='← Volver a ' + category.section.toLowerCase();
+
+      const extra = {
+        plantillas:['Explora más plantillas ♡','Descubre otras categorías de plantillas digitales para tus proyectos.','Ver plantillas →'],
+        journals:['Organiza a tu manera ♡','Descubre más journals, trackers, listas y recursos de organización.','Ver journals →'],
+        guias:['Sigue aprendiendo ♡','Explora otras guías digitales y encuentra recursos prácticos para ti.','Ver guías →'],
+        stickers:['Descubre más stickers ♡','Explora otros estilos y packs de stickers digitales ZuzuBayo.','Ver stickers →']
+      };
+      if(extra[category.type]){
+        document.getElementById('extraTitle').textContent=extra[category.type][0];
+        document.getElementById('extraText').textContent=extra[category.type][1];
+        document.getElementById('extraButton').textContent=extra[category.type][2];
+      }
+      document.title = category.collection + ' | ZuzuBayo';
+    } else {
+      const unknown = Boolean(raw2);
+      document.getElementById('categoryTitle').innerHTML =
+        unknown ? 'Colección <span>no disponible ♡</span>' : 'Productos <span>ZuzuBayo ♡</span>';
+      document.getElementById('categoryDescription').textContent =
+        unknown ? 'Esta colección no está visible actualmente. Puedes regresar a las categorías principales.' :
+                  'Elige una categoría para explorar nuestros productos digitales.';
+      document.getElementById('collectionTitle').textContent=unknown?'Explora ZuzuBayo':'Colecciones';
+      document.getElementById('breadcrumb').innerHTML='<a href="index.html">Inicio</a> &nbsp;/&nbsp; Productos';
+      document.getElementById('emptyText').textContent =
+        unknown ? 'Esta categoría está oculta por ahora. Elige una de las secciones activas para continuar.' :
+                  'Selecciona una categoría desde nuestra tienda para comenzar.';
+      document.getElementById('emptyButton').textContent='Explorar categorías →';
+      document.getElementById('extraTitle').textContent='Descubre ZuzuBayo ♡';
+      document.getElementById('extraText').textContent='Explora journals, stickers, plantillas y guías digitales.';
+      document.getElementById('extraButton').textContent='Ver categorías →';
+    }
+  }
+
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    if(lang === 'en') renderEnglish(); else renderSpanish();
+    if(esBtn) esBtn.classList.toggle('active',lang==='es');
+    if(enBtn) enBtn.classList.toggle('active',lang==='en');
+    localStorage.setItem(KEY,lang);
+  }
+
+  if(esBtn) esBtn.addEventListener('click',function(){setLang('es')});
+  if(enBtn) enBtn.addEventListener('click',function(){setLang('en')});
+
+  setLang(localStorage.getItem(KEY) || 'es');
+})();
+</script>
 
 </body>
 
