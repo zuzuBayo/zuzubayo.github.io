@@ -522,7 +522,13 @@
       .footer-inner{width:92%;flex-direction:column;text-align:center}
       .footer-links{justify-content:center}
     }
-  </style>
+  
+.lang-switch{display:flex;gap:6px;align-items:center;margin-left:12px}
+.lang-btn{border:1px solid var(--border);background:#fff;color:var(--wine);border-radius:999px;padding:7px 10px;font:inherit;font-size:11px;font-weight:700;cursor:pointer}
+.lang-btn.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+@media(max-width:700px){.lang-switch{margin-left:6px}.lang-btn{padding:6px 8px;font-size:10px}}
+
+</style>
 </head>
 
 <body>
@@ -542,14 +548,14 @@
         ← Volver a Stickers
       </a>
     </div>
-  </header>
+  <div class="lang-switch" aria-label="Language selector"><button class="lang-btn active" id="lang-es" type="button">ES</button><button class="lang-btn" id="lang-en" type="button">EN</button></div></header>
 
   <main>
     <section class="hero">
       <div class="breadcrumb">
-        <a href="index.html">Inicio</a>
+        <a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a>
         &nbsp;/&nbsp;
-        <a href="stickers.html">Stickers</a>
+        <a href="stickers.html"><span data-es="Stickers" data-en="Stickers">Stickers</span></a>
         &nbsp;/&nbsp;
         <span id="breadcrumbCollection">Colección</span>
       </div>
@@ -618,10 +624,10 @@
       </a>
 
       <div class="footer-links">
-        <a href="index.html">Inicio</a>
-        <a href="stickers.html">Stickers</a>
+        <a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a>
+        <a href="stickers.html"><span data-es="Stickers" data-en="Stickers">Stickers</span></a>
         <a href="index.html#faq">Preguntas frecuentes</a>
-        <a href="index.html#contacto">Contacto</a>
+        <a href="index.html#contacto"><span data-es="Contacto" data-en="Contact">Contacto</span></a>
       </div>
     </div>
 
@@ -749,7 +755,7 @@
               <div class="detail">♡ <span><b>32 stickers</b> individuales</span></div>
               <div class="detail">✓ <span><b>PNG</b> fondo transparente</span></div>
               <div class="detail">⇩ <span><b>Archivo ZIP</b> organizado</span></div>
-              <div class="detail">▣ <span><b>Licencia</b> de uso personal</span></div>
+              <div class="detail">▣ <span><b><span data-es="Licencia" data-en="License">Licencia</span></b> de uso personal</span></div>
             </div>
 
             <div class="product-bottom">
@@ -772,5 +778,24 @@
 
     sortSelect.addEventListener("change", renderProducts);
   </script>
+
+<script>
+(function(){
+ const KEY='zuzubayo_lang', es=document.getElementById('lang-es'), en=document.getElementById('lang-en');
+ function setLang(lang){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+   el.textContent=lang==='en'?el.dataset.en:el.dataset.es;
+  });
+  if(es) es.classList.toggle('active',lang==='es');
+  if(en) en.classList.toggle('active',lang==='en');
+  localStorage.setItem(KEY,lang);
+ }
+ if(es) es.addEventListener('click',()=>setLang('es'));
+ if(en) en.addEventListener('click',()=>setLang('en'));
+ setLang(localStorage.getItem(KEY)||'es');
+})();
+</script>
+
 </body>
 </html>
