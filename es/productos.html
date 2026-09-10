@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZuzuBayo | Productos</title>
+<meta content="Explora productos digitales de ZuzuBayo." name="description"/>
+<style>
+
+    :root{
+      --wine:#7f1020;
+      --red:#a81429;
+      --pink:#e36f7c;
+      --pink-soft:#f8dfe3;
+      --blush:#fdf0f2;
+      --cream:#fffaf6;
+      --white:#ffffff;
+
+      --text:#211b1c;
+      --muted:#75696b;
+      --border:#efd9dd;
+
+      --shadow:0 8px 28px rgba(84,30,38,.07);
+      --shadow-hover:0 13px 35px rgba(84,30,38,.12);
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar{
+      min-height:29px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:36px;
+
+      padding:6px 14px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:11px;
+      font-weight:600;
+    }
+
+
+    .topbar span{
+      white-space:nowrap;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,250,246,.96);
+
+      border-bottom:1px solid var(--border);
+
+      backdrop-filter:blur(10px);
+    }
+
+
+    .nav{
+      width:min(1180px,92%);
+      min-height:65px;
+
+      margin:auto;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:21px;
+    }
+
+
+    .logo img{
+      width:162px;
+    }
+
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+
+      gap:22px;
+
+      font-size:13px;
+      font-weight:600;
+    }
+
+
+    .desktop-nav a:hover{
+      color:var(--red);
+    }
+
+
+    .back-button{
+      padding:8px 14px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+    }
+
+
+    .back-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      width:min(1020px,92%);
+
+      margin:auto;
+
+      padding:39px 0 23px;
+
+      text-align:center;
+    }
+
+
+    .breadcrumb{
+      margin-bottom:16px;
+
+      color:var(--pink);
+
+      font-size:11px;
+    }
+
+
+    .breadcrumb a{
+      color:var(--pink);
+    }
+
+
+    .hero h1{
+      margin-bottom:11px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:42px;
+      font-weight:500;
+
+      line-height:1.08;
+    }
+
+
+    .hero h1 span{
+      color:var(--pink);
+      font-style:italic;
+    }
+
+
+    .hero p{
+      max-width:700px;
+
+      margin:auto;
+
+      color:var(--muted);
+
+      font-size:13px;
+      line-height:1.65;
+    }
+
+
+
+    /* =========================
+       PRODUCT AREA
+    ========================= */
+
+    .products-wrap{
+      width:min(1080px,92%);
+
+      margin:0 auto 26px;
+    }
+
+
+    .products-heading{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+
+      gap:17px;
+
+      margin-bottom:15px;
+    }
+
+
+    .products-heading h2{
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:23px;
+      font-weight:500;
+    }
+
+
+    .products-heading span{
+      color:var(--muted);
+
+      font-size:10px;
+    }
+
+
+
+    /* =========================
+       EMPTY STATE
+    ========================= */
+
+    .empty-state{
+      min-height:264px;
+
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+
+      padding:34px 21px;
+
+      text-align:center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffefe,
+          #fff6f5
+        );
+
+      border:1px solid var(--border);
+      border-radius:19px;
+
+      box-shadow:var(--shadow);
+    }
+
+
+    .empty-mark{
+      margin-bottom:10px;
+
+      color:var(--pink);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:31px;
+      font-style:italic;
+    }
+
+
+    .empty-state h3{
+      margin-bottom:7px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:21px;
+      font-weight:500;
+    }
+
+
+    .empty-state p{
+      max-width:520px;
+
+      margin-bottom:17px;
+
+      color:var(--muted);
+
+      font-size:11px;
+    }
+
+
+    .empty-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:8px 14px;
+
+      border:1px solid var(--pink);
+      border-radius:100px;
+
+      color:var(--wine);
+
+      font-size:10px;
+      font-weight:750;
+
+      transition:.2s ease;
+    }
+
+
+    .empty-button:hover{
+      background:var(--blush);
+    }
+
+
+
+    /* =========================
+       PRODUCTOS FUTUROS
+    ========================= */
+
+    .product-grid{
+      display:none;
+
+      grid-template-columns:repeat(3,1fr);
+
+      gap:14px;
+    }
+
+
+    .product-card{
+      overflow:hidden;
+
+      background:white;
+
+      border:1px solid var(--border);
+      border-radius:16px;
+
+      box-shadow:var(--shadow);
+
+      transition:.22s ease;
+    }
+
+
+    .product-card:hover{
+      transform:translateY(-4px);
+
+      box-shadow:var(--shadow-hover);
+    }
+
+
+    .product-image{
+      aspect-ratio:4 / 3;
+
+      overflow:hidden;
+
+      background:var(--blush);
+    }
+
+
+    .product-image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+    }
+
+
+    .product-info{
+      padding:14px;
+    }
+
+
+    .product-category{
+      margin-bottom:5px;
+
+      color:var(--pink);
+
+      font-size:10px;
+      font-weight:800;
+
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+
+    .product-info h3{
+      margin-bottom:6px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:18px;
+      font-weight:500;
+    }
+
+
+    .product-info p{
+      margin-bottom:12px;
+
+      color:var(--muted);
+
+      font-size:10px;
+    }
+
+
+    .product-footer{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:10px;
+
+      padding-top:10px;
+
+      border-top:1px solid var(--border);
+    }
+
+
+    .product-price{
+      color:var(--wine);
+
+      font-size:14px;
+      font-weight:800;
+    }
+
+
+    .product-view{
+      color:var(--red);
+
+      font-size:9.5px;
+      font-weight:750;
+    }
+
+
+
+    /* =========================
+       CTA EXTRA
+    ========================= */
+
+    .extra-cta{
+      width:min(1080px,92%);
+
+      margin:0 auto 26px;
+
+      padding:19px 22px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:17px;
+
+      background:var(--pink-soft);
+
+      border:1px solid var(--border);
+      border-radius:15px;
+    }
+
+
+    .extra-cta h3{
+      margin-bottom:3px;
+
+      color:var(--wine);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:16px;
+      font-weight:500;
+    }
+
+
+    .extra-cta p{
+      color:var(--muted);
+
+      font-size:10px;
+    }
+
+
+    .extra-cta a{
+      flex-shrink:0;
+
+      padding:8px 13px;
+
+      border-radius:100px;
+
+      background:var(--wine);
+      color:white;
+
+      font-size:9.5px;
+      font-weight:750;
+    }
+
+
+
+    /* =========================
+       BENEFICIOS
+    ========================= */
+
+    .benefits{
+      width:min(900px,92%);
+
+      margin:0 auto 26px;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      overflow:hidden;
+
+      background:var(--blush);
+
+      border:1px solid var(--border);
+      border-radius:14px;
+    }
+
+
+    .benefit{
+      padding:14px;
+
+      text-align:center;
+
+      border-right:1px solid var(--border);
+    }
+
+
+    .benefit:last-child{
+      border-right:none;
+    }
+
+
+    .benefit strong{
+      display:block;
+
+      margin-bottom:2px;
+
+      color:var(--wine);
+
+      font-size:12px;
+    }
+
+
+    .benefit span{
+      color:var(--muted);
+
+      font-size:9.5px;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      background:
+        linear-gradient(
+          135deg,
+          #76101f,
+          #8e1727
+        );
+
+      color:white;
+    }
+
+
+    .footer-inner{
+      width:min(1100px,92%);
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1.3fr .8fr .8fr;
+
+      gap:29px;
+
+      padding:24px 0 20px;
+    }
+
+
+    .footer-logo img{
+      width:132px;
+    }
+
+
+    .footer-brand p{
+      margin-top:8px;
+
+      color:#f8dde2;
+
+      font-size:10px;
+    }
+
+
+    .footer-col h4{
+      margin-bottom:9px;
+
+      font-size:11px;
+    }
+
+
+    .footer-col a{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#f8dde2;
+
+      font-size:10px;
+    }
+
+
+    .copyright{
+      padding:8px 13px;
+
+      text-align:center;
+
+      border-top:
+        1px solid rgba(255,255,255,.15);
+
+      color:#f6dbe0;
+
+      font-size:9.5px;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:760px){
+
+
+      .topbar{
+        min-height:28px;
+
+        gap:12px;
+
+        padding:6px 8px;
+
+        overflow:hidden;
+
+        font-size:10px;
+      }
+
+
+      .topbar span:nth-child(3){
+        display:none;
+      }
+
+
+      .nav{
+        width:94%;
+        min-height:53px;
+      }
+
+
+      .logo img{
+        width:123px;
+      }
+
+
+      .desktop-nav{
+        display:none;
+      }
+
+
+      .hero{
+        width:92%;
+
+        padding:23px 0 17px;
+      }
+
+
+      .breadcrumb{
+        margin-bottom:10px;
+
+        font-size:11px;
+      }
+
+
+      .hero h1{
+        font-size:31px;
+      }
+
+
+      .hero p{
+        font-size:11px;
+      }
+
+
+      .products-wrap{
+        width:94%;
+
+        margin-bottom:17px;
+      }
+
+
+      .products-heading h2{
+        font-size:18px;
+      }
+
+
+      .products-heading span{
+        display:none;
+      }
+
+
+      .empty-state{
+        min-height:213px;
+
+        padding:26px 15px;
+
+        border-radius:14px;
+      }
+
+
+      .empty-mark{
+        font-size:25px;
+      }
+
+
+      .empty-state h3{
+        font-size:18px;
+      }
+
+
+      .empty-state p{
+        font-size:10px;
+      }
+
+
+      .product-grid{
+        grid-template-columns:repeat(2,1fr);
+
+        gap:9px;
+      }
+
+
+      .product-info{
+        padding:9px;
+      }
+
+
+      .product-info h3{
+        font-size:14px;
+      }
+
+
+      .product-info p{
+        display:none;
+      }
+
+
+      .product-footer{
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:3px;
+      }
+
+
+      .product-price{
+        font-size:12px;
+      }
+
+
+      .extra-cta{
+        width:94%;
+
+        margin-bottom:17px;
+
+        padding:14px;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:10px;
+      }
+
+
+      .extra-cta h3{
+        font-size:14px;
+      }
+
+
+      .benefits{
+        width:94%;
+
+        margin-bottom:17px;
+      }
+
+
+      .benefit{
+        padding:9px 4px;
+      }
+
+
+      .benefit strong{
+        font-size:9.5px;
+      }
+
+
+      .benefit span{
+        display:none;
+      }
+
+
+      .footer-inner{
+        width:92%;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:17px;
+
+        padding:19px 0 15px;
+      }
+
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+
+
+      .footer-logo img{
+        width:110px;
+      }
+
+
+      .footer-brand p{
+        font-size:9.5px;
+      }
+
+
+      .footer-col h4{
+        font-size:10px;
+      }
+
+
+      .footer-col a{
+        font-size:9.5px;
+      }
+
+    }
+
+  
+.lang-switch{display:flex;gap:6px;align-items:center;margin-left:10px}
+.lang-btn{border:1px solid var(--border);background:#fff;color:var(--wine);border-radius:999px;padding:7px 10px;font:inherit;font-size:11px;font-weight:750;cursor:pointer}
+.lang-btn.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+@media(max-width:760px){.lang-switch{margin-left:auto}.lang-btn{padding:6px 8px;font-size:9.5px}}
+
+
+.language-link{
+display:inline-flex;align-items:center;justify-content:center;
+min-width:38px;height:32px;padding:0 10px;border:1px solid var(--border,#ead8d9);
+border-radius:999px;background:#fff;color:var(--wine,#6e2635);
+font-size:11px;font-weight:700;text-decoration:none
+}
+.language-link:hover{background:var(--blush,#f8e8e8)}
+</style>
+</head>
+<body>
+<!-- TOP BAR -->
+<div class="topbar">
+<span>
+      ⇩ Productos digitales
+    </span>
+<span>
+      ♡ Pago seguro con PayPal
+    </span>
+<span>
+      ZuzuBayo Digital Goodies
+    </span>
+</div>
+<!-- HEADER -->
+<header>
+<div class="nav">
+<a class="logo" href="index.html">
+<img alt="ZuzuBayo" src="../logo.png"/>
+</a>
+<nav class="desktop-nav">
+<a href="index.html">Inicio</a>
+<a href="journals.html">Journals &amp; Listas</a>
+<a href="stickers.html">Stickers</a>
+<a href="plantillas.html">Plantillas</a>
+<a href="guias.html">Guías</a>
+<a class="back-button" href="index.html#categorias" id="backButton">← Volver</a>
+</nav>
+
+</div>
+<a class="language-link" href="../en/productos.html">EN</a></header>
+<main>
+<!-- HERO -->
+<section class="hero">
+<div class="breadcrumb" id="breadcrumb">
+        Inicio / Productos
+      </div>
+<h1 id="categoryTitle">
+
+        Productos
+
+        <span>
+          ZuzuBayo ♡
+        </span>
+</h1>
+<p id="categoryDescription">
+        Explora nuestros productos digitales.
+      </p>
+</section>
+<!-- PRODUCT AREA -->
+<section class="products-wrap">
+<div class="products-heading">
+<h2 id="collectionTitle">
+          Colección
+        </h2>
+<span>
+          Digital goodies made with love ♡
+        </span>
+</div>
+<!-- VACÍO POR AHORA -->
+<div class="empty-state" id="emptyState">
+<div class="empty-mark">
+          ♡
+        </div>
+<h3>
+          Esta colección está creciendo ♡
+        </h3>
+<p id="emptyText">
+
+          Muy pronto encontrarás aquí
+          nuevos productos digitales.
+
+        </p>
+<a class="empty-button" href="index.html#categorias" id="emptyButton">
+          Explorar categorías →
+        </a>
+</div>
+<!-- PRODUCTOS REALES FUTUROS -->
+<div class="product-grid" id="productGrid">
+<!--
+          AQUÍ AGREGAREMOS
+          LOS PRODUCTOS REALES
+          MÁS ADELANTE.
+        -->
+</div>
+</section>
+<!-- CTA DINÁMICO -->
+<section class="extra-cta" id="extraCta">
+<div>
+<h3 id="extraTitle">
+          ¿Buscas algo diferente? ♡
+        </h3>
+<p id="extraText">
+          Explora más productos digitales ZuzuBayo.
+        </p>
+</div>
+<a href="index.html#categorias" id="extraButton">
+        Explorar →
+      </a>
+</section>
+<!-- BENEFICIOS -->
+<section class="benefits">
+<div class="benefit">
+<strong>
+          100% digital
+        </strong>
+<span>
+          Sin envíos físicos
+        </span>
+</div>
+<div class="benefit">
+<strong>
+          Fácil de usar
+        </strong>
+<span>
+          Desde tus dispositivos
+        </span>
+</div>
+<div class="benefit">
+<strong>
+          Pago seguro
+        </strong>
+<span>
+          PayPal al elegir producto
+        </span>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="footer-logo">
+<a href="index.html">
+<img alt="ZuzuBayo" src="../logo.png"/>
+</a>
+</div>
+<p>
+          Digital goodies made with love ♡
+        </p>
+</div>
+<div class="footer-col">
+<h4>Explora</h4>
+<a href="journals.html">Journals &amp; Listas</a>
+<a href="stickers.html">Stickers</a>
+<a href="plantillas.html">Plantillas</a>
+<a href="guias.html">Guías</a>
+</div>
+<div class="footer-col">
+<h4>
+          Ayuda
+        </h4>
+<a href="index.html#faq">
+          Preguntas frecuentes
+        </a>
+<a href="index.html#contacto">
+          Contacto
+        </a>
+<a href="index.html#sobre">
+          Sobre ZuzuBayo
+        </a>
+</div>
+</div>
+<div class="copyright">
+
+      © 2026 ZuzuBayo ·
+      Todos los derechos reservados
+
+    </div>
+</footer>
+<!-- =====================================================
+       SISTEMA UNIVERSAL DE CATEGORÍAS
+  ====================================================== -->
+<script>
+
+    const categories = {
+
+      /* =========================
+         JOURNALS & LISTAS
+      ========================= */
+
+      "journal-self-care":{
+        title:'Autocuidado & <span>Bienestar ♡</span>',
+        description:'Recursos digitales para hacer una pausa, reflexionar y conectar contigo de una manera sencilla.',
+        collection:'Autocuidado & Bienestar',
+        section:'Journals & Listas',
+        parent:'',
+        sectionUrl:'journals.html',
+        back:'journals.html',
+        type:'journals'
+      },
+
+      "journal-organizacion":{
+        title:'Journals de <span>Organización ♡</span>',
+        description:'Journals y listas para ordenar prioridades, pendientes, rutinas y planes sin complicarte de más.',
+        collection:'Organización',
+        section:'Journals & Listas',
+        parent:'',
+        sectionUrl:'journals.html',
+        back:'journals.html',
+        type:'journals'
+      },
+
+      "journal-estudio":{
+        title:'Journals de <span>Estudio ♡</span>',
+        description:'Recursos digitales para organizar materias, tareas, sesiones de estudio y objetivos académicos.',
+        collection:'Estudio',
+        section:'Journals & Listas',
+        parent:'',
+        sectionUrl:'journals.html',
+        back:'journals.html',
+        type:'journals'
+      },
+
+      /* =========================
+         PLANTILLAS
+      ========================= */
+
+      "redes-sociales":{
+        title:'Plantillas para <span>Redes Sociales ♡</span>',
+        description:'Plantillas para facilitar la creación de contenido y mantener una presencia visual más organizada.',
+        collection:'Redes Sociales',
+        section:'Plantillas',
+        parent:'',
+        sectionUrl:'plantillas.html',
+        back:'plantillas.html',
+        type:'plantillas'
+      },
+
+      "organizacion-estudio":{
+        title:'Organización & <span>Estudio ♡</span>',
+        description:'Plantillas prácticas para organizar horarios, tareas, prioridades y recursos académicos.',
+        collection:'Organización & Estudio',
+        section:'Plantillas',
+        parent:'',
+        sectionUrl:'plantillas.html',
+        back:'plantillas.html',
+        type:'plantillas'
+      },
+
+      /* =========================
+         GUÍAS
+      ========================= */
+
+      "guias-organizacion":{
+        title:'Guías de <span>Organización ♡</span>',
+        description:'Recursos prácticos para mejorar rutinas, planificación, orden y manejo del tiempo.',
+        collection:'Organización',
+        section:'Guías',
+        parent:'',
+        sectionUrl:'guias.html',
+        back:'guias.html',
+        type:'guias'
+      },
+
+      "guias-productividad":{
+        title:'Guías de <span>Productividad ♡</span>',
+        description:'Estrategias prácticas para enfocarte, convertir ideas en acciones y aprovechar mejor tu tiempo.',
+        collection:'Productividad',
+        section:'Guías',
+        parent:'',
+        sectionUrl:'guias.html',
+        back:'guias.html',
+        type:'guias'
+      },
+
+      "guias-dinero-planificacion":{
+        title:'Dinero & <span>Planificación ♡</span>',
+        description:'Recursos sencillos para organizar gastos, ahorro, metas y planificación personal.',
+        collection:'Dinero & Planificación',
+        section:'Guías',
+        parent:'',
+        sectionUrl:'guias.html',
+        back:'guias.html',
+        type:'guias'
+      },
+
+      "guias-redes-contenido":{
+        title:'Redes Sociales & <span>Contenido ♡</span>',
+        description:'Guías para organizar ideas, crear contenido y construir una presencia digital con intención.',
+        collection:'Redes Sociales & Contenido',
+        section:'Guías',
+        parent:'',
+        sectionUrl:'guias.html',
+        back:'guias.html',
+        type:'guias'
+      },
+
+      "guias-emprender":{
+        title:'Guías para <span>Emprender ♡</span>',
+        description:'Recursos para convertir una idea en algo más claro y construir un proyecto paso a paso.',
+        collection:'Emprendimiento',
+        section:'Guías',
+        parent:'',
+        sectionUrl:'guias.html',
+        back:'guias.html',
+        type:'guias'
+      }
+    };
+
+    /* Compatibilidad con enlaces antiguos que pudieran seguir guardados */
+    const legacyAliases = {
+      "journal-gratitude":"journal-self-care",
+      "journal-habitos":"journal-organizacion",
+      "journal-listas":"journal-organizacion",
+      "journal-hogar":"journal-organizacion",
+      "journal-presupuesto":"journal-organizacion",
+      "guias-dinero-productividad":"guias-dinero-planificacion",
+      "guias-marketing":"guias-redes-contenido"
+    };
+
+
+
+    /* =====================================================
+       LEER CATEGORÍA DESDE LA URL
+    ====================================================== */
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const rawCategoryKey = params.get("categoria");
+    const categoryKey = legacyAliases[rawCategoryKey] || rawCategoryKey;
+    const category = categories[categoryKey];
+
+
+
+    /* =====================================================
+       SI LA CATEGORÍA EXISTE
+    ====================================================== */
+
+    if(category){
+
+
+      /* TÍTULO */
+
+      document
+        .getElementById("categoryTitle")
+        .innerHTML =
+        category.title;
+
+
+
+      /* DESCRIPCIÓN */
+
+      document
+        .getElementById("categoryDescription")
+        .textContent =
+        category.description;
+
+
+
+      /* COLECCIÓN */
+
+      document
+        .getElementById("collectionTitle")
+        .textContent =
+        category.collection;
+
+
+
+      /* VOLVER */
+
+      document
+        .getElementById("backButton")
+        .href =
+        category.back;
+
+
+
+      /* BREADCRUMB */
+
+      let breadcrumbHTML =
+
+        '<a href="index.html">Inicio</a>' +
+
+        ' &nbsp;/&nbsp; ' +
+
+        '<a href="' +
+        category.sectionUrl +
+        '">' +
+        category.section +
+        '</a>';
+
+
+      if(category.parent){
+
+        breadcrumbHTML +=
+
+          ' &nbsp;/&nbsp; ' +
+
+          category.parent;
+
+      }
+
+
+      breadcrumbHTML +=
+
+        ' &nbsp;/&nbsp; ' +
+
+        category.collection;
+
+
+      document
+        .getElementById("breadcrumb")
+        .innerHTML =
+        breadcrumbHTML;
+
+
+
+      /* MENSAJE DE COLECCIÓN VACÍA */
+
+      document
+        .getElementById("emptyText")
+        .textContent =
+
+        'Los primeros productos de ' +
+
+        category.collection +
+
+        '. Agregaremos los productos conforme estén listos.';
+
+
+
+      /* BOTÓN VOLVER DEL EMPTY STATE */
+
+      document
+        .getElementById("emptyButton")
+        .href =
+        category.back;
+
+
+      document
+        .getElementById("emptyButton")
+        .textContent =
+        '← Volver a ' +
+        category.section.toLowerCase();
+
+
+
+      /* =================================================
+         CTA SEGÚN EL TIPO
+      ================================================= */
+
+
+      if(category.type === "invitaciones"){
+
+
+        document
+          .getElementById("extraTitle")
+          .textContent =
+          '¿Buscas algo diferente? ♡';
+
+
+        document
+          .getElementById("extraText")
+          .textContent =
+          'También puedes solicitar una invitación personalizada para tu celebración.';
+
+
+        document
+          .getElementById("extraButton")
+          .href =
+          'personalizadas.html';
+
+
+        document
+          .getElementById("extraButton")
+          .textContent =
+          'Ver personalizadas →';
+
+
+      }
+
+
+      else if(category.type === "plantillas"){
+
+
+        document
+          .getElementById("extraTitle")
+          .textContent =
+          'Explora más plantillas ♡';
+
+
+        document
+          .getElementById("extraText")
+          .textContent =
+          'Descubre otras categorías de plantillas digitales para tus proyectos.';
+
+
+        document
+          .getElementById("extraButton")
+          .href =
+          'plantillas.html';
+
+
+        document
+          .getElementById("extraButton")
+          .textContent =
+          'Ver plantillas →';
+
+
+      }
+
+
+      else if(category.type === "stickers"){
+
+
+        document
+          .getElementById("extraTitle")
+          .textContent =
+          'Descubre más stickers ♡';
+
+
+        document
+          .getElementById("extraText")
+          .textContent =
+          'Explora otros estilos y packs de stickers digitales ZuzuBayo.';
+
+
+        document
+          .getElementById("extraButton")
+          .href =
+          'stickers.html';
+
+
+        document
+          .getElementById("extraButton")
+          .textContent =
+          'Ver stickers →';
+
+
+      }
+
+
+      else if(category.type === "journals"){
+
+
+        document
+          .getElementById("extraTitle")
+          .textContent =
+          'Organiza a tu manera ♡';
+
+
+        document
+          .getElementById("extraText")
+          .textContent =
+          'Descubre más journals, trackers, listas y recursos de organización.';
+
+
+        document
+          .getElementById("extraButton")
+          .href =
+          'journals.html';
+
+
+        document
+          .getElementById("extraButton")
+          .textContent =
+          'Ver journals →';
+
+
+      }
+
+
+      else if(category.type === "guias"){
+
+
+        document
+          .getElementById("extraTitle")
+          .textContent =
+          'Sigue aprendiendo ♡';
+
+
+        document
+          .getElementById("extraText")
+          .textContent =
+          'Explora otras guías digitales y encuentra recursos prácticos para ti.';
+
+
+        document
+          .getElementById("extraButton")
+          .href =
+          'guias.html';
+
+
+        document
+          .getElementById("extraButton")
+          .textContent =
+          'Ver guías →';
+
+
+      }
+
+
+
+      /* TITLE DEL NAVEGADOR */
+
+      document.title =
+        category.collection +
+        " | ZuzuBayo";
+
+
+    }
+
+
+
+    /* =====================================================
+       SI ENTRAN SIN ?categoria=
+    ====================================================== */
+
+    
+    else{
+
+      const hadUnknownCategory = Boolean(rawCategoryKey);
+
+      document
+        .getElementById("categoryTitle")
+        .innerHTML =
+        hadUnknownCategory
+          ? 'Colección <span>no disponible ♡</span>'
+          : 'Productos <span>ZuzuBayo ♡</span>';
+
+      document
+        .getElementById("categoryDescription")
+        .textContent =
+        hadUnknownCategory
+          ? 'Esta colección no está visible actualmente. Puedes regresar a las categorías principales.'
+          : 'Elige una categoría para explorar nuestros productos digitales.';
+
+      document
+        .getElementById("collectionTitle")
+        .textContent =
+        hadUnknownCategory ? 'Explora ZuzuBayo' : 'Colecciones';
+
+      document
+        .getElementById("breadcrumb")
+        .innerHTML =
+        '<a href="index.html">Inicio</a> &nbsp;/&nbsp; Productos';
+
+      document
+        .getElementById("backButton")
+        .href =
+        'index.html#categorias';
+
+      document
+        .getElementById("emptyText")
+        .textContent =
+        hadUnknownCategory
+          ? 'Esta categoría está oculta por ahora. Elige una de las secciones activas para continuar.'
+          : 'Selecciona una categoría desde nuestra tienda para comenzar.';
+
+      document
+        .getElementById("emptyButton")
+        .href =
+        'index.html#categorias';
+
+      document
+        .getElementById("emptyButton")
+        .textContent =
+        'Explorar categorías →';
+
+      document
+        .getElementById("extraTitle")
+        .textContent =
+        'Descubre ZuzuBayo ♡';
+
+      document
+        .getElementById("extraText")
+        .textContent =
+        'Explora journals, stickers, plantillas y guías digitales.';
+
+      document
+        .getElementById("extraButton")
+        .href =
+        'index.html#categorias';
+
+      document
+        .getElementById("extraButton")
+        .textContent =
+        'Ver categorías →';
+
+    }
+
+  </script>
+
+</body>
+</html>
