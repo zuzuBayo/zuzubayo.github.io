@@ -207,6 +207,12 @@
       #destacados .product-link{font-size:9px}
     }
 
+
+.lang-switch{display:flex;gap:6px;align-items:center;margin-left:12px}
+.lang-btn{border:1px solid var(--border);background:#fff;color:var(--wine);border-radius:999px;padding:7px 10px;font:inherit;font-size:11px;font-weight:700;cursor:pointer}
+.lang-btn.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+@media(max-width:700px){.lang-switch{margin-left:6px}.lang-btn{padding:6px 8px;font-size:10px}}
+
 </style>
 </head>
 <body>
@@ -223,16 +229,20 @@
 <a href="#categorias">Productos</a>
 <a href="nextflight.html">NextFlight</a>
 <a href="#faq">FAQ</a>
-<a href="#contacto">Contacto</a>
+<a href="#contacto"><span data-es="Contacto" data-en="Contact">Contacto</span></a>
 <a class="shop-pill" href="#categorias">Tienda ♡</a>
 </nav>
+<div class="lang-switch" aria-label="Language selector">
+  <button class="lang-btn active" id="lang-es" type="button">ES</button>
+  <button class="lang-btn" id="lang-en" type="button">EN</button>
+</div>
 <button aria-expanded="false" aria-label="Abrir menú" class="menu-btn" id="menuBtn" type="button">☰</button>
 </div>
 <nav aria-label="Navegación móvil" class="mobile-nav" id="mobileNav">
 <a href="#inicio">Inicio</a>
-<a href="#categorias">Categorías</a><a href="nextflight.html">NextFlight</a>
-<a href="#faq">Preguntas frecuentes</a>
-<a href="#contacto">Contacto</a>
+<a href="#categorias"><span data-es="Categorías" data-en="Categories">Categorías</span></a><a href="nextflight.html">NextFlight</a>
+<a href="#faq"><span data-es="Preguntas frecuentes" data-en="Frequently asked questions">Preguntas frecuentes</span></a>
+<a href="#contacto"><span data-es="Contacto" data-en="Contact">Contacto</span></a>
 </nav>
 </header>
 <main>
@@ -270,9 +280,9 @@
 
 
 <div class="categories">
-<a class="category-card" href="journals.html"><div class="category-image"><img alt="Journals y listas digitales" src="journals.png"/></div><div class="category-body"><h3>Journals &amp; Listas</h3><p>Autocuidado, organización, estudio y recursos para tu día a día.</p><span class="category-btn">Explorar journals →</span></div></a>
-<a class="category-card" href="plantillas.html"><div class="category-image"><img alt="Plantillas digitales" src="plantillas.png"/></div><div class="category-body"><h3>Plantillas</h3><p>Redes sociales, organización, estudio y recursos editables.</p><span class="category-btn">Explorar plantillas →</span></div></a>
-<a class="category-card" href="guias.html"><div class="category-image"><img alt="Guías digitales" src="guias.png"/></div><div class="category-body"><h3>Guías</h3><p>Organización, productividad, contenido, dinero y emprendimiento.</p><span class="category-btn">Explorar guías →</span></div></a>
+<a class="category-card" href="journals.html"><div class="category-image"><img alt="Journals y listas digitales" src="journals.png"/></div><div class="category-body"><h3><span data-es="Journals &amp; Listas" data-en="Journals &amp; Lists">Journals &amp; Listas</span></h3><p>Autocuidado, organización, estudio y recursos para tu día a día.</p><span class="category-btn">Explorar journals →</span></div></a>
+<a class="category-card" href="plantillas.html"><div class="category-image"><img alt="Plantillas digitales" src="plantillas.png"/></div><div class="category-body"><h3><span data-es="Plantillas" data-en="Templates">Plantillas</span></h3><p>Redes sociales, organización, estudio y recursos editables.</p><span class="category-btn">Explorar plantillas →</span></div></a>
+<a class="category-card" href="guias.html"><div class="category-image"><img alt="Guías digitales" src="guias.png"/></div><div class="category-body"><h3><span data-es="Guías" data-en="Guides">Guías</span></h3><p>Organización, productividad, contenido, dinero y emprendimiento.</p><span class="category-btn">Explorar guías →</span></div></a>
 <a class="category-card" href="stickers.html"><div class="category-image"><img alt="Stickers digitales" src="stikers.png"/></div><div class="category-body"><h3>Stickers</h3><p>Cute &amp; Aesthetic, Self-Care, Productivity, Anime y más.</p><span class="category-btn">Explorar stickers →</span></div></a>
 </div>
 </section>
@@ -306,8 +316,8 @@
 <footer>
 <div class="footer-inner">
 <div class="footer-brand"><div class="footer-logo"><img alt="ZuzuBayo" src="logo.png"/></div><p>Detalles digitales hechos con amor ♡</p></div>
-<div class="footer-col"><h4>Explora</h4><a href="#categorias">Categorías</a><a href="journals.html">Journals &amp; Listas</a><a href="plantillas.html">Plantillas</a><a href="guias.html">Guías</a><a href="stickers.html">Stickers</a></div>
-<div class="footer-col"><h4>Ayuda</h4><a href="#faq">Preguntas frecuentes</a><a href="#contacto">Contacto</a><a href="#sobre">Sobre ZuzuBayo</a></div>
+<div class="footer-col"><h4>Explora</h4><a href="#categorias"><span data-es="Categorías" data-en="Categories">Categorías</span></a><a href="journals.html"><span data-es="Journals &amp; Listas" data-en="Journals &amp; Lists">Journals &amp; Listas</span></a><a href="plantillas.html"><span data-es="Plantillas" data-en="Templates">Plantillas</span></a><a href="guias.html"><span data-es="Guías" data-en="Guides">Guías</span></a><a href="stickers.html">Stickers</a></div>
+<div class="footer-col"><h4>Ayuda</h4><a href="#faq"><span data-es="Preguntas frecuentes" data-en="Frequently asked questions">Preguntas frecuentes</span></a><a href="#contacto"><span data-es="Contacto" data-en="Contact">Contacto</span></a><a href="#sobre">Sobre ZuzuBayo</a></div>
 <div class="footer-col"><h4>Legal</h4><a href="terminos.html">Términos y condiciones</a><a href="privacidad.html">Política de privacidad</a><a href="reembolsos.html">Política de reembolsos</a><a href="licencia.html">Licencia de uso</a></div>
 <div class="footer-col"><h4>Síguenos ♡</h4><a href="https://www.instagram.com/zuzu.bayo?igsh=MWZrMWRmODFpNmlpOA==" rel="noopener noreferrer" target="_blank">Instagram</a></div>
 </div>
@@ -327,5 +337,29 @@
       menuBtn.textContent='☰';
     }));
   </script>
+
+<script>
+(function(){
+  const KEY = 'zuzubayo_lang';
+  const esBtn = document.getElementById('lang-es');
+  const enBtn = document.getElementById('lang-en');
+
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      el.textContent = (lang === 'en') ? el.dataset.en : el.dataset.es;
+    });
+    if(esBtn) esBtn.classList.toggle('active', lang === 'es');
+    if(enBtn) enBtn.classList.toggle('active', lang === 'en');
+    localStorage.setItem(KEY, lang);
+  }
+
+  if(esBtn) esBtn.addEventListener('click', function(){ setLang('es'); });
+  if(enBtn) enBtn.addEventListener('click', function(){ setLang('en'); });
+
+  setLang(localStorage.getItem(KEY) || 'es');
+})();
+</script>
+
 </body>
 </html>
