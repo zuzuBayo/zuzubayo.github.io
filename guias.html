@@ -25,30 +25,57 @@ footer{background:linear-gradient(135deg,#76101f,#8e1727);color:#fff}.footer-inn
 .num{height:100%;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--border);color:#d88a95;font-family:Georgia,serif;font-size:30px}
 .num-copy{padding:3px 28px}.num-copy h2{margin:0 0 8px;color:var(--wine);font-family:Georgia,serif;font-size:24px;font-weight:500}.num-copy p{color:var(--muted);font-size:10.5px}.num-arrow{color:var(--red);font-size:20px;font-weight:700}
 @media(max-width:700px){.num-list{width:94%;gap:9px}.num-row{grid-template-columns:54px 1fr 28px;min-height:112px;padding:12px 8px 12px 0}.num{font-size:21px}.num-copy{padding:2px 14px}.num-copy h2{font-size:18px}.num-copy p{font-size:8.8px}.num-arrow{font-size:15px}}
+
+.lang-switch{display:flex;gap:6px;align-items:center;margin-left:10px}
+.lang-btn{border:1px solid var(--border);background:#fff;color:var(--wine);border-radius:999px;padding:7px 10px;font:inherit;font-size:11px;font-weight:750;cursor:pointer}
+.lang-btn.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+@media(max-width:760px){.lang-switch{margin-left:auto}.lang-btn{padding:6px 8px;font-size:9.5px}}
+
 </style>
 </head>
 <body>
 <div class="topbar"><span>⇩ Productos digitales</span><span>♡ Pago seguro con PayPal</span><span>ZuzuBayo Digital Goodies</span></div>
-<header><div class="nav"><a href="index.html" class="logo"><img src="logo.png" alt="ZuzuBayo"></a><nav class="desktop-nav"><a href="index.html">Inicio</a><a href="journals.html">Journals &amp; Listas</a><a href="stickers.html">Stickers</a><a href="plantillas.html">Plantillas</a><a href="index.html#categorias" class="back-button">← Volver a categorías</a></nav></div></header>
+<header><div class="nav"><a href="index.html" class="logo"><img src="logo.png" alt="ZuzuBayo"></a><nav class="desktop-nav"><a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a><a href="journals.html">Journals &amp; Listas</a><a href="stickers.html">Stickers</a><a href="plantillas.html"><span data-es="Plantillas" data-en="Templates">Plantillas</span></a><a href="index.html#categorias" class="back-button">← Volver a categorías</a></nav><div class="lang-switch" aria-label="Language selector"><button class="lang-btn active" id="lang-es" type="button">ES</button><button class="lang-btn" id="lang-en" type="button">EN</button></div></div></header>
 
 <main>
-<section class="hero"><div class="breadcrumb"><a href="index.html">Inicio</a> &nbsp;/&nbsp; Guías</div><h1>Guías digitales ♡</h1><p>Recursos claros y prácticos para ayudarte a organizarte, aprender algo útil y avanzar paso a paso sin convertir cada tema en un curso enorme.</p></section>
+<section class="hero"><div class="breadcrumb"><a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a> &nbsp;/&nbsp; Guías</div><h1><span data-es="Guías digitales ♡" data-en="Digital Guides ♡">Guías digitales ♡</span></h1><p><span data-es="Recursos claros y prácticos para ayudarte a organizarte, aprender algo útil y avanzar paso a paso sin convertir cada tema en un curso enorme." data-en="Clear, practical resources to help you get organized, learn something useful, and move forward step by step without turning every topic into a huge course.">Recursos claros y prácticos para ayudarte a organizarte, aprender algo útil y avanzar paso a paso sin convertir cada tema en un curso enorme.</span></p></section>
 
-<section class="intro"><h2>¿En qué quieres avanzar? ♡</h2><p>Explora los temas que formarán parte de la biblioteca de guías ZuzuBayo.</p></section>
+<section class="intro"><h2><span data-es="¿En qué quieres avanzar? ♡" data-en="What do you want to work on? ♡">¿En qué quieres avanzar? ♡</span></h2><p><span data-es="Explora los temas que formarán parte de la biblioteca de guías ZuzuBayo." data-en="Explore the topics that will become part of the ZuzuBayo guide library.">Explora los temas que formarán parte de la biblioteca de guías ZuzuBayo.</span></p></section>
 
 <section class="num-list">
-<a class="num-row" href="productos.html?categoria=guias-organizacion"><div class="num">01</div><div class="num-copy"><h2>Organización ♡</h2><p>Rutinas · Planificación · Orden · Tiempo</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="productos.html?categoria=guias-productividad"><div class="num">02</div><div class="num-copy"><h2>Productividad ♡</h2><p>Prioridades · Enfoque · Metas · Hábitos</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="productos.html?categoria=guias-dinero-planificacion"><div class="num">03</div><div class="num-copy"><h2>Dinero & Planificación ♡</h2><p>Presupuesto · Ahorro · Metas · Planificación</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="productos.html?categoria=guias-redes-contenido"><div class="num">04</div><div class="num-copy"><h2>Redes Sociales & Contenido ♡</h2><p>Instagram · Contenido · Marketing · Branding</p></div><div class="num-arrow">→</div></a>
-<a class="num-row" href="productos.html?categoria=guias-emprender"><div class="num">05</div><div class="num-copy"><h2>Emprendimiento ♡</h2><p>Ideas · Primeros pasos · Negocio digital · Recursos</p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-organizacion"><div class="num">01</div><div class="num-copy"><h2><span data-es="Organización ♡" data-en="Organization ♡">Organización ♡</span></h2><p><span data-es="Rutinas · Planificación · Orden · Tiempo" data-en="Routines · Planning · Organization · Time">Rutinas · Planificación · Orden · Tiempo</span></p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-productividad"><div class="num">02</div><div class="num-copy"><h2><span data-es="Productividad ♡" data-en="Productivity ♡">Productividad ♡</span></h2><p><span data-es="Prioridades · Enfoque · Metas · Hábitos" data-en="Priorities · Focus · Goals · Habits">Prioridades · Enfoque · Metas · Hábitos</span></p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-dinero-planificacion"><div class="num">03</div><div class="num-copy"><h2><span data-es="Dinero &amp; Planificación ♡" data-en="Money &amp; Planning ♡">Dinero & Planificación ♡</span></h2><p><span data-es="Presupuesto · Ahorro · Metas · Planificación" data-en="Budget · Savings · Goals · Planning">Presupuesto · Ahorro · Metas · Planificación</span></p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-redes-contenido"><div class="num">04</div><div class="num-copy"><h2><span data-es="Redes Sociales &amp; Contenido ♡" data-en="Social Media &amp; Content ♡">Redes Sociales & Contenido ♡</span></h2><p><span data-es="Instagram · Contenido · Marketing · Branding" data-en="Instagram · Content · Marketing · Branding">Instagram · Contenido · Marketing · Branding</span></p></div><div class="num-arrow">→</div></a>
+<a class="num-row" href="productos.html?categoria=guias-emprender"><div class="num">05</div><div class="num-copy"><h2><span data-es="Emprendimiento ♡" data-en="Entrepreneurship ♡">Emprendimiento ♡</span></h2><p><span data-es="Ideas · Primeros pasos · Negocio digital · Recursos" data-en="Ideas · First steps · Digital business · Resources">Ideas · Primeros pasos · Negocio digital · Recursos</span></p></div><div class="num-arrow">→</div></a>
 </section>
 
-<section class="info"><h3>Guías pequeñas que realmente puedas usar ♡</h3><p>La idea no es llenar la tienda por llenar. Las guías se irán activando conforme creemos recursos completos y útiles para cada tema. La sección ya queda visible desde ahora, pero no mostraremos productos falsos ni incompletos.</p></section>
+<section class="info"><h3><span data-es="Guías pequeñas que realmente puedas usar ♡" data-en="Small guides you can actually use ♡">Guías pequeñas que realmente puedas usar ♡</span></h3><p><span data-es="La idea no es llenar la tienda por llenar. Las guías se irán activando conforme creemos recursos completos y útiles para cada tema. La sección ya queda visible desde ahora, pero no mostraremos productos falsos ni incompletos." data-en="The goal isn’t to fill the store just for the sake of it. Guides will be activated as we create complete, useful resources for each topic. The section is visible now, but we won’t show fake or unfinished products.">La idea no es llenar la tienda por llenar. Las guías se irán activando conforme creemos recursos completos y útiles para cada tema. La sección ya queda visible desde ahora, pero no mostraremos productos falsos ni incompletos.</span></p></section>
 
-<section class="benefits"><div class="benefit"><strong>Contenido práctico</strong><span>Directo al punto</span></div><div class="benefit"><strong>100% digital</strong><span>Fácil de consultar</span></div><div class="benefit"><strong>Crece poco a poco</strong><span>Solo productos terminados</span></div></section>
+<section class="benefits"><div class="benefit"><strong><span data-es="Contenido práctico" data-en="Practical content">Contenido práctico</span></strong><span><span data-es="Directo al punto" data-en="Straight to the point">Directo al punto</span></span></div><div class="benefit"><strong>100% digital</strong><span><span data-es="Fácil de consultar" data-en="Easy to reference">Fácil de consultar</span></span></div><div class="benefit"><strong><span data-es="Crece poco a poco" data-en="Growing gradually">Crece poco a poco</span></strong><span><span data-es="Solo productos terminados" data-en="Finished products only">Solo productos terminados</span></span></div></section>
 </main>
 
-<footer><div class="footer-inner"><div class="footer-brand"><div class="footer-logo"><img src="logo.png" alt="ZuzuBayo"></div><p>Detalles digitales hechos con amor ♡</p></div><div class="footer-col"><h4>Explora</h4><a href="index.html">Inicio</a><a href="journals.html">Journals &amp; Listas</a><a href="stickers.html">Stickers</a><a href="plantillas.html">Plantillas</a><a href="guias.html">Guías</a></div><div class="footer-col"><h4>Información</h4><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="reembolsos.html">Reembolsos</a><a href="licencia.html">Licencia</a></div></div><div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div></footer>
+<footer><div class="footer-inner"><div class="footer-brand"><div class="footer-logo"><img src="logo.png" alt="ZuzuBayo"></div><p><span data-es="Detalles digitales hechos con amor ♡" data-en="Digital details made with love ♡">Detalles digitales hechos con amor ♡</span></p></div><div class="footer-col"><h4><span data-es="Explora" data-en="Explore">Explora</span></h4><a href="index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a><a href="journals.html">Journals &amp; Listas</a><a href="stickers.html">Stickers</a><a href="plantillas.html"><span data-es="Plantillas" data-en="Templates">Plantillas</span></a><a href="guias.html"><span data-es="Guías" data-en="Guides">Guías</span></a></div><div class="footer-col"><h4><span data-es="Información" data-en="Information">Información</span></h4><a href="terminos.html"><span data-es="Términos" data-en="Terms">Términos</span></a><a href="privacidad.html"><span data-es="Privacidad" data-en="Privacy">Privacidad</span></a><a href="reembolsos.html"><span data-es="Reembolsos" data-en="Refunds">Reembolsos</span></a><a href="licencia.html"><span data-es="Licencia" data-en="License">Licencia</span></a></div></div><div class="copyright">© 2026 ZuzuBayo · Todos los derechos reservados</div></footer>
+
+<script>
+(function(){
+  const KEY='zuzubayo_lang';
+  const esBtn=document.getElementById('lang-es');
+  const enBtn=document.getElementById('lang-en');
+  function setLang(lang){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      el.textContent=lang==='en' ? el.dataset.en : el.dataset.es;
+    });
+    if(esBtn) esBtn.classList.toggle('active',lang==='es');
+    if(enBtn) enBtn.classList.toggle('active',lang==='en');
+    localStorage.setItem(KEY,lang);
+  }
+  if(esBtn) esBtn.addEventListener('click',function(){setLang('es')});
+  if(enBtn) enBtn.addEventListener('click',function(){setLang('en')});
+  setLang(localStorage.getItem(KEY)||'es');
+})();
+</script>
+
 </body>
 </html>
